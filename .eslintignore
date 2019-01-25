@@ -1,0 +1,6 @@
+.git/
+.vscode/
+app/js/jquery
+app/js/vendors/
+dist/
+node_modules/

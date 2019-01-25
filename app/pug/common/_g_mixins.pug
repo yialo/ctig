@@ -1,0 +1,10 @@
+//- =================
+//- Global Pug mixins
+//- =================
+
+//- Set default values of mixin
+
+mixin setDefaults(values, defaultValues)
+  each value, key in defaultValues
+    if values[key] === undefined
+      - values[key] = defaultValues[key];
