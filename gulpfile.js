@@ -111,6 +111,10 @@ const copyvideo = function copyVideoFilesToBuildFolder() {
   return gulp.src('./app/video/*.mp4').pipe(gulp.dest('./dist/video/'));
 };
 
+const copyfavicons = function copyFavIconsToBuildFolder() {
+  return gulp.src('./app/favicons/*').pipe(gulp.dest('./dist/favicons/'));
+};
+
 const copyfonts = function copyFontFilesToBuildFolder() {
   return gulp
     .src('./app/fonts/*.{woff,woff2}')
@@ -173,7 +177,7 @@ gulp.task(
   'build',
   gulp.series(
     cleanbuild,
-    gulp.parallel(copyfonts, copyvideo, copysvg, copybitmap),
+    gulp.parallel(copyvideo, copyfonts, copyfavicons, copysvg, copybitmap),
     scripts,
     style,
     html,

@@ -10,11 +10,13 @@ $s-min-width: 320px;
 // Typography
 // ==========
 
-$font-family: %fontfamily%;
+$font-family: geometria;
 $font-properties: (
   font-styles: (normal, italic),
   font-weights: (
-    (400, normal),
+    (300, light),
+    (400, regular),
+    (500, medium),
     (700, bold),
   ),
 );
@@ -22,7 +24,8 @@ $font-properties: (
 // Colors
 // ======
 
-
+$modal-bg-color: #161616;
+$modal-overlay-bg-color: rgba(0, 0, 0, 0.6);
 
 // Various
 // =======
