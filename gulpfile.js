@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulp = require('gulp');
+const jpegtran = require('imagemin-jpegtran');
 const mincss = require('gulp-csso');
 const minimage = require('gulp-imagemin');
 const minjs = require('gulp-terser');
@@ -84,18 +85,18 @@ const minbitmap = function minimizeBitmapImages() {
     .src('./spec/img-raw/*.{jpg,png}')
     .pipe(
       minimage([
-        pngquant({
-          speed: 1,
-          quality: 80,
-        }),
-        zopfli({
-          more: true,
-        }),
-        minimage.jpegtran({
+        jpegtran({
           progressive: true,
         }),
         mozjpeg({
           quality: 90,
+        }),
+        pngquant({
+          speed: 1,
+          quality: [0.8, 0.8],
+        }),
+        zopfli({
+          more: true,
         }),
       ]),
     )
