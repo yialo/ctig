@@ -8,10 +8,12 @@ include _import_components
 
 doctype html
 html(lang='ru')
-  include ../partials/_p_head
+  include ../components/_c_head
   body.page(class=`page--${page.id}`)
-    block page-header
-    block navigation-bar
+    header.page__header
+      include ../components/_c_page-header
+    .page__sidebar
+      include ../components/_c_sidebar
     block page-main
     script(src='js/picturefill.js')
     block current-page-scripts
