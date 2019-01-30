@@ -23,3 +23,5 @@ mixin navigation()
       each item in NAVIGATION_ITEMS
         - const [modifier, text] = item;
         +navigation__item({ modifier: modifier, text: text })
+          if modifier in NAVIGATION_SUBLISTS
+            +navigation-sublist(modifier)
