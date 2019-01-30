@@ -1,28 +1,11 @@
 .sidebar
   .sidebar__container
-    ul.sidebar__list
-      mixin sidebar__item(sidebarItem_props)
-        li.sidebar__item
-          a.sidebar__link(
-            href=(
-              SIDEBAR_LINKS_EMPTY
-                .concat(page.id)
-                .includes(sidebarItem_props.modifier)
-              ? null
-              : `${sidebarItem_props.modifier}.html`
-            )
-            class={
-              'sidebar__link--notext':
-              sidebarItem_props.modifier === 'index'
-            }
-          )
-            if sidebarItem_props.modifier === 'index'
-              span.sidebar__legend= sidebarItem_props.text
-            else
-              = sidebarItem_props.text
-      each item in SIDEBAR_ITEMS
-        - const [modifier, text] = item;
-        +sidebar__item({ modifier: modifier, text: text })
+    .sidebar__navigation-toggle
+      include _c_navigation-toggle
+    .sidebar__language-toggle
+      include _c_language-toggle
+    .sidebar__menu
+      include _c_main-menu
     .sidebar__calculator-toggle
       include _c_calculator-toggle
     .sidebar__navigation
