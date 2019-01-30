@@ -1,9 +1,20 @@
 nav.navigation
   .navigation__container
     ul.navigation__list
-      mixin navigation__item()
+      mixin navigation__item(navigationItem_props)
         li.navigation__item
-          a.navigation__link
+          a.navigation__link(
+            href=(
+              NAVIGATION_EMPTY_LINKS
+                .concat(page.id)
+                .includes(navigationItem_props.modifier)
+              ? null
+              : `${navigationItem_props.modifier}.html`
+            )
+          )= navigationItem_props.text
           block
+      each item in NAVIGATION_ITEMS
+        - const [modifier, text] = item;
+        +navigation__item({ modifier: modifier, text: text })
   aside.navigation__extra
     include _c_extra
