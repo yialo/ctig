@@ -10,12 +10,13 @@ mixin head()
     each item in FAVICONS_META_DATA
       - const [name, content] = item;
       meta(name=name content=content)
-    each weightValue in FONT_PROPERTIES.weightNames
-      each styleValue in FONT_PROPERTIES.styleNames
-        link(
-          rel='preload'
-          href=`fonts/${FONT_FAMILY_NAME}-${weightValue}-${styleValue}.woff2`
-          as='font'
-          crossorigin='anonymous'
-        )
+    each value, key in FONT_SETS
+      each weightValue in value.weightNames
+        each styleValue in value.styleNames
+          link(
+            rel='preload'
+            href=`fonts/${key}-${weightValue}-${styleValue}.woff2`
+            as='font'
+            crossorigin='anonymous'
+          )
     link(rel='stylesheet' href='css/main.min.css')

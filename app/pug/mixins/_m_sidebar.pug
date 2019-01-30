@@ -1,6 +1,6 @@
 mixin sidebar()
   .sidebar
-    .sidebar__constant-container
+    .sidebar__static-container
       .sidebar__navigation-toggle
         +navigation-toggle()
       .sidebar__language-toggle
@@ -9,8 +9,8 @@ mixin sidebar()
         +main-menu()
       .sidebar__calculator-toggle
         +calculator-toggle()
-    .sidebar__alternate-container
+    .sidebar__popup-container
       .sidebar__navigation
         +navigation()
-      aside.sidebar__extra
+      .sidebar__extra
         +extra()
