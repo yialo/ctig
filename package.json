@@ -33,7 +33,7 @@
   },
   "license": "ISC",
   "main": "gulpfile.js",
-  "name": "stig",
+  "name": "ctig",
   "private": true,
   "repository": {
     "type": "git",
