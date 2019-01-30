@@ -1,8 +1,14 @@
-//- =================
 //- Global Pug mixins
 //- =================
 
 //- Set default values of mixin
+//- ---------------------------
+//-
+//- Parameters:
+//-
+//- values (object): parameter of outer mixin
+//- defaultValues (object): default parameter value of outer mixin
+//-
 
 mixin setDefaults(values, defaultValues)
   each value, key in defaultValues

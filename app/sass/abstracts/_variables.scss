@@ -1,9 +1,8 @@
-// ==============
 // Sass variables
 // ==============
 
 // Viewport sizing
-// ===============
+// ---------------
 
 $s-min-width: 320px;
 $s-max-width: 767px;
@@ -14,7 +13,7 @@ $l-max-width: 1919px;
 $xl-min-width: 1920px;
 
 // Typography
-// ==========
+// ----------
 
 $font-family: geometria;
 $font-properties: (
@@ -28,10 +27,10 @@ $font-properties: (
 );
 
 // Colors
-// ======
+// ------
 
 $modal-bg-color: #161616;
 $modal-overlay-bg-color: rgba(0, 0, 0, 0.6);
 
 // Various
-// =======
+// -------
