@@ -1,0 +1,13 @@
+mixin indices()
+  section.indices(class=attributes.class)
+    .indices__container
+      h2.basic-heading.indices__heading Показатели
+      img.indices__image(src='img/indices__image.jpg' alt='Контейнеры')
+      dl.indices__list
+        mixin indices__list-item(indicesListItem_props)
+          dt.indices__term
+            .indices__string= indicesListItem_props.text
+          dd.indices__details= indicesListItem_props.number
+        each item in INDICES_ITEMS
+          - const [value, key] = item;
+          +indices__list-item({ text: key, number: value })
