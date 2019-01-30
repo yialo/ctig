@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulp = require('gulp');
+const jpegtran = require('imagemin-jpegtran');
 const mincss = require('gulp-csso');
 const minimage = require('gulp-imagemin');
 const minjs = require('gulp-terser');
@@ -84,18 +85,18 @@ const minbitmap = function minimizeBitmapImages() {
     .src('./spec/img-raw/*.{jpg,png}')
     .pipe(
       minimage([
-        pngquant({
-          speed: 1,
-          quality: 80,
-        }),
-        zopfli({
-          more: true,
-        }),
-        minimage.jpegtran({
+        jpegtran({
           progressive: true,
         }),
         mozjpeg({
           quality: 90,
+        }),
+        pngquant({
+          speed: 1,
+          quality: [0.8, 0.8],
+        }),
+        zopfli({
+          more: true,
         }),
       ]),
     )
@@ -108,6 +109,10 @@ const cleanbuild = function deleteFormerBuildFolder() {
 
 const copyvideo = function copyVideoFilesToBuildFolder() {
   return gulp.src('./app/video/*.mp4').pipe(gulp.dest('./dist/video/'));
+};
+
+const copyfavicons = function copyFavIconsToBuildFolder() {
+  return gulp.src('./app/favicons/*').pipe(gulp.dest('./dist/favicons/'));
 };
 
 const copyfonts = function copyFontFilesToBuildFolder() {
@@ -172,7 +177,7 @@ gulp.task(
   'build',
   gulp.series(
     cleanbuild,
-    gulp.parallel(copyfonts, copyvideo, copysvg, copybitmap),
+    gulp.parallel(copyvideo, copyfonts, copyfavicons, copysvg, copybitmap),
     scripts,
     style,
     html,

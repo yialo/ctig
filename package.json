@@ -1,15 +1,15 @@
 {
-  "author": "author",
+  "author": "WayToStart",
   "browserslist": [
     "last 2 versions"
   ],
   "devDependencies": {
-    "autoprefixer": "9.4.6",
+    "autoprefixer": "9.4.7",
     "browser-sync": "2.26.3",
     "del": "3.0.0",
     "eslint": "5.12.1",
     "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.15.0",
+    "eslint-plugin-import": "2.16.0",
     "gulp": "4.0.0",
     "gulp-cli": "2.0.1",
     "gulp-csso": "3.0.1",
@@ -21,6 +21,7 @@
     "gulp-sass": "4.0.2",
     "gulp-sass-glob": "1.0.9",
     "gulp-terser": "1.1.7",
+    "imagemin-jpegtran": "6.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "7.0.0",
     "imagemin-zopfli": "6.0.0",
@@ -28,12 +29,16 @@
     "stylelint-scss": "3.5.1"
   },
   "engines": {
-    "node": "8.11.4"
+    "node": "10.15.0"
   },
   "license": "ISC",
   "main": "gulpfile.js",
-  "name": "stig",
+  "name": "ctig",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/alekseiarrowaytostart/stig.git"
+  },
   "scripts": {
     "build": "gulp build",
     "eslint": "eslint \"app/js/**/*.js\"",

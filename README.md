@@ -1,1 +1,1 @@
-# STIG / Transportal project
+# CTIG project
