@@ -1,0 +1,16 @@
+mixin sidebar()
+  .sidebar
+    .sidebar__constant-container
+      .sidebar__navigation-toggle
+        +navigation-toggle()
+      .sidebar__language-toggle
+        +language-toggle()
+      .sidebar__menu
+        +main-menu()
+      .sidebar__calculator-toggle
+        +calculator-toggle()
+    .sidebar__alternate-container
+      .sidebar__navigation
+        +navigation()
+      aside.sidebar__extra
+        +extra()

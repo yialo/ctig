@@ -152,7 +152,7 @@ const style = function launchCssCompiler() {
 
 const html = function launchHtmlCompiler() {
   return gulp
-    .src('./app/pug/*.pug')
+    .src('./app/pug/pages/*.pug')
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))

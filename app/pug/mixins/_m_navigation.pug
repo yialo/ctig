@@ -1,9 +1,16 @@
-nav.navigation
-  .navigation__container
+mixin navigation()
+  nav.navigation
+    .navigation__certificates
+      +certificates()
     ul.navigation__list
       mixin navigation__item(navigationItem_props)
         li.navigation__item
           a.navigation__link(
+            class=(
+              navigationItem_props.modifier === 'certificates'
+              ? 'navigation__link--certificates'
+              : null
+            )
             href=(
               NAVIGATION_EMPTY_LINKS
                 .concat(page.id)
@@ -16,5 +23,3 @@ nav.navigation
       each item in NAVIGATION_ITEMS
         - const [modifier, text] = item;
         +navigation__item({ modifier: modifier, text: text })
-  aside.navigation__extra
-    include _c_extra

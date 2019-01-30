@@ -1,0 +1,10 @@
+mixin search-form()
+  form.search-form(method='GET' action='https://echo.htmlacademy.ru' name='search-tracking')
+    label.search-form__field-wrapper(for='search-text')
+      input.search-form__field#search-text(
+        type='search'
+        name='search-text'
+        placeholder='Введите трек-номер'
+      )
+    button.search-form__button(type='submit')
+      .search-form__button-legend Найти

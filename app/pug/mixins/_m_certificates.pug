@@ -1,0 +1,9 @@
+mixin certificates()
+  .certificates
+    a.certificates__return-button(href='#') Вернуться
+    ul.certificates__list
+      mixin certificates__item(certificatesItem_text)
+        li.certificates__item
+          a.certificates__link(href='#')= certificatesItem_text
+      each text in CERTIFICATES_ITEMS
+        +certificates__item(text)

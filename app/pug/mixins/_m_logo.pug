@@ -1,0 +1,11 @@
+mixin logo()
+  .logo
+    a.logo__link(href=(page.id !== 'index' ? 'index.html' : null))
+      img.logo__image(
+        src='img/logo.svg'
+        alt=`Логотип компании ${SITE_TITLE}`
+        width='119'
+        height='39'
+      )
+      if page.id === 'index'
+        h1.logo__heading= page.heading

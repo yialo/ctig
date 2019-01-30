@@ -1,0 +1,10 @@
+mixin calls()
+  .calls
+    ul.calls__list
+      mixin calls__item(callsItem_props)
+        li.calls__item
+          a.calls__link(href=`tel:${callsItem_props.tel}`)= callsItem_props.text
+          span.calls__string= CALLS_STRING_TEXT
+      each item in CALLS_LINKS
+        - const [tel, text] = item;
+        +calls__item({ tel: tel, text: text })

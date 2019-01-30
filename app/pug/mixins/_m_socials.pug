@@ -1,0 +1,13 @@
+mixin socials()
+  .socials
+    ul.socials__list
+      mixin socials__item(socialsItem_props)
+        li.socials__item
+          a.socials__link(
+            class=`socials__link--${socialsItem_props.modifier}`
+            href=`https://${socialsItem_props.modifier}.com/`
+          )
+            .socials__legend= socialsItem_props.label
+      each item in SOCIALS_ITEMS
+        - const [path, text] = item;
+        +socials__item({ modifier: path, label: text })

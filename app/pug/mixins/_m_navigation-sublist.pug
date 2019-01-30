@@ -1,0 +1,7 @@
+mixin navigation-sublist(navigationSublist_props)
+  ul.navigation-sublist(
+    class=`navigation-sublist--${navigationSublist_props.modifier}`
+  )
+    mixin navigation-sublist__item()
+      li.navigation-sublist__item
+      a.navigation-sublist__link

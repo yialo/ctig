@@ -1,19 +1,20 @@
-include _global_variables
+include _global_data
 include _global_mixins
 
 block page-variables
 
 include _import_data
-include _import_components
+include _import_mixins
 
 doctype html
 html(lang='ru')
-  include ../components/_c_head
+  +head()
   body.page(class=`page--${page.id}`)
     header.page__header
-      include ../components/_c_page-header
+      +page-header()
     .page__sidebar
-      include ../components/_c_sidebar
-    block page-main
+      +sidebar()
+    main.page-main.page__main
+      block page-main
     script(src='js/picturefill.js')
     block current-page-scripts
