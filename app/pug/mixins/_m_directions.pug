@@ -1,0 +1,9 @@
+mixin directions(directions_props)
+  .directions(class=attributes.class)
+    h3.directions__heading= directions_props.heading
+    ul.directions__list
+      mixin directions__item(directionsItem_text)
+        li.directions__item
+          a.directions__link(href='#')= directionsItem_text
+      each item in directions_props.items
+        +directions__item(item)
