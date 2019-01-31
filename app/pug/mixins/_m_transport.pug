@@ -1,13 +1,4 @@
 mixin transport()
-  -
-    const TRANSPORT_TYPES = [
-      'Авиатранспорт',
-      'Ж/Д перевозки',
-      'Автотранспорт',
-      'Водный транспорт',
-      'Ракетный транспорт',
-    ];
-
   section.transport(class=attributes.class)
     .transport__container
       +basic-heading().transport__heading Виды перевозок
@@ -15,16 +6,24 @@ mixin transport()
       ul.transport__list
 
         mixin transport__item(transportItem_props)
-          li.transport__item
-            h3.transport__caption
+          li.transport__item(class=transportItem_props.specialModifier)
+            h3.transport__caption= transportItem_props.caption
             +basic-picture({
               parentClass: 'transport',
               numerator: transportItem_props.number,
-              altText: transportItem_props.altText,
+              altText: transportItem_props.caption,
             })
+            block
 
         each item, index in TRANSPORT_TYPES
+          -
+            const naturalIndex = index + 1;
+            const specialClass = naturalIndex === 5 ? 'transport__item--special' : null;
+
           +transport__item({
-            number: index + 1,
-            altText: item,
+            number: naturalIndex,
+            caption: item,
+            specialModifier: specialClass,
           })
+            if specialClass
+              span.transport__hint Скоро

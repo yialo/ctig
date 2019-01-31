@@ -1,0 +1,18 @@
+mixin customs(customs_modifier)
+  section.customs(
+    class=[
+      `customs--${customs_modifier}`,
+      attributes.class,
+    ]
+  )
+    .customs__container
+      header.customs__headline
+        +basic-heading().customs__title= CUSTOMS_DATA[customs_modifier].title
+        p.customs__subtitle= CUSTOMS_DATA[customs_modifier].subtitle
+
+      +basic-picture({
+        parentClass: `customs--${customs_modifier}`,
+        numerator: 1,
+        altText: CUSTOMS_DATA[customs_modifier].title,
+      })
+

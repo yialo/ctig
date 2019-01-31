@@ -5,12 +5,7 @@ mixin basic-picture(basicPicture_props)
     const parentElementNumeratorClass = `${parentElementClass}--${numerator}`
     const imageSubpath = `${parentClass}__image--${numerator}`;
 
-  picture.basic-picture(
-    class=[
-      parentElementClass,
-      parentElementNumeratorClass,
-    ]
-  )
+  picture.basic-picture(class=[parentElementClass, parentElementNumeratorClass])
     img.basic-picture__image(
       src=`img/${imageSubpath}.jpg`
       alt=basicPicture_props.altText
