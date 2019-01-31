@@ -1,0 +1,30 @@
+mixin transport()
+  -
+    const TRANSPORT_TYPES = [
+      'Авиатранспорт',
+      'Ж/Д перевозки',
+      'Автотранспорт',
+      'Водный транспорт',
+      'Ракетный транспорт',
+    ];
+
+  section.transport(class=attributes.class)
+    .transport__container
+      +basic-heading().transport__heading Виды перевозок
+
+      ul.transport__list
+
+        mixin transport__item(transportItem_props)
+          li.transport__item
+            h3.transport__caption
+            +basic-picture({
+              parentClass: 'transport',
+              numerator: transportItem_props.number,
+              altText: transportItem_props.altText,
+            })
+
+        each item, index in TRANSPORT_TYPES
+          +transport__item({
+            number: index + 1,
+            altText: item,
+          })
