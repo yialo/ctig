@@ -1,0 +1,18 @@
+mixin additional-service()
+  section.additional-service(class=attributes.class)
+    .additional-service__container
+      +basic-heading().additional-service__heading= ADDITIONAL_SERVICE.heading
+      ul.additional-service__list
+        mixin additional-service__item(additionalServiceItem_props)
+          li.additional-service__item(
+            class=`additional-service__item--${additionalServiceItem_props.number}`
+          )
+            h3.additional-service__caption=additionalServiceItem_props.caption
+            +basic-picture({
+              parentClass: 'additional-service',
+              numerator: additionalServiceItem_props.number,
+              altText: additionalServiceItem_props.altText,
+              isWrapped: true,
+            })
+        each caption, index in ADDITIONAL_SERVICE.items
+          +additional-service__item({ number: index + 1, caption: caption })

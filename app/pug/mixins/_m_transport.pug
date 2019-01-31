@@ -6,12 +6,18 @@ mixin transport()
       ul.transport__list
 
         mixin transport__item(transportItem_props)
-          li.transport__item(class=transportItem_props.specialModifier)
+          li.transport__item(
+            class=[
+              `transport__item--${transportItem_props.number}`,
+              transportItem_props.specialModifier,
+            ]
+          )
             h3.transport__caption= transportItem_props.caption
             +basic-picture({
               parentClass: 'transport',
               numerator: transportItem_props.number,
               altText: transportItem_props.caption,
+              isWrapped: true,
             })
             block
 

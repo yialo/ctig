@@ -1,9 +1,9 @@
 mixin intro()
   header.intro(class=attributes.class)
     .intro__container
-      +basic-heading().intro__heading Международная перевозка сборных грузов
+      +basic-heading().intro__heading= INTRO_DATA.heading
 
-      each string, index in ['Старт ракеты', 'Облака']
+      each string, index in INTRO_DATA.imageDescriptions
         +basic-picture({
           parentClass: 'intro',
           numerator: index + 1,

@@ -1,0 +1,24 @@
+mixin clients()
+  section.clients(class=attributes.class)
+    .clients__container
+
+      +basic-heading().clients__heading= CLIENTS_DATA.heading
+      ul.clients__list
+
+        mixin clients__item(clientsItem_props)
+          li.clients__item(
+            class=`clients__item--${clientsItem_props.number}`
+          )
+            +basic-picture({
+              parentClass: 'clients',
+              numerator: clientsItem_props.number,
+              altText: clientsItem_props.text,
+              isWrapper: true,
+              imageFormat: 'png',
+            })
+
+        each item, index in CLIENTS_DATA.clientNames
+          +clients__item({
+            number: index + 1,
+            text: item,
+          })

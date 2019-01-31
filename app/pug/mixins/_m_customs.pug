@@ -13,7 +13,7 @@ mixin customs(customs_modifier)
       +basic-picture({
         parentClass: `customs--${customs_modifier}`,
         numerator: 1,
-        altText: CUSTOMS_DATA[customs_modifier].title,
+        altText: CUSTOMS_DATA[customs_modifier].imageDescription,
       })
 
       .customs__text-content
@@ -28,3 +28,8 @@ mixin customs(customs_modifier)
 
         each item in CUSTOMS_DATA[customs_modifier].listItems
           +customs__item(item)
+
+        - const customsParagraphsRest = CUSTOMS_DATA[customs_modifier].paragraphs.slice(1);
+
+        each item in customsParagraphsRest
+          +customs__paragraph(item)
