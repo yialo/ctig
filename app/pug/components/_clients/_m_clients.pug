@@ -2,7 +2,7 @@ mixin clients()
   section.clients(class=attributes.class)
     .clients__container
 
-      +basic-heading().clients__heading= CLIENTS_DATA.heading
+      +basic-heading().clients__heading= CLIENTS_HEADING
       ul.clients__list
 
         mixin clients__item(clientsItem_props)
@@ -17,7 +17,7 @@ mixin clients()
               imageFormat: 'png',
             })
 
-        each item, index in CLIENTS_DATA.clientNames
+        each item, index in CLIENTS_LOGO_TITLES
           +clients__item({
             number: index + 1,
             text: item,

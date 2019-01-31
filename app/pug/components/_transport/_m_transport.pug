@@ -1,7 +1,8 @@
 mixin transport()
   section.transport(class=attributes.class)
     .transport__container
-      +basic-heading().transport__heading Виды перевозок
+
+      +basic-heading().transport__heading= TRANSPORT_HEADING
 
       ul.transport__list
 
@@ -21,7 +22,7 @@ mixin transport()
             })
             block
 
-        each item, index in TRANSPORT_TYPES
+        each item, index in TRANSPORT_CAPTIONS
           -
             const naturalIndex = index + 1;
             const specialClass = naturalIndex === 5 ? 'transport__item--special' : null;
@@ -32,4 +33,4 @@ mixin transport()
             specialModifier: specialClass,
           })
             if specialClass
-              span.transport__hint Скоро
+              span.transport__hint= TRANSPORT_HINT

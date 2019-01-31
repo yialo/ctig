@@ -1,12 +1,7 @@
 extends ../base/_template_default
 
 block page-variables
-  -
-    const page = {
-      id: 'index',
-      title: 'Главная',
-      heading: `Транспортная компания ${SITE_TITLE}: официальный сайт`,
-    };
+  - const page = PAGE_INDEX;
 
 block page-main
   +intro().page-main__intro

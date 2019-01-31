@@ -1,7 +1,7 @@
 mixin additional-service()
   section.additional-service(class=attributes.class)
     .additional-service__container
-      +basic-heading().additional-service__heading= ADDITIONAL_SERVICE.heading
+      +basic-heading().additional-service__heading= ADDITIONAL_HEADING
       ul.additional-service__list
         mixin additional-service__item(additionalServiceItem_props)
           li.additional-service__item(
@@ -14,5 +14,5 @@ mixin additional-service()
               altText: additionalServiceItem_props.altText,
               isWrapped: true,
             })
-        each caption, index in ADDITIONAL_SERVICE.items
+        each caption, index in ADDITIONAL_ITEMS
           +additional-service__item({ number: index + 1, caption: caption })
