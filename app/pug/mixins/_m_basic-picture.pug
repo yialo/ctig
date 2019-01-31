@@ -1,0 +1,17 @@
+mixin basic-picture(basicPicture_props)
+  -
+    const {parentClass, numerator, altText} = basicPicture_props;
+    const parentElementClass = `${parentClass}__image-wrapper`;
+    const parentElementNumeratorClass = `${parentElementClass}--${numerator}`
+    const imageSubpath = `${parentClass}__image--${numerator}`;
+
+  picture.basic-picture(
+    class=[
+      parentElementClass,
+      parentElementNumeratorClass,
+    ]
+  )
+    img.basic-picture__image(
+      src=`img/${imageSubpath}.jpg`
+      alt=basicPicture_props.altText
+    )

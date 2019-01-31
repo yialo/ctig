@@ -1,27 +1,22 @@
 mixin logistics()
   section.logistics(class=attributes.class)
     .logistics__container
-      h2.basic-heading.logistics__heading География перевозок
-      mixin logistics__image-wrapper(logisticsImageWrapper_props)
-        picture.logistics__image-wrapper(
-          class=`logistics__image-wrapper--${logisticsImageWrapper_props.modifier}`
-        )
-          img.logistics__image(
-            src=`logistics__image-wrapper--${logisticsImageWrapper_props.modifier}${logisticsImageWrapper_props.subpath}`
-            alt=logisticsImageWrapper_props.altText
-          )
-      each item in LOGISTICS_PICTURES
-        - const [modifier, subpath, altText] = item;
-        +logistics__image-wrapper({
-            modifier: modifier,
-            subpath: subpath,
-            altText: altText,
-          })
+      +basic-heading().logistics__heading География перевозок
+
+      each string, index in ['Башня', 'Собор', 'Пагода']
+        +basic-picture({
+          parentClass: 'logistics',
+          numerator: index + 1,
+          altText: string,
+        })
+
       .logistics__text-content
         ul.logistics__list
+
           mixin logistics__item()
             li.logistics__item
               block
+
           each countries, continent in DIRECTIONS
             +logistics__item()
               +directions({

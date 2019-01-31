@@ -1,12 +1,19 @@
 mixin about()
   section.about(class=attributes.class)
     .about__container
-      h2.basic-heading.about__heading О нас
-      picture.about__image-wrapper
-        img.about__image(src='img/about__image.jpg' alt='Контейнеры')
+      +basic-heading().about__heading О нас
+
+      +basic-picture({
+        parentClass: 'about',
+        numerator: 1,
+        altText: 'Контейнеры',
+      })
+
       .about__text-content
+
         mixin about__paragraph(aboutParagraph_content)
           p.basic-paragraph.about__paragraph= aboutParagraph_content
+
         each paragraph in ABOUT_PARAGRAPHS
           +about__paragraph(paragraph)
         p.about__endline Спасибо за доверие, Ваш #{SITE_TITLE}.
