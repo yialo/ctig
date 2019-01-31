@@ -16,3 +16,15 @@ mixin customs(customs_modifier)
         altText: CUSTOMS_DATA[customs_modifier].title,
       })
 
+      .customs__text-content
+        mixin customs__paragraph(customsParagraph_content)
+          +basic-text-block('p').customs__paragraph!= customsParagraph_content
+
+        +customs__paragraph(CUSTOMS_DATA[customs_modifier].paragraphs[0])
+
+        ul.customs__list
+          mixin customs__item(customItem_content)
+            +basic-text-block('li').customs__item!= customItem_content
+
+        each item in CUSTOMS_DATA[customs_modifier].listItems
+          +customs__item(item)

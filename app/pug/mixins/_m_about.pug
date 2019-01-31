@@ -12,7 +12,7 @@ mixin about()
       .about__text-content
 
         mixin about__paragraph(aboutParagraph_content)
-          p.basic-paragraph.about__paragraph= aboutParagraph_content
+          +basic-text-block('p').about__paragraph= aboutParagraph_content
 
         each paragraph in ABOUT_PARAGRAPHS
           +about__paragraph(paragraph)
