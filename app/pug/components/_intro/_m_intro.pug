@@ -1,12 +1,12 @@
 mixin intro()
   header.intro(class=attributes.class)
-    .intro__container
-      +basic-heading().intro__heading= INTRO_DATA.heading
+    +basic-container().intro__container
+      +basic-heading().intro__heading= INTRO_HEADING
 
-      each string, index in INTRO_DATA.imageDescriptions
+      each string, index in INTRO_IMAGE_ALTS
         +basic-picture({
-          parentClass: 'intro',
-          numerator: index + 1,
           altText: string,
-          isNumerated: true,
+          areBlocksNumerated: true,
+          numerator: index + 1,
+          parentClass: 'intro',
       })
