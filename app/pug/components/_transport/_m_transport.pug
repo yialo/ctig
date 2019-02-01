@@ -18,14 +18,16 @@ mixin transport()
               parentClass: 'transport',
               numerator: transportItem_props.number,
               altText: transportItem_props.caption,
-              isWrapped: true,
             })
             block
 
         each item, index in TRANSPORT_CAPTIONS
           -
             const naturalIndex = index + 1;
-            const specialClass = naturalIndex === 5 ? 'transport__item--special' : null;
+            const specialClass =
+              naturalIndex === 5
+              ? 'transport__item--special'
+              : null;
 
           +transport__item({
             number: naturalIndex,

@@ -1,13 +1,14 @@
 mixin logistics()
   section.logistics(class=attributes.class)
     .logistics__container
-      +basic-heading().logistics__heading География перевозок
+      +basic-heading().logistics__heading= LOGISTICS_HEADING
 
-      each string, index in ['Башня', 'Собор', 'Пагода']
+      each string, index in LOGISTICS_IMAGE_ALTS
         +basic-picture({
           parentClass: 'logistics',
           numerator: index + 1,
           altText: string,
+          isNumerated: true,
         })
 
       .logistics__text-content

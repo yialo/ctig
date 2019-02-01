@@ -4,15 +4,14 @@ mixin basic-picture(basicPicture_props)
       parentClass,
       numerator,
       altText,
-      isWrapped=false,
+      isNumerated=false,
       imageFormat='jpg',
     } = basicPicture_props;
     const parentElementClass = `${parentClass}__image-wrapper`;
-    const parentElementNumeratorClass = (
-      isWrapped
-      ? null
-      : `${parentElementClass}--${numerator}`
-    );
+    const parentElementNumeratorClass =
+      isNumerated
+      ? `${parentElementClass}--${numerator}`
+      : null;
     const imageSubpath = `${parentClass}__image--${numerator}`;
 
   picture.basic-picture(class=[parentElementClass, parentElementNumeratorClass])

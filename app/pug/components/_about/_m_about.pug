@@ -1,13 +1,13 @@
 mixin about()
   section.about(class=attributes.class)
-    .about__container
+    +basic-container().about__container
 
       +basic-heading().about__heading= ABOUT_HEADING
 
       +basic-picture({
         parentClass: 'about',
         numerator: 1,
-        altText: 'Контейнеры',
+        altText: ABOUT_IMAGE_ALT,
       })
 
       .about__text-content
