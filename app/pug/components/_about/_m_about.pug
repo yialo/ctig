@@ -1,0 +1,21 @@
+mixin about()
+  include _d_about
+  section.about(class=attributes.class)
+    +basic-container().about__container
+      +basic-heading('h1').about__heading О нас
+      +basic-picture({
+        altText: 'Склад',
+        areImagesNumerated: false,
+        parentClass: 'about',
+      })
+      each item in ABOUT_FEATURES_LISTS
+        - const { heading, list } = item;
+        .about__features-block
+          h3.about__list-caption= `${heading}:`
+          ul.about__list
+            each listItem, index in list
+              -
+                const stringFinalCharacted = (index !== list.length - 1)
+                  ? ';'
+                  : '.';
+              li.about__item= `${listItem}${stringFinalCharacted}`
