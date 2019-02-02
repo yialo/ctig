@@ -1,24 +1,22 @@
 mixin main-menu()
   ul.main-menu
+
     mixin main-menu__item(mainMenuItem_props)
+      - const { modifier, text } = mainMenuItem_props;
       li.main-menu__item
         a.main-menu__link(
           href=(
-            MAIN_MENU_EMPTY_LINKS
-              .concat(page.id)
-              .includes(mainMenuItem_props.modifier)
+            MAIN_MENU_EMPTY_LINKS.concat(page.id).includes(modifier)
             ? null
-            : `${mainMenuItem_props.modifier}.html`
+            : `${modifier}.html`
           )
-          class={
-            'main-menu__link--notext':
-            mainMenuItem_props.modifier === 'index'
-          }
+          class=(modifier === 'index' ? 'main-menu__link--notext': null)
         )
-          if mainMenuItem_props.modifier === 'index'
-            span.main-menu__legend= mainMenuItem_props.text
+          if modifier === 'index'
+            span.main-menu__legend= text
           else
-            = mainMenuItem_props.text
+            = text
+
     each item in MAIN_MENU_ITEMS
       - const [modifier, text] = item;
       +main-menu__item({ modifier: modifier, text: text })

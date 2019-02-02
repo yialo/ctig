@@ -1,37 +1,13 @@
 mixin transport()
   section.transport(class=attributes.class)
-    .transport__container
-
+    +basic-container().transport__container
       +basic-heading().transport__heading= TRANSPORT_HEADING
 
       ul.transport__list
-
-        mixin transport__item(transportItem_props)
-          - const { number, caption, specialModifier } = transportItem_props;
-          li.transport__item(
-            class=[
-              `transport__item--${number}`,
-              specialModifier,
-            ]
-          )
-            h3.transport__caption= caption
-            +basic-picture({
-              parentClass: 'transport',
-              numerator: number,
-              altText: caption,
-            })
-            block
-
         each item, index in TRANSPORT_CAPTIONS
-          -
-            const specialClass = (index + 1 === 5)
-              ? 'transport__item--special'
-              : null;
-
-          +transport__item({
-            number: index + 1,
-            caption: item,
-            specialModifier: specialClass,
-          })
-            if specialClass
-              span.transport__hint= TRANSPORT_HINT
+          - const naturalIndex = index + 1;
+          +transport-item({
+            heading: item,
+            number: naturalIndex,
+            specialMark: item === 'Ракетный транспорт',
+          }).transport__item(class=`transport__item--${naturalIndex}`)

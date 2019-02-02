@@ -1,0 +1,17 @@
+mixin transport-item(transportItem_props)
+  - const { heading, number, specialMark=false } = transportItem_props;
+
+  li.transport-item(class=[
+    specialMark ? 'transport-item--special' : null,
+    attributes.class,
+  ])
+    h3.transport-item__heading= heading
+
+    +basic-picture({
+      altText: heading,
+      numerator: number,
+      parentClass: 'transport-item',
+    })
+
+    if specialMark
+      span.transport-item__hint= TRANSPORT_ITEM_HINT

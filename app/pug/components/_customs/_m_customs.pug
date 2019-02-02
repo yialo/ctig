@@ -1,35 +1,42 @@
 mixin customs(customs_modifier)
-  section.customs(
-    class=[
-      `customs--${customs_modifier}`,
-      attributes.class,
-    ]
-  )
-    .customs__container
+  -
+    const {
+      imageDescription,
+      listItems,
+      paragraphs,
+      subtitle,
+      title,
+    } = CUSTOMS_DATA[customs_modifier];
+
+  section.customs(class=[`customs--${customs_modifier}`, attributes.class])
+    +basic-container().customs__container
+
       header.customs__headline
-        +basic-heading().customs__title= CUSTOMS_DATA[customs_modifier].title
-        p.customs__subtitle= CUSTOMS_DATA[customs_modifier].subtitle
+        +basic-heading().customs__title= title
+        p.customs__subtitle= subtitle
 
       +basic-picture({
-        parentClass: `customs--${customs_modifier}`,
-        numerator: 1,
-        altText: CUSTOMS_DATA[customs_modifier].imageDescription,
+        altText: imageDescription,
+        areImagesNumerated: false,
+        imagePathModifier: customs_modifier,
+        parentClass: `customs`,
+        parentHasModifier: true,
       })
 
       .customs__text-content
+
         mixin customs__paragraph(customsParagraph_content)
           +basic-text-block('p').customs__paragraph!= customsParagraph_content
 
-        +customs__paragraph(CUSTOMS_DATA[customs_modifier].paragraphs[0])
+        +customs__paragraph(paragraphs[0])
 
         ul.customs__list
           mixin customs__item(customItem_content)
             +basic-text-block('li').customs__item!= customItem_content
 
-        each item in CUSTOMS_DATA[customs_modifier].listItems
+        each item in listItems
           +customs__item(item)
 
-        - const customsParagraphsRest = CUSTOMS_DATA[customs_modifier].paragraphs.slice(1);
-
+        - const customsParagraphsRest = paragraphs.slice(1);
         each item in customsParagraphsRest
           +customs__paragraph(item)

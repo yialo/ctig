@@ -2,24 +2,26 @@ mixin navigation()
   .navigation
     .navigation__certificates
       +certificates()
+
     ul.navigation__list
+
       mixin navigation__item(navigationItem_props)
+        - const { modifier, text } = navigationItem_props;
         li.navigation__item
           a.navigation__link(
             class=(
-              navigationItem_props.modifier === 'certificates'
+              modifier === 'certificates'
               ? 'navigation__link--certificates'
               : null
             )
             href=(
-              NAVIGATION_EMPTY_LINKS
-                .concat(page.id)
-                .includes(navigationItem_props.modifier)
+              NAVIGATION_EMPTY_LINKS.concat(page.id).includes(modifier)
               ? null
-              : `${navigationItem_props.modifier}.html`
+              : `${modifier}.html`
             )
-          )= navigationItem_props.text
+          )= text
           block
+
       each item in NAVIGATION_ITEMS
         - const [modifier, text] = item;
         +navigation__item({ modifier: modifier, text: text })

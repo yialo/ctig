@@ -11,16 +11,15 @@ mixin logistics-brief()
           parentClass: 'logistics-brief',
         })
 
-      .logistics-brief__text-content
-        ul.logistics-brief__list
+      ul.logistics-brief__list
 
-          mixin logistics-brief__item()
-            li.logistics-brief__item
-              block
+        mixin logistics-brief__item()
+          li.logistics-brief__item
+            block
 
-          each countries, continent in DIRECTIONS
-            +logistics-brief__item()
-              +directions({
-                heading: continent,
-                items: countries,
-              })
+        each countries, continent in LOGISTICS_BRIEF_ITEMS
+          +logistics-brief__item()
+            +directions({
+              heading: continent,
+              items: countries,
+            })

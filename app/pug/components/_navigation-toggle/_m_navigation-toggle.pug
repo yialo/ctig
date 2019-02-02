@@ -1,12 +1,9 @@
 mixin navigation-toggle()
   .navigation-toggle
-    button.navigation-toggle__button(
-      class='navigation-toggle__button--opener'
-      type='button'
-    )
-      span.navigation-toggle__legend Показать главное меню
-    button.navigation-toggle__button(
-      class='navigation-toggle__button--closer'
-      type='button'
-    )
-      span.navigation-toggle__legend Скрыть главное меню
+    each item in NAVIGATION_TOGGLES
+      - const [modifier, string] = item;
+      button.navigation-toggle__button(
+        class=`navigation-toggle__button--${modifier}`
+        type='button'
+      )
+        span.navigation-toggle__legend= `${string} ${NAVIGATION_TOGGLE_LEGEND}`
