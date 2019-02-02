@@ -1,10 +1,18 @@
 mixin main-menu()
+  -
+    const MAIN_MENU_ITEMS = [
+      ['index', 'Главная'],
+      ['contacts', 'Контакты'],
+      ['about', 'О компании'],
+      ['transport', 'Транспорт'],
+      ['registration', 'Таможенное оформление'],
+    ];
   ul.main-menu
     each item in MAIN_MENU_ITEMS
       - const [modifier, text] = item;
       li.main-menu__item
         -
-          const itemLink = MAIN_MENU_EMPTY_LINKS.includes(modifier)
+          const itemLink = EMPTY_NAVIGATION_LINKS.includes(modifier)
             ? '#'
             : `${modifier}.html`;
         a.main-menu__link(

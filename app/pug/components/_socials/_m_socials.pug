@@ -1,4 +1,10 @@
 mixin socials()
+  -
+    const SOCIALS_ITEMS = [
+      ['facebook', 'Facebook'],
+      ['instagram', 'Instagram'],
+      ['vk', 'ВКонтакте'],
+    ];
   .socials(class=attributes.class)
     ul.socials__list
       each item in SOCIALS_ITEMS

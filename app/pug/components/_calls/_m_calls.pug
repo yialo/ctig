@@ -1,8 +1,13 @@
 mixin calls()
+  -
+    const CALLS_LINKS = [
+      ['+74957446983', '8 495 744 69 83'],
+      ['88002220733', '8 800 222 07 33'],
+    ];
   .calls
     ul.calls__list
       each item in CALLS_LINKS
         - const [tel, text] = item;
         li.calls__item
           a.calls__link(href=`tel:${tel}`)= text
-          a.calls__request(href='#')= CALLS_REQUEST_TEXT
+          a.calls__request(href='#') Заказать звонок

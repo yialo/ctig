@@ -1,8 +1,9 @@
 mixin logistics-brief()
+  include _d_logistics-brief
   section.logistics-brief(class=attributes.class)
     +basic-container().logistics-brief__container
-      +basic-heading().logistics-brief__heading= LOGISTICS_BRIEF_HEADING
-      each string, index in LOGISTICS_BRIEF_IMAGE_ALTS
+      +basic-heading().logistics-brief__heading География перевозок
+      each string, index in ['Башня', 'Собор', 'Пагода']
         +basic-picture({
           altText: string,
           areBlocksNumerated: true,

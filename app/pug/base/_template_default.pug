@@ -2,8 +2,7 @@ include _global_data
 
 block page-variables
 
-include ../components/_import_data
-include ../components/_import_mixins
+include _components_import
 
 doctype html
 html(lang='ru')
@@ -17,7 +16,3 @@ html(lang='ru')
       block page-main
     script(src='js/picturefill.js')
     block current-page-scripts
-
-//- TODO:
-  1). Применить деструктурирующее присваивание для параметров миксинов, если это объекты.
-  2). Разделить шаблоны и данные и соединить в папках компонентов

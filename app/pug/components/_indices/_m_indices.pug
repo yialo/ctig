@@ -1,9 +1,16 @@
 mixin indices()
+  -
+    const INDICES_ITEMS = [
+      ['15 733 000', 'тонн перевезено'],
+      ['156', 'партнеров'],
+      ['15', 'лет на рынке перевозок'],
+      ['58', 'человек в команде'],
+    ];
   section.indices(class=attributes.class)
     +basic-container().indices__container
-      +basic-heading().indices__heading= INDECES_HEADING
+      +basic-heading().indices__heading Показатели
       +basic-picture({
-        altText: INDICES_IMAGE_ALT,
+        altText: 'Контейнеры',
         areImagesNumerated: false,
         parentClass: 'indices',
       })

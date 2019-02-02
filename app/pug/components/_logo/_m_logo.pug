@@ -1,12 +1,11 @@
 mixin logo()
   .logo
     a.logo__link(href=(page.id !== 'index' ? 'index.html' : null))
-      - const { width, height } = LOGO_IMAGE_SIZES;
       img.logo__image(
-        src=LOGO_IMAGE_PATH
-        alt=LOGO_IMAGE_ALT
-        width=width
-        height=height
+        alt=`Логотип компании ${SITE_TITLE}`
+        height=39
+        src='img/logo__image.svg'
+        width=119
       )
       if page.id === 'index'
         h1.logo__heading= page.heading

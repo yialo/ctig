@@ -1,7 +1,14 @@
 mixin additional-service()
+  -
+    const ADDITIONAL_ITEMS = [
+      'Страхование грузов',
+      'Поиск поставщиков в Китае',
+      'Предоставление контрактодержателя',
+      'Кросс докинг',
+    ];
   section.additional-service(class=attributes.class)
     +basic-container().additional-service__container
-      +basic-heading().additional-service__heading= ADDITIONAL_HEADING
+      +basic-heading().additional-service__heading Дополнительный сервис
       ul.additional-service__list
         each caption, index in ADDITIONAL_ITEMS
           li.additional-service__item(

@@ -1,6 +1,7 @@
 mixin certificates()
+  include _d_certificates
   .certificates
-    a.certificates__return-button(href='#')= CERTIFICATES_RETURN_LEGEND
+    a.certificates__return-button(href='#') Вернуться
     ul.certificates__list
       each text in CERTIFICATES_ITEMS
         li.certificates__item
