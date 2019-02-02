@@ -7,14 +7,11 @@ mixin customs(customs_modifier)
       subtitle,
       title,
     } = CUSTOMS_DATA[customs_modifier];
-
   section.customs(class=[`customs--${customs_modifier}`, attributes.class])
     +basic-container().customs__container
-
       header.customs__headline
         +basic-heading().customs__title= title
         p.customs__subtitle= subtitle
-
       +basic-picture({
         altText: imageDescription,
         areImagesNumerated: false,
@@ -22,21 +19,11 @@ mixin customs(customs_modifier)
         parentClass: `customs`,
         parentHasModifier: true,
       })
-
       .customs__text-content
-
-        mixin customs__paragraph(customsParagraph_content)
-          +basic-text-block('p').customs__paragraph!= customsParagraph_content
-
-        +customs__paragraph(paragraphs[0])
-
-        ul.customs__list
-          mixin customs__item(customItem_content)
-            +basic-text-block('li').customs__item!= customItem_content
-
-        each item in listItems
-          +customs__item(item)
-
         - const customsParagraphsRest = paragraphs.slice(1);
+        +basic-text-block('p').customs__paragraph!= paragraphs[0]
+        ul.customs__list
+          each item in listItems
+            +basic-text-block('li').customs__item!= item
         each item in customsParagraphsRest
-          +customs__paragraph(item)
+          +basic-text-block('p').customs__paragraph!= item

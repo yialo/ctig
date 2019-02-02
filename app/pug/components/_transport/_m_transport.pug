@@ -2,7 +2,6 @@ mixin transport()
   section.transport(class=attributes.class)
     +basic-container().transport__container
       +basic-heading().transport__heading= TRANSPORT_HEADING
-
       ul.transport__list
         each item, index in TRANSPORT_CAPTIONS
           - const naturalIndex = index + 1;

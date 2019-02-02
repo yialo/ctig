@@ -10,7 +10,9 @@ mixin basic-picture(basicPicture_props)
       parentHasModifier=false,
       imagePathModifier=false,
     } = basicPicture_props;
+
     const parentElementClass = `${parentClass}__image-wrapper`;
+
     const parentElementNumeratorClass = areBlocksNumerated
       ? `${parentElementClass}--${numerator}`
       : null;

@@ -2,28 +2,21 @@ mixin navigation()
   .navigation
     .navigation__certificates
       +certificates()
-
     ul.navigation__list
-
-      mixin navigation__item(navigationItem_props)
-        - const { modifier, text } = navigationItem_props;
+      each item in NAVIGATION_ITEMS
+        - const [modifier, text] = item;
         li.navigation__item
+          -
+            const linkPath = NAVIGATION_EMPTY_LINKS.includes(modifier)
+              ? '#'
+              : `${modifier}.html`;
           a.navigation__link(
             class=(
               modifier === 'certificates'
               ? 'navigation__link--certificates'
               : null
             )
-            href=(
-              NAVIGATION_EMPTY_LINKS.concat(page.id).includes(modifier)
-              ? null
-              : `${modifier}.html`
-            )
+            href=(modifier === page.id ? null : linkPath)
           )= text
-          block
-
-      each item in NAVIGATION_ITEMS
-        - const [modifier, text] = item;
-        +navigation__item({ modifier: modifier, text: text })
           if modifier in NAVIGATION_SUBLISTS
             +navigation-sublist(modifier)

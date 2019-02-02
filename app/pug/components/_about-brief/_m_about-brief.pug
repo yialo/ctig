@@ -1,21 +1,13 @@
 mixin about-brief()
   section.about-brief(class=attributes.class)
     +basic-container().about-brief__container
-
       +basic-heading().about-brief__heading= ABOUT_BRIEF_HEADING
-
       +basic-picture({
         altText: ABOUT_BRIEF_IMAGE_ALT,
         areImagesNumerated: false,
         parentClass: 'about-brief',
       })
-
       .about-brief__text-content
-
-        mixin about-brief__paragraph(aboutBriefParagraph_text)
-          +basic-text-block('p').about-brief__paragraph= aboutBriefParagraph_text
-
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
-          +about-brief__paragraph(paragraph)
-
+          +basic-text-block('p').about-brief__paragraph= paragraph
         p.about-brief__endline= ABOUT_BRIEF_ENDLINE

@@ -2,21 +2,14 @@ mixin indices()
   section.indices(class=attributes.class)
     +basic-container().indices__container
       +basic-heading().indices__heading= INDECES_HEADING
-
       +basic-picture({
         altText: INDICES_IMAGE_ALT,
         areImagesNumerated: false,
         parentClass: 'indices',
       })
-
       dl.indices__list
-
-        mixin indices__list-item(indicesListItem_props)
-          - const { text, number } = indicesListItem_props;
-          dt.indices__term
-            .indices__string= text
-          dd.indices__details= number
-
         each item in INDICES_ITEMS
           - const [value, key] = item;
-          +indices__list-item({ text: key, number: value })
+          dt.indices__term
+            span.indices__string= key
+          dd.indices__details= value

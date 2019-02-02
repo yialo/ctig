@@ -1,24 +1,15 @@
 mixin additional-service()
   section.additional-service(class=attributes.class)
     +basic-container().additional-service__container
-
       +basic-heading().additional-service__heading= ADDITIONAL_HEADING
-
       ul.additional-service__list
-
-        mixin additional-service__item(additionalServiceItem_props)
-          - const { number, caption, altText } = additionalServiceItem_props;
-
+        each caption, index in ADDITIONAL_ITEMS
           li.additional-service__item(
-            class=`additional-service__item--${number}`
+            class=`additional-service__item--${index + 1}`
           )
-            h3.additional-service__caption=caption
-
+            h3.additional-service__caption= caption
             +basic-picture({
-              altText: altText,
-              numerator: number,
+              altText: caption,
+              numerator: index + 1,
               parentClass: 'additional-service',
             })
-
-        each caption, index in ADDITIONAL_ITEMS
-          +additional-service__item({ number: index + 1, caption: caption })

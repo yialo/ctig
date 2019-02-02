@@ -1,16 +1,6 @@
 mixin navigation-sublist(navigationSublist_modifier)
-  ul.navigation-sublist(
-    class=`navigation-sublist--${navigationSublist_modifier}`
-  )
-
-    mixin navigation-sublist__item(navigationSublistItem_props)
-      - const { path, text } = navigationSublistItem_props;
-      li.navigation-sublist__item
-        a.navigation-sublist__link(href=path)= text
-
+  ul.navigation-sublist
     each item in NAVIGATION_SUBLISTS[navigationSublist_modifier]
       - const [text, path] = item;
-      +navigation-sublist__item({
-        path: path,
-        text: text,
-      })
+      li.navigation-sublist__item
+        a.navigation-sublist__link(href=path)= text

@@ -2,7 +2,6 @@ mixin logistics-brief()
   section.logistics-brief(class=attributes.class)
     +basic-container().logistics-brief__container
       +basic-heading().logistics-brief__heading= LOGISTICS_BRIEF_HEADING
-
       each string, index in LOGISTICS_BRIEF_IMAGE_ALTS
         +basic-picture({
           altText: string,
@@ -10,16 +9,12 @@ mixin logistics-brief()
           numerator: index + 1,
           parentClass: 'logistics-brief',
         })
-
       ul.logistics-brief__list
-
-        mixin logistics-brief__item()
+        each item in LOGISTICS_BRIEF_ITEMS
+          - const { caption, list, modifier } = item;
           li.logistics-brief__item
-            block
-
-        each countries, continent in LOGISTICS_BRIEF_ITEMS
-          +logistics-brief__item()
             +directions({
-              heading: continent,
-              items: countries,
+              heading: caption,
+              items: list,
+              modifier: modifier,
             })
