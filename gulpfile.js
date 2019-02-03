@@ -174,6 +174,18 @@ const serve = function launchBrowserSync() {
 // Gulp tasks
 
 gulp.task(
+  'default',
+  gulp.series(
+    cleanbuild,
+    gulp.parallel(copyvideo, copyfonts, copyfavicons, copysvg, copybitmap),
+    scripts,
+    style,
+    html,
+    serve,
+  ),
+);
+
+gulp.task(
   'build',
   gulp.series(
     cleanbuild,

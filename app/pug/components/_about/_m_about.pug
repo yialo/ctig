@@ -18,4 +18,5 @@ mixin about()
                 const stringFinalCharacted = (index !== list.length - 1)
                   ? ';'
                   : '.';
-              li.about__item= `${listItem}${stringFinalCharacted}`
+              li.about__item
+                a.about__link(href='#')= `${listItem}${stringFinalCharacted}`
