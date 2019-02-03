@@ -1,2 +1,8 @@
-mixin basic-list()
+mixin basic-list(basicList_data)
   ul.basic-list(class=attributes.class)
+    each item, index in basicList_data
+      -
+        const itemFinalCharacted = (index !== basicList_data.length - 1)
+          ? ';'
+          : '.';
+      li.basic-list__item= `${item}${itemFinalCharacted}`

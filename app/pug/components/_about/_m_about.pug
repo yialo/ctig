@@ -12,11 +12,4 @@ mixin about()
         - const { heading, list } = item;
         .about__features-block
           h3.about__list-caption= `${heading}:`
-          ul.about__list
-            each listItem, index in list
-              -
-                const stringFinalCharacted = (index !== list.length - 1)
-                  ? ';'
-                  : '.';
-              li.about__item
-                a.about__link(href='#')= `${listItem}${stringFinalCharacted}`
+          +basic-list(list).about__list
