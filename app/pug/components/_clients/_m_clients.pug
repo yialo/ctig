@@ -5,9 +5,7 @@ mixin clients()
       +basic-heading().clients__heading Наши клиенты
       ul.clients__list
         each item, index in CLIENTS_LOGO_ALTS
-          li.clients__item(
-            class=`clients__item--${index + 1}`
-          )
+          li.clients__item(class=`clients__item--${index + 1}`)
             +basic-picture({
               altText: item,
               imageFormat: 'png',

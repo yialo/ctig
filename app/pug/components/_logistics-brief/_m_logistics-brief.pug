@@ -1,5 +1,4 @@
 mixin logistics-brief()
-  include _d_logistics-brief
   section.logistics-brief(class=attributes.class)
     +basic-container().logistics-brief__container
       +basic-heading().logistics-brief__heading География перевозок
@@ -11,7 +10,7 @@ mixin logistics-brief()
           parentClass: 'logistics-brief',
         })
       ul.logistics-brief__list
-        each item in LOGISTICS_BRIEF_ITEMS
+        each item in LOGISTICS_ITEMS
           - const { caption, list, modifier } = item;
           li.logistics-brief__item
             +directions({

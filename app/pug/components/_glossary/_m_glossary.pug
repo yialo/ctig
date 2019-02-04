@@ -2,21 +2,20 @@ mixin glossary()
   include _d_glossary
   section.glossary(class=attributes.class)
     +basic-container().glossary__container
-      +basic-heading('h1').glossary__heading Глоссарий
-      +basic-picture({
-        altText: 'Словарь',
-        areImagesNumerated: false,
-        parentClass: 'glossary',
-      })
-      ul.glossary__menu
-        each item in GLOSSARY_MENU_ITEMS
-          li.glossary__menu-item
-            a.glossary__menu-link(href='#')= item
-      .glossary__content
-        h3.glossary__wordlist-title Толковый словарь
-        ul.glossary__wordlist
-          each item in GLOSSARY_DICTIONARY_ITEMS
-            li.glossary__word
-              a.glossary__word-link(href='#')= item
-
-//- TODO: разметить стандартный список basic-list
+      +basic-heading('h1').glossary__heading
+      +inner-page-content().glossary__inner
+        +basic-picture({
+          altText: 'Словарь',
+          areImagesNumerated: false,
+          parentClass: 'glossary',
+        })
+        ul.glossary__menu
+          each item in GLOSSARY_MENU_ITEMS
+            li.glossary__menu-item
+              a.glossary__menu-link(href='#')= item
+        .glossary__content
+          h3.glossary__wordlist-title Толковый словарь
+          ul.glossary__wordlist
+            each item in GLOSSARY_DICTIONARY_ITEMS
+              li.glossary__word
+                a.glossary__word-link(href='#')= item

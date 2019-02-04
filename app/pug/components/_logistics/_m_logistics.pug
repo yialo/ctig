@@ -1,0 +1,12 @@
+mixin logistics()
+  section.logistics(class=attributes.class)
+    +basic-container().logistics__container
+      +basic-heading('h1').logistics__heading
+      +inner-page-content().logistics__inner
+        +logistics-crumbs(LOGISTICS_ITEMS).logistics__breadcrumbs
+        +basic-picture({
+          altText: page.heading,
+          parentClass: 'logistics',
+          areImagesNumerated: false,
+        })
+        +country-information({ modifier: 'uk' }).logistics__text-content

@@ -1,0 +1,8 @@
+mixin request-form(requestForm_props)
+ - const { modifier, name } = requestForm_props;
+  form.request-form(
+    class=`request-form--${modifier}`
+    method='POST',
+    action='https://echo.htmlacademy.ru',
+    name=name,
+  )
