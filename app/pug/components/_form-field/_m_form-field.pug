@@ -1,24 +1,23 @@
 mixin form-field(formField_props)
   -
     const {
-      type,
+      type='text',
       name,
       legend,
+      placeholder=null,
+      value=null,
       isChecked=false,
-      value=false,
     } = formField_props;
-    const isBoolean = (type === ('checkbox' || 'radio'));
   label.form-field(class=attributes.class)
+    - const legendModifier = (type === 'radio' ? 'visible' : 'invisible');
     span.form-field__legend(
-      class=`form-field__legend--${isBoolean ? 'visible' : 'invisible'}`
+      class=`form-field__legend--${legendModifier}`
     )= legend
     input.form-field__input(
       type=type
       name=name
       value=value
-      placeholder=placeholderValue
+      placeholder=placeholder
       checked=isChecked
       required
     )
-
-//- TODO: проверить isBoolean и разобраться с тернарным оператором!

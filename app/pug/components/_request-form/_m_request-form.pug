@@ -1,96 +1,71 @@
 mixin request-form(requestForm_props)
- - const { modifier, heading, name } = requestForm_props;
+  include _d_request-form
+  - const { modifier, heading } = requestForm_props;
   form.request-form(
     class=`request-form--${modifier}`
     method='POST',
-    action='https://echo.htmlacademy.ru',
-    name=name,
+    action=FORM_DEFAULT_ACTION,
+    name=`${modifier}-request`,
   )
     h3.request-form__heading= heading
 
-    //- mixin request-form__group(requestFormGroup_params)
-    //-   - const { modifier, caption, fields } = requestFormGroup_params;
-    //-   fieldset.request-form__group(
-    //-     class=`.request-form__group--${modifier}`
-    //-   )
-    //-     legend.request-form__group-caption= caption
-    //-       each field in fields
-    //-       +form-field({
-    //-         type: text,
-    //-         name:
-    //-       })
-
-
     fieldset.request-form__group.request-form__group--route
       legend.request-form__group-caption Маршрут
-      +form-field({
-        type: 'text',
-        name: 'departure',
-        legend: 'Откуда',
-      }).request-form__field.request-form__field--departure
-      +form-field({
-        type: 'text',
-        name: 'destination',
-        legend: 'Куда',
-      }).request-form__field.request-form__field--destination
+      each item in REQUEST_FORM_ROUTE_FIELDS
+        - const [name, legend] = item;
+        +form-field({
+          name: name,
+          legend: legend,
+          placeholder: legend,
+        }).request-form__field(class=`request-form__field--${name}`)
 
     case modifier
-      when 'transport'
+      when 'shipping'
         fieldset.request-form__group.request-form__group--dimensions
-          -
-            const REQUEST_FORM_TRANSPORT_FIELDS = [
-              ['length', 'Длина'],
-              ['width', 'Ширина'],
-              ['height', 'Высота'],
-              ['weight', 'Вес'],
-            ];
           legend.request-form__group-caption Параметры груза
-          each item in REQUEST_FORM_TRANSPORT_FIELDS
+          each item in REQUEST_FORM_DIMENSIONS_FIELDS
             -
               const [name, legend] = item;
               const unit = (name === 'weight' ? 'кг' : 'см');
             +form-field({
-              legend: `${legend} (${unit})`,
               name: name,
-              type: 'text',
-              isChecked: true,
+              legend: legend,
+              placeholder: `${legend} (${unit})`,
             }).request-form__field(
               class=`request-form__field--${name}`
             )
       when 'calculation'
-        fieldset.request-form__group.request-form__group--types
-          -
-            const REQUEST_FORM_CALCULATION_FIELDS = [
-              ['plane', 'Самолетом'],
-              ['ship', 'Кораблем'],
-              ['car', 'Автомобилем'],
-              ['train', 'Поездом'],
-            ];
+        fieldset.request-form__group.request-form__group--capgo-type
+          legend.request-form__group-caption Сведения о грузе
+          - const [name, legend] = REQUEST_FORM_CARGO_TYPE_FIELDS;
+          .request-form__select-list
+          +form-field({
+            name: name,
+            legend: legend,
+            placeholder: `${legend}, кг`,
+          })
+        fieldset.request-form__group.request-form__group--transport-type
           legend.request-form__group-caption Тип доставки:
-          each item in REQUEST_FORM_CALCULATION_FIELDS
+          each item in REQUEST_FORM_TRANSPORT_TYPE_FIELDS
             - const [value, legend] = item;
             +form-field({
               type: 'radio',
-              name: 'delivery-type',
+              name: 'transport_type',
               legend: legend,
               value: value,
-              isChecked: value === 'plane',
+              isChecked: (value === 'plane' ? 'checked' : false),
             })
-
 
     fieldset.request-form__group.request-form__group--person
       legend.request-form__group-caption Персональные данные
-      +form-field({
-        type: 'text',
-        name: 'fullname',
-        legend: 'Ваше имя',
-      }).request-form__field.request-form__field--fullname
-      +form-field({
-        type: 'text',
-        name: 'contact',
-        legend: 'Номер телефона или Email',
-      }).request-form__field.request-form__field--contact
+      each item in REQUEST_FORM_PERSON_FIELDS
+        - const [name, legend] = item;
+        +form-field({
+          name: name,
+          legend: legend,
+          placeholder: legend,
+        }).request-form__field(class=`.request-form__field--${name}`)
 
     footer.request-form__footer
       button.request-form__button(type='submit') Рассчитать доставку
-      p.request-form__caution Нажимая кнопку “Рассчитать доставку” я соглашаюсь с #[a.request-form__link(href='#') правилами обработки персональных данных]
+      p.request-form__caution Нажимая кнопку "Рассчитать доставку", я соглашаюсь с #[a.request-form__link(href='#') правилами обработки персональных данных]

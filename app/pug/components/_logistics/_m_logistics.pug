@@ -12,12 +12,10 @@ mixin logistics()
         +country-information({ modifier: 'uk' }).logistics__text-content
         +request-form({
           heading: 'Заявка на перевозку',
-          modifier: 'transport',
-          name: 'transport-request',
+          modifier: 'shipping',
         })
 
         +request-form({
           heading: 'Запрос на расчет',
           modifier: 'calculation',
-          name: 'calculation-request',
         })
