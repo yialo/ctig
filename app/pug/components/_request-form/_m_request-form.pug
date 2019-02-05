@@ -9,9 +9,14 @@ mixin request-form(requestForm_props)
   )
     h3.request-form__heading= heading
 
-    fieldset.request-form__group.request-form__group--route
-      legend.request-form__group-caption Маршрут
-      each item in REQUEST_FORM_ROUTE_FIELDS
+    mixin request-form__group(requestFormGroup_props)
+      - const { title, caption } = requestFormGroup_props;
+      fieldset.request-form__group(class=`request-form__group--${title}`)
+        legend.request-form__group-caption= caption
+        block
+
+    +request-form__group(REQUEST_FORM_ROUTE_DATA)
+      each item in REQUEST_FORM_ROUTE_DATA.fields
         - const [name, legend] = item;
         +form-field({
           name: name,
