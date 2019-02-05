@@ -39,8 +39,8 @@ mixin request-form(requestForm_props)
               name=name
               placeholder=`${legend}, кг`
             ).request-form__field= legend
-
         +request-form__group('transport-type')
+          each field in REQUEST_FORMS_DATA['tran-type']['fields']
 
     +request-form__group('person')
       each field in REQUEST_FORMS_DATA['person']['fields']
