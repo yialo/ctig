@@ -1,0 +1,13 @@
+mixin modal()
+  .modal
+    .modal__overlay
+      span.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
+    .modal__container
+      button.modal__close-button(type='button')
+        span.modal__button-legend Закрыть окно
+      +request-form({
+        heading: 'Запрос на расчет',
+        modifier: 'calculation',
+      }).modal__form
+      .modal__product-list
+        +product-list()

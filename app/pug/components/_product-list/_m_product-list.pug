@@ -1,0 +1,15 @@
+mixin product-list()
+  include _d_product-list
+  .product-list
+    header.product-list__header
+      a.product-list__return-link(href='#') Вернуться
+    .product-list__wrapper
+      ul.product-list__items
+        each item in PRODUCT_LIST_ITEMS
+          li.product-list__item(class=(
+            item === 'Декоративные изделия для интерьера'
+            ? 'product-list__item--current'
+            : null
+          ))= item
+    footer.product-list__footer
+      a.product-list__select-button(href='#') Выбрать

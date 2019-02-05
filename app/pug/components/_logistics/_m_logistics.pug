@@ -13,9 +13,4 @@ mixin logistics()
         +request-form({
           heading: 'Заявка на перевозку',
           modifier: 'shipping',
-        })
-
-        +request-form({
-          heading: 'Запрос на расчет',
-          modifier: 'calculation',
-        })
+        }).logistics__form

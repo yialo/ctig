@@ -2,7 +2,7 @@ mixin request-form(requestForm_props)
   include _d_request-form
   - const { modifier, heading } = requestForm_props;
   form.request-form(
-    class=`request-form--${modifier}`
+    class=[`request-form--${modifier}`, attributes.class]
     method='POST',
     action=FORM_DEFAULT_ACTION,
     name=`${modifier}-request`,
@@ -40,6 +40,10 @@ mixin request-form(requestForm_props)
       when 'calculation'
         +request-form__group(REQUEST_FORM_CARGO_TYPES)
           .request-form__select-list
+            a.request-form__select__link(href='#')
+              span.request-form__link-text Тип груза
+              span.request-form__select-hint Выбрать
+
           each field in REQUEST_FORM_CARGO_TYPES.fields
             - const [name, legend] = field;
             +form-field--text({
