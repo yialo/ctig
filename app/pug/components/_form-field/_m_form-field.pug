@@ -8,11 +8,10 @@ mixin form-field(formField_props)
       value=null,
       isChecked=false,
     } = formField_props;
-  label.form-field(class=attributes.class)
-    - const legendModifier = (type === 'radio' ? 'visible' : 'invisible');
-    span.form-field__legend(
-      class=`form-field__legend--${legendModifier}`
-    )= legend
+    const legendModifier = (type === 'radio' ? 'visible' : 'invisible');
+  label.form-field(class=[attributes.class, `${attributes.class}--${name}`])
+    span.form-field__legend(class=`form-field__legend--${legendModifier}`)
+      = legend
     input.form-field__input(
       type=type
       name=name

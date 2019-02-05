@@ -17,7 +17,7 @@ mixin request-form(requestForm_props)
           name: name,
           legend: legend,
           placeholder: legend,
-        }).request-form__field(class=`request-form__field--${name}`)
+        }).request-form__field
 
     case modifier
       when 'shipping'
@@ -31,9 +31,8 @@ mixin request-form(requestForm_props)
               name: name,
               legend: legend,
               placeholder: `${legend} (${unit})`,
-            }).request-form__field(
-              class=`request-form__field--${name}`
-            )
+            }).request-form__field
+
       when 'calculation'
         fieldset.request-form__group.request-form__group--capgo-type
           legend.request-form__group-caption Сведения о грузе
