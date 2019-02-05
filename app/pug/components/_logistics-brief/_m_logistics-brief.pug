@@ -3,12 +3,14 @@ mixin logistics-brief()
     +common-container().logistics-brief__container
       +common-heading().logistics-brief__heading География перевозок
       each string, index in ['Башня', 'Собор', 'Пагода']
-        +common-picture({
-          altText: string,
-          areBlocksNumerated: true,
-          numerator: index + 1,
-          parentClass: 'logistics-brief',
-        })
+        +common-picture(
+          class=[
+            'logistics-brief__image-wrapper',
+            `logistics-brief__image-wrapper--${index + 1}`,
+          ]
+          src=`img/logistics-brief__image--${index + 1}.jpg`
+          alt=string
+        )
       ul.logistics-brief__list
         each item in LOGISTICS_ITEMS
           - const { caption, list, modifier } = item;

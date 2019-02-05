@@ -4,8 +4,10 @@ mixin about()
     +common-container().about__container
       +common-heading('h1').about__heading
       +common-inner-page-content().about__inner
-        picture.common-picture.about__image-wrapper
-          img.common-picture__image(src='img/about__image.jpg' alt='Склад')
+        +common-picture(
+          src='img/about__image.jpg'
+          alt='Склад'
+        ).about__image-wrapper
         each item in ABOUT_FEATURES_LISTS
           - const { heading, list } = item;
           .about__features-block

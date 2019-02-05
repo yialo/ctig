@@ -7,10 +7,9 @@ mixin transport-item(transportItem_props)
     ])
   )
     h3.transport-item__heading= heading
-    +common-picture({
-      altText: heading,
-      numerator: number,
-      parentClass: 'transport-item',
-    })
+    +common-picture(
+      src=`img/transport-item__image--${number}.jpg`
+      alt=heading
+    ).transport-item__image-wrapper
     if heading === 'Ракетный транспорт'
       span.transport-item__hint Скоро

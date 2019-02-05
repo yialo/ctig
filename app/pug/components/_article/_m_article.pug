@@ -5,8 +5,7 @@ mixin article()
       header.article__header
         +common-heading('h1').article__heading
         +common-inner-page-content().article__inner
-        picture.common-picture.article__banner
-          img.article__image(
+          +common-picture().article__banner(
             src='img/article__banner-image.jpg'
             alt=page.heading
           )
@@ -19,8 +18,8 @@ mixin article()
         .article__bottom-block
           h3.article__subtitle Подзаголовок для статьи
           +article__paragraphs()
-          picture.common-picture.article__image-wrapper
-            img.article__image(
-              src='img/article__image.jpg'
-              alt='Контейнеры на складе'
-            )
+          +common-picture(
+            src='img/article__image.jpg'
+            alt='Контейнеры на складе'
+          ).article__image-wrapper
+

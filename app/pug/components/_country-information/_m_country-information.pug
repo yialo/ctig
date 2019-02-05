@@ -1,4 +1,4 @@
-mixin country-information(countryInformation_props)
+mixin country-information(countryInformation_modifier)
   -
     const COUNTRY_INFORMATION_LIST = [
       'Галантерея (вязаные изделия в виде шапок и шарфов, галстуки, часы)',
@@ -9,9 +9,8 @@ mixin country-information(countryInformation_props)
       'Продукты питания',
       'Техника',
     ];
-    const { modifier } = countryInformation_props;
   .country-information(class=[
-    `country-information--${modifier}`,
+    `country-information--${countryInformation_modifier}`,
     attributes.class,
   ])
     h3.country-information__heading Перевозка грузов из Англии

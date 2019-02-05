@@ -1,36 +1,3 @@
-mixin common-picture(basicPicture_props)
-  -
-    const {
-      altText,
-      imageFormat='jpg',
-      areBlocksNumerated=false,
-      areImagesNumerated=true,
-      numerator=null,
-      parentClass,
-      parentHasModifier=false,
-      imagePathModifier=false,
-    } = basicPicture_props;
-
-    const parentElementClass = `${parentClass}__image-wrapper`;
-
-    const parentElementNumeratorClass = areBlocksNumerated
-      ? `${parentElementClass}--${numerator}`
-      : null;
-
-    const imageInnerSubpath = parentHasModifier
-      ? `${parentClass}--${imagePathModifier}__image`
-      : `${parentClass}__image`;
-
-    const imageSubpath = areImagesNumerated
-      ? `${imageInnerSubpath}--${numerator}`
-      : imageInnerSubpath;
-
-  picture.common-picture(class=[parentElementClass, parentElementNumeratorClass])
-    img.common-picture__image(
-      src=`img/${imageSubpath}.${imageFormat}`
-      alt=altText
-    )
-
-mixin common-picture_text()
-  picture.common-picture(class=attribures.class)
+mixin common-picture()
+  picture.common-picture(class=attributes.class)
     img.common-picture__image(src=attributes.src alt=attributes.alt)

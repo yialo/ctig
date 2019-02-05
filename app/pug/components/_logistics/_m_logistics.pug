@@ -4,12 +4,11 @@ mixin logistics()
       +common-heading('h1').logistics__heading
       +common-inner-page-content().logistics__inner
         +logistics-crumbs(LOGISTICS_ITEMS).logistics__breadcrumbs
-        +common-picture({
-          altText: page.heading,
-          parentClass: 'logistics',
-          areImagesNumerated: false,
-        })
-        +country-information({ modifier: 'uk' }).logistics__text-content
+        +common-picture(
+          src='img/logistics__image.jpg'
+          alt=page.heading
+        ).logistics__image-wrapper
+        +country-information('uk').logistics__text-content
         +request-form({
           heading: 'Заявка на перевозку',
           modifier: 'shipping',

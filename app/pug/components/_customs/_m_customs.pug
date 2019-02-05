@@ -13,13 +13,10 @@ mixin customs(customs_modifier)
       header.customs__headline
         +common-heading().customs__title= title
         p.customs__subtitle= subtitle
-      +common-picture({
-        altText: imageDescription,
-        areImagesNumerated: false,
-        imagePathModifier: customs_modifier,
-        parentClass: `customs`,
-        parentHasModifier: true,
-      })
+      +common-picture(
+        src=`img/customs--${customs_modifier}__image.jpg`
+        alt=imageDescription
+      ).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
         +common-text-block('p').customs__paragraph!= paragraphs[0]

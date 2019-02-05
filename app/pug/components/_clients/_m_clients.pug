@@ -6,9 +6,8 @@ mixin clients()
       ul.clients__list
         each item, index in CLIENTS_LOGO_ALTS
           li.clients__item(class=`clients__item--${index + 1}`)
-            +common-picture({
-              altText: item,
-              imageFormat: 'png',
-              numerator: index + 1,
-              parentClass: 'clients',
-            })
+            +common-picture(
+              src=`img/clients__image--${index + 1}.png`
+              alt=item
+            ).clients__image-wrapper
+

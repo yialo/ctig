@@ -3,9 +3,8 @@ mixin intro()
     +common-container().intro__container
       +common-heading().intro__heading Международная перевозка сборных грузов
       each string, index in ['Ракета', 'Облака']
-        +common-picture({
-          altText: string,
-          areBlocksNumerated: true,
-          numerator: index + 1,
-          parentClass: 'intro',
-      })
+        +common-picture(
+          class=['intro__image-wrapper', `intro__image-wrapper--${index + 1}`]
+          src=`img/intro__image--${index + 1}.jpg`
+          alt=string
+        )
