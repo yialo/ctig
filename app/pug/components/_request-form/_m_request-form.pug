@@ -11,14 +11,44 @@ mixin request-form(requestForm_props)
     h3.request-form__heading= heading
 
     +request-form__group('route')
-      legend.request-form__group__caption Маршрут
-      each field in REQUEST_FORM_FIELDS['route']
-        +common-form-field()
+      each field in REQUEST_FORMS_DATA['route']['fields']
+        - const [name, legend] = field;
+        +common-form-field(
+          name=name
+          placeholder=legend
+        ).request-form__field= legend
 
+    case modifier
+      when 'shipping'
+        +request-form__group('dimensions')
+         each field in REQUEST_FORMS_DATA['dimensions']['fields']
+          -
+            const [name, legend] = field;
+            const unit = (name === 'weight' ? 'кг' : 'см');
+          +common-form-field(
+            name=name
+            placeholder=`${legend} (${unit})`
+          ).request-form__field= legend
+      when 'calculation'
+      default
+        +request-form__group('capgo-type')
+          each field in REQUEST_FORMS_DATA['capgo-type']['fields']
+            - const [name, legend] = field;
+            .request-form__select-field
+            +common-form-field(
+              name=name
+              placeholder=`${legend}, кг`
+            ).request-form__field= legend
+
+        +request-form__group('transport-type')
 
     +request-form__group('person')
-
-
+      each field in REQUEST_FORMS_DATA['person']['fields']
+        - const [name, legend] = field;
+        +common-form-field(
+          name=name
+          placeholder=legend
+        ).request-form__field= legend
 
     footer.request-form__footer
       button.request-form__button(type='submit') Рассчитать доставку
