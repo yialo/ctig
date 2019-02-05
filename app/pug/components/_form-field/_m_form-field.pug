@@ -1,22 +1,28 @@
-mixin form-field(formField_props)
-  -
-    const {
-      type='text',
-      name,
-      legend,
-      placeholder=null,
-      value=null,
-      isChecked=false,
-    } = formField_props;
-    const legendModifier = (type === 'radio' ? 'visible' : 'invisible');
-  label.form-field(class=[attributes.class, `${attributes.class}--${name}`])
-    span.form-field__legend(class=`form-field__legend--${legendModifier}`)
-      = legend
+mixin form-field--text(formTextField_props)
+  - const { name, legend, placeholder } = formTextField_props;
+  label.form-field.form-field--text(class=[
+    attributes.class,
+    `${attributes.class}--${name}`,
+  ])
+    span.form-field__legend= legend
     input.form-field__input(
-      type=type
+      type='text'
+      name=name
+      placeholder=placeholder,
+      required
+    )
+
+mixin form-field--radio(formRadioField_props)
+  - const { name, legend, value, defaultValue } = formRadioField_props;
+  label.form-field.form-field--radio(class=[
+    attributes.class,
+    `${attributes.class}--${value}`,
+  ])
+    span.form-field__legend= legend
+    input.form-field__input(
+      type='radio'
       name=name
       value=value
-      placeholder=placeholder
-      checked=isChecked
+      checked=(value === defaultValue ? 'checked' : false)
       required
     )

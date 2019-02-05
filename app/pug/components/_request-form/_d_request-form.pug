@@ -1,5 +1,5 @@
 -
-  const REQUEST_FORM_ROUTE_DATA = {
+  const REQUEST_FORM_ROUTE = {
     title: 'route',
     caption: 'Маршрут',
     fields: [
@@ -7,20 +7,34 @@
       ['destination', 'Куда'],
     ],
   };
-  const REQUEST_FORM_DIMENSIONS_FIELDS = [
-    ['length', 'Длина'],
-    ['width', 'Ширина'],
-    ['height', 'Высота'],
-    ['weight', 'Вес'],
-  ];
-  const REQUEST_FORM_CARGO_TYPE_FIELDS = ['weight', 'Вес'];
-  const REQUEST_FORM_TRANSPORT_TYPE_FIELDS = [
-    ['plane', 'Самолетом'],
-    ['ship', 'Кораблем'],
-    ['car', 'Автомобилем'],
-    ['train', 'Поездом'],
-  ];
-  const REQUEST_FORM_PERSON_FIELDS = [
-    ['fullname', 'Ваше имя'],
-    ['contact', 'Номер телефона или Email'],
-  ];
+  const REQUEST_FORM_DIMENSIONS = {
+    title: 'dimensions',
+    caption: 'Параметры груза',
+    fields: [
+      ['length', 'Длина'],
+      ['width', 'Ширина'],
+      ['height', 'Высота'],
+      ['weight', 'Вес'],
+    ],
+  };
+  const REQUEST_FORM_CARGO_TYPES = {
+    title: 'capgo-type',
+    caption: 'Сведения о грузе',
+    fields: [['weight', 'Вес']],
+  };
+
+  const REQUEST_FORM_TRANSPORT_TYPES = {
+    title: 'transport-type',
+    caption: 'Тип доставки:',
+    fields: [
+      ['plane', 'Самолетом'],
+      ['ship', 'Кораблем'],
+      ['car', 'Автомобилем'],
+      ['train', 'Поездом'],
+    ],
+  };
+  const REQUEST_FORM_PERSON = {
+    title: 'person',
+    caption: 'Персональные данные',
+    fields: [['fullname', 'Ваше имя'], ['contact', 'Номер телефона или Email']],
+  };
