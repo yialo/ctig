@@ -1,15 +1,9 @@
 mixin articles()
-  include _d_articles
   section.articles(class=attributes.class)
     +basic-container().articles__container
       +basic-heading('h1').articles__heading
       +inner-page-content().articles__inner
         ul.articles__list
-          - const [heading, text] = ARTICLES;
           - for (let i = 1; i <= 3; i += 1)
               li.articles__item
-                +article-intro({
-                  number: i,
-                  heading: heading,
-                  text: text,
-                })
+                +article-intro(i)
