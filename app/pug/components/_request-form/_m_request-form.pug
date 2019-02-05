@@ -1,5 +1,6 @@
 mixin request-form(requestForm_props)
   include _d_request-form
+  include _m_request-form__group
   - const { modifier, heading } = requestForm_props;
   form.request-form(
     class=[`request-form--${modifier}`, attributes.class]
@@ -9,67 +10,15 @@ mixin request-form(requestForm_props)
   )
     h3.request-form__heading= heading
 
-    mixin request-form__group(requestFormGroup_props)
-      - const { title, caption } = requestFormGroup_props;
-      fieldset.request-form__group(class=`request-form__group--${title}`)
-        legend.request-form__group-caption= caption
-        block
+    +request-form__group('route')
+      legend.request-form__group__caption Маршрут
+      each field in REQUEST_FORM_FIELDS['route']
+        +common-form-field()
 
-    +request-form__group(REQUEST_FORM_ROUTE)
-      each field in REQUEST_FORM_ROUTE.fields
-        - const [name, legend] = field;
-        +form-field--text({
-          name: name,
-          legend: legend,
-          placeholder: legend,
-        }).request-form__field
 
-    case modifier
-      when 'shipping'
-        +request-form__group(REQUEST_FORM_DIMENSIONS)
-          each field in REQUEST_FORM_DIMENSIONS.fields
-            -
-              const [name, legend] = field;
-              const unit = (name === 'weight' ? 'кг' : 'см');
-            +form-field--text({
-              name: name,
-              legend: legend,
-              placeholder: `${legend} (${unit})`,
-            }).request-form__field
+    +request-form__group('person')
 
-      when 'calculation'
-        +request-form__group(REQUEST_FORM_CARGO_TYPES)
-          .request-form__select-list
-            a.request-form__select__link(href='#')
-              span.request-form__link-text Тип груза
-              span.request-form__select-hint Выбрать
 
-          each field in REQUEST_FORM_CARGO_TYPES.fields
-            - const [name, legend] = field;
-            +form-field--text({
-              name: name,
-              legend: legend,
-              placeholder: `${legend}, кг`,
-            }).request-form__field
-
-        +request-form__group(REQUEST_FORM_TRANSPORT_TYPES)
-          each field in REQUEST_FORM_TRANSPORT_TYPES.fields
-            - const [value, legend] = field;
-            +form-field--radio({
-              name: 'transport_type',
-              legend: legend,
-              value: value,
-              defaultValue: 'plane',
-            }).request-form__field
-
-    +request-form__group(REQUEST_FORM_PERSON)
-      each field in REQUEST_FORM_PERSON.fields
-        - const [name, legend] = field;
-        +form-field--text({
-          name: name,
-          legend: legend,
-          placeholder: legend,
-        }).request-form__field
 
     footer.request-form__footer
       button.request-form__button(type='submit') Рассчитать доставку

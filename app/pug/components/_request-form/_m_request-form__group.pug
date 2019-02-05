@@ -1,0 +1,6 @@
+mixin request-form__group(requestFormGroup_modifier)
+  fieldset.request-form__group(
+    class=`request-form__group--${requestFormGroup_modifier}`
+  )
+    legend.request-form__group__caption= REQUEST_FORMS_DATA[requestFormGroup_modifier].caption
+    block
