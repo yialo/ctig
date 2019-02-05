@@ -4,30 +4,25 @@ mixin article()
       header.article__header
         +basic-heading('h1').article__heading
         +inner-page-content().article__inner
-          +basic-picture({
-            altText: page.heading,
-            areBlocksNumerated: true,
-            numerator: 1,
-            parentClass: 'article',
-          })
-
+        picture.basic-picture.article__banner
+          img.article__image(
+            src='img/article__banner-image.jpg'
+            alt=page.heading
+          )
       +inner-page-content().article__inner
         mixin article__paragraphs()
           each paragraph in TEMPLATE_PARAGRAPHS
             +basic-text-block().article__paragraph= paragraph
-
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
           .article__row
             +article__paragraphs()
             +article__paragraphs()
-
         .article__bottom-block
           h3.article__subtitle Подзаголовок для статьи
           +article__paragraphs()
-          +basic-picture({
-            altText: 'Контейнеры на складе',
-            areBlocksNumerated: true,
-            numerator: 2,
-            parentClass: 'article',
-          })
+          picture.basic-picture.article__image-wrapper
+            img.article__image(
+              src='img/article__image.jpg'
+              alt='Контейнеры на складе'
+            )
