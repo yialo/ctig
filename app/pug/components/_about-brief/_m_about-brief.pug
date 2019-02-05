@@ -3,11 +3,11 @@ mixin about-brief()
   section.about-brief(class=attributes.class)
     +common-container().about-brief__container
       +common-heading().about-brief__heading О нас
-      +common-picture({
-        altText: 'Контейнеры',
-        areImagesNumerated: false,
-        parentClass: 'about-brief',
-      })
+      picture.common-picture.about-brief__image-wrapper
+        img.common-picture__image(
+          src='img/about-brief__image.jpg'
+          alt='Контейнеры'
+        )
       .about-brief__text-content
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
           +common-text-block('p').about-brief__paragraph= paragraph

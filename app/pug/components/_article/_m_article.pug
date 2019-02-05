@@ -1,4 +1,5 @@
 mixin article()
+  include _m_article__paragraphs
   article.article(class=attributes.class)
     +common-container().article__container
       header.article__header
@@ -10,9 +11,6 @@ mixin article()
             alt=page.heading
           )
       +common-inner-page-content().article__inner
-        mixin article__paragraphs()
-          each paragraph in TEMPLATE_PARAGRAPHS
-            +common-text-block().article__paragraph= paragraph
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
           .article__row

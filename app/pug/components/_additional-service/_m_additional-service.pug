@@ -15,8 +15,8 @@ mixin additional-service()
             class=`additional-service__item--${index + 1}`
           )
             h3.additional-service__caption= caption
-            +common-picture({
-              altText: caption,
-              numerator: index + 1,
-              parentClass: 'additional-service',
-            })
+            picture.common-picture.additional-service__image-wrapper
+              img.common-picture__image(
+                src=`img/additional-service__image--${index + 1}.jpg`
+                alt=caption
+              )

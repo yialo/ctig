@@ -30,3 +30,7 @@ mixin common-picture(basicPicture_props)
       src=`img/${imageSubpath}.${imageFormat}`
       alt=altText
     )
+
+mixin common-picture_text()
+  picture.common-picture(class=attribures.class)
+    img.common-picture__image(src=attributes.src alt=attributes.alt)

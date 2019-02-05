@@ -2,6 +2,7 @@ mixin article-intro(articleIntro_number)
   article.article-intro(class=`article-intro--${articleIntro_number}`)
     header.article-intro__header
       h3.article-intro__heading Праздники в странах
+    picture.common-picture.article-intro__image-wrapper
     +common-picture({
       altText: heading,
       numerator: articleIntro_number,
