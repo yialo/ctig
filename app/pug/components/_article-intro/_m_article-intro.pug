@@ -1,0 +1,13 @@
+mixin article-intro(articleIntro_props)
+  - const { number, heading, text } = articleIntro_props;
+  article.article-intro(class=`article-intro--${number}`)
+    header.article-intro__header
+      h3.article-intro__heading= heading
+    +basic-picture({
+      altText: heading,
+      numerator: number,
+      parentClass: 'article-intro',
+    })
+    p.article-intro__excerpt= text
+    footer.article-intro__footer
+      a.article-intro__details(href='#')= Подробнее
