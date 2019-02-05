@@ -1,9 +1,0 @@
-mixin basic-heading(basicHeading_type)
-  case basicHeading_type
-    when 'h1'
-      h1.basic-heading(class=attributes.class)= page.heading
-        block
-    when 'h2'
-    default
-      h2.basic-heading(class=attributes.class)
-        block

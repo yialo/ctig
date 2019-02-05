@@ -1,4 +1,4 @@
-mixin basic-picture(basicPicture_props)
+mixin common-picture(basicPicture_props)
   -
     const {
       altText,
@@ -25,8 +25,8 @@ mixin basic-picture(basicPicture_props)
       ? `${imageInnerSubpath}--${numerator}`
       : imageInnerSubpath;
 
-  picture.basic-picture(class=[parentElementClass, parentElementNumeratorClass])
-    img.basic-picture__image(
+  picture.common-picture(class=[parentElementClass, parentElementNumeratorClass])
+    img.common-picture__image(
       src=`img/${imageSubpath}.${imageFormat}`
       alt=altText
     )

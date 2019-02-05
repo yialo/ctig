@@ -1,9 +1,0 @@
-mixin basic-text-block(basicTextBlock_type)
-  case basicTextBlock_type
-    when 'li'
-      li.basic-text-block(class=attributes.class)
-        block
-    when 'p'
-    default
-      p.basic-text-block(class=attributes.class)
-        block

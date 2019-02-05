@@ -1,12 +1,12 @@
 mixin clients()
   include _d_clients
   section.clients(class=attributes.class)
-    +basic-container().clients__container
-      +basic-heading().clients__heading Наши клиенты
+    +common-container().clients__container
+      +common-heading().clients__heading Наши клиенты
       ul.clients__list
         each item, index in CLIENTS_LOGO_ALTS
           li.clients__item(class=`clients__item--${index + 1}`)
-            +basic-picture({
+            +common-picture({
               altText: item,
               imageFormat: 'png',
               numerator: index + 1,

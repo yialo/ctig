@@ -1,10 +1,10 @@
 mixin about()
   include _d_about
   section.about(class=attributes.class)
-    +basic-container().about__container
-      +basic-heading('h1').about__heading
-      +inner-page-content().about__inner
-        +basic-picture({
+    +common-container().about__container
+      +common-heading('h1').about__heading
+      +common-inner-page-content().about__inner
+        +common-picture({
           altText: 'Склад',
           areImagesNumerated: false,
           parentClass: 'about',
@@ -13,4 +13,4 @@ mixin about()
           - const { heading, list } = item;
           .about__features-block
             h3.about__list-caption= `${heading}:`
-            +basic-list(list).about__list
+            +common-list(list).about__list

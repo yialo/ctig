@@ -1,14 +1,14 @@
 mixin about-brief()
   include _d_about-brief
   section.about-brief(class=attributes.class)
-    +basic-container().about-brief__container
-      +basic-heading().about-brief__heading О нас
-      +basic-picture({
+    +common-container().about-brief__container
+      +common-heading().about-brief__heading О нас
+      +common-picture({
         altText: 'Контейнеры',
         areImagesNumerated: false,
         parentClass: 'about-brief',
       })
       .about-brief__text-content
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
-          +basic-text-block('p').about-brief__paragraph= paragraph
+          +common-text-block('p').about-brief__paragraph= paragraph
         p.about-brief__endline Спасибо за доверие, Ваш #{SITE_TITLE}.

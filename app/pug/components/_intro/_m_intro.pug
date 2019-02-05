@@ -1,9 +1,9 @@
 mixin intro()
   header.intro(class=attributes.class)
-    +basic-container().intro__container
-      +basic-heading().intro__heading Международная перевозка сборных грузов
+    +common-container().intro__container
+      +common-heading().intro__heading Международная перевозка сборных грузов
       each string, index in ['Ракета', 'Облака']
-        +basic-picture({
+        +common-picture({
           altText: string,
           areBlocksNumerated: true,
           numerator: index + 1,

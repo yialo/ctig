@@ -1,18 +1,18 @@
 mixin article()
   article.article(class=attributes.class)
-    +basic-container().article__container
+    +common-container().article__container
       header.article__header
-        +basic-heading('h1').article__heading
-        +inner-page-content().article__inner
-        picture.basic-picture.article__banner
+        +common-heading('h1').article__heading
+        +common-inner-page-content().article__inner
+        picture.common-picture.article__banner
           img.article__image(
             src='img/article__banner-image.jpg'
             alt=page.heading
           )
-      +inner-page-content().article__inner
+      +common-inner-page-content().article__inner
         mixin article__paragraphs()
           each paragraph in TEMPLATE_PARAGRAPHS
-            +basic-text-block().article__paragraph= paragraph
+            +common-text-block().article__paragraph= paragraph
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
           .article__row
@@ -21,7 +21,7 @@ mixin article()
         .article__bottom-block
           h3.article__subtitle Подзаголовок для статьи
           +article__paragraphs()
-          picture.basic-picture.article__image-wrapper
+          picture.common-picture.article__image-wrapper
             img.article__image(
               src='img/article__image.jpg'
               alt='Контейнеры на складе'

@@ -2,11 +2,11 @@ mixin article-intro(articleIntro_number)
   article.article-intro(class=`article-intro--${articleIntro_number}`)
     header.article-intro__header
       h3.article-intro__heading Праздники в странах
-    +basic-picture({
+    +common-picture({
       altText: heading,
       numerator: articleIntro_number,
       parentClass: 'article-intro',
     })
-    +basic-text-block().article-intro__excerpt= TEMPLATE_PARAGRAPHS[0]
+    +common-text-block().article-intro__excerpt= TEMPLATE_PARAGRAPHS[0]
     footer.article-intro__footer
       a.article-intro__details(href='article.html') Подробнее

@@ -1,10 +1,10 @@
 mixin logistics()
   section.logistics(class=attributes.class)
-    +basic-container().logistics__container
-      +basic-heading('h1').logistics__heading
-      +inner-page-content().logistics__inner
+    +common-container().logistics__container
+      +common-heading('h1').logistics__heading
+      +common-inner-page-content().logistics__inner
         +logistics-crumbs(LOGISTICS_ITEMS).logistics__breadcrumbs
-        +basic-picture({
+        +common-picture({
           altText: page.heading,
           parentClass: 'logistics',
           areImagesNumerated: false,
