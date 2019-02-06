@@ -1,0 +1,61 @@
+// TODO: Удалить ненужные файлы (root, functions), если они не потребуются.
+
+@import "../common/variables.scss";
+@import "../common/functions.scss";
+@import "../common/mixins.scss";
+@import "../vendors/normalize.scss";
+@import "../common/root";
+@import "../common/fonts";
+@import "../common/global";
+@import "../components/_about/*.scss";
+@import "../components/_about-brief/*.scss";
+@import "../components/_additional-service/*.scss";
+@import "../components/_article/*.scss";
+@import "../components/_article-intro/*.scss";
+@import "../components/_articles/*.scss";
+@import "../components/_calculator-toggle/*.scss";
+@import "../components/_calls/*.scss";
+@import "../components/_certificates/*.scss";
+@import "../components/_clients/*.scss";
+@import "../components/_common-container/*.scss";
+@import "../components/_common-form-field/*.scss";
+@import "../components/_common-heading/*.scss";
+@import "../components/_common-inner-page-content/*.scss";
+@import "../components/_common-list/*.scss";
+@import "../components/_common-picture/*.scss";
+@import "../components/_common-text-block/*.scss";
+@import "../components/_contacts/*.scss";
+@import "../components/_copyright/*.scss";
+@import "../components/_country-information/*.scss";
+@import "../components/_customs/*.scss";
+@import "../components/_directions/*.scss";
+@import "../components/_error404/*.scss";
+@import "../components/_extra/*.scss";
+@import "../components/_glossary/*.scss";
+@import "../components/_head/*.scss";
+@import "../components/_indices/*.scss";
+@import "../components/_intro/*.scss";
+@import "../components/_language-toggle/*.scss";
+@import "../components/_logistics/*.scss";
+@import "../components/_logistics-brief/*.scss";
+@import "../components/_logistics-crumbs/*.scss";
+@import "../components/_logo/*.scss";
+@import "../components/_main-menu/*.scss";
+@import "../components/_modal/*.scss";
+@import "../components/_navigation/*.scss";
+@import "../components/_navigation-sublist/*.scss";
+@import "../components/_navigation-toggle/*.scss";
+@import "../components/_page-header/*.scss";
+@import "../components/_product-list/*.scss";
+@import "../components/_request-form/*.scss";
+@import "../components/_search-form/*.scss";
+@import "../components/_sidebar/*.scss";
+@import "../components/_socials/*.scss";
+@import "../components/_transport/*.scss";
+@import "../components/_transport-item/*.scss";
+
+/*
+TODO:
+1). Реализовать Pug + Sass в одной директории
+2). Пересмотреть common-form-field: есть text есть radio
+*/

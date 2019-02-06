@@ -1,0 +1,22 @@
+include ../common/_d_common_site
+include ../common/_d_common_pages
+include ../common/_d_common_components
+
+block page-variable
+
+include _components_import
+
+doctype html
+html(lang='ru')
+  +head()
+  body.page(class=`page--${page.id}`)
+    header.page__header
+      +page-header()
+    nav.page__sidebar
+      +sidebar()
+    main.page-main.page__main
+      block page-main
+    .page__modal
+      +modal()
+    script(src='js/picturefill.js')
+    block current-page-scripts
