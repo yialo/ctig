@@ -1,0 +1,8 @@
+mixin generic-list(genericList_data)
+  ul.generic-list(class=attributes.class)
+    each item, index in genericList_data
+      -
+        const itemFinalCharacter = (index !== genericList_data.length - 1)
+          ? ';'
+          : '.';
+      li.generic-list__item= `${item}${itemFinalCharacter}`

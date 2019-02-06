@@ -1,0 +1,12 @@
+mixin generic-form-field(genericFormField_type)
+  label.generic-form-field(class=attributes.class)
+    span.generic-form-field__legend
+      block
+    input.generic-form-field__input(
+      type=genericFormField_type
+      name=attributes.name
+      value=attributes.value
+      placeholder=attributes.placeholder
+      checked=attributes.checked
+      required
+    )

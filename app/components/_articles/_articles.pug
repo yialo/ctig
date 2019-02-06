@@ -1,8 +1,8 @@
 mixin articles()
   .articles(class=attributes.class)
-    +common-container().articles__container
-      +common-heading('h1').articles__heading
-      +common-inner-page-content().articles__inner
+    +generic-container().articles__container
+      +generic-heading('h1').articles__heading
+      +generic-inner-page-content().articles__inner
         ul.articles__list
           - for (let i = 1; i <= 3; i += 1)
               li.articles__item

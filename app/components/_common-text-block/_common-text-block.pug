@@ -1,9 +1,0 @@
-mixin common-text-block(commonTextBlock_type)
-  case commonTextBlock_type
-    when 'li'
-      li.common-text-block(class=attributes.class)
-        block
-    when 'p'
-    default
-      p.common-text-block(class=attributes.class)
-        block

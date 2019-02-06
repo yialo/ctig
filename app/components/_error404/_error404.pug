@@ -1,7 +1,7 @@
 mixin error404()
   .error404(class=attributes.class)
-    +common-container().error404__container
-      +common-heading('h1').error404__heading
+    +generic-container().error404__container
+      +generic-heading('h1').error404__heading
       p.error404__lead Вы не заблудились?
       p.error404__hint.
         Вы всегда можете #[a.error404__link(href='#') вернуться] на предыдущую страницу, перейти на #[a.error404__link(href='index.html') главную] или узнать наши #[a.error404__link(href='contacts.html') контакты]

@@ -9,19 +9,19 @@ mixin customs(customs_modifier)
       title,
     } = CUSTOMS_DATA[customs_modifier];
   section.customs(class=[`customs--${customs_modifier}`, attributes.class])
-    +common-container().customs__container
+    +generic-container().customs__container
       header.customs__headline
-        +common-heading().customs__title= title
+        +generic-heading().customs__title= title
         p.customs__subtitle= subtitle
-      +common-picture(
+      +generic-picture(
         src=`img/customs--${customs_modifier}__image.jpg`
         alt=imageDescription
       ).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
-        +common-text-block('p').customs__paragraph!= paragraphs[0]
+        +generic-text-block('p').customs__paragraph!= paragraphs[0]
         ul.customs__list
           each item in listItems
-            +common-text-block('li').customs__item!= item
+            +generic-text-block('li').customs__item!= item
         each item in customsParagraphsRest
-          +common-text-block('p').customs__paragraph!= item
+          +generic-text-block('p').customs__paragraph!= item

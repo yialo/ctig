@@ -1,10 +1,10 @@
 mixin glossary()
   include _d_glossary
   .glossary(class=attributes.class)
-    +common-container().glossary__container
-      +common-heading('h1').glossary__heading
-      +common-inner-page-content().glossary__inner
-        +common-picture(
+    +generic-container().glossary__container
+      +generic-heading('h1').glossary__heading
+      +generic-inner-page-content().glossary__inner
+        +generic-picture(
           src='img/glossary__image.jpg'
           alt='Словарь'
         ).glossary__image-wrapper

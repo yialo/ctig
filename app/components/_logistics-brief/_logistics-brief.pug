@@ -1,9 +1,9 @@
 mixin logistics-brief()
   section.logistics-brief(class=attributes.class)
-    +common-container().logistics-brief__container
-      +common-heading().logistics-brief__heading География перевозок
+    +generic-container().logistics-brief__container
+      +generic-heading().logistics-brief__heading География перевозок
       each string, index in ['Башня', 'Собор', 'Пагода']
-        +common-picture(
+        +generic-picture(
           class=[
             'logistics-brief__image-wrapper',
             `logistics-brief__image-wrapper--${index + 1}`,

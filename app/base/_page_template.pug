@@ -1,6 +1,8 @@
-include ../common/_d_common_site
-include ../common/_d_common_pages
-include ../common/_d_common_components
+include ../common/data/_d_site
+include ../common/data/_d_pages
+include ../common/data/_d_fonts
+include ../common/data/_d_favicons
+include ../common/data/_d_components
 
 block page-variable
 
@@ -8,7 +10,7 @@ include _components_import
 
 doctype html
 html(lang='ru')
-  include ../common/_head
+  include ../common/scaffolds/_head
   body.page(class=`page--${page.id}`)
     header.page__header
       +page-header()

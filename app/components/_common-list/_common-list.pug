@@ -1,8 +1,0 @@
-mixin common-list(commonList_data)
-  ul.common-list(class=attributes.class)
-    each item, index in commonList_data
-      -
-        const itemFinalCharacted = (index !== commonList_data.length - 1)
-          ? ';'
-          : '.';
-      li.common-list__item= `${item}${itemFinalCharacted}`

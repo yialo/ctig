@@ -1,9 +1,0 @@
-mixin common-heading(commonHeading_type)
-  case commonHeading_type
-    when 'h1'
-      h1.common-heading(class=attributes.class)= page.heading
-        block
-    when 'h2'
-    default
-      h2.common-heading(class=attributes.class)
-        block

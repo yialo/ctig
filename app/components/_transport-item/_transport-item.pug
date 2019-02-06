@@ -7,7 +7,7 @@ mixin transport-item(transportItem_props)
     ])
   )
     h3.transport-item__heading= heading
-    +common-picture(
+    +generic-picture(
       src=`img/transport-item__image--${number}.jpg`
       alt=heading
     ).transport-item__image-wrapper

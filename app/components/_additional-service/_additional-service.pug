@@ -7,15 +7,15 @@ mixin additional-service()
       'Кросс докинг',
     ];
   section.additional-service(class=attributes.class)
-    +common-container().additional-service__container
-      +common-heading().additional-service__heading Дополнительный сервис
+    +generic-container().additional-service__container
+      +generic-heading().additional-service__heading Дополнительный сервис
       ul.additional-service__list
         each caption, index in ADDITIONAL_ITEMS
           li.additional-service__item(
             class=`additional-service__item--${index + 1}`
           )
             h3.additional-service__caption= caption
-            +common-picture().additional-service__image-wrapper(
+            +generic-picture().additional-service__image-wrapper(
               src=`img/additional-service__image--${index + 1}.jpg`
               alt=caption
             )

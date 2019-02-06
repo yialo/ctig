@@ -1,15 +1,15 @@
 mixin article()
   include _article__paragraphs
   article.article(class=attributes.class)
-    +common-container().article__container
+    +generic-container().article__container
       header.article__header
-        +common-heading('h1').article__heading
-        +common-inner-page-content().article__inner
-          +common-picture().article__banner(
+        +generic-heading('h1').article__heading
+        +generic-inner-page-content().article__inner
+          +generic-picture().article__banner(
             src='img/article__banner-image.jpg'
             alt=page.heading
           )
-      +common-inner-page-content().article__inner
+      +generic-inner-page-content().article__inner
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
           .article__row
@@ -18,7 +18,7 @@ mixin article()
         .article__bottom-block
           h3.article__subtitle Подзаголовок для статьи
           +article__paragraphs()
-          +common-picture(
+          +generic-picture(
             src='img/article__image.jpg'
             alt='Контейнеры на складе'
           ).article__image-wrapper

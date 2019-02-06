@@ -1,9 +1,9 @@
 mixin intro()
   header.intro(class=attributes.class)
-    +common-container().intro__container
-      +common-heading().intro__heading Международная перевозка сборных грузов
+    +generic-container().intro__container
+      +generic-heading().intro__heading Международная перевозка сборных грузов
       each string, index in ['Ракета', 'Облака']
-        +common-picture(
+        +generic-picture(
           class=['intro__image-wrapper', `intro__image-wrapper--${index + 1}`]
           src=`img/intro__image--${index + 1}.jpg`
           alt=string

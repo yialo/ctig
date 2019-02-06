@@ -1,10 +1,10 @@
 mixin logistics()
   .logistics(class=attributes.class)
-    +common-container().logistics__container
-      +common-heading('h1').logistics__heading
-      +common-inner-page-content().logistics__inner
+    +generic-container().logistics__container
+      +generic-heading('h1').logistics__heading
+      +generic-inner-page-content().logistics__inner
         +logistics-crumbs(LOGISTICS_ITEMS).logistics__breadcrumbs
-        +common-picture(
+        +generic-picture(
           src='img/logistics__image.jpg'
           alt=page.heading
         ).logistics__image-wrapper
