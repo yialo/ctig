@@ -10,3 +10,26 @@ mixin generic-form-field(genericFormField_type)
       checked=attributes.checked
       required
     )
+
+mixin generic-formfield-text(genericFormfieldText_type='text')
+  label.generic-formfield-text(class=attributes.class)
+    span.generic-formfield-text__legend
+      block
+    input.generic-formfield-text__input(
+      type=genericFormfieldText_type
+      name=attributes.name
+      placeholder=attributes.placeholder
+      required
+    )
+
+mixin generic-formfield-radio(genericFormfieldRadio_name)
+  label.generic-formfield-radio(class=attributes.class)
+    span.generic-formfield-radio__legend
+      block
+    input.generic-formfield-radio__input(
+      type='radio'
+      name=genericFormfieldRadio_name
+      value=attributes.value
+      checked=attributes.checked
+      required
+    )
