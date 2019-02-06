@@ -1,5 +1,5 @@
 mixin logistics()
-  section.logistics(class=attributes.class)
+  .logistics(class=attributes.class)
     +common-container().logistics__container
       +common-heading('h1').logistics__heading
       +common-inner-page-content().logistics__inner
@@ -9,7 +9,8 @@ mixin logistics()
           alt=page.heading
         ).logistics__image-wrapper
         +country-information('uk').logistics__text-content
-        +request-form({
-          heading: 'Заявка на перевозку',
-          modifier: 'shipping',
-        }).logistics__form
+        aside.logistics__form
+          +request-form({
+            heading: 'Заявка на перевозку',
+            modifier: 'shipping',
+          })
