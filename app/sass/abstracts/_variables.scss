@@ -1,9 +1,3 @@
-// Sass variables
-// ==============
-
-// Viewport sizing
-// ---------------
-
 $s-min-width: 320px;
 $s-max-width: 767px;
 $m-min-width: 768px;
@@ -12,26 +6,17 @@ $l-min-width: 1200px;
 $l-max-width: 1919px;
 $xl-min-width: 1920px;
 
-// Typography
-// ----------
-
-$font-family: geometria;
 $font-properties: (
-  font-styles: (normal, italic),
-  font-weights: (
-    (300, light),
-    (400, regular),
-    (500, medium),
-    (700, bold),
+  geometria: (
+    font-styles: (normal italic),
+    font-weights: (300 light, 400 regular, 500 medium, 700 bold),
+  ),
+  caveat: (
+    font-styles: normal,
+    font-weights: ((400 regular),),
   ),
 );
-
-// Colors
-// ------
 
 $emerald: #79bd9d;
 $modal-bg-color: #161616;
 $modal-overlay-bg-color: rgba(0, 0, 0, 0.6);
-
-// Various
-// -------

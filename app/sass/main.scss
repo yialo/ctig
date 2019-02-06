@@ -1,8 +1,16 @@
-@import "abstracts/_variables.scss";
-@import "abstracts/_functions.scss";
-@import "abstracts/_mixins.scss";
-@import "vendors/_normalize.scss";
-@import "base/_root";
-@import "base/_fonts";
-@import "base/_global";
-@import "components/*.scss";
+// TODO: Удалить ненужные файлы (root, functions), если они не потребуются.
+
+@import "abstracts/variables.scss";
+@import "abstracts/functions.scss";
+@import "abstracts/mixins.scss";
+@import "vendors/normalize.scss";
+@import "base/root";
+@import "base/fonts";
+@import "base/global";
+@import "common_components/*.scss";
+
+/*
+TODO:
+1). Реализовать Pug + Sass в одной директории
+2). Пересмотреть common-form-field: есть text есть radio
+*/

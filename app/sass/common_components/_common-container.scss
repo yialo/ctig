@@ -1,0 +1,5 @@
+.common-container {
+  @include outline();
+  @include margin-hor();
+  width: 320px;
+}
