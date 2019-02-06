@@ -35,17 +35,23 @@
       caption: 'Тип доставки:',
       type: 'radio',
       fields: [
-        { value: 'plane', legend: 'Самолетом', checked: true },
-        { value: 'ship', legend: 'Кораблем' },
-        { value: 'car', legend: 'Автомобилем' },
-        { value: 'train', legend: 'Поездом' },
+        {
+          name: 'transport_type',
+          value: 'plane',
+          legend: 'Самолетом',
+          checked: true,
+        },
+        { name: 'transport_type', value: 'ship', legend: 'Кораблем' },
+        { name: 'transport_type', value: 'car', legend: 'Автомобилем' },
+        { name: 'transport_type', value: 'train', legend: 'Поездом' },
       ],
     },
     person: {
       caption: 'Персональные данные',
       type: 'text',
       fields: [
-        { name: 'fullname',
+        {
+          name: 'fullname',
           legend: 'Укажите ваше имя',
           placeholder: 'Ваше имя',
         },
