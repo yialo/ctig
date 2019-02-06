@@ -1,5 +1,6 @@
 mixin request-form(requestForm_props)
   include _d_request-form
+  include _f_request-form
   include _m_request-form__group
   - const { modifier, heading } = requestForm_props;
   form.request-form(
@@ -11,39 +12,45 @@ mixin request-form(requestForm_props)
     h3.request-form__heading= heading
 
     +request-form__group('route')
-      each field in REQUEST_FORMS_DATA['route']['fields']
+      each field in getFields('route')
         - const [name, legend] = field;
-        +common-form-field(
-          name=name
-          placeholder=legend
-        ).request-form__field= legend
+        +common-form-field&attributes({
+          name: name,
+          placeholder: legend,
+        }).request-form__field= legend
 
     case modifier
       when 'shipping'
         +request-form__group('dimensions')
-         each field in REQUEST_FORMS_DATA['dimensions']['fields']
-          -
-            const [name, legend] = field;
-            const unit = (name === 'weight' ? 'кг' : 'см');
+         each field in getFields('dimensions')
+          - const [name, legend] = field;
           +common-form-field(
             name=name
-            placeholder=`${legend} (${unit})`
+            placeholder=`${legend} (${setUnit(name)})`
           ).request-form__field= legend
+
       when 'calculation'
-      default
         +request-form__group('capgo-type')
-          each field in REQUEST_FORMS_DATA['capgo-type']['fields']
+          each field in getFields('capgo-type')
             - const [name, legend] = field;
             .request-form__select-field
             +common-form-field(
               name=name
               placeholder=`${legend}, кг`
             ).request-form__field= legend
+
         +request-form__group('transport-type')
-          each field in REQUEST_FORMS_DATA['tran-type']['fields']
+          each field in getFields('transport-type')
+            - const [value, legend] = field;
+            +common-form-field('radio')(
+              name='transport_type'
+              value=value
+              checked=(value === 'plane')
+            ).request-form__field= legend
+
 
     +request-form__group('person')
-      each field in REQUEST_FORMS_DATA['person']['fields']
+      each field in getFields('person')
         - const [name, legend] = field;
         +common-form-field(
           name=name
@@ -52,4 +59,6 @@ mixin request-form(requestForm_props)
 
     footer.request-form__footer
       button.request-form__button(type='submit') Рассчитать доставку
-      p.request-form__caution Нажимая кнопку "Рассчитать доставку", я соглашаюсь с #[a.request-form__link(href='#') правилами обработки персональных данных]
+      p.request-form__caution
+        = 'Нажимая кнопку "Рассчитать доставку", я соглашаюсь с '
+        a.request-form__link(href='#') правилами обработки персональных данных

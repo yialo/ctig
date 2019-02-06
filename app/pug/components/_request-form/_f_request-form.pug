@@ -1,0 +1,9 @@
+-
+  const getFields = function getRequestFormsDataFields(formDataKey) {
+    return REQUEST_FORMS_DATA[formDataKey].fields;
+  };
+  const setUnit = function setDimensionsFormFieldPlaceholderUnit(
+    fieldModirier
+  ) {
+    return (fieldModirier === 'weight' ? 'кг' : 'см');
+  };
