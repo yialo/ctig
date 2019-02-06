@@ -77,7 +77,7 @@ const minsvg = function mimimizeSvgImages() {
         }),
       ]),
     )
-    .pipe(gulp.dest('./app/img/'));
+    .pipe(gulp.dest('./app/assets/img/'));
 };
 
 const minbitmap = function minimizeBitmapImages() {
@@ -100,7 +100,7 @@ const minbitmap = function minimizeBitmapImages() {
         }),
       ]),
     )
-    .pipe(gulp.dest('./app/img/'));
+    .pipe(gulp.dest('./app/assets/img/'));
 };
 
 const cleanbuild = function deleteFormerBuildFolder() {
@@ -133,14 +133,14 @@ const copybitmap = function copyBitmapImagesToBuildFolder() {
 
 const scripts = function launchJsCompiler() {
   return gulp
-    .src(['./app/vendors/*.js', './app/scripts/*.js', './app/js/*.js'])
+    .src(['./app/vendors/*.js', './app/scripts/*.js'])
     .pipe(minjs())
     .pipe(gulp.dest('./dist/js/'));
 };
 
 const style = function launchCssCompiler() {
   return gulp
-    .src('./app/sass/main.scss')
+    .src('./app/base/main.scss')
     .pipe(plumber())
     .pipe(sassglob())
     .pipe(sass())
@@ -154,7 +154,7 @@ const style = function launchCssCompiler() {
 
 const html = function launchHtmlCompiler() {
   return gulp
-    .src('./app/pug/pages/*.pug')
+    .src('./app/pages/*.pug')
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
@@ -168,9 +168,9 @@ const serve = function launchBrowserSync() {
     open: true,
     server: { baseDir: './dist/' },
   });
-  gulp.watch('./app/js/**/*.js', scripts).on('change', browserSync.reload);
-  gulp.watch('./app/pug/**/*.pug', html);
-  gulp.watch('./app/sass/**/*.scss', style);
+  gulp.watch('./app/**/*.js', scripts).on('change', browserSync.reload);
+  gulp.watch('./app/**/*.pug', html);
+  gulp.watch('./app/**/*.scss', style);
 };
 
 // Gulp tasks
