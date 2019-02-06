@@ -1,7 +1,19 @@
 mixin request-form__group(requestFormGroup_modifier)
-  - const { caption, fields } = REQUEST_FORMS_DATA[requestFormGroup_modifier];
+  -
+    const {
+      caption,
+      type,
+      fields,
+    } = REQUEST_FORMS_DATA[requestFormGroup_modifier];
   fieldset.request-form__group(
     class=`request-form__group--${requestFormGroup_modifier}`
   )
     legend.request-form__group__caption= caption
     block
+    each field in fields
+      -
+        const { name, value, legend } = field;
+        const requestFormField_modifier = (type === 'text' ? name : value);
+      +common-form-field(type).request-form__field(
+        class=`request-form__field--${requestFormField_modifier}`
+      )&attributes(field)= legend

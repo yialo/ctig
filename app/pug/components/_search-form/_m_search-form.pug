@@ -4,7 +4,8 @@ mixin search-form()
     action=FORM_DEFAULT_ACTION
     name='search-tracking'
   )
-    +common-form-field('search')(
+    +common-form-field()(
+      type='search'
       name='search-text'
       placeholder='Введите трек-номер'
     ).search-form__field-wrapper Поле ввода трек-номера

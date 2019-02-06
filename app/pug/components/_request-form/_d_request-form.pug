@@ -2,38 +2,58 @@
   const REQUEST_FORMS_DATA = {
     route: {
       caption: 'Маршрут',
+      type: 'text',
       fields: [
-        ['departure', 'Откуда'],
-        ['destination', 'Куда'],
+        {
+          name: 'departure',
+          legend: 'Укажите пункт отправки',
+          placeholder: 'Откуда',
+        },
+        {
+          name: 'destination',
+          legend: 'Укажите пункт назначения',
+          placeholder: 'Куда',
+        },
       ],
     },
     dimensions: {
       caption: 'Параметры груза',
+      type: 'text',
       fields: [
-        ['length', 'Длина'],
-        ['width', 'Ширина'],
-        ['height', 'Высота'],
-        ['weight', 'Вес'],
+        { name: 'length', legend: 'Длина', placeholder: 'Длина (см)' },
+        { name: 'width', legend: 'Ширина', placeholder: 'Ширина (см)' },
+        { name: 'height', legend: 'Высота', placeholder: 'Высота (см)' },
+        { name: 'weight', legend: 'Вес', placeholder: 'Вес (кг)' },
       ],
     },
-    'capgo-type': {
+    'cargo-type': {
       caption: 'Сведения о грузе',
-      fields: [['weight', 'Вес']],
+      type: 'text',
+      fields: [{ name: 'weight', legend: 'Вес', placeholder: 'Вес, кг' }],
     },
     'transport-type': {
       caption: 'Тип доставки:',
+      type: 'radio',
       fields: [
-        ['plane', 'Самолетом'],
-        ['ship', 'Кораблем'],
-        ['car', 'Автомобилем'],
-        ['train', 'Поездом'],
+        { value: 'plane', legend: 'Самолетом', checked: true },
+        { value: 'ship', legend: 'Кораблем' },
+        { value: 'car', legend: 'Автомобилем' },
+        { value: 'train', legend: 'Поездом' },
       ],
     },
     person: {
       caption: 'Персональные данные',
+      type: 'text',
       fields: [
-        ['fullname', 'Ваше имя'],
-        ['contact', 'Номер телефона или Email'],
+        { name: 'fullname',
+          legend: 'Укажите ваше имя',
+          placeholder: 'Ваше имя',
+        },
+        {
+          name: 'contact',
+          legend: 'Укажите номер телефона или адрес электронной почты',
+          placeholder: 'Номер телефона или Email',
+        },
       ],
     },
   };

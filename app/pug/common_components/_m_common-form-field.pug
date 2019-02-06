@@ -1,9 +1,9 @@
-mixin common-form-field(formField_type='text')
+mixin common-form-field(formFieldType)
   label.common-form-field(class=attributes.class)
     span.common-form-field__legend
       block
     input.common-form-field__input(
-      type=formField_type
+      type=formFieldType
       name=attributes.name
       value=attributes.value
       placeholder=attributes.placeholder
