@@ -1,19 +1,30 @@
 mixin request-form__group(requestFormGroup_modifier)
   -
-    const {
-      caption,
-      type,
-      fields,
-    } = REQUEST_FORMS_DATA[requestFormGroup_modifier];
-  fieldset.request-form__group(
+    const requestFormGroup_data = REQUEST_FORMS_DATA[requestFormGroup_modifier];
+    const { caption, type, fields } = requestFormGroup_data;
+  +generic-formgroup(type).request-form__group(
     class=`request-form__group--${requestFormGroup_modifier}`
   )
-    legend.request-form__group__caption= caption
     block
-    each field in fields
-      -
-        const { name, value, legend } = field;
-        const requestFormField_modifier = (type === 'text' ? name : value);
-      +generic-form-field(type).request-form__field(
-        class=`request-form__field--${requestFormField_modifier}`
-      )&attributes(field)= legend
+    legend.generic-formgroup__caption= caption
+    ul.generic-formgroup__list.request-form__list
+      each field in fields
+        - const { name, legend, placeholder, value, checked } = field;
+        li.generic-formgroup__item.request-form__item
+          case type
+            when 'text'
+              +generic-textfield-block(legend).generic-formgroup__label
+                +generic-textfield(
+                  name=name
+                  placeholder=placeholder
+                ).generic-textfield-block__input.generic-formgroup__textfield
+            when 'radio'
+              input.generic-formgroup__radiofield(
+                type='radio'
+                name='transport_type'
+                value=value
+                checked=checked
+                id=value
+                required
+              )
+              label.generic-formgroup__label(for=value)= legend

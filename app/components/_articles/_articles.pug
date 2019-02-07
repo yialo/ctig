@@ -2,7 +2,7 @@ mixin articles()
   .articles(class=attributes.class)
     +generic-container().articles__container
       +generic-heading('h1').articles__heading
-      +generic-inner-page-content().articles__inner
+      +generic-inner-content().articles__inner
         ul.articles__list
           - for (let i = 1; i <= 3; i += 1)
               li.articles__item

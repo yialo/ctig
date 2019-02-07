@@ -4,12 +4,12 @@ mixin article()
     +generic-container().article__container
       header.article__header
         +generic-heading('h1').article__heading
-        +generic-inner-page-content().article__inner
+        +generic-inner-content().article__inner
           +generic-picture().article__banner(
             src='img/article__banner-image.jpg'
             alt=page.heading
           )
-      +generic-inner-page-content().article__inner
+      +generic-inner-content().article__inner
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
           .article__row

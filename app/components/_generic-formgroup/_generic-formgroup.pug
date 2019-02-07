@@ -1,0 +1,10 @@
+mixin generic-formgroup(genericFormgroup_modifier)
+  fieldset.generic-formgroup(class=[
+    (
+      genericFormgroup_modifier
+      ? `generic-formgroup--${genericFormgroup_modifier}`
+      : null
+    ),
+    attributes.class,
+  ])
+    block

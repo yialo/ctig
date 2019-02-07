@@ -4,9 +4,10 @@ mixin search-form()
     action=FORM_DEFAULT_ACTION
     name='search-tracking'
   )
-    +generic-formfield-text('search')(
-      name='search-text'
-      placeholder='Введите трек-номер'
-    ).search-form__field Поле ввода трек-номера
+    +generic-textfield-block('Поле ввода трек-номера').search-form__inner
+      +generic-textfield('search')(
+        name='search-text'
+        placeholder='Введите трек-номер'
+      ).generic-textfield-block__input.search-form__field
     button.search-form__button(type='submit')
       span.search-form__button-legend Найти отправление
