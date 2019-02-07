@@ -3,7 +3,6 @@
 // Variables
 
 const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulp = require('gulp');
 const jpegtran = require('imagemin-jpegtran');
@@ -18,6 +17,7 @@ const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const sassglob = require('gulp-sass-glob');
+const server = require('browser-sync').create();
 const zopfli = require('imagemin-zopfli');
 
 // Task functions
@@ -77,7 +77,7 @@ const minsvg = function mimimizeSvgImages() {
         }),
       ]),
     )
-    .pipe(gulp.dest('./app/assets/img/'));
+    .pipe(gulp.dest('./spec/img-output/'));
 };
 
 const minbitmap = function minimizeBitmapImages() {
@@ -100,7 +100,7 @@ const minbitmap = function minimizeBitmapImages() {
         }),
       ]),
     )
-    .pipe(gulp.dest('./app/assets/img/'));
+    .pipe(gulp.dest('./spec/img-output/'));
 };
 
 const cleanbuild = function deleteFormerBuildFolder() {
@@ -111,7 +111,7 @@ const copyvideo = function copyVideoFilesToBuildFolder() {
   return gulp.src('./app/assets/video/*.mp4').pipe(gulp.dest('./dist/video/'));
 };
 
-const copyfavicons = function copyFavIconsToBuildFolder() {
+const copyfavicons = function copyFaviconsToBuildFolder() {
   return gulp.src('./app/assets/favicons/*')
     .pipe(gulp.dest('./dist/favicons/'));
 };
@@ -126,7 +126,7 @@ const copysvg = function copySvgImagesToBuildFolder() {
   return gulp.src('./app/assets/img/*.svg').pipe(gulp.dest('./dist/img/'));
 };
 
-const copybitmap = function copyBitmapImagesToBuildFolder() {
+const copybitmaps = function copyBitmapImagesToBuildFolder() {
   return gulp.src('./app/assets/img/*.{jpg,png}')
     .pipe(gulp.dest('./dist/img/'));
 };
@@ -149,7 +149,7 @@ const style = function launchCssCompiler() {
     .pipe(mincss())
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('./dist/css/'))
-    .pipe(browserSync.stream());
+    .pipe(server.stream());
 };
 
 const html = function launchHtmlCompiler() {
@@ -158,61 +158,53 @@ const html = function launchHtmlCompiler() {
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
-    .pipe(browserSync.stream());
+    .pipe(server.stream());
 };
 
-const serve = function launchBrowserSync() {
-  browserSync.init({
+const reload = function reloadBrowserSync(done) {
+  server.reload();
+  done();
+};
+
+const serve = function launchBrowserSync(done) {
+  server.init({
     cors: true,
     notify: false,
     open: true,
     server: { baseDir: './dist/' },
   });
-  gulp.watch('./app/**/*.js', scripts).on('change', browserSync.reload);
+  done();
   gulp.watch('./app/**/*.pug', html);
   gulp.watch('./app/**/*.scss', style);
 };
 
+const watchJs = function watchForJavascriptFiles() {
+  return gulp.watch('./app/**/*.js', gulp.series(scripts, reload));
+};
+
+const watchSvg = function watchForSvgFiles() {
+  return gulp.watch('./app/assets/img/*.svg', gulp.series(copysvg, reload));
+};
+
+const watchBitmaps = function watchForBitmapFiles() {
+  return gulp
+    .watch('./app/assets/img/*.{jpg,png}', gulp.series(copybitmaps, reload));
+};
+
 // Gulp tasks
-
-gulp.task(
-  'default',
-  gulp.series(
-    cleanbuild,
-    gulp.parallel(copyvideo, copyfonts, copyfavicons, copysvg, copybitmap),
-    scripts,
-    style,
-    html,
-    serve,
-  ),
-);
-
-gulp.task(
-  'build',
-  gulp.series(
-    cleanbuild,
-    gulp.parallel(copyvideo, copyfonts, copyfavicons, copysvg, copybitmap),
-    scripts,
-    style,
-    html,
-  ),
-);
-gulp.task('serve', serve);
-
-gulp.task('imagemin', gulp.parallel(minsvg, minbitmap));
-gulp.task('imagecopy', gulp.parallel(copysvg, copybitmap));
-gulp.task(
-  'imagerenew',
-  gulp.series(
-    gulp.parallel(minsvg, minbitmap),
-    gulp.parallel(copysvg, copybitmap),
-  ),
-);
 
 gulp.task('svgmin', minsvg);
 gulp.task('svgcopy', copysvg);
-gulp.task('svgrenew', gulp.series(minsvg, copysvg));
-
 gulp.task('bitmapmin', minbitmap);
-gulp.task('bitmapcopy', copybitmap);
-gulp.task('bitmaprenew', gulp.series(minbitmap, copybitmap));
+gulp.task('bitmapcopy', copybitmaps);
+gulp.task('imagemin', gulp.parallel('svgmin', 'bitmapmin'));
+gulp.task('imagecopy', gulp.parallel('svgcopy', 'bitmapcopy'));
+gulp.task(
+  'copyassets',
+  gulp.parallel(copyvideo, copyfonts, copyfavicons, 'imagecopy'),
+);
+gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps));
+gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
+gulp.task('serve', gulp.series(serve, 'watchForAll'));
+
+gulp.task('default', gulp.series('build', 'serve'));
