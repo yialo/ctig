@@ -1,5 +1,6 @@
 .generic-container {
   @include outline();
   @include margin-hor();
+  @include padding-hor();
   width: 320px;
 }

@@ -1,0 +1,19 @@
+.page-header__container {
+  @include outline();
+  @include margin-hor();
+  @include padding-hor();
+  width: 320px;
+  padding: {
+    top: 24px;
+    bottom: 24px;
+  }
+}
+
+.page-header__logo {
+  margin-bottom: 24px;
+}
+
+.page-header__search {
+  display: flex;
+  justify-content: center;
+}

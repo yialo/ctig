@@ -12,6 +12,7 @@ body {
   @include font();
   min-width: $s-min-width;
   margin: 0;
+  font-style: normal;
   color: black;
   background-color: white;
 }

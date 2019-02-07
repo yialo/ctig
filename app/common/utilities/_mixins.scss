@@ -1,7 +1,7 @@
 @mixin font(
   $fontWeight: 400,
   $fontSize: 16px,
-  $lineHeight: 1.5,
+  $lineHeight: 1,
   $font-family: geometria,
 ) {
   font: {
@@ -19,7 +19,7 @@
   }
 }
 
-@mixin padding-hor($paddingHorizontal: 10px) {
+@mixin padding-hor($paddingHorizontal: 16px) {
   padding: {
     left: $paddingHorizontal;
     right: $paddingHorizontal;

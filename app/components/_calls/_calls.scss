@@ -1,0 +1,32 @@
+.calls__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.calls__item {
+  @include margin-hor();
+  display: flex;
+  flex-direction: column;
+
+  &--1 {
+    margin-bottom: 24px;
+  }
+}
+
+.calls__link {
+  margin-bottom: 16px;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.calls__request {
+  overflow: hidden;
+}
+
+.calls__string {
+  font-size: 12px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}

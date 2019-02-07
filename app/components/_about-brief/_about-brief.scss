@@ -1,0 +1,7 @@
+.about-brief__endline {
+  @include font(400, 24px, 1, caveat);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+}
