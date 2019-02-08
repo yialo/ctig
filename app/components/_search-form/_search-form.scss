@@ -1,8 +1,10 @@
 .search-form {
   display: flex;
+  width: 100%;
 }
 
 .search-form__inner {
+  flex-grow: 1;
   margin-right: 16px;
 }
 
