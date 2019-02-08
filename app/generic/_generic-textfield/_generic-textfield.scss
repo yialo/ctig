@@ -4,10 +4,12 @@
   min-width: 0;
   padding: 7px 12px 6px;
   font-size: 14px;
-  border-style: none;
-  border-bottom: {
-    width: 1px;
-    style: solid;
+  border: {
+    style: none;
+    bottom: {
+      width: 1px;
+      style: solid;
+    }
   }
 
   &:focus::placeholder {

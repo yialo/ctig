@@ -1,8 +1,9 @@
 mixin about-brief()
+  - const ABOUT_BRIEF_HEADING = 'О нас';
   include _d_about-brief
   section.about-brief(class=attributes.class)
     +generic-container().about-brief__container
-      +generic-heading().about-brief__heading О нас
+      +generic-heading().about-brief__heading= ABOUT_BRIEF_HEADING
       +generic-picture(
         src='img/about-brief__image.jpg'
         alt='Контейнеры'

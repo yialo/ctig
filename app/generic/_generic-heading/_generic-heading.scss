@@ -1,0 +1,31 @@
+.generic-heading {
+  @include font(700, 32px, 1);
+  margin: {
+    top: 0;
+    bottom: 0;
+  };
+}
+
+.generic-heading-wrapper__text {
+  -webkit-text-stroke: 0.5px #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+
+  &--higher {
+    z-index: 2;
+    color: transparent;
+  }
+
+  &--substrate {
+    z-index: 0;
+    color: inherit;
+  }
+}
+
+.generic-heading-wrapper__image {
+  position: relative;
+  top: 64px;
+  z-index: 1;
+}

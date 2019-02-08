@@ -1,7 +1,19 @@
 mixin intro()
+  - const INTRO_HEADING = 'Международная перевозка сборных грузов';
   header.intro(class=attributes.class)
-    +generic-container().intro__container
-      +generic-heading().intro__heading Международная перевозка сборных грузов
+    +generic-container().blending.intro__container
+      +generic-heading--higher()(class=[
+        'blending__heading',
+        'blending__heading--higher',
+        'intro__heading',
+        'intro__heading--higher',
+      ])= INTRO_HEADING
+      +generic-heading--substrate()(class=[
+        'blending__heading',
+        'blending__heading--substrate',
+        'intro__heading',
+        'intro__heading--substrate',
+      ])= INTRO_HEADING
       each string, index in ['Ракета', 'Облака']
         +generic-picture(
           class=['intro__image-wrapper', `intro__image-wrapper--${index + 1}`]

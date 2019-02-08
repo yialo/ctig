@@ -7,6 +7,15 @@
 @import "../common/scaffolds/root";
 @import "../common/scaffolds/fonts";
 @import "../common/scaffolds/global";
+@import "../generic/_generic-container/*";
+@import "../generic/_generic-formgroup/*";
+@import "../generic/_generic-heading/*";
+@import "../generic/_generic-inner-content/*";
+@import "../generic/_generic-list/*";
+@import "../generic/_generic-picture/*";
+@import "../generic/_generic-text-block/*";
+@import "../generic/_generic-textfield-block/*";
+@import "../generic/_generic-textfield/*";
 @import "../components/_about-brief/*";
 @import "../components/_about/*";
 @import "../components/_additional-service/*";
@@ -24,15 +33,6 @@
 @import "../components/_directions/*";
 @import "../components/_error404/*";
 @import "../components/_extra/*";
-@import "../components/_generic-container/*";
-@import "../components/_generic-formgroup/*";
-@import "../components/_generic-heading/*";
-@import "../components/_generic-inner-content/*";
-@import "../components/_generic-list/*";
-@import "../components/_generic-picture/*";
-@import "../components/_generic-text-block/*";
-@import "../components/_generic-textfield-block/*";
-@import "../components/_generic-textfield/*";
 @import "../components/_glossary/*";
 @import "../components/_indices/*";
 @import "../components/_intro/*";
@@ -56,9 +56,3 @@
 @import "../components/_socials/*";
 @import "../components/_transport-item/*";
 @import "../components/_transport/*";
-
-/*
-TODO:
-1). Пересмотреть generic-form-field: есть text есть radio
-2). Настроить imagemin в Gulp
-*/
