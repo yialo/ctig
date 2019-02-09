@@ -1,9 +1,0 @@
-mixin generic-text-block(genericTextBlock_type)
-  case genericTextBlock_type
-    when 'li'
-      li.generic-text-block(class=attributes.class)
-        block
-    when 'p'
-    default
-      p.generic-text-block(class=attributes.class)
-        block

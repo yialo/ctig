@@ -2,13 +2,13 @@ mixin about-brief()
   - const ABOUT_BRIEF_HEADING = 'О нас';
   include _d_about-brief
   section.about-brief(class=attributes.class)
-    +generic-container().about-brief__container
-      +generic-heading().about-brief__heading= ABOUT_BRIEF_HEADING
+    .generic-container.about-brief__container
+      h2.generic-heading.about-brief__heading= ABOUT_BRIEF_HEADING
       +generic-picture(
         src='img/about-brief__image.jpg'
         alt='Контейнеры'
       ).about-brief__image-wrapper
       .about-brief__text-content
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
-          +generic-text-block('p').about-brief__paragraph= paragraph
+          p.generic-text-block.about-brief__paragraph= paragraph
         p.about-brief__endline Спасибо за доверие, Ваш #{SITE_TITLE}.

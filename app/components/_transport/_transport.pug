@@ -8,8 +8,8 @@ mixin transport()
       'Ракетный транспорт',
     ];
   section.transport(class=attributes.class)
-    +generic-container().transport__container
-      +generic-heading().transport__heading Виды перевозок
+    .generic-container.transport__container
+      h2.generic-heading.transport__heading Виды перевозок
       ul.transport__list
         each item, index in TRANSPORT_ITEMS
           +transport-item({ heading: item, number: index + 1 }).transport__item

@@ -1,9 +1,9 @@
 mixin about()
   include _d_about
   .about(class=attributes.class)
-    +generic-container().about__container
-      +generic-heading('h1').about__heading
-      +generic-inner-content().about__inner
+    .generic-container.about__container
+      h1.generic-heading.about__heading= page.heading
+      .generic-container__inner.about__inner
         +generic-picture(
           src='img/about__image.jpg'
           alt='Склад'

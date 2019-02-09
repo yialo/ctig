@@ -1,8 +1,8 @@
 mixin logistics()
   .logistics(class=attributes.class)
-    +generic-container().logistics__container
-      +generic-heading().logistics__heading
-      +generic-inner-content().logistics__inner
+    .generic-container.logistics__container
+      h1.generic-heading.logistics__heading= page.heading
+      .generic-container__inner.logistics__inner
         +logistics-crumbs(LOGISTICS_ITEMS).logistics__breadcrumbs
         +generic-picture(
           src='img/logistics__image.jpg'

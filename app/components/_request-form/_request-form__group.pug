@@ -2,9 +2,11 @@ mixin request-form__group(requestFormGroup_modifier)
   -
     const requestFormGroup_data = REQUEST_FORMS_DATA[requestFormGroup_modifier];
     const { caption, type, fields } = requestFormGroup_data;
-  +generic-formgroup(type).request-form__group(
-    class=`request-form__group--${requestFormGroup_modifier}`
-  )
+  fieldset.generic-formgroup(class=[
+    `generic-formgroup--${type}`,
+    'request-form__group',
+    `request-form__group--${requestFormGroup_modifier}`,
+  ])
     block
     legend.generic-formgroup__caption= caption
     ul.generic-formgroup__list.request-form__list
@@ -14,9 +16,11 @@ mixin request-form__group(requestFormGroup_modifier)
           case type
             when 'text'
               +generic-textfield-block(legend).generic-formgroup__label
-                +generic-textfield(
+                input.generic-textfield(
+                  type='text'
                   name=name
                   placeholder=placeholder
+                  required
                 ).generic-textfield-block__input.generic-formgroup__textfield
             when 'radio'
               input.generic-formgroup__radiofield(

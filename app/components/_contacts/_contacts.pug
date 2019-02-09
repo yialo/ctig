@@ -6,9 +6,9 @@ mixin contacts()
       ['+79265333737', '+7 926 533 37 37 (WhatsApp, Viber)'],
     ];
   .contacts(class=attributes.class)
-    +generic-container().contacts__container
-      +generic-heading('h1').contacts__heading
-      +generic-inner-content().contacts__inner
+    .generic-container.contacts__container
+      h1.generic-heading.contacts__heading= page.heading
+      .generic-container__inner.contacts__inner
         .contacts__office
           h3.contacts__subheading Офис в Москва
           ul.contacts__list
