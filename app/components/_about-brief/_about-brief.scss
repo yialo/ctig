@@ -2,12 +2,12 @@
   position: relative;
 }
 
-.about-brief__heading-wrapper {
+.about-brief__heading {
   @include padding-hor();
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
-.about-brief__inner {
+.about-brief__image-wrapper {
   margin-bottom: 32px;
 }
 
@@ -22,7 +22,7 @@
   left: calc(100% - 8px);
   width: 200px;
   transform-origin: top left;
-  transform: translateY(64px) rotate(90deg);
+  transform: translateY(96px) rotate(90deg);
   margin: {
     top: 0;
     bottom: 0;
