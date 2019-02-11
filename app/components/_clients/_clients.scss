@@ -1,0 +1,18 @@
+.clients__heading {
+  @include padding-hor();
+  margin-bottom: 32px;
+}
+
+.clients__list {
+  @include list();
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.clients__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 176px;
+  background-color: #f5f5f5;
+}

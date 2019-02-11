@@ -1,12 +1,14 @@
 mixin clients()
   include _d_clients
   section.clients(class=attributes.class)
-    .generic-container.clients__container
+    +generic-container().clients__container
       h2.generic-heading.clients__heading Наши клиенты
       ul.clients__list
         each item, index in CLIENTS_LOGO_ALTS
-          li.clients__item(class=`clients__item--${index + 1}`)
+          li.clients__item
             +generic-picture(
               src=`img/clients__image--${index + 1}.png`
               alt=item
-            ).clients__image-wrapper
+            ).clients__image-wrapper(
+              class=`.clients__image-wrapper----${index + 1}`
+            )
