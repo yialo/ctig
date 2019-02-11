@@ -3,7 +3,10 @@ mixin article()
   article.article(class=attributes.class)
     .generic-container.article__container
       header.article__header
-        h1.generic-heading.article__heading= page.heading
+        h1(class=[
+          'generic-heading',
+          'generic-container__heading',
+        ]).article__heading= page.heading
         .generic-container__inner.article__inner
           +generic-picture().article__banner(
             src='img/article__banner-image.jpg'

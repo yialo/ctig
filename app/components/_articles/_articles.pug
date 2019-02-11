@@ -1,7 +1,10 @@
 mixin articles()
   .articles(class=attributes.class)
     .generic-container.articles__container
-      h1.generic-heading.articles__heading= page.heading()
+      h1(class=[
+        'generic-heading',
+        'generic-container__heading',
+      ]).articles__heading= page.heading()
       .generic-container__inner.articles__inner
         ul.articles__list
           - for (let i = 1; i <= 3; i += 1)

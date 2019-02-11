@@ -2,7 +2,10 @@ mixin about()
   include _d_about
   .about(class=attributes.class)
     .generic-container.about__container
-      h1.generic-heading.about__heading= page.heading()
+      h1(class=[
+        'generic-heading',
+        'generic-container__heading',
+      ]).about__heading= page.heading()
       .generic-container__inner.about__inner
         +generic-picture(
           src='img/about__image.jpg'

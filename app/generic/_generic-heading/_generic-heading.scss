@@ -1,8 +1,5 @@
 .generic-heading {
   @include font(700, 32px);
-  margin: {
-    top: 0;
-    bottom: 0;
-  };
+  margin-top: 0;
   letter-spacing: 0.5px;
 }
