@@ -19,12 +19,15 @@
 }
 
 .directions__item {
-  margin-top: var(--directions__list-vertical-margin);
+  margin: {
+    top: var(--directions__list-vertical-margin);
+    right: 4px;
+  }
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  &:not(:last-child) {
-    margin-right: 4px;
+  &--last {
+    margin-right: 0;
   }
 }

@@ -7,8 +7,7 @@ mixin clients()
         each item, index in CLIENTS_LOGO_ALTS
           li.clients__item
             +generic-picture(
+              class=`.clients__image-wrapper----${index + 1}`
               src=`img/clients__image--${index + 1}.png`
               alt=item
-            ).clients__image-wrapper(
-              class=`.clients__image-wrapper----${index + 1}`
-            )
+            ).clients__image-wrapper

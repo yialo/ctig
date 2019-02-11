@@ -9,7 +9,7 @@ mixin customs(customs_modifier)
       title,
     } = CUSTOMS_DATA[customs_modifier];
   section.customs(class=[`customs--${customs_modifier}`, attributes.class])
-    .generic-container.customs__container
+    +generic-container().customs__container
       header.customs__headline
         h2.generic-heading.customs__title= title
         p.customs__subtitle= subtitle
@@ -19,9 +19,25 @@ mixin customs(customs_modifier)
       ).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
-        p.generic-text-block.customs__paragraph!= paragraphs[0]
+        p.generic-text-block.customs__paragraph(
+          class='customs__paragraph--lone'
+        )!= paragraphs[0]
         ul.customs__list
-          each item in listItems
-            li.generic-text-block.customs__item!= item
-        each item in customsParagraphsRest
-          p.generic-text-block.customs__paragraph!= item
+          each item, index in listItems
+            -
+              const lastCustomsItemModifier =
+                (index === listItems.length - 1)
+                ? 'customs__item--last'
+                : null;
+            li.generic-text-block.customs__item(
+              class=lastCustomsItemModifier
+            )!= item
+        each item, index in customsParagraphsRest
+          -
+            const lastCustomsParagraphModifier =
+              (index === customsParagraphsRest.length - 1)
+              ? 'customs__paragraph--last'
+              : null;
+          p.generic-text-block.customs__paragraph(
+            class=lastCustomsParagraphModifier
+          )!= item
