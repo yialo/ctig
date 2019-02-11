@@ -1,18 +1,20 @@
 mixin intro()
   - const INTRO_HEADING = 'Международная перевозка сборных грузов';
-  header.intro(class=attributes.class)
-    .blending.intro__container
-      h2.generic-heading(class=[
-        'blending__heading',
-        'blending__heading--higher',
-      ]).intro__heading= INTRO_HEADING
-      span.generic-heading(class=[
-        'blending__heading',
-        'blending__heading--substrate',
-      ]).intro__heading= INTRO_HEADING
-      each string, index in ['Ракета', 'Облака']
-        +generic-picture.blending__image.intro__image-wrapper(
-          class=`intro__image-wrapper--${index + 1}`
-          src=`img/intro__image--${index + 1}.jpg`
-          alt=string
-        )
+  section.intro(class=attributes.class)
+      +generic-container().intro__container
+        .blending.intro__inner
+          .blending__heading-wrapper.intro__heading-wrapper
+            h2.generic-heading(class=[
+              'blending__heading',
+              'blending__heading--higher',
+            ]).intro__heading= INTRO_HEADING
+            span.generic-heading(class=[
+              'blending__heading',
+              'blending__heading--substrate',
+            ]).intro__heading= INTRO_HEADING
+          each string, index in ['Ракета', 'Облака']
+            +generic-picture.blending__picture.intro__image-wrapper(
+              class=`intro__image-wrapper--${index + 1}`
+              src=`img/intro__image--${index + 1}.jpg`
+              alt=string
+            )

@@ -8,7 +8,7 @@ mixin navigation()
         - const [modifier, text] = item;
         li.navigation__item
           -
-            const linkPath = EMPTY_NAVIGATION_LINKS.includes(modifier)
+            const linkPath = _EMPTY_NAVIGATION_LINKS.includes(modifier)
               ? '#'
               : `${modifier}.html`;
           a.navigation__link(

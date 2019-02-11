@@ -6,6 +6,6 @@ mixin article-intro(articleIntro_number)
       src=`img/article-intro__image--${articleIntro_number}.jpg`
       alt=heading
     ).article-intro__image-wrapper
-    p.generic-text-block.article-intro__excerpt= TEMPLATE_PARAGRAPHS[0]
+    p.generic-text-block.article-intro__excerpt= _TEMPLATE_PARAGRAPHS[0]
     footer.article-intro__footer
       a.article-intro__details(href='article.html') Подробнее

@@ -2,27 +2,28 @@
   position: relative;
 }
 
-.blending__heading {
-  @include padding-hor(16px);
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-text-stroke: 0.35px #ffffff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  mix-blend-mode: overlay;
+.blending__heading-wrapper {
+  position: relative;
+}
 
+.blending__heading {
   &--higher {
-    z-index: 2;
-    color: transparent;
+    color: inherit;
   }
 
   &--substrate {
     z-index: 0;
+    display: none;
     color: inherit;
+  }
+
+  @media (min-width: $l-min-width) {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-stroke: 0.35px #ffffff;
+    mix-blend-mode: overlay;
   }
 }
 
-.blending__image {
-  position: relative;
+.blending__picture {
   z-index: 1;
 }

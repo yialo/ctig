@@ -9,7 +9,13 @@
     title: 'Такой страницы нет',
     heading: 'Страница не существует',
   };
-  const PAGE_ABOUT =  { id: 'about', title: 'О нас', heading: 'О нас' };
+  const PAGE_ABOUT =  {
+    id: 'about',
+    title: 'О нас',
+    heading: function () {
+      return this.title;
+    },
+  };
   const PAGE_ARTICLE = {
     id: 'article',
     title: 'Статьи / Подробнее',
@@ -18,20 +24,28 @@
   const PAGE_ARTICLES = {
     id: 'articles',
     title: 'Статьи',
-    heading: 'Статьи',
+    heading: function () {
+      return this.title;
+    },
   };
   const PAGE_LOGISTICS = {
     id: 'logistics',
     title: 'География перевозок',
-    heading: 'География перевозок',
+    heading: function () {
+      return this.title;
+    },
   };
   const PAGE_GLOSSARY = {
     id: 'glossary',
     title: 'Глоссарий',
-    heading: 'Глоссарий',
+    heading: function () {
+      return this.title;
+    },
   };
   const PAGE_CONTACTS = {
     id: 'contacts',
     title: 'Контакты',
-    heading: 'Контакты',
+    heading: function () {
+      return this.title;
+    },
   };

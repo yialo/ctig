@@ -12,7 +12,7 @@ mixin main-menu()
       - const [modifier, text] = item;
       li.main-menu__item
         -
-          const itemLink = EMPTY_NAVIGATION_LINKS.includes(modifier)
+          const itemLink = _EMPTY_NAVIGATION_LINKS.includes(modifier)
             ? '#'
             : `${modifier}.html`;
         a.main-menu__link(

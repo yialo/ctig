@@ -2,7 +2,7 @@ mixin glossary()
   include _d_glossary
   .glossary(class=attributes.class)
     .generic-container.glossary__container
-      h1.generic-heading.glossary__heading= page.heading
+      h1.generic-heading.glossary__heading= page.heading()
       .generic-container__inner.glossary__inner
         +generic-picture(
           src='img/glossary__image.jpg'
