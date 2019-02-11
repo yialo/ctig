@@ -8,8 +8,13 @@ mixin about()
           src='img/about__image.jpg'
           alt='Склад'
         ).about__image-wrapper
-        each item in ABOUT_FEATURES_LISTS
-          - const { heading, list } = item;
+        each item, index in ABOUT_FEATURES_LISTS
+          -
+            const lastAboutListModifier =
+              (index === ABOUT_FEATURES_LISTS.length - 1)
+              ? 'about__list--last'
+              : null;
+            const { heading, list } = item;
           .about__features-block
             h3.about__list-caption= `${heading}:`
-            +generic-list(list).about__list
+            +generic-list(list).about__list(class=lastAboutListModifier)

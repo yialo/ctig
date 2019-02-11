@@ -1,7 +1,7 @@
 mixin clients()
   include _d_clients
   section.clients(class=attributes.class)
-    +generic-container().clients__container
+    .generic-container.generic-container--mainpage.clients__container
       h2.generic-heading.clients__heading Наши клиенты
       ul.clients__list
         each item, index in CLIENTS_LOGO_ALTS

@@ -1,0 +1,28 @@
+.about__container {
+  padding-bottom: 64px;
+}
+
+.about__heading {
+  margin-bottom: 32px;
+}
+
+.about__image-wrapper {
+  margin-bottom: 32px;
+}
+
+.about__list {
+  margin-bottom: 48px;
+
+  &--last {
+    margin-bottom: 0;
+  }
+}
+
+.about__list-caption {
+  @include font(500, 24px);
+  letter-spacing: 0.5px;
+  margin: {
+    top: 0;
+    bottom: 24px;
+  }
+}

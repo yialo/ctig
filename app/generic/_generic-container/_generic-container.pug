@@ -1,9 +1,0 @@
-mixin generic-container()
-  -
-    const genericContainer_modifier = _IS_MAINPAGE
-      ? 'generic-container--mainpage'
-      : null;
-  .generic-container(class=[genericContainer_modifier, attributes.class])
-    block
-
-//- TODO: подумать насчёт модификатора и необходимости выносить в миксин.

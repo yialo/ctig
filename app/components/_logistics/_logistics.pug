@@ -1,6 +1,6 @@
 mixin logistics()
   .logistics(class=attributes.class)
-    +generic-container().logistics__container
+    .generic-container.logistics__container
       h1.generic-heading.logistics__heading= page.heading()
       .generic-container__inner.logistics__inner
         +logistics-crumbs(_LOGISTICS_ITEMS).logistics__breadcrumbs
