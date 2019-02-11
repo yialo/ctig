@@ -7,9 +7,16 @@ mixin transport-item(transportItem_props)
     ])
   )
     h3.transport-item__heading= heading
-    +generic-picture(
-      src=`img/transport-item__image--${number}.jpg`
-      alt=heading
-    ).transport-item__image-wrapper
     if heading === 'Ракетный транспорт'
-      span.transport-item__hint Скоро
+      .transport-item__wrapper
+        +generic-picture(
+          src=`img/transport-item__image--${number}.jpg`
+          alt=heading
+        ).transport-item__image-wrapper
+        span.transport-item__hint Скоро
+    else
+      +generic-picture(
+        src=`img/transport-item__image--${number}.jpg`
+        alt=heading
+      ).transport-item__image-wrapper
+

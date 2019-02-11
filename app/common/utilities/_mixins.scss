@@ -1,15 +1,13 @@
 @mixin font(
   $fontWeight: 400,
   $fontSize: 16px,
-  $lineHeight: 1,
-  $font-family: geometria,
+  $fontFamily: geometria,
 ) {
   font: {
     weight: $fontWeight;
     size: $fontSize;
-    family: "#{$font-family}", "Arial", sans-serif;
+    family: "#{$fontFamily}", "Arial", sans-serif;
   }
-  line-height: $lineHeight;
 }
 
 @mixin margin-hor($marginHorizontal: auto) {

@@ -3,7 +3,7 @@
 }
 
 .about-brief__heading-wrapper {
-  @include padding-hor(16px);
+  @include padding-hor();
   margin-bottom: 16px;
 }
 
@@ -12,11 +12,11 @@
 }
 
 .about-brief__text-content {
-  @include padding-hor(16px);
+  @include padding-hor();
 }
 
 .about-brief__subtitle {
-  @include font(700, 16px, 1);
+  @include font(700, 16px);
   position: absolute;
   top: 0;
   left: calc(100% - 8px);
@@ -49,7 +49,10 @@
 }
 
 .about-brief__endline {
-  @include font(400, 24px, 1, caveat);
+  @include font(
+    $fontSize: 24px,
+    $fontFamily: caveat,
+  );
   margin: {
     top: 0;
     bottom: 0;

@@ -1,0 +1,30 @@
+.directions__heading {
+  margin: {
+    top: 0;
+    bottom: 16px;
+  }
+  font: {
+    weight: 500;
+    size: 24px;
+  }
+  letter-spacing: 1px;
+}
+
+.directions__list {
+  @include list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: calc(var(--directions__list-vertical-margin) * -1);
+}
+
+.directions__item {
+  margin-top: var(--directions__list-vertical-margin);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}

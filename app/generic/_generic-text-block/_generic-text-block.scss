@@ -1,4 +1,4 @@
 .generic-text-block {
-  @include font(400, 16px, 1.5);
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }

@@ -1,3 +1,13 @@
+.transport__container {
+  @include padding-hor();
+}
+
+.transport__heading {
+  margin-bottom: 32px;
+}
+
 .transport__list {
   @include list();
+  display: grid;
+  grid-row-gap: 48px;
 }
