@@ -5,6 +5,7 @@
 }
 
 .transport-item__heading {
+  @include padding-hor();
   @include font(500, 24px);
   margin: {
     top: 0;
@@ -17,6 +18,7 @@
 }
 
 .transport-item__hint {
+  @include padding-hor();
   @include font(300, 48px);
   position: absolute;
   top: 0;

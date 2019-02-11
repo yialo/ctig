@@ -1,8 +1,5 @@
-.transport__container {
-  @include padding-hor();
-}
-
 .transport__heading {
+  @include padding-hor();
   margin-bottom: 32px;
 }
 
