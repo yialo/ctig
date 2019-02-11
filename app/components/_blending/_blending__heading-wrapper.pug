@@ -1,0 +1,12 @@
+mixin blending__heading-wrapper()
+  .blending__heading-wrapper(class=attributes.class)
+    h2.generic-heading(class=[
+      'blending__heading',
+      'blending__heading--higher',
+    ])
+      block
+    span.generic-heading(class=[
+      'blending__heading',
+      'blending__heading--substrate',
+    ])
+      block

@@ -1,0 +1,38 @@
+.indices__image-wrapper {
+  margin-bottom: 32px;
+}
+
+.indices__list {
+  @include padding-hor(16px);
+  display: grid;
+  grid-template: repeat(8, auto) / 1fr;
+}
+
+.indices__term {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @for $number from 1 through 4 {
+    &--#{$number} {
+      @if $number != 4 {
+        margin-bottom: 16px;
+      }
+      grid-row: #{2 * $number} / #{2 * $number + 1};
+    }
+  }
+}
+
+.indices__details {
+  grid-column: 1;
+  margin-left: 0;
+  font-size: 48px;
+  letter-spacing: 1px;
+
+  @for $number from 1 through 4 {
+    &--#{$number} {
+      grid-row: #{2 * $number - 1} / #{2 * $number};
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -3,7 +3,9 @@
 }
 
 .blending__heading-wrapper {
+  @include padding-hor(16px);
   position: relative;
+  margin-bottom: 16px;
 }
 
 .blending__heading {

@@ -1,23 +1,14 @@
 mixin about-brief()
-  - const ABOUT_BRIEF_HEADING = 'О нас';
   include _d_about-brief
   section.about-brief(class=attributes.class)
     +generic-container().about-brief__container
       .blending.about-brief__inner
         .blending__heading-wrapper.about-brief__heading-wrapper
-          h2.generic-heading.about-brief__heading(class=[
-            'blending__heading',
-            'blending__heading--higher',
-          ])= ABOUT_BRIEF_HEADING
-          span.generic-heading(class=[
-            'blending__heading',
-            'blending__heading--substrate',
-          ]).about-brief__heading= ABOUT_BRIEF_HEADING
-        +generic-picture.blending__picture.intro__image-wrapper(
+          +blending__heading-wrapper().about-brief__heading-wrapper О нас
+        +generic-picture.blending__picture(
           src='img/about-brief__image.jpg'
           alt='Контейнеры'
         ).about-brief__image-wrapper
-
       .about-brief__text-content
         p.about-brief__subtitle Pабота с нами
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
