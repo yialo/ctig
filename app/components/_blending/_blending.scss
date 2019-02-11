@@ -1,31 +1,35 @@
 .blending {
-  position: relative;
+  // @media (min-width: $l-min-width) {
+  //   position: relative;
+  // }
 }
 
 .blending__heading-wrapper {
   @include padding-hor(16px);
-  position: relative;
   margin-bottom: 16px;
+
+  // @media (min-width: $l-min-width) {
+  //   position: relative;
+  // }
 }
 
 .blending__heading {
-  &--higher {
-    color: inherit;
-  }
-
   &--substrate {
-    z-index: 0;
     display: none;
-    color: inherit;
   }
 
-  @media (min-width: $l-min-width) {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-text-stroke: 0.35px #ffffff;
-    mix-blend-mode: overlay;
-  }
-}
+  // @media (min-width: $l-min-width) {
+  //   -webkit-font-smoothing: subpixel-antialiased;
+  //   -webkit-text-stroke: 0.35px #ffffff;
+  //   position: absolute;
+  //   mix-blend-mode: overlay;
 
-.blending__picture {
-  z-index: 1;
+  //   &--higher {
+  //     color: transparent;
+  //   }
+
+  //   &--substrate {
+  //     display: block;
+  //   }
+  // }
 }

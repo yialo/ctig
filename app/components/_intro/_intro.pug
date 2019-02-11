@@ -3,9 +3,10 @@ mixin intro()
       +generic-container().intro__container
         .blending.intro__inner
           +blending__heading-wrapper().intro__heading-wrapper Международная перевозка сборных грузов
-          each string, index in ['Ракета', 'Облака']
-            +generic-picture.blending__picture(
-              class=`intro__image-wrapper--${index + 1}`
-              src=`img/intro__image--${index + 1}.jpg`
-              alt=string
-            ).intro__image-wrapper
+          .blending__pictures.intro__pictures
+            each string, index in ['Ракета', 'Облака']
+              +generic-picture.blending__picture(
+                class=`intro__image-wrapper--${index + 1}`
+                src=`img/intro__image--${index + 1}.jpg`
+                alt=string
+              ).intro__image-wrapper

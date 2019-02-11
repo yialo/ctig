@@ -10,13 +10,14 @@ mixin indices()
     +generic-container().indices__container
       .blending.indices__inner
         +blending__heading-wrapper().indices__heading-wrapper Показатели
-        +generic-picture.blending__picture(
-          src='img/indices__image.jpg'
-          alt='Контейнеры'
-        ).indices__image-wrapper
-        dl.indices__list
-          each item, index in INDICES_ITEMS
-            - const [value, key] = item;
-            dt.indices__term(class=`indices__term--${index + 1}`)
-              span.indices__string= key
-            dd.indices__details(class=`indices__details--${index + 1}`)= value
+        .blending__pictures.indices__pictures
+          +generic-picture.blending__picture(
+            src='img/indices__image.jpg'
+            alt='Контейнеры'
+          ).indices__image-wrapper
+      dl.indices__list
+        each item, index in INDICES_ITEMS
+          - const [value, key] = item;
+          dt.indices__term(class=`indices__term--${index + 1}`)
+            span.indices__string= key
+          dd.indices__details(class=`indices__details--${index + 1}`)= value

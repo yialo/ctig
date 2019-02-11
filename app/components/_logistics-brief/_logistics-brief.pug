@@ -1,22 +1,15 @@
 mixin logistics-brief()
-  - const LOGISTICS_BRIEF_HEADING = 'География перевозок';
   section.logistics-brief(class=attributes.class)
-    .blending.logistics-brief__container
-      .blending__heading-wrapper.logistics__brief__heading-wrapper
-        h2.generic-heading(class=[
-          'blending__heading',
-          'blending__heading--higher',
-        ]).logistics-brief__heading= LOGISTICS_BRIEF_HEADING
-        span.generic-heading(class=[
-          'blending__heading',
-          'blending__heading--substrate',
-        ]).logistics-brief__heading= LOGISTICS_BRIEF_HEADING
-      each string, index in ['Башня', 'Собор', 'Пагода']
-        +generic-picture.blending__image.logistics-brief__image-wrapper(
-          class=`logistics-brief__image-wrapper--${index + 1}`
-          src=`img/logistics-brief__image--${index + 1}.jpg`
-          alt=string
-        )
+    +generic-container().logistics-brief__container
+      .blending.logistics-brief__inner
+        +blending__heading-wrapper().logistics__brief__heading-wrapper География перевозок
+        .blending__pictures.logistics__brief__pictures
+          each string, index in ['Башня', 'Собор', 'Пагода']
+            +generic-picture.blending__picture(
+              class=`logistics-brief__image-wrapper--${index + 1}`
+              src=`img/logistics-brief__image--${index + 1}.jpg`
+              alt=string
+            ).logistics-brief__image-wrapper
       ul.logistics-brief__list
         each item in _LOGISTICS_ITEMS
           - const { caption, list, modifier } = item;

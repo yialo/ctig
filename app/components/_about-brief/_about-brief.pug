@@ -3,12 +3,12 @@ mixin about-brief()
   section.about-brief(class=attributes.class)
     +generic-container().about-brief__container
       .blending.about-brief__inner
-        .blending__heading-wrapper.about-brief__heading-wrapper
-          +blending__heading-wrapper().about-brief__heading-wrapper О нас
-        +generic-picture.blending__picture(
-          src='img/about-brief__image.jpg'
-          alt='Контейнеры'
-        ).about-brief__image-wrapper
+        +blending__heading-wrapper().about-brief__heading-wrapper О нас
+        .blending__pictures.about-brief__pictures
+          +generic-picture.blending__picture(
+            src='img/about-brief__image.jpg',
+            alt='Контейнеры',
+          ).about-brief__image-wrapper
       .about-brief__text-content
         p.about-brief__subtitle Pабота с нами
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
