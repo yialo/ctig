@@ -1,3 +1,7 @@
+.about-brief__container {
+  position: relative;
+}
+
 .about-brief__heading-wrapper {
   @include padding-hor(16px);
   margin-bottom: 16px;
@@ -8,18 +12,17 @@
 }
 
 .about-brief__text-content {
-  position: relative;
-  padding-left: 16px;
-  padding-right: 32px;
+  @include padding-hor(16px);
 }
 
 .about-brief__subtitle {
   @include font(700, 16px, 1);
   position: absolute;
   top: 0;
-  right: 8px;
-  transform-origin: top right;
-  transform: rotate(90deg) translateX(240px);
+  left: calc(100% - 8px);
+  width: 200px;
+  transform-origin: top left;
+  transform: translateY(64px) rotate(90deg);
   margin: {
     top: 0;
     bottom: 0;
