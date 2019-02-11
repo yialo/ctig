@@ -1,3 +1,49 @@
+.about-brief__heading {
+  margin-bottom: 32px;
+}
+
+.about-brief__image-wrapper {
+  margin-bottom: 32px;
+}
+
+.about-brief__text-content {
+  position: relative;
+  padding-right: 32px;
+}
+
+.about-brief__subtitle {
+  @include font(700, 16px, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+  transform: rotate(90deg) translateX(240px);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 32px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: black;
+  }
+}
+
+
+.about-brief__paragraph {
+  margin: {
+    top: 0;
+    bottom: 16px;
+  }
+}
+
 .about-brief__endline {
   @include font(400, 24px, 1, caveat);
   margin: {

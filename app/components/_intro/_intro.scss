@@ -1,3 +1,15 @@
 .intro__container {
+  @include margin-hor();
+  width: 320px;
   padding-top: 64px;
+  padding-bottom: 16px;
+}
+
+.intro__image-wrapper {
+  &--2 {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    width: 160px;
+  }
 }
