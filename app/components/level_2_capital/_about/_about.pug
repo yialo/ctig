@@ -20,4 +20,4 @@ mixin about()
             const { heading, list } = item;
           .about__features-block(class=lastAboutFeaturesBlock)
             h3.generic-heading-3.about__list-caption= `${heading}:`
-            +generic-list(list).about__list
+            +generic-list({ modifier: 'bottom-bullet', data: list }).about__list

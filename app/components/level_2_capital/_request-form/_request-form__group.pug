@@ -15,20 +15,21 @@ mixin request-form__group(requestFormGroup_modifier)
         li.generic-formgroup__item.request-form__item
           case type
             when 'text'
-              +generic-textfield-block(legend).generic-formgroup__label
+              label.generic-formgroup__label
+                span.generic-formgroup__legend= legend
                 input.generic-textfield(
                   type='text'
                   name=name
                   placeholder=placeholder
                   required
-                ).generic-textfield-block__input.generic-formgroup__textfield
+                ).generic-formgroup__textfield
             when 'radio'
-              input.generic-formgroup__radiofield(
+              input(
                 type='radio'
                 name='transport_type'
                 value=value
                 checked=checked
                 id=value
                 required
-              )
+              ).generic-formgroup__radiofield
               label.generic-formgroup__label(for=value)= legend
