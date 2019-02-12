@@ -1,0 +1,46 @@
+.glossary__image-wrapper {
+  margin-bottom: 32px;
+}
+
+.glossary__menu {
+  @include list();
+  display: grid;
+  grid-row-gap: 24px;
+  padding-left: 16px;
+  margin-bottom: 56px;
+}
+
+.glossary__menu-item {
+  @include font(500, 24px);
+  letter-spacing: 1px;
+}
+
+.glossary__wordlist-title {
+  @include font(500, 24px);
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.glossary__wordlist {
+  @include list();
+  display: grid;
+  grid-template: repeat(8, auto) / repeat(2, 1fr);
+  grid-auto-flow: column;
+  grid-row-gap: 32px;
+}
+
+.glossary__word  {
+  @include font(400, 16px);
+  letter-spacing: 0.08em;
+  color: #333333;
+
+  $grid-line-counter: 9;
+
+  @for $number from 16 through 37 {
+    &--#{$number} {
+      grid-column: 1 / 3;
+      grid-row: #{$grid-line-counter} / ($grid-line-counter + 1);
+      $grid-line-counter: $grid-line-counter + 1;
+    }
+  }
+}

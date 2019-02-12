@@ -18,6 +18,6 @@ mixin glossary()
         .glossary__content
           h3.glossary__wordlist-title Толковый словарь
           ul.glossary__wordlist
-            each item in GLOSSARY_DICTIONARY_ITEMS
-              li.glossary__word
+            each item, index in GLOSSARY_DICTIONARY_ITEMS
+              li.glossary__word(class=`glossary__word--${index + 1}`)
                 a.glossary__word-link(href='#')= item
