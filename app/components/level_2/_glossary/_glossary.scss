@@ -10,15 +10,8 @@
   margin-bottom: 56px;
 }
 
-.glossary__menu-item {
-  @include font(500, 24px);
-  letter-spacing: 1px;
-}
-
 .glossary__wordlist-title {
-  @include font(500, 24px);
   margin-bottom: 32px;
-  letter-spacing: 1px;
 }
 
 .glossary__wordlist {

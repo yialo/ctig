@@ -8,12 +8,7 @@
 }
 
 .customs__subtitle {
-  @include font(500, 20px);
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
-  letter-spacing: 0.5px;
+  margin-bottom: 0;
 }
 
 .customs__image-wrapper {

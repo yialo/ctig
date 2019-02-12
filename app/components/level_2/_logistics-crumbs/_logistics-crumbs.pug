@@ -22,13 +22,13 @@ mixin logistics-crumbs(logisticsCrumbs_dataset)
       each item in logisticsCrumbs_dataset
         -
           const { modifier, caption, list } = item;
-        ul.logistics-crumbs__list(class=[
+        .logistics-crumbs__list(class=[
           `logistics-crumbs__list--${modifier}`,
           modifier === 'europe' ? 'logistics-crumbs__list--current' : null,
         ])
           each listItem in list
-            li.logistics-crumbs__item(class=(
-              listItem === 'Англия'
+            .logistics-crumbs__item(class=(
+              listItem === list[0]
               ? 'logistics-crumbs__item--current'
               : null
             ))

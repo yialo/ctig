@@ -1,0 +1,5 @@
+.generic-heading-3 {
+  @include font(500, 20px);
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}

@@ -9,7 +9,7 @@ mixin transport()
     ];
   section.transport(class=attributes.class)
     .generic-container.generic-container--wide.transport__container
-      h2.generic-heading.transport__heading Виды перевозок
+      h2.generic-heading-1.transport__heading Виды перевозок
       ul.transport__list
         each item, index in TRANSPORT_ITEMS
           +transport-item({ heading: item, number: index + 1 }).transport__item

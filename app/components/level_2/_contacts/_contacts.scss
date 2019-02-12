@@ -7,12 +7,7 @@
 }
 
 .contacts__subheading {
-  @include font(500, 24px);
-  margin: {
-    top: 0;
-    bottom: 24px;
-  }
-  letter-spacing: 1px;
+  margin-bottom: 24px;
 }
 
 .contacts__list {

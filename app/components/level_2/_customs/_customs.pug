@@ -11,15 +11,15 @@ mixin customs(customs_modifier)
   section.customs(class=[`customs--${customs_modifier}`, attributes.class])
     .generic-container.generic-container--wide.customs__container
       header.customs__headline
-        h2.generic-heading.customs__title= title
-        p.customs__subtitle= subtitle
+        h2.generic-heading-1.customs__title= title
+        p.generic-heading-3.customs__subtitle= subtitle
       +generic-picture(
         src=`img/customs--${customs_modifier}__image.jpg`
         alt=imageDescription
       ).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
-        p.generic-text-block.customs__paragraph(
+        p.generic-textblock.customs__paragraph(
           class='customs__paragraph--lone'
         )!= paragraphs[0]
         ul.customs__list
@@ -29,7 +29,7 @@ mixin customs(customs_modifier)
                 (index === listItems.length - 1)
                 ? 'customs__item--last'
                 : null;
-            li.generic-text-block.customs__item(
+            li.generic-textblock.customs__item(
               class=lastCustomsItemModifier
             )!= item
         each item, index in customsParagraphsRest
@@ -38,6 +38,6 @@ mixin customs(customs_modifier)
               (index === customsParagraphsRest.length - 1)
               ? 'customs__paragraph--last'
               : null;
-          p.generic-text-block.customs__paragraph(
+          p.generic-textblock.customs__paragraph(
             class=lastCustomsParagraphModifier
           )!= item

@@ -8,12 +8,12 @@ mixin contacts()
   .contacts(class=attributes.class)
     .generic-container.contacts__container
       h1(class=[
-        'generic-heading',
+        'generic-heading-1',
         'generic-container__heading',
       ]).contacts__heading= page.heading()
       .generic-container__inner.contacts__inner
         .contacts__office
-          h3.contacts__subheading Офис в Москве
+          h3.generic-heading-3.contacts__subheading Офис в Москве
           ul.contacts__list
             each item in CONTACTS_TELS
               - const [tel, text] = item;
@@ -23,7 +23,7 @@ mixin contacts()
               a.contacts__link(href='mailto:info@ctig.ru') info@ctig.ru
             li.contacts__item.contacts__item--address Москва, Пресненская наб. 6, стр. 2, башня «Империя», 16 этаж, ММДЦ «Москва-Сити»
         .contacts__stock
-          h3.contacts__subheading Склад консолидации
+          h3.generic-heading-3.contacts__subheading Склад консолидации
           p.contacts__item.contacts__item--stock
             a.contacts__link(href='#') Vilnius, Lithuania
     footer.contacts__map-wrapper

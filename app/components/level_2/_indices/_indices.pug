@@ -8,7 +8,7 @@ mixin indices()
     ];
   section.indices(class=attributes.class)
     .generic-container.generic-container--wide.indices__container
-      h2.generic-heading.indices__heading Показатели
+      h2.generic-heading-1.indices__heading Показатели
       +generic-picture(
         src='img/indices__image.jpg'
         alt='Контейнеры'
@@ -18,4 +18,4 @@ mixin indices()
           - const [value, key] = item;
           dt.indices__term(class=`indices__term--${index + 1}`)
             span.indices__string= key
-          dd.indices__details(class=`indices__details--${index + 1}`)= value
+          dd.generic-subheading.indices__details(class=`indices__details--${index + 1}`)= value

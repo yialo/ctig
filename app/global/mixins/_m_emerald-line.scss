@@ -6,9 +6,10 @@
     content: "";
     position: absolute;
     top: calc(50% - 1px);
-    left: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
-    width: calc(100% + 20px);
+    width: 100%;
     height: 3px;
     background-color: $emerald;
   }

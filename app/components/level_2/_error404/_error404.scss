@@ -27,19 +27,15 @@
 }
 
 .error404__lead-string {
-  @include font(700, 32px);
   margin: {
     top: auto;
     bottom: 0;
   }
-  letter-spacing: 1px;
   color: $emerald;
 }
 
 .error404__hint {
-  @include font(500, 24px);
-  line-height: 1.15;
-  letter-spacing: 1px;
+  line-height: 1.35;
 }
 
 .error404__link {

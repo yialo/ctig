@@ -8,13 +8,13 @@ mixin additional-service()
     ];
   section.additional-service(class=attributes.class)
     .generic-container.generic-container--wide.additional-service__container
-      h2.generic-heading.additional-service__heading Дополнительный сервис
+      h2.generic-heading-1.additional-service__heading Дополнительный сервис
       ul.additional-service__list
         each caption, index in ADDITIONAL_ITEMS
           li.additional-service__item(
             class=`additional-service__item--${index + 1}`
           )
-            h3.additional-service__caption
+            h3.generic-heading-2.additional-service__caption
               span.additional-service__string(
                 class=`additional-service__string--${index + 1}`
               )= caption

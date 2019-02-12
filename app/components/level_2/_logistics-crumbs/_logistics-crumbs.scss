@@ -1,3 +1,7 @@
+.logistics-crumbs {
+  @include padding-hor(10px);
+}
+
 .logistics-crumbs__heading-list {
   @include list();
   display: flex;
@@ -30,12 +34,16 @@
 }
 
 .logistics-crumbs__list {
-  @include list();
-  @include font(500, 20px);
-  display: flex;
+  display: none;
+
+  &--current {
+    display: block;
+  }
 }
 
 .logistics-crumbs__item {
+  @include font(500, 20px);
+  @include padding-hor(10px);
   color: $middle-gray;
 
   &--current {
@@ -43,4 +51,3 @@
     color: black;
   }
 }
-

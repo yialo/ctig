@@ -1,4 +1,7 @@
-// TODO: Удалить ненужные файлы (root, functions), если они не потребуются.
+/* TODO:
+1). Оптимизировать графику под различные вьюпорты.
+*/
+
 
 @import "../global/data/*";
 @import "../global/mixins/*";
@@ -9,10 +12,12 @@
 @import "../global/styles/tags";
 @import "../components/level_1/_generic-container/*";
 @import "../components/level_1/_generic-formgroup/*";
-@import "../components/level_1/_generic-heading/*";
+@import "../components/level_1/_generic-heading-1/*";
+@import "../components/level_1/_generic-heading-2/*";
+@import "../components/level_1/_generic-heading-3/*";
 @import "../components/level_1/_generic-list/*";
 @import "../components/level_1/_generic-picture/*";
-@import "../components/level_1/_generic-text-block/*";
+@import "../components/level_1/_generic-plaintext/*";
 @import "../components/level_1/_generic-textfield-block/*";
 @import "../components/level_1/_generic-textfield/*";
 @import "../components/level_2/_about-brief/*";
@@ -57,8 +62,3 @@
 @import "../components/level_2/_socials/*";
 @import "../components/level_2/_transport-item/*";
 @import "../components/level_2/_transport/*";
-
-/*
-TODO:
-1). Оптимизировать графику под различные вьюпорты.
-*/

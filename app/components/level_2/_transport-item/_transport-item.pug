@@ -6,7 +6,7 @@ mixin transport-item(transportItem_props)
       attributes.class,
     ])
   )
-    h3.transport-item__heading= heading
+    h3.generic-heading-2.transport-item__heading= heading
     if heading === 'Ракетный транспорт'
       .transport-item__wrapper
         +generic-picture(

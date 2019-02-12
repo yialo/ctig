@@ -1,8 +1,8 @@
 mixin error404()
   .error404(class=attributes.class)
     .generic-container.error404__container
-      h1.generic-heading.error404__heading= page.heading
+      h1.error404__heading= page.heading
       .error404__lead
-        p.error404__lead-string Вы не заблудились?
-      p.error404__hint.
-        Вы всегда можете #[a.error404__link(href='#') вернуться] на предыдущую страницу, перейти на #[a.error404__link(href='index.html') главную] или узнать наши #[a.error404__link(href='contacts.html') контакты]
+        p.generic-heading-1.error404__lead-string Вы не заблудились?
+      p.generic-heading-3.error404__hint
+        | Вы всегда можете #[a.error404__link(href='#') вернуться] на предыдущую страницу, перейти на #[a.error404__link(href='index.html') главную] или узнать наши #[a.error404__link(href='contacts.html') контакты]

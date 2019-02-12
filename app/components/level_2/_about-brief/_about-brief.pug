@@ -2,7 +2,7 @@ mixin about-brief()
   include _d_about-brief
   section.about-brief(class=attributes.class)
     .generic-container.generic-container--wide.about-brief__container
-      h2.generic-heading.about-brief__heading О нас
+      h2.generic-heading-1.about-brief__heading О нас
       +generic-picture(
         src='img/about-brief__image.jpg',
         alt='Контейнеры',
@@ -10,5 +10,5 @@ mixin about-brief()
       .about-brief__text-content
         p.about-brief__subtitle Pабота с нами
         each paragraph in ABOUT_BRIEF_PARAGRAPHS
-          p.generic-text-block.about-brief__paragraph= paragraph
+          p.generic-textblock.about-brief__paragraph= paragraph
         p.about-brief__endline Спасибо за доверие, Ваш #{SITE_TITLE}.

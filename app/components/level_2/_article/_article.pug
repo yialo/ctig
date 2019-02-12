@@ -4,7 +4,7 @@ mixin article()
     header.article__header
       .generic-container.article__heading-wrapper
         h1(class=[
-          'generic-heading',
+          'generic-heading-1',
           'generic-container__heading',
         ]).article__heading= page.heading
       .article__banner-wrapper
@@ -15,12 +15,12 @@ mixin article()
     .generic-container.article__container
       .generic-container__inner.article__inner
         .article__top-block
-          h3.article__subtitle Подзаголовок для статьи
+          h3.generic-heading-2.article__subtitle Подзаголовок для статьи
           .article__textblock
             +article_Paragraphs()
             +article_Paragraphs()
         .article__bottom-block
-          h3.article__subtitle Подзаголовок для статьи
+          h3.generic-heading-2.article__subtitle Подзаголовок для статьи
           .article__textblock
             +article_Paragraphs()
           +generic-picture(

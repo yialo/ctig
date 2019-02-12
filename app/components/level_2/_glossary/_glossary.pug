@@ -3,7 +3,7 @@ mixin glossary()
   .glossary(class=attributes.class)
     .generic-container.glossary__container
       h1(class=[
-        'generic-heading',
+        'generic-heading-1',
         'generic-container__heading',
       ]).glossary__heading= page.heading()
       .generic-container__inner.glossary__inner
@@ -13,10 +13,10 @@ mixin glossary()
         ).glossary__image-wrapper
         ul.glossary__menu
           each item in GLOSSARY_MENU_ITEMS
-            li.glossary__menu-item
+            li.generic-heading-3.glossary__menu-item
               a.glossary__menu-link(href='#')= item
         .glossary__content
-          h3.glossary__wordlist-title Толковый словарь
+          h3.generic-heading-3.glossary__wordlist-title Толковый словарь
           ul.glossary__wordlist
             each item, index in GLOSSARY_DICTIONARY_ITEMS
               li.glossary__word(class=`glossary__word--${index + 1}`)
