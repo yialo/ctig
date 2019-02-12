@@ -1,3 +1,15 @@
+$font-properties: (
+  geometria: (
+    font-styles: (normal italic),
+    font-weights: (300 light, 400 regular, 500 medium, 700 bold),
+  ),
+  caveat: (
+    font-styles: normal,
+    font-weights: ((400 regular),),
+  ),
+);
+
+
 @each $font-family, $font-family-properties in $font-properties {
   @each $font-weight in map-get($font-family-properties, font-weights) {
     @each $font-style in map-get($font-family-properties, font-styles) {

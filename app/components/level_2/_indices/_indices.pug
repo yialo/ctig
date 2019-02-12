@@ -8,13 +8,11 @@ mixin indices()
     ];
   section.indices(class=attributes.class)
     .generic-container.generic-container--mainpage.indices__container
-      .blending.indices__inner
-        +blending__heading-wrapper().indices__heading-wrapper Показатели
-        .blending__pictures.indices__pictures
-          +generic-picture.blending__picture(
-            src='img/indices__image.jpg'
-            alt='Контейнеры'
-          ).indices__image-wrapper
+      h2.generic-heading.indices__heading Показатели
+      +generic-picture(
+        src='img/indices__image.jpg'
+        alt='Контейнеры'
+      ).indices__image-wrapper
       dl.indices__list
         each item, index in INDICES_ITEMS
           - const [value, key] = item;

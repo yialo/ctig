@@ -1,3 +1,15 @@
+$page-main-elements: (
+  intro,
+  about-brief,
+  indices,
+  logistics-brief,
+  transport,
+  additional-service,
+  clients,
+  customs-agent,
+  customs-service,
+);
+
 @for $number from 1 to length($page-main-elements) {
   .page-main__#{nth($page-main-elements, $number)} {
     margin-bottom: 84px;

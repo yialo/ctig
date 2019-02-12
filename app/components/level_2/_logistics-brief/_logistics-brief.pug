@@ -2,7 +2,8 @@ mixin logistics-brief()
   section.logistics-brief(class=attributes.class)
     .generic-container.generic-container--mainpage.logistics-brief__container
       .blending.logistics-brief__inner
-        +blending__heading-wrapper().logistics__brief__heading-wrapper География перевозок
+        +blending__heading-wrapper().logistics__brief__heading-wrapper
+          | География перевозок
         .blending__pictures.logistics__brief__pictures
           each string, index in ['Башня', 'Собор', 'Пагода']
             +generic-picture.blending__picture(

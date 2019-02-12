@@ -1,15 +1,14 @@
-include ../common/data/_d_site
-include ../common/data/_d_pages
+include ../global/data/_d_site
+include ../global/data/_d_pages
 
 block page-variable
 
-include ../common/data/_d_components
-include _generic_import
+include ../global/data/_d_components
 include _components_import
 
 doctype html
 html(lang='ru')
-  include ../common/head/_head
+  include ../global/head/_head
   body.page(class=`page--${page.id}`)
     header.page__header
       +page-header()

@@ -1,4 +1,9 @@
-.indices__pictures {
+.indices__heading {
+  @include padding-hor();
+  margin-bottom: 32px;
+}
+
+.indices__image-wrapper {
   margin-bottom: 32px;
 }
 
