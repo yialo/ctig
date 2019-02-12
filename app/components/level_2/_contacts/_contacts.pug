@@ -13,17 +13,18 @@ mixin contacts()
       ]).contacts__heading= page.heading()
       .generic-container__inner.contacts__inner
         .contacts__office
-          h3.contacts__subheading Офис в Москва
+          h3.contacts__subheading Офис в Москве
           ul.contacts__list
-            each item, index in CONTACTS_TELS
+            each item in CONTACTS_TELS
               - const [tel, text] = item;
-              li.contacts__item(class=`contacts__item--tel-${index + 1}`)
+              li.contacts__item.contacts__item--tel
                 a.contacts__link(href=`tel:${tel}`)= text
             li.contacts__item.contacts__item--email
               a.contacts__link(href='mailto:info@ctig.ru') info@ctig.ru
-            li.contacts__item.contacts__item--address Пресненская наб. 6, стр. 2, башня "Империя",#[br]16 этаж, ММДЦ "Москва-Сити"
+            li.contacts__item.contacts__item--address Москва, Пресненская наб. 6, стр. 2, башня «Империя», 16 этаж, ММДЦ «Москва-Сити»
         .contacts__stock
           h3.contacts__subheading Склад консолидации
-          a.contacts__link(href='#') Vilnius, Lithuania
-      footer.contacts__map-wrapper
-        .contacts__map#map
+          p.contacts__item.contacts__item--stock
+            a.contacts__link(href='#') Vilnius, Lithuania
+    footer.contacts__map-wrapper
+      .contacts__map#map

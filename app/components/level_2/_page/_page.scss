@@ -1,3 +1,11 @@
+.page {
+  padding-bottom: 64px;
+
+  &--contacts {
+    padding-bottom: 0;
+  }
+}
+
 .page__header {
   margin-bottom: 64px;
 }
@@ -9,3 +17,4 @@
 .page__modal {
   display: none;
 }
+
