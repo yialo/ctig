@@ -1,0 +1,37 @@
+.article-intro__header {
+  margin-bottom: 24px;
+}
+
+.article-intro__heading {
+  @include font(500, 24px);
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.article-intro__image-wrapper {
+  margin-bottom: 24px;
+}
+
+.article-intro__excerpt {
+  margin: {
+    top: 0;
+    bottom: 24px;
+  }
+}
+
+.article-intro__details {
+  display: block;
+  font-size: 16px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: $emerald;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $emerald-semitransparent;
+  }
+}

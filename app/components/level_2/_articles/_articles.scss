@@ -1,4 +1,5 @@
 .articles__list {
   @include list();
   display: grid;
+  grid-row-gap: 64px;
 }
