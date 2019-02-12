@@ -1,0 +1,4 @@
+.articles__list {
+  @include list();
+  display: grid;
+}

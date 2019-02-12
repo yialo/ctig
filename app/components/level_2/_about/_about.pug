@@ -13,11 +13,11 @@ mixin about()
         ).about__image-wrapper
         each item, index in ABOUT_FEATURES_LISTS
           -
-            const lastAboutListModifier =
+            const lastAboutFeaturesBlock =
               (index === ABOUT_FEATURES_LISTS.length - 1)
-              ? 'about__list--last'
+              ? 'about__features-block--last'
               : null;
             const { heading, list } = item;
-          .about__features-block
+          .about__features-block(class=lastAboutFeaturesBlock)
             h3.about__list-caption= `${heading}:`
-            +generic-list(list).about__list(class=lastAboutListModifier)
+            +generic-list(list).about__list
