@@ -17,18 +17,7 @@
   }
 }
 
-.article-intro__details {
-  display: block;
-  font-size: 16px;
-  text-decoration: underline;
-  text-transform: uppercase;
-  color: $emerald;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:active {
-    color: $emerald-semitransparent;
-  }
+.article-intro__footer {
+  display: flex;
 }
+

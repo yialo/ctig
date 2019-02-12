@@ -8,7 +8,7 @@ mixin request-form(requestForm_props)
     action=FORM_DEFAULT_ACTION,
     name=`${modifier}-request`,
   )
-    h3.request-form__heading= heading
+    h3.generic-heading-3.request-form__heading= heading
 
     +request-form__group('route')
 
@@ -25,7 +25,7 @@ mixin request-form(requestForm_props)
     +request-form__group('person')
 
     footer.request-form__footer
-      button.request-form__button(type='submit') Рассчитать доставку
+      button.generic-link.request-form__button(type='submit') Рассчитать доставку
       p.request-form__caution
         = 'Нажимая кнопку "Рассчитать доставку", я соглашаюсь с '
         a.request-form__link(href='#') правилами обработки персональных данных

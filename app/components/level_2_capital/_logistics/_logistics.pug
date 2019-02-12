@@ -12,8 +12,8 @@ mixin logistics()
           alt=page.heading()
         ).logistics__image-wrapper
         +country-information('uk').logistics__text-content
-        aside.logistics__form
-          +request-form({
-            heading: 'Заявка на перевозку',
-            modifier: 'shipping',
-          })
+    aside.logistics__form-wrapper
+      +request-form({
+        heading: 'Заявка на перевозку',
+        modifier: 'shipping',
+      })

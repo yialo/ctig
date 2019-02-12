@@ -13,10 +13,12 @@ mixin country-information(countryInformation_modifier)
     `country-information--${countryInformation_modifier}`,
     attributes.class,
   ])
-    h3.generic-subheading.country-information__heading Перевозка грузов из Англии
+    h3.generic-heading-2.country-information__heading Перевозка грузов из Англии
     p.generic-textblock.country-information__paragraph В экономике Евросоюза Великобритания (Шотландия, Ирландия, Англия, Уэльс) занимает почетное третье место. Пальму первенства по общему товарообороту перехватывает Германия и Франция. Главные категории английского экспорта это: машины, ткани и производственное оборудование. Наиболее регулярно в Россию из Великобритании экспортируются такие виды товаров:
     +generic-list({
       modifier: 'top-bullet',
       data: COUNTRY_INFORMATION_LIST,
     }).country-information__list
-    p.generic-textblock.country-information__paragraph Грузоперевозки необходимых категорий товаров CTIG выполняет из Англии в Российскую Федерацию чаще всего при помощи автоперевозок - период доставки 7-14 дней.
+    p.generic-textblock.country-information__paragraph(
+      class='country-information__paragraph--last'
+    ) Грузоперевозки необходимых категорий товаров CTIG выполняет из Англии в Российскую Федерацию чаще всего при помощи автоперевозок - период доставки 7-14 дней.

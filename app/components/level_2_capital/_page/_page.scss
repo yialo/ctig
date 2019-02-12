@@ -1,8 +1,10 @@
 .page {
   padding-bottom: 64px;
 
-  &--contacts {
-    padding-bottom: 0;
+  @each $modifier in (contacts, logistics) {
+    &--#{$modifier} {
+      padding-bottom: 0;
+    }
   }
 }
 

@@ -5,13 +5,14 @@
 .country-information__paragraph {
   margin: {
     top: 0;
-    bottom: 0;
+    bottom: 32px;
+  }
+
+  &--last {
+    margin-bottom: 0;
   }
 }
 
 .country-information__list {
-  margin: {
-    top: 24px;
-    bottom: 24px;
-  }
+  margin-bottom: 32px;
 }

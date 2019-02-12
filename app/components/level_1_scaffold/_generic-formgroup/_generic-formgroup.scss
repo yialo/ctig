@@ -1,3 +1,27 @@
 .generic-formgroup {
-  // border-style: none;
+  @include margin-hor(0);
+  padding: 0;
+  border-style: none;
+}
+
+.generic-formgroup__caption {
+  @include accessible-hiding();
+}
+
+.generic-formgroup__list {
+  @include list();
+}
+
+.generic-formgroup__legend {
+  @include accessible-hiding();
+}
+
+.generic-formgroup__textfield {
+  color: white;
+  border-bottom-color: #666666;
+
+  &:focus {
+    border-bottom-color: white;
+    outline-style: none;
+  }
 }
