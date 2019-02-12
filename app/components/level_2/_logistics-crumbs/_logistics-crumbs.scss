@@ -1,0 +1,46 @@
+.logistics-crumbs__heading-list {
+  @include list();
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.logistics-crumbs__heading-item {
+  @include font(500, 16px);
+  margin-right: 8px;
+
+  &--current {
+    flex-grow: 1;
+    display: flex;
+    color: $emerald;
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      align-self: center;
+      width: 10px;
+      height: 1px;
+      margin-left: 8px;
+      background-color: $middle-gray;
+    }
+  }
+
+  &--last {
+    margin-right: 0;
+  }
+}
+
+.logistics-crumbs__list {
+  @include list();
+  @include font(500, 20px);
+  display: flex;
+}
+
+.logistics-crumbs__item {
+  color: $middle-gray;
+
+  &--current {
+    @include emerald-line();
+    color: black;
+  }
+}
+
