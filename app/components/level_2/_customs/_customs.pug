@@ -9,7 +9,7 @@ mixin customs(customs_modifier)
       title,
     } = CUSTOMS_DATA[customs_modifier];
   section.customs(class=[`customs--${customs_modifier}`, attributes.class])
-    .generic-container.generic-container--mainpage.customs__container
+    .generic-container.generic-container--wide.customs__container
       header.customs__headline
         h2.generic-heading.customs__title= title
         p.customs__subtitle= subtitle

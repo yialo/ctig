@@ -1,28 +1,29 @@
 mixin article()
   include _article_Paragraphs
   article.article(class=attributes.class)
-    .generic-container.article__container
-      header.article__header
+    header.article__header
+      .generic-container.article__heading-wrapper
         h1(class=[
           'generic-heading',
           'generic-container__heading',
         ]).article__heading= page.heading
-        .generic-container__inner.article__inner
-          +generic-picture().article__banner(
-            src='img/article__banner-image.jpg'
-            alt=page.heading
-          )
+      .article__banner-wrapper
+        +generic-picture()(
+          src='img/article__banner-image.jpg'
+          alt=page.heading
+        ).article__banner
+    .generic-container.article__container
       .generic-container__inner.article__inner
         .article__top-block
           h3.article__subtitle Подзаголовок для статьи
-          .article__row
+          .article__textblock
             +article_Paragraphs()
             +article_Paragraphs()
         .article__bottom-block
           h3.article__subtitle Подзаголовок для статьи
-          +article_Paragraphs()
+          .article__textblock
+            +article_Paragraphs()
           +generic-picture(
             src='img/article__image.jpg'
             alt='Контейнеры на складе'
           ).article__image-wrapper
-
