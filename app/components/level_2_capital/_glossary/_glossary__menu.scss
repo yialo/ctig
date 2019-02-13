@@ -1,0 +1,7 @@
+.glossary__menu {
+  @include list();
+  display: grid;
+  grid-row-gap: 24px;
+  padding-left: 16px;
+  margin-bottom: 56px;
+}

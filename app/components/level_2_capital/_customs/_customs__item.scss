@@ -1,0 +1,19 @@
+.customs__item {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+}

@@ -9,33 +9,30 @@ mixin request-formgroup(requestFormgroup_modifier)
   ])
     legend.request-formgroup__caption= caption
     ul.request-formgroup__list
-      if requestFormgroup_modifier === 'cargo-type'
-        li.request-formgroup__item
-          .select-field.request-formgroup__select-field
-            a.select-field__link(href='#')
-              span.select-field__legend Тип груза
       each field in fields
         - const { name, legend, placeholder, value, checked } = field;
         li.request-formgroup__item
           case type
             when 'text'
-              label.request-formgroup__label(class=[
-                `request-formgroup__label--${name}`,
-              ])
+              - const isReadonly = (name === 'type');
+              label.request-formgroup__label(
+                class=`request-formgroup__label--${name}`,
+              )
                 span.request-formgroup__legend= legend
                 input.generic-textfield(
-                  type=type
-                  name=name
-                  placeholder=placeholder
-                  required
-                ).request-formgroup__textfield
+                  type=type,
+                  name=name,
+                  placeholder=placeholder,
+                  readonly=isReadonly,
+                  required,
+                ).request-formgroup__textfield,
             when 'radio'
               input(
-                type=type
-                name='transport_type'
-                value=value
-                checked=checked
-                id=value
-                required
+                type=type,
+                name='transport_type',
+                value=value,
+                checked=checked,
+                id=value,
+                required,
               ).request-formgroup__radiofield
               label.request-formgroup__label(for=value)= legend

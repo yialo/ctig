@@ -1,9 +1,9 @@
 .generic-textfield {
+  @include form-text-s();
   display: block;
   width: 100%;
   min-width: 0;
   padding: 7px 12px 6px;
-  font-size: 14px;
   background-color: transparent;
   border: {
     style: none;
@@ -13,7 +13,11 @@
     }
   }
 
-  &:focus::placeholder {
-    visibility: hidden;
+  &::placeholder {
+    color: $search-form-field-placeholder;
+    transition: {
+      property: color;
+      duration: 0.3s;
+    }
   }
 }

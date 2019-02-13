@@ -3,9 +3,13 @@
   display: grid;
   grid-row-gap: 16px;
 
+  .request-formgroup--cargo-type & {
+
+  }
+
   .request-formgroup--transport-type & {
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 24px;
+    grid-gap: 32px 24px;
     justify-items: stretch;
   }
 }

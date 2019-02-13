@@ -10,6 +10,7 @@ mixin product-list()
             item === 'Декоративные изделия для интерьера'
             ? 'product-list__item--current'
             : null
-          ))= item
+          ))
+            a.product-list__link(href='#')= item
     footer.product-list__footer
       a.product-list__select-button(href='#') Выбрать

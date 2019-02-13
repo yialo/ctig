@@ -29,7 +29,18 @@
     'cargo-type': {
       caption: 'Сведения о грузе',
       type: 'text',
-      fields: [{ name: 'weight', legend: 'Вес', placeholder: 'Вес, кг' }],
+      fields: [
+        {
+          name: 'type',
+          legend: 'Выберите тип груза',
+          placeholder: 'Тип груза',
+        },
+        {
+          name: 'weight',
+          legend: 'Вес',
+          placeholder: 'Вес, кг',
+        },
+      ],
     },
     'transport-type': {
       caption: 'Тип доставки:',

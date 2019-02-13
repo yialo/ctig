@@ -1,0 +1,7 @@
+.directions__list {
+  @include list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: calc(var(--directions__list-vertical-margin) * -1);
+}

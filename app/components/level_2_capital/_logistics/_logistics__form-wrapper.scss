@@ -1,0 +1,4 @@
+.logistics__form-wrapper {
+  @include margin-hor();
+  width: $s-min-width;
+}

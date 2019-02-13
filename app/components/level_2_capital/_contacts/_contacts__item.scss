@@ -1,0 +1,16 @@
+.contacts__item {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  &--address {
+    width: 270px;
+  }
+
+  &--stock {
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}

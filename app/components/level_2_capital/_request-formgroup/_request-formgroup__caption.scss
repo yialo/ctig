@@ -1,3 +1,14 @@
 .request-formgroup__caption {
-  @include accessible-hiding();
+  @each $modifier in (route, dimensions, cargo-type, person,) {
+    .request-formgroup--#{$modifier} & {
+      @include accessible-hiding();
+    }
+  }
+
+  .request-formgroup--transport-type & {
+    @include form-text-s();
+    display: block;
+    margin-bottom: 32px;
+    color: white;
+  }
 }

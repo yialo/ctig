@@ -2,8 +2,11 @@
   display: block;
 
   .request-formgroup--route & {
-    width: calc(100% - 24px);
+    width: calc(100% - 28px);
+    margin-left: auto;
+  }
 
+  .request-formgroup--dimensions & {
     @each $modifier in (length, width, height, weight) {
       &--#{$modifier} {
         background: {
@@ -22,12 +25,38 @@
 
   .request-formgroup--transport-type & {
     @include padding-hor(10px);
+    @include form-text-s();
     width: 100%;
     text-align: center;
-    color: white;
+    color: $form-gray;
+    cursor: pointer;
+    transition: {
+      property: color;
+      duration: 0.3s;
+    }
+
+    &:hover {
+      color: white;
+    }
   }
 
   .request-formgroup__radiofield:checked ~ & {
     @include emerald-line();
+    font-weight: 500;
+    color: white;
+  }
+
+  &--type {
+    position: relative;
+
+    &::before {
+      @include form-text-s();
+      content: "выбрать";
+      position: absolute;
+      bottom: 6px;
+      right: 12px;
+      color: $emerald;
+      cursor: pointer;
+    }
   }
 }

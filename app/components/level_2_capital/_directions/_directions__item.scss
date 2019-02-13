@@ -1,0 +1,13 @@
+.directions__item {
+  margin: {
+    top: var(--directions__list-vertical-margin);
+    right: 4px;
+  }
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &--last {
+    margin-right: 0;
+  }
+}
