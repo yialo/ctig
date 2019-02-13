@@ -1,0 +1,7 @@
+.search-form__field {
+  border-bottom-color: $light-gray;
+
+  &::placeholder {
+    color: $search-form-field-placeholder;
+  }
+}

@@ -1,0 +1,13 @@
+.request-formgroup__textfield {
+  color: white;
+  border-bottom-color: #666666;
+
+  &:focus {
+    border-bottom-color: white;
+    outline-style: none;
+  }
+
+  .request-formgroup--dimensions & {
+    padding-left: 42px;
+  }
+}

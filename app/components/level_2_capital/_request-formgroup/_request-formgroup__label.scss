@@ -1,0 +1,33 @@
+.request-formgroup__label {
+  display: block;
+
+  .request-formgroup--route & {
+    width: calc(100% - 24px);
+
+    @each $modifier in (length, width, height, weight) {
+      &--#{$modifier} {
+        background: {
+          image: url("../img/request-formgroup__label--#{$modifier}.svg");
+          position: 12px calc(100% - 6px);
+          repeat: no-repeat;
+          size: 18px 18px;
+        }
+      }
+    }
+
+    &--weight {
+      background-size: 18px 20px;
+    }
+  }
+
+  .request-formgroup--transport-type & {
+    @include padding-hor(10px);
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .request-formgroup__radiofield:checked ~ & {
+    @include emerald-line();
+  }
+}

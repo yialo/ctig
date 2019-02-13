@@ -1,0 +1,26 @@
+.logistics-brief__image-wrapper {
+  @each $number in (1, 3) {
+    &--#{$number} {
+      position: absolute;
+      width: 25%;
+      box-shadow: $index-box-shadow;
+    }
+  }
+
+  &--1 {
+    bottom: 0;
+    left: 16px;
+    z-index: 2;
+  }
+
+  &--2 {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--3 {
+    top: -16px;
+    right: 16px;
+    z-index: 3;
+  }
+}

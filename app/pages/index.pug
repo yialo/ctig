@@ -1,15 +1,24 @@
 extends ../base/_page_template
 
 block page-variable
-  - const page = PAGE_INDEX;
+  -
+    const page = PAGE_INDEX;
+    const getElMod = function getPageMainElementModifierClass(modifier) {
+      const pageMainElementBasicClass = 'page-main__longpage-inner';
+      const pageMainElementClasses = [
+        pageMainElementBasicClass,
+        `${pageMainElementBasicClass}--${modifier}`,
+      ];
+      return pageMainElementClasses;
+    };
 
 block page-main
-  +intro().page-main__intro
-  +about-brief().page-main__about-brief
-  +indices().page-main__indices
-  +logistics-brief().page-main__logistics-brief
-  +transport().page-main__transport
-  +additional-service().page-main__additional-service
-  +clients().page-main__clients
-  +customs('agent').page-main__customs-agent
-  +customs('service').page-main__customs-service
+  +intro()(class=getElMod('intro'))
+  +about-brief()(class=getElMod('about-brief'))
+  +indices()(class=getElMod('indices'))
+  +logistics-brief()(class=getElMod('logistics-brief'))
+  +transport()(class=getElMod('transport'))
+  +additional-service()(class=getElMod('additional-service'))
+  +clients()(class=getElMod('clients'))
+  +customs('agent')(class=getElMod('customs-agent'))
+  +customs('service')(class=getElMod('customs-service'))

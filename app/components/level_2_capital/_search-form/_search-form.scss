@@ -2,36 +2,3 @@
   display: flex;
   width: 100%;
 }
-
-.search-form__inner {
-  flex-grow: 1;
-}
-
-.search-form__legend {
-  @include accessible-hiding();
-}
-
-.search-form__field {
-  border-bottom-color: $light-gray;
-
-  &::placeholder {
-    color: $search-form-field-placeholder;
-  }
-}
-
-.search-form__button {
-  display: block;
-  width: 40px;
-  height: 30px;
-  padding: 0;
-  background-color: transparent;
-  background-image: url("../img/search-form__button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 13px;
-  border-style: none;
-}
-
-.search-form__button-legend {
-  @include accessible-hiding();
-}

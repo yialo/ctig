@@ -1,6 +1,5 @@
-.generic-list {
+.clients__list {
   @include list();
   display: grid;
   grid-row-gap: 16px;
-  padding-left: 21px;
 }

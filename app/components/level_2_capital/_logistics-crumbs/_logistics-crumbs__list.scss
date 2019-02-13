@@ -1,0 +1,7 @@
+.logistics-crumbs__list {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}

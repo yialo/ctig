@@ -14,9 +14,6 @@ mixin request-form(requestForm_props)
           +request-formgroup('dimensions').request-form__group
         when 'calculation'
           +request-formgroup('cargo-type').request-form__group
-            .select-field.request-form__select-field
-              a.select-field__link(href='#')
-                span.select-field__legend Тип груза
           +request-formgroup('transport-type').request-form__group
       +request-formgroup('person').request-form__group
 

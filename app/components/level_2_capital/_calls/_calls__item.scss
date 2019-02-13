@@ -1,0 +1,9 @@
+.calls__item {
+  @include margin-hor();
+  display: flex;
+  flex-direction: column;
+
+  &--1 {
+    margin-bottom: 24px;
+  }
+}

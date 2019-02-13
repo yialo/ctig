@@ -1,0 +1,10 @@
+.logistics-crumbs__item {
+  @include font(500, 20px);
+  @include padding-hor(10px);
+  color: $middle-gray;
+
+  &--current {
+    @include emerald-line();
+    color: black;
+  }
+}

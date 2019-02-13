@@ -1,0 +1,5 @@
+.logistics-crumbs__heading-list {
+  @include list();
+  display: flex;
+  margin-bottom: 32px;
+}

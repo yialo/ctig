@@ -1,0 +1,6 @@
+.logistics-brief__list {
+  @include list();
+  @include padding-hor();
+  display: grid;
+  grid-row-gap: 32px;
+}
