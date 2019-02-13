@@ -1,4 +1,4 @@
-mixin request-form__group(requestFormGroup_modifier)
+mixin request-formgroup(requestFormGroup_modifier)
   -
     const requestFormGroup_data = REQUEST_FORMS_DATA[requestFormGroup_modifier];
     const { caption, type, fields } = requestFormGroup_data;
@@ -6,6 +6,7 @@ mixin request-form__group(requestFormGroup_modifier)
     `generic-formgroup--${type}`,
     'request-form__group',
     `request-form__group--${requestFormGroup_modifier}`,
+    attributes.class,
   ])
     block
     legend.generic-formgroup__caption= caption

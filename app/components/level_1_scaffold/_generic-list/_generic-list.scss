@@ -21,7 +21,7 @@
     background-color: $emerald-semitransparent;
 
     @each $key, $value in (top: 1px, bottom: 8px) {
-      .generic-list--#{$key}-bullet & {
+      .generic-list--bullet_#{$key} & {
         top: $value;
       }
     }
