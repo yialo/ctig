@@ -1,31 +1,20 @@
 .request-formgroup__textfield {
-  color: white;
-  border-bottom-color: #666666;
-  transition: {
-    property: border-bottom-color;
-    duration: 0.3s;
-  }
+  @include hover-focus_set() {
+    border-bottom-color: white;
 
-  &:focus {
-    outline-style: none;
-  }
-
-  @each $state in (focus, hover) {
-    &:#{$state} {
-      border-bottom-color: white;
-    }
-
-    &:read-only:#{$state}::placeholder {
+    &:read-only::placeholder {
       color: white;
     }
   }
 
-  &:not(:read-only):focus::placeholder {
-    visibility: hidden;
-  }
+  border-bottom-color: #666666;
 
   &:read-only {
     cursor: pointer;
+  }
+
+  &:read-only:focus::placeholder {
+    visibility: visible;
   }
 
   .request-formgroup--dimensions & {

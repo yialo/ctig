@@ -12,6 +12,18 @@
       style: solid;
     }
   }
+  transition: {
+    property: border-bottom-color;
+    duration: 0.3s;
+  }
+
+  &:focus {
+    outline-style: none;
+  }
+
+  &:focus::placeholder {
+    visibility: hidden;
+  }
 
   &::placeholder {
     color: $search-form-field-placeholder;

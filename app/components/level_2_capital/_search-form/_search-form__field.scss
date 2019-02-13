@@ -1,3 +1,7 @@
 .search-form__field {
+  @include hover-focus_set() {
+    border-bottom-color: $form-bg-color;
+  }
+
   border-bottom-color: $light-gray;
 }

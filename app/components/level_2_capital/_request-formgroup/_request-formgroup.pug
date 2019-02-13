@@ -14,18 +14,22 @@ mixin request-formgroup(requestFormgroup_modifier)
         li.request-formgroup__item
           case type
             when 'text'
-              - const isReadonly = (name === 'type');
               label.request-formgroup__label(
                 class=`request-formgroup__label--${name}`,
               )
                 span.request-formgroup__legend= legend
-                input.generic-textfield(
+                input.generic-textfield.request-formgroup__textfield(
+                  class=(
+                    name === 'type'
+                    ? 'request-formgroup__textfield--readonly'
+                    : null
+                  )
                   type=type,
                   name=name,
                   placeholder=placeholder,
-                  readonly=isReadonly,
+                  readonly=(name === 'type'),
                   required,
-                ).request-formgroup__textfield,
+                )
             when 'radio'
               input(
                 type=type,
