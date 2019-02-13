@@ -1,5 +1,4 @@
 mixin request-form(requestForm_props)
-  include _d_request-form
   - const { modifier, heading } = requestForm_props;
   form.request-form(
     class=[`request-form--${modifier}`, attributes.class]
@@ -8,20 +7,18 @@ mixin request-form(requestForm_props)
     name=`${modifier}-request`,
   )
     h3.generic-heading-3.request-form__heading= heading
-
-    //- +request-form__group('route')
-
-    //- case modifier
-    //-   when 'shipping'
-    //-     +request-form__group('dimensions')
-    //-   when 'calculation'
-    //-     +request-form__group('cargo-type')
-    //-       .select-field.request-form__select-field
-    //-         a.select-field__link(href='#')
-    //-           span.select-field__legend Тип груза
-    //-     +request-form__group('transport-type')
-
-    //- +request-form__group('person')
+    .request-form__body
+      +request-formgroup('route').request-form__group
+      case modifier
+        when 'shipping'
+          +request-formgroup('dimensions').request-form__group
+        when 'calculation'
+          +request-formgroup('cargo-type').request-form__group
+            .select-field.request-form__select-field
+              a.select-field__link(href='#')
+                span.select-field__legend Тип груза
+          +request-formgroup('transport-type').request-form__group
+      +request-formgroup('person').request-form__group
 
     footer.request-form__footer
       button.generic-link.request-form__button(type='submit') Рассчитать доставку

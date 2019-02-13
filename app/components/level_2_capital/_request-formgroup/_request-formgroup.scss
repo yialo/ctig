@@ -1,3 +1,97 @@
 .request-formgroup {
+  @include margin-hor(0);
+  padding: 0;
+  border-style: none;
 
+  &--route {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 42px;
+      right: 12px;
+      transform-origin: bottom right;
+      transform: rotate(90deg);
+      width: 43px;
+      height: 9px;
+      background: {
+        image: url("../img/request-formgroup--route.svg");
+        repeat: no-repeat;
+        size: cover;
+      }
+    }
+  }
+}
+
+.request-formgroup__caption {
+  @include accessible-hiding();
+}
+
+.request-formgroup__list {
+  @include list();
+  display: grid;
+  grid-row-gap: 16px;
+
+  .request-formgroup--transport-type & {
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 24px;
+    justify-items: stretch;
+  }
+}
+
+.request-formgroup__radiofield {
+  @include accessible-hiding();
+}
+
+.request-formgroup__label {
+  display: block;
+
+  .request-formgroup--route & {
+    width: calc(100% - 24px);
+
+    @each $modifier in (length, width, height, weight) {
+      &--#{$modifier} {
+        background: {
+          image: url("../img/request-formgroup__label--#{$modifier}.svg");
+          position: 12px calc(100% - 6px);
+          repeat: no-repeat;
+          size: 18px 18px;
+        }
+      }
+    }
+
+    &--weight {
+      background-size: 18px 20px;
+    }
+  }
+
+  .request-formgroup--transport-type & {
+    @include padding-hor(10px);
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .request-formgroup__radiofield:checked ~ & {
+    @include emerald-line();
+  }
+}
+
+.request-formgroup__legend {
+  @include accessible-hiding();
+}
+
+.request-formgroup__textfield {
+  color: white;
+  border-bottom-color: #666666;
+
+  &:focus {
+    border-bottom-color: white;
+    outline-style: none;
+  }
+
+  .request-formgroup--dimensions & {
+    padding-left: 42px;
+  }
 }

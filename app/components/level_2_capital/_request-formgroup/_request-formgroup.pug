@@ -1,36 +1,37 @@
-mixin request-formgroup(requestFormGroup_modifier)
+mixin request-formgroup(requestFormgroup_modifier)
+  include _d_request-formgroup
   -
-    const requestFormGroup_data = REQUEST_FORMS_DATA[requestFormGroup_modifier];
-    const { caption, type, fields } = requestFormGroup_data;
-  fieldset.generic-formgroup(class=[
-    `generic-formgroup--${type}`,
-    'request-form__group',
-    `request-form__group--${requestFormGroup_modifier}`,
+    const requestFormgroup_data = REQUEST_FORMGROUP_DATA[requestFormgroup_modifier];
+    const { caption, type, fields } = requestFormgroup_data;
+  fieldset.request-formgroup(class=[
+    `request-formgroup--${requestFormgroup_modifier}`,
     attributes.class,
   ])
+    legend.request-formgroup__caption= caption
     block
-    legend.generic-formgroup__caption= caption
-    ul.generic-formgroup__list.request-form__list
+    ul.request-formgroup__list
       each field in fields
         - const { name, legend, placeholder, value, checked } = field;
-        li.generic-formgroup__item.request-form__item
+        li.request-formgroup__item
           case type
             when 'text'
-              label.generic-formgroup__label
-                span.generic-formgroup__legend= legend
+              label.request-formgroup__label(class=[
+                `request-formgroup__label--${name}`,
+              ])
+                span.request-formgroup__legend= legend
                 input.generic-textfield(
-                  type='text'
+                  type=type
                   name=name
                   placeholder=placeholder
                   required
-                ).generic-formgroup__textfield
+                ).request-formgroup__textfield
             when 'radio'
               input(
-                type='radio'
+                type=type
                 name='transport_type'
                 value=value
                 checked=checked
                 id=value
                 required
-              ).generic-formgroup__radiofield
-              label.generic-formgroup__label(for=value)= legend
+              ).request-formgroup__radiofield
+              label.request-formgroup__label(for=value)= legend

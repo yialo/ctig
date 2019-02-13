@@ -4,11 +4,14 @@
 }
 
 .request-form__heading {
+  margin-bottom: 32px;
   color: white;
 }
 
-.request-form__group {
-  margin-bottom: 32px;
+.request-form__body {
+  display: grid;
+  grid-row-gap: 32px;
+  margin-bottom: 40px;
 }
 
 .request-form__button {

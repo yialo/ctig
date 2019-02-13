@@ -7,6 +7,10 @@
   flex-grow: 1;
 }
 
+.search-form__legend {
+  @include accessible-hiding();
+}
+
 .search-form__field {
   border-bottom-color: $light-gray;
 

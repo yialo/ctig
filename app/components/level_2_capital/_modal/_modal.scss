@@ -1,0 +1,4 @@
+.modal__container {
+  @include margin-hor();
+  width: $s-min-width;
+}
