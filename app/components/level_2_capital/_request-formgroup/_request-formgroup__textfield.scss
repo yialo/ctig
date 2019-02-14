@@ -1,20 +1,24 @@
 .request-formgroup__textfield {
-  @include hover-focus_set() {
-    border-bottom-color: white;
-
-    &:read-only::placeholder {
-      color: white;
-    }
-  }
-
   border-bottom-color: #666666;
 
-  &:read-only {
-    cursor: pointer;
+  @include hover-focus_set() {
+    border-bottom-color: white;
   }
 
-  &:read-only:focus::placeholder {
-    visibility: visible;
+  &--readonly {
+    cursor: pointer;
+
+    &::placeholder {
+      @include hover-focus_set() {
+        color: white;
+      }
+    }
+
+    &:focus {
+      &::placeholder {
+        visibility: visible;
+      }
+    }
   }
 
   .request-formgroup--dimensions & {

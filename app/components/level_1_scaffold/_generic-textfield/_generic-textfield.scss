@@ -17,19 +17,19 @@
     duration: 0.3s;
   }
 
-  &:focus {
-    outline-style: none;
-  }
-
-  &:focus::placeholder {
-    visibility: hidden;
-  }
-
   &::placeholder {
-    color: $search-form-field-placeholder;
+    color: $form-gray;
     transition: {
       property: color;
       duration: 0.3s;
+    }
+  }
+
+  &:focus {
+    outline-style: none;
+
+    &::placeholder {
+      visibility: hidden;
     }
   }
 }
