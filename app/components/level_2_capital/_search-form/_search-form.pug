@@ -1,16 +1,16 @@
 mixin search-form()
   form.search-form(
-    method='GET'
-    action=FORM_DEFAULT_ACTION
-    name='search-tracking'
+    method='GET',
+    action=FORM_DEFAULT_ACTION,
+    name='tracking-search',
   )
     label.search-form__inner
       span.search-form__legend Поле ввода трек-номера
       input.generic-textfield(
-        type='search'
-        name='search-text'
-        placeholder='Введите трек-номер'
-        required
+        type='search',
+        name='tracking-number',
+        placeholder='Введите трек-номер',
+        required,
       ).search-form__field
     button.search-form__button(type='submit')
       span.search-form__button-legend Найти отправление

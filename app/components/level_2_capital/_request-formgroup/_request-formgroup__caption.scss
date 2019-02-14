@@ -7,8 +7,19 @@
 
   .request-formgroup--transport-type & {
     @include form-text-s();
+    float: left;
     display: block;
+    width: 100%;
     margin-bottom: 32px;
+    color: $form-gray;
+    transition: color 0.3s;
+  }
+
+  .request-formgroup--transport-type:hover & {
+    color: white;
+  }
+
+  .request-formgroup--transport-type:focus-within & {
     color: white;
   }
 }

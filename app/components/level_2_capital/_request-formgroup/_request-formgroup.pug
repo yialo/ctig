@@ -14,8 +14,8 @@ mixin request-formgroup(requestFormgroup_modifier)
         li.request-formgroup__item
           case type
             when 'text'
-              label.request-formgroup__label(
-                class=`request-formgroup__label--${name}`,
+              label.request-formgroup__text-label(
+                class=`request-formgroup__text-label--${name}`,
               )
                 span.request-formgroup__legend= legend
                 input.generic-textfield.request-formgroup__textfield(
@@ -39,4 +39,4 @@ mixin request-formgroup(requestFormgroup_modifier)
                 id=value,
                 required,
               ).request-formgroup__radiofield
-              label.request-formgroup__label(for=value)= legend
+              label.request-formgroup__radio-label(for=value)= legend

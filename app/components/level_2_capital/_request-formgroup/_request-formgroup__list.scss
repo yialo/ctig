@@ -4,8 +4,11 @@
   grid-row-gap: 16px;
 
   .request-formgroup--transport-type & {
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 16px 24px;
+    clear: left;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
     justify-items: stretch;
+    grid-column-gap: 16px;
   }
 }

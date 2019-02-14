@@ -1,5 +1,5 @@
 .request-formgroup__textfield {
-  border-bottom-color: #666666;
+  border-bottom-color: $request-form-border;
 
   @include hover-focus_set() {
     border-bottom-color: white;

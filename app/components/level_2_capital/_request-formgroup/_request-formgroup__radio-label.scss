@@ -1,0 +1,23 @@
+.request-formgroup__radio-label {
+  @include form-text-s();
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  color: $form-gray;
+  cursor: pointer;
+  transition: {
+    property: color, font-weight;
+    duration: 0.3s;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  .request-formgroup__radiofield:checked ~ & {
+    @include emerald-line();
+    font-weight: 500;
+    color: white;
+  }
+}

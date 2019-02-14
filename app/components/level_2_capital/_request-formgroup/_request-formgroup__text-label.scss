@@ -1,0 +1,37 @@
+.request-formgroup__text-label {
+  display: block;
+
+  .request-formgroup--route & {
+    width: calc(100% - 28px);
+    margin-left: auto;
+  }
+
+  .request-formgroup--dimensions & {
+    @each $modifier in (length, width, height, weight,) {
+      &--#{$modifier} {
+        background: {
+          image: url("../img/request-formgroup__label--#{$modifier}.svg");
+          position: 12px calc(100% - 6px);
+          repeat: no-repeat;
+          size: 18px if($modifier == weight, 20px, 18px);
+        }
+      }
+    }
+  }
+
+  .request-formgroup--cargo-type & {
+    &--type {
+      position: relative;
+
+      &::before {
+        @include form-text-s();
+        content: "выбрать";
+        position: absolute;
+        bottom: 6px;
+        right: 12px;
+        color: $emerald;
+        cursor: pointer;
+      }
+    }
+  }
+}
