@@ -25,7 +25,7 @@
 
   &--transport-type {
     position: relative;
-    padding: 8px;
+    padding: 16px 8px;
 
     &::before {
       content: "";
@@ -38,7 +38,7 @@
         width: 1px;
         style: solid;
         color: transparent;
-        radius: 5px;
+        radius: 4px;
       }
       pointer-events: none;
       transition: border-color 0.3s;
