@@ -1,8 +1,10 @@
 extends ../base/_page_template
 
 block page-variable
+  - const page = PAGE_INDEX;
+
+block page-main
   -
-    const page = PAGE_INDEX;
     const getElMod = function getPageMainElementModifierClass(modifier) {
       const pageMainElementBasicClass = 'page-main__longpage-inner';
       const pageMainElementClasses = [
@@ -11,8 +13,6 @@ block page-variable
       ];
       return pageMainElementClasses;
     };
-
-block page-main
   +intro()(class=getElMod('intro'))
   +about-brief()(class=getElMod('about-brief'))
   +indices()(class=getElMod('indices'))

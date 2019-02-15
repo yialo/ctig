@@ -1,10 +1,6 @@
-.page-header__container {
+.sidebar__container {
   @include outline();
   @include margin-hor();
   @include padding-hor();
   width: $s-min-width;
-  padding: {
-    top: 24px;
-    bottom: 24px;
-  }
 }

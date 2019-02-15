@@ -1,0 +1,6 @@
+.language-toggle__link {
+  @include font(500, 12px);
+  line-height: calc(4 / 3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

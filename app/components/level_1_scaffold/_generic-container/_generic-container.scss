@@ -2,7 +2,7 @@
   @include outline();
   @include margin-hor();
   @include padding-hor();
-  width: 320px;
+  width: $s-min-width;
 
   &--wide {
     @include padding-hor(0);
