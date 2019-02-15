@@ -1,0 +1,25 @@
+.about-brief__subtitle {
+  @include font(700, 16px);
+  position: absolute;
+  top: 0;
+  left: calc(100% - 8px);
+  width: 200px;
+  transform-origin: top left;
+  transform: translateY(96px) rotate(90deg);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  padding-left: 32px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: black;
+  }
+}

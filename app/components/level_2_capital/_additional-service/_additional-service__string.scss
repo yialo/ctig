@@ -1,0 +1,19 @@
+.additional-service__string {
+  $additions-service-string-data: (
+    200px 16px,
+    170px 96px,
+    auto 32px,
+    120px 72px,
+  );
+
+  @for $number from 1 through length($additions-service-string-data) {
+    @each $width, $marginTop in nth($additions-service-string-data, $number) {
+      &--#{$number} {
+        width: $width;
+        margin-top: $marginTop;
+      }
+    }
+  }
+}
+
+// FIXME: исправить итератор

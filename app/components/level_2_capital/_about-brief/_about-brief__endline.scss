@@ -1,0 +1,10 @@
+.about-brief__endline {
+  @include font(
+    $fontSize: 24px,
+    $fontFamily: caveat,
+  );
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+}
