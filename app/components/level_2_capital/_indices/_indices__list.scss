@@ -1,0 +1,5 @@
+.indices__list {
+  @include padding-hor();
+  display: grid;
+  grid-template: repeat(8, auto) / 1fr;
+}

@@ -1,18 +1,3 @@
-.transport-item__wrapper {
-  .transport-item--special & {
-    position: relative;
-  }
-}
-
-.transport-item__heading {
-  @include padding-hor();
-  margin-bottom: 16px;
-
-  .transport-item--special & {
-    color: $middle-gray;
-  }
-}
-
 .transport-item__hint {
   @include padding-hor();
   @include font(300, 48px);

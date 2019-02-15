@@ -1,0 +1,8 @@
+.transport-item__heading {
+  @include padding-hor();
+  margin-bottom: 16px;
+
+  .transport-item--special & {
+    color: $middle-gray;
+  }
+}

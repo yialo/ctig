@@ -1,0 +1,14 @@
+.indices__term {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @for $number from 1 through 4 {
+    &--#{$number} {
+      @if $number != 4 {
+        margin-bottom: 16px;
+      }
+      grid-row: #{2 * $number} / #{2 * $number + 1};
+    }
+  }
+}

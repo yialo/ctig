@@ -3,10 +3,12 @@
   width: 40px;
   height: 30px;
   padding: 0;
-  background-color: transparent;
-  background-image: url("../img/search-form__button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 13px;
+  background: {
+    color: transparent;
+    image: url("../img/search-form__button.svg");
+    repeat: no-repeat;
+    position: center;
+    size: 16px 13px;
+  }
   border-style: none;
 }

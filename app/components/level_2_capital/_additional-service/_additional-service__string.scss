@@ -7,13 +7,10 @@
   );
 
   @for $number from 1 through length($additions-service-string-data) {
-    @each $width, $marginTop in nth($additions-service-string-data, $number) {
-      &--#{$number} {
-        width: $width;
-        margin-top: $marginTop;
-      }
+    &--#{$number} {
+      $item: nth($additions-service-string-data, $number);
+      width: nth($item, 1);
+      margin-top: nth($item, 2);
     }
   }
 }
-
-// FIXME: исправить итератор

@@ -1,8 +1,3 @@
-.transport__heading {
-  @include padding-hor();
-  margin-bottom: 32px;
-}
-
 .transport__list {
   @include list();
   display: grid;

@@ -1,0 +1,11 @@
+.indices__details {
+  grid-column: 1;
+  margin-left: 0;
+
+  @for $number from 1 through 4 {
+    &--#{$number} {
+      grid-row: #{2 * $number - 1} / #{2 * $number};
+      margin-bottom: 8px;
+    }
+  }
+}
