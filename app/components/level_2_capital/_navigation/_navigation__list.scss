@@ -1,0 +1,5 @@
+.navigation__list {
+  @include list();
+  display: grid;
+  grid-row-gap: 24px;
+}

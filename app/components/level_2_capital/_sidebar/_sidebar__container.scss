@@ -1,5 +1,4 @@
 .sidebar__container {
-  @include outline();
   @include margin-hor();
   display: flex;
   flex-direction: column;

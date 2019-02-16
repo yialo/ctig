@@ -1,0 +1,7 @@
+.navigation-sublist {
+  @include list();
+  display: grid;
+  grid-row-gap: 16px;
+  padding-left: 18px;
+  border-left: 2px solid $ultralight-gray;
+}

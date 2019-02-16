@@ -1,7 +1,13 @@
 .socials__item {
-  @each $number, $value in (1: 32px, 2: 36px,) {
-    &--#{$number} {
-      margin-bottom: $value;
-    }
+  margin-right: 48px;
+
+  &--last {
+    margin-right: 0;
   }
+
+  // @each $number, $value in (1: 32px, 2: 36px,) {
+  //   &--#{$number} {
+  //     margin-bottom: $value;
+  //   }
+  // }
 }

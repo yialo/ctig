@@ -11,9 +11,8 @@ mixin sidebar()
         .sidebar__calculator-toggle
           +calculator-toggle()
       .sidebar__popup
-        .sidebar__navigation
-          +navigation()
-        .sidebar__extra
-          +extra()
+        +navigation().sidebar__navigation
+        +extra().sidebar__extra
+
 
 //- TODO: возможно, стоит упростить extra через bem mix
