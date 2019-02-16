@@ -7,11 +7,11 @@ mixin socials()
     ];
   .socials(class=attributes.class)
     ul.socials__list
-      each item in SOCIALS_ITEMS
+      each item, index in SOCIALS_ITEMS
         - const [path, text] = item;
-        li.socials__item
+        li.socials__item(class=`socials__item--${index + 1}`)
           a.socials__link(
             class=`socials__link--${path}`
             href=`https://${path}.com/`
           )
-            .socials__legend= text
+            span.socials__legend= text

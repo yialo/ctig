@@ -1,17 +1,19 @@
 mixin sidebar()
-  .sidebar
+  nav.sidebar
     .sidebar__container
       .sidebar__navigation-toggle
         +navigation-toggle()
-      .sidebar__static-container
+      .sidebar__static-block
         .sidebar__language-toggle
           +language-toggle()
         .sidebar__main-menu
           +main-menu()
         .sidebar__calculator-toggle
           +calculator-toggle()
-      .sidebar__popup-container
+      .sidebar__popup
         .sidebar__navigation
           +navigation()
         .sidebar__extra
           +extra()
+
+//- TODO: возможно, стоит упростить extra через bem mix

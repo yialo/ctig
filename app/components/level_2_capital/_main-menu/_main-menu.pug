@@ -8,9 +8,9 @@ mixin main-menu()
       ['registration', 'Таможенное оформление'],
     ];
   ul.main-menu
-    each item in MAIN_MENU_ITEMS
+    each item, index in MAIN_MENU_ITEMS
       - const [modifier, text] = item;
-      li.main-menu__item
+      li.main-menu__item(class=`main-menu__item--${index + 1}`)
         -
           const itemLink = _EMPTY_NAVIGATION_LINKS.includes(modifier)
             ? '#'

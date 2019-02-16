@@ -1,0 +1,16 @@
+.socials__link {
+  display: block;
+  width: 24px;
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  };
+
+  @each $modifier, $height in (facebook: 24px, instagram: 24px, vk: 14px,) {
+    &--#{$modifier} {
+      height: $height;
+      background-image: url("../img/socials__link--#{$modifier}.svg");
+    }
+  }
+}

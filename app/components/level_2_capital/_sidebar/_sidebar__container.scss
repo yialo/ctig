@@ -1,7 +1,7 @@
 .sidebar__container {
   @include outline();
   @include margin-hor();
-  @include padding-hor();
+  display: flex;
+  flex-direction: column;
   width: $s-min-width;
-  height: 100%;
 }
