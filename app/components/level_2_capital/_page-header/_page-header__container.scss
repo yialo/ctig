@@ -1,0 +1,14 @@
+.page-header__container {
+  display: grid;
+  grid: {
+    template: {
+      rows: 1fr repeat(4, auto);
+      columns: 1fr;
+    }
+    row-gap: 24px;
+  }
+  padding: {
+    top: 24px;
+    bottom: 8px;
+  }
+}

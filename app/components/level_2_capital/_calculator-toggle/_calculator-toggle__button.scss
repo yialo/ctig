@@ -1,7 +1,7 @@
 .calculator-toggle__button {
   @include font(500, 18px);
   display: block;
-  padding: 16px 24px 0;
+  padding: 16px 24px;
   letter-spacing: 0.08em;
   text-align: center;
   color: $emerald;
@@ -9,6 +9,14 @@
     width: 2px;
     style: solid;
     color: currentColor;
-    bottom-style: none;
+  }
+  transition: color 200ms;
+
+  &:hover {
+    color: $emerald-semitransparent;
+  }
+
+  &:active {
+    color: transparentize($emerald, 0.75);
   }
 }

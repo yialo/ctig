@@ -1,6 +1,6 @@
 mixin navigation()
   include _d_navigation
-  .navigation(class=attributes.class)
+  nav.navigation(class=attributes.class)
     ul.navigation__list
       each item in NAVIGATION_ITEMS
         - const [modifier, text] = item;

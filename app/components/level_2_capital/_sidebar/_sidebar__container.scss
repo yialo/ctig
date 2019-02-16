@@ -1,6 +1,0 @@
-.sidebar__container {
-  @include margin-hor();
-  display: flex;
-  flex-direction: column;
-  width: $s-min-width;
-}

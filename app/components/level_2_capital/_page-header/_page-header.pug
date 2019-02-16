@@ -1,11 +1,18 @@
 mixin page-header()
   .page-header
-    .generic-container.page-header__top-container
+    .generic-container.page-header__container
       .page-header__logo
         +logo()
       .page-header__calls
         +calls()
       .page-header__search
         +search-form()
-    .page-header__sidebar
-      +sidebar()
+      .page-header__language-toggle
+        +language-toggle()
+      .page-header__main-menu
+        +main-menu()
+      .page-header__calculator-toggle
+        +calculator-toggle()
+    .page-header__popup-container
+      +navigation().page-header__navigation
+      +extra().page-header__extra

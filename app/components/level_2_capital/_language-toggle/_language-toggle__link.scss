@@ -3,4 +3,13 @@
   line-height: calc(4 / 3);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transition: color 0.2s;
+
+  &:hover {
+    color: transparentize(#000000, 0.5);
+  }
+
+  &:active {
+    color: transparentize(#000000, 0.75);
+  }
 }

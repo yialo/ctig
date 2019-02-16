@@ -1,6 +1,6 @@
 mixin navigation-toggle()
   - const NAVIGATION_TOGGLES = [['opener', 'Показать'], ['closer', 'Скрыть']];
-  .navigation-toggle
+  nav.navigation-toggle
     each item in NAVIGATION_TOGGLES
       - const [modifier, string] = item;
       button.navigation-toggle__button(
