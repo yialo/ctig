@@ -12,9 +12,3 @@
     overflow-y: scroll;
   }
 }
-
-.page-header__popup-inner {
-  @include margin-hor();
-  width: $s-min-width;
-  padding: 24px 16px var(--main-menu__navigation-toggle-height);
-}

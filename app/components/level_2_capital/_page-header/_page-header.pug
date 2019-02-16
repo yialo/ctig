@@ -11,10 +11,12 @@ mixin page-header()
         +language-toggle()
       .page-header__main-menu
         +main-menu()
-      .page-header__calculator-toggle
-        +calculator-toggle()
+      .page-header__outer-calculator-toggle
+        +calculator-toggle('outer')
     .page-header__popup
       .page-header__popup-inner
+        .page-header__extra
+          +socials().page-header__socials
+          +copyright().page-header__copyright
         +navigation().page-header__navigation
-        +socials().page-header__socials
-        +copyright().page-header__copyright
+        +calculator-toggle('inner').page-header__inner-calculator-toggle

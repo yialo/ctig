@@ -8,10 +8,12 @@ const navCloserButton = page
 
 const onNavOpenerClick = function navOpenerClickHandler() {
   page.classList.add('nav-is-shown');
+  navCloserButton.focus();
 };
 
 const onNavCloserClick = function navCloserClickHandler() {
   page.classList.remove('nav-is-shown');
+  navOpenerButton.focus();
 };
 
 navOpenerButton.addEventListener('click', onNavOpenerClick);

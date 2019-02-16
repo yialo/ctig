@@ -1,0 +1,5 @@
+.page-header__popup-inner {
+  @include margin-hor();
+  width: $s-min-width;
+  padding-bottom: var(--main-menu__navigation-toggle-height);
+}

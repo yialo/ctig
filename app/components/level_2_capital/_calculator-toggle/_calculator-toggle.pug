@@ -1,3 +1,6 @@
-mixin calculator-toggle()
-  .calculator-toggle
+mixin calculator-toggle(calculatorToggle_modifier)
+  .calculator-toggle(class=[
+    `calculator-toggle--${calculatorToggle_modifier}`,
+    attributes.class,
+  ])
     a.calculator-toggle__button(href='#') Калькулятор доставки
