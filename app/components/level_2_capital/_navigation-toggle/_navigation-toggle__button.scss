@@ -1,0 +1,22 @@
+.navigation-toggle__button {
+  padding: 0;
+  background: {
+    color: transparent;
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  border-style: none;
+
+  @each $key, $value in (opener: (28px 12px), closer: (22px 21px)) {
+    &--#{$key} {
+      width: nth($value, 1);
+      height: nth($value, 2);
+      background-image: url("../img/navigation-toggle__button--#{$key}.svg");
+    }
+  }
+
+  &--closer {
+    display: none;
+  }
+}

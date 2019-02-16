@@ -3,4 +3,5 @@
   @include margin-hor();
   @include padding-hor();
   width: $s-min-width;
+  height: 100%;
 }

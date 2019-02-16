@@ -1,0 +1,14 @@
+.calculator-toggle__button {
+  @include font(500, 18px);
+  display: block;
+  padding: 16px 24px 0;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: $emerald;
+  border: {
+    width: 2px;
+    style: solid;
+    color: currentColor;
+    bottom-style: none;
+  }
+}

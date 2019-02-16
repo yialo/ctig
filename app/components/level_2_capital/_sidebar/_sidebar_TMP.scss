@@ -1,3 +1,9 @@
+.sidebar {
+  height: 100%;
+  background-color: white;
+}
+
+.sidebar__static-container,
 .sidebar__popup-container {
   display: none;
 }
