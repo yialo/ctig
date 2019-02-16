@@ -3,7 +3,11 @@
 
   @each $modifier in (contacts, logistics) {
     &--#{$modifier} {
-      padding-bottom: 40px;
+      padding-bottom: var(--main-menu__navigation-toggle-height);
     }
+  }
+
+  &.nav-is-shown {
+    overflow-y: hidden;
   }
 }

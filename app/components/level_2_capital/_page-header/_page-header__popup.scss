@@ -1,4 +1,20 @@
 .page-header__popup {
-  @include padding-hor();
+  position: fixed;
+  top: 0;
+  z-index: 4;
   display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+
+  .nav-is-shown & {
+    display: block;
+    overflow-y: scroll;
+  }
+}
+
+.page-header__popup-inner {
+  @include margin-hor();
+  width: $s-min-width;
+  padding: 24px 16px var(--main-menu__navigation-toggle-height);
 }

@@ -8,15 +8,16 @@
   }
   border-style: none;
 
-  @each $key, $value in (opener: (28px 12px), closer: (22px 21px)) {
+  @each $key, $value in (opener: (28px 12px block none), closer: (22px 21px none block)) {
     &--#{$key} {
+      display: nth($value, 3);
       width: nth($value, 1);
       height: nth($value, 2);
       background-image: url("../img/navigation-toggle__button--#{$key}.svg");
-    }
-  }
 
-  &--closer {
-    display: none;
+      .nav-is-shown & {
+        display: nth($value, 4);
+      }
+    }
   }
 }

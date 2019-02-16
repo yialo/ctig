@@ -13,6 +13,8 @@ mixin page-header()
         +main-menu()
       .page-header__calculator-toggle
         +calculator-toggle()
-    .page-header__popup-container
-      +navigation().page-header__navigation
-      +extra().page-header__extra
+    .page-header__popup
+      .page-header__popup-inner
+        +navigation().page-header__navigation
+        +socials().page-header__socials
+        +copyright().page-header__copyright
