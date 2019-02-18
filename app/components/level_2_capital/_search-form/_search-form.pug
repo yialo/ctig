@@ -5,7 +5,7 @@ mixin search-form()
     name='tracking-search',
   )
     label.search-form__inner
-      span.search-form__legend Поле ввода трек-номера
+      span.generic-hidden-box.search-form__legend Поле ввода трек-номера
       input.generic-textfield(
         type='search',
         name='tracking-number',
@@ -13,4 +13,4 @@ mixin search-form()
         required,
       ).search-form__field
     button.search-form__button(type='submit')
-      span.search-form__button-legend Найти отправление
+      span.generic-hidden-box.search-form__button-legend Найти отправление

@@ -1,4 +1,6 @@
 .request-form {
-  padding: 40px 16px;
-  background-color: $form-background;
+  &--shipping {
+    padding: 48px 16px;
+    background-color: $form-background;
+  }
 }

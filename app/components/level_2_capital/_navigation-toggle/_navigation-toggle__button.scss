@@ -15,7 +15,7 @@
       height: nth($value, 2);
       background-image: url("../img/navigation-toggle__button--#{$key}.svg");
 
-      .nav-is-shown & {
+      .is-nav-shown & {
         display: nth($value, 4);
       }
     }

@@ -1,4 +1,4 @@
 .modal__container {
-  @include margin-hor();
-  width: $s-min-width;
+  position: relative;
+  background-color: $form-background;
 }

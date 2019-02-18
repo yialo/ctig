@@ -1,3 +1,8 @@
 .page__modal {
-  display: none;
+  z-index: 6;
+  // display: none;
+
+  .is-modal-shown {
+    display: block;
+  }
 }

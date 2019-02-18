@@ -17,7 +17,7 @@ mixin request-formgroup(requestFormgroup_modifier)
               label.request-formgroup__text-label(
                 class=`request-formgroup__text-label--${name}`,
               )
-                span.request-formgroup__legend= legend
+                span.generic-hidden-box.request-formgroup__legend= legend
                 input.generic-textfield.request-formgroup__textfield(
                   class=(
                     name === 'type'
@@ -38,5 +38,5 @@ mixin request-formgroup(requestFormgroup_modifier)
                 checked=checked,
                 id=value,
                 required,
-              ).request-formgroup__radiofield
+              ).generic-hidden-box.request-formgroup__radiofield
               label.request-formgroup__radio-label(for=value)= legend

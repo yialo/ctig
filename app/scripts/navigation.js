@@ -7,12 +7,12 @@ const navCloserButton = page
   .querySelector('.navigation-toggle__button--closer');
 
 const onNavOpenerClick = function navOpenerClickHandler() {
-  page.classList.add('nav-is-shown');
+  page.classList.add('is-nav-shown');
   navCloserButton.focus();
 };
 
 const onNavCloserClick = function navCloserClickHandler() {
-  page.classList.remove('nav-is-shown');
+  page.classList.remove('is-nav-shown');
   navOpenerButton.focus();
 };
 

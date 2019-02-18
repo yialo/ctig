@@ -1,10 +1,10 @@
 mixin modal()
-  .modal
+  .modal(class=attributes.class)
     .modal__overlay
       span.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
-    .modal__container
+    .generic-container.generic-container--wide.modal__container
       button.modal__close-button(type='button')
-        span.modal__button-legend Закрыть окно
+        span.generic-hidden-box.modal__button-legend Закрыть окно
       +request-form({
         heading: 'Запрос на расчет',
         modifier: 'calculation',
