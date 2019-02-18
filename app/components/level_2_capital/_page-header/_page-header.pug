@@ -1,18 +1,16 @@
 mixin page-header()
   .page-header
     .generic-container.page-header__container
-      .page-header__logo
+      .page-header__inner.page-header__inner--logo
         +logo()
-      .page-header__calls
+      .page-header__inner.page-header__inner--calls
         +calls()
-      .page-header__search
+      .page-header__inner.page-header__inner--search
         +search-form()
-      .page-header__language-toggle
+      .page-header__inner.page-header__inner--language-toggle
         +language-toggle()
-      .page-header__main-menu
+      .page-header__inner.page-header__inner--main-menu
         +main-menu()
-      .page-header__outer-calculator-toggle
-        +calculator-toggle('outer')
     .page-header__popup
       .page-header__popup-inner
         .page-header__extra

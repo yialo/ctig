@@ -9,7 +9,5 @@
 
   .nav-is-shown & {
     border-top-color: black;
-    // FIXME: this declaration is for desktop, not mobile!
-    transform: translateX(-10px);
   }
 }

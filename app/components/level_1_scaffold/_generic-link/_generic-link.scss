@@ -12,6 +12,6 @@
   }
 
   &:active {
-    color: $emerald-semitransparent;
+    color: transparentize($emerald, 0.5);
   }
 }

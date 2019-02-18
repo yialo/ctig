@@ -1,0 +1,14 @@
+.page-header__inner {
+  $page-header__inner-Modifiers: (logo, calls, search, main-menu,);
+
+  @for $count from 1 through length($page-header__inner-Modifiers) {
+    &--#{nth($page-header__inner-Modifiers, $count)} {
+      grid-area: #{$count} / 1 / #{$count + 1} / 2;
+    }
+  }
+
+  &--language-toggle {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: auto;
+  }
+}

@@ -11,7 +11,7 @@
     z-index: -1;
     width: 42px;
     height: 8px;
-    background-color: $emerald-semitransparent;
+    background-color: transparentize($emerald, 0.5);
 
     @each $key, $value in (top: 1px, bottom: 8px) {
       .generic-list--bullet_#{$key} & {

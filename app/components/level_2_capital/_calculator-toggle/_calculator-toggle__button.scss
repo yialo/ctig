@@ -12,11 +12,7 @@
   }
   transition: color 200ms;
 
-  &:hover {
-    color: $emerald-semitransparent;
-  }
-
   &:active {
-    color: transparentize($emerald, 0.75);
+    color: transparentize($emerald, 0.5);
   }
 }
