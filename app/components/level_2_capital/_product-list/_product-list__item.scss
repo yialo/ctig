@@ -1,12 +1,7 @@
 .product-list__item {
   @include font(400, 16px);
   line-height: normal;
-  text-align: center;
   color: $middle-gray;
-
-  &:hover {
-    color: white;
-  }
 
   &--current {
     position: relative;
