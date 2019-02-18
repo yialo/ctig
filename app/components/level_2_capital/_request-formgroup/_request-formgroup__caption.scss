@@ -15,11 +15,9 @@
     transition: color 0.3s;
   }
 
-  .request-formgroup--transport-type:hover & {
-    color: white;
-  }
-
-  .request-formgroup--transport-type:focus-within & {
-    color: white;
+  @each $state in (hover, focus-within,) {
+    .request-formgroup--transport-type:#{$state} & {
+      color: white;
+    }
   }
 }
