@@ -1,0 +1,32 @@
+.product-list__item {
+  @include font(400, 16px);
+  line-height: normal;
+  text-align: center;
+  color: $middle-gray;
+
+  &:hover {
+    color: white;
+  }
+
+  &--current {
+    position: relative;
+    z-index: 0;
+    padding: {
+      top: 4px;
+      bottom: 4px;
+    }
+    font-weight: 500;
+    color: white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $emerald;
+    }
+  }
+}
