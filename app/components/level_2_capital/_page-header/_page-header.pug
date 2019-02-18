@@ -2,7 +2,7 @@ mixin page-header()
   .page-header
     .generic-container.page-header__container
       .page-header__inner.page-header__inner--logo
-        +logo()
+        +logo('outer')
       .page-header__inner.page-header__inner--calls
         +calls()
       .page-header__inner.page-header__inner--search
@@ -11,10 +11,7 @@ mixin page-header()
         +language-toggle()
       .page-header__inner.page-header__inner--main-menu
         +main-menu()
+      .page-header__inner--calculator-toggle
+        +calculator-toggle('outer')
     .page-header__popup
-      .page-header__popup-inner
-        .page-header__extra
-          +socials().page-header__socials
-          +copyright().page-header__copyright
-        +navigation().page-header__navigation
-        +calculator-toggle('inner').page-header__inner-calculator-toggle
+      +header-popup()

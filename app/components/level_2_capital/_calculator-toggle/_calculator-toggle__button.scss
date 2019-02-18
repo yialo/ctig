@@ -1,18 +1,22 @@
 .calculator-toggle__button {
-  @include font(500, 18px);
   display: block;
-  padding: 16px 24px;
   letter-spacing: 0.08em;
   text-align: center;
   color: $emerald;
-  border: {
-    width: 2px;
-    style: solid;
-    color: currentColor;
-  }
   transition: color 200ms;
 
   &:active {
     color: transparentize($emerald, 0.5);
+  }
+
+  .calculator-toggle--inner & {
+    @include font(500, 16px);
+    padding: 8px 16px;
+
+    border: {
+      width: 2px;
+      style: solid;
+      color: currentColor;
+    }
   }
 }

@@ -1,0 +1,13 @@
+mixin header-popup()
+  .header-popup
+    .header-popup__container
+      .header-popup__auxiliary.header-popup__auxiliary--leading
+        +logo('inner').header-popup__nest.header-popup__nest--logo
+        +calculator-toggle('inner')(class=[
+          'header-popup__nest',
+          'header-popup__nest--calculator-toggle',
+        ])
+      +navigation().header-popup__navigation
+      .header-popup__auxiliary.header-popup__auxiliary--references
+        +socials().header-popup__nest--socials
+        +copyright().header-popup__nest--copyright

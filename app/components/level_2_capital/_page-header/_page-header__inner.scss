@@ -11,4 +11,8 @@
     grid-area: 1 / 1 / 2 / 2;
     margin-left: auto;
   }
+
+  &--calculator-toggle {
+    display: none;
+  }
 }

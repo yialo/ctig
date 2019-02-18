@@ -1,6 +1,17 @@
 .logo__link {
-  @include margin-hor();
+  @mixin set-logo-sizes($width) {
+    width: $width;
+    height: $width * 39 / 119;
+  }
+
   display: block;
-  width: 119px;
-  height: 39px;
+
+  .logo--outer & {
+    @include margin-hor();
+    @include set-logo-sizes(119px);
+  }
+
+  .logo--inner & {
+    @include set-logo-sizes(80px);
+  }
 }

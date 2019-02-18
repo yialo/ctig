@@ -1,5 +1,8 @@
 .page {
-  padding-bottom: 64px;
+  padding: {
+    top: var(--page-padding-top);
+    bottom: 64px;
+  }
 
   @each $modifier in (contacts, logistics) {
     &--#{$modifier} {

@@ -1,0 +1,17 @@
+.header-popup__auxiliary {
+  @include padding-hor();
+  display: flex;
+
+  &--leading {
+    margin-bottom: 24px;
+  }
+
+  &--references {
+    justify-content: space-between;
+    padding: {
+      top: 24px;
+      bottom: 24px;
+    }
+    border-top: 1px solid black;
+  }
+}
