@@ -1,6 +1,11 @@
 .request-form {
+  background-color: $form-background;
+
   &--shipping {
     padding: 48px 16px;
-    background-color: $form-background;
+  }
+
+  &--calculation {
+    padding: 16px;
   }
 }

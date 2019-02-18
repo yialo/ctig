@@ -1,4 +1,12 @@
 .request-form__heading {
-  margin-bottom: 32px;
   color: white;
+
+  .request-form--shipping & {
+    margin-bottom: 32px;
+  }
+
+  .request-form--calculation & {
+    margin-bottom: 24px;
+    padding-right: 38px;
+  }
 }

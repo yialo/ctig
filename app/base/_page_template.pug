@@ -14,7 +14,8 @@ html(lang='ru')
       +page-header()
     main.page-main.page__main
       block page-main
-    +modal().generic-fixed-fullscreen.page__modal
+    .generic-fixed-fullscreen.page__modal
+      +modal()
     script(src='js/picturefill.js')
     script(src='js/navigation.js')
     block current-page-scripts

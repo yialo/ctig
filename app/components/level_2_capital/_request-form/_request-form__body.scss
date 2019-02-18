@@ -1,5 +1,13 @@
 .request-form__body {
   display: grid;
-  grid-row-gap: 32px;
-  margin-bottom: 40px;
+
+  .request-form--shipping & {
+    grid-row-gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .request-form--calculation & {
+    grid-row-gap: 24px;
+    margin-bottom: 24px;
+  }
 }

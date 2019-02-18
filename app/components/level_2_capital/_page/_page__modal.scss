@@ -2,7 +2,10 @@
   z-index: 6;
   // display: none;
 
+  overflow-y: scroll;
+
   .is-modal-shown {
     display: block;
+    overflow-y: scroll;
   }
 }
