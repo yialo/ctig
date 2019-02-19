@@ -1,7 +1,10 @@
 .copyright__link {
   @include font(700, 10px);
-  transform: rotate(-0.25turn);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: $dark-gray;
+
+  @media (min-width: $m-min-width) {
+    transform: rotate(-0.25turn);
+  }
 }

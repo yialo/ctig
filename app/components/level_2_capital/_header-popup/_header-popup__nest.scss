@@ -7,10 +7,6 @@
     max-width: 160px;
   }
 
-  &--copyright {
-    display: flex;
-  }
-
   @media (min-width: $m-min-width) {
     max-width: none;
 
@@ -19,7 +15,12 @@
     }
 
     &--socials {
-      margin-bottom: 80px;
+      margin-bottom: 130px;
+    }
+
+    &--copyright {
+      width: 100%;
+      height: 100px;
     }
   }
 }
