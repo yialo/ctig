@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $m-min-width) {
-    @include padding-hor(32px);
+    padding: 0;
 
     &--leading {
       grid-area: 1 / 2 / 2 / 3;

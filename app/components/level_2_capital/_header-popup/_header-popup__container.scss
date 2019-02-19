@@ -7,6 +7,7 @@
   }
 
   @media (min-width: $m-min-width) {
+    @include padding-hor(32px);
     display: grid;
     grid: {
       template: {
@@ -16,5 +17,6 @@
       column-gap: 100px;
     }
     width: 100%;
+    padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 24px);
   }
 }

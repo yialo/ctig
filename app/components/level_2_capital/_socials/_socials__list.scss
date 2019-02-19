@@ -1,6 +1,10 @@
 .socials__list {
   @include list();
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: $m-min-width) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

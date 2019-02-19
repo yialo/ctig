@@ -22,7 +22,7 @@
 
   @media (min-width: $m-min-width) {
     .calculator-toggle--inner & {
-      @include padding-hor(32px);
+      padding: 10px 32px;
       font-size: 20px;
     }
   }
