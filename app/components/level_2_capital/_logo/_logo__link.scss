@@ -9,6 +9,7 @@
   .logo--outer & {
     @include margin-hor();
     @include set-logo-sizes(119px);
+    padding-right: 40px;
   }
 
   .logo--inner & {
@@ -18,6 +19,7 @@
   @media (min-width: $m-min-width) {
     .logo--outer & {
       @include margin-hor(0);
+      padding-right: 0;
     }
 
     .logo--inner & {
