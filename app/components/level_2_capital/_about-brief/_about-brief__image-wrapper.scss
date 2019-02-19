@@ -4,7 +4,9 @@
   @media (min-width: $m-min-width) {
     float: left;
     width: 200px;
-    margin-bottom: 8px;
-    margin-right: 32px;
+    margin: {
+      bottom: 8px;
+      right: 32px;
+    }
   }
 }

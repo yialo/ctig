@@ -1,5 +1,25 @@
 .indices__list {
   @include padding-hor();
   display: grid;
-  grid-template: repeat(8, auto) / 1fr;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  grid-template: {
+    rows: repeat(8, auto);
+    columns: 1fr;
+  }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    flex-grow: 1;
+    grid: {
+      template: {
+        rows: repeat(4, auto);
+        columns: auto 1fr;
+      }
+      gap: 32px 24px;
+    }
+    align-items: end;
+  }
 }

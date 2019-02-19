@@ -1,3 +1,11 @@
 .indices__image-wrapper {
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 200px;
+    margin: {
+      bottom: 0;
+      right: 32px;
+    }
+  }
 }

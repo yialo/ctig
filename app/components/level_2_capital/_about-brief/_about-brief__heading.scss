@@ -3,6 +3,7 @@
   margin-bottom: 32px;
 
   @media (min-width: $m-min-width) {
+    @include padding-hor(0);
     width: 100%;
     margin-bottom: 40px;
   }
