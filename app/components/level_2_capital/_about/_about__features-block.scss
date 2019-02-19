@@ -4,4 +4,14 @@
   &--last {
     margin-bottom: 0;
   }
+
+  @media (min-width: $m-min-width) {
+    &--1 {
+      flex: 1 0 50px;
+    }
+
+    &--2 {
+      flex: 0 0 100%;
+    }
+  }
 }

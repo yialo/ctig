@@ -1,3 +1,11 @@
 .about__image-wrapper {
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 300px;
+    margin: {
+      bottom: 48px;
+      right: 32px;
+    };
+  }
 }

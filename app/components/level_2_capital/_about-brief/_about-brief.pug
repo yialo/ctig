@@ -10,12 +10,9 @@ mixin about-brief()
       .about-brief__text-content
         p.about-brief__subtitle Pабота с нами
         each paragraph, index in ABOUT_BRIEF_PARAGRAPHS
-          -
-            const lastItem_modifier =
-              (index === ABOUT_BRIEF_PARAGRAPHS.length - 1)
-              ? 'about-brief__paragraph--last'
-              : null;
-          p.generic-textblock.about-brief__paragraph(
-            class=lastItem_modifier,
-          )= paragraph
+          p.generic-textblock.about-brief__paragraph(class=(
+            index === ABOUT_BRIEF_PARAGRAPHS.length - 1
+            ? 'about-brief__paragraph--last'
+            : null
+          ))= paragraph
         p.about-brief__endline Спасибо за доверие, Ваш #{SITE_TITLE}.

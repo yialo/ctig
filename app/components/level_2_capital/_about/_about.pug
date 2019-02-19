@@ -13,10 +13,13 @@ mixin about()
         ).about__image-wrapper
         each item, index in ABOUT_FEATURES_LISTS
           - const { heading, list } = item;
-          .about__features-block(class=(
-            index === ABOUT_FEATURES_LISTS.length - 1
-            ? 'about__features-block--last'
-            : null
-          ))
+          .about__features-block(class=[
+            `about__features-block--${index + 1}`,
+            (
+              index === ABOUT_FEATURES_LISTS.length - 1
+              ? 'about__features-block--last'
+              : null
+            ),
+          ])
             h3.generic-heading-3.about__list-caption= `${heading}:`
             +generic-list({ modifier: 'bullet_bottom', data: list }).about__list

@@ -13,4 +13,14 @@
   &.is-nav-shown {
     overflow-y: hidden;
   }
+
+  @media (min-width: $m-min-width) {
+    padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 64px);
+
+    @each $modifier in (contacts, logistics) {
+      &--#{$modifier} {
+        padding-bottom: var(--main-menu__navigation-toggle-height);
+      }
+    }
+  }
 }
