@@ -3,5 +3,6 @@
 
   @media (min-width: $m-min-width) {
     position: static;
+    overflow: hidden;
   }
 }
