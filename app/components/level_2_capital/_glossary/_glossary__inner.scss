@@ -1,0 +1,6 @@
+.glossary__inner {
+  @media (min-width: $m-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,3 +1,11 @@
 .glossary__image-wrapper {
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 360px;
+    margin: {
+      bottom: 0;
+      right: 32px;
+    }
+  }
 }
