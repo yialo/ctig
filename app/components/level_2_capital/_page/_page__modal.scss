@@ -1,8 +1,6 @@
 .page__modal {
   z-index: 6;
-  // display: none;
-
-  overflow-y: scroll;
+  display: none;
 
   .is-modal-shown {
     display: block;
