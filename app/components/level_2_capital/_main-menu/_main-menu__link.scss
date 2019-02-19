@@ -1,17 +1,11 @@
 .main-menu__link {
   @media (min-width: $m-min-width) {
     &--notext {
+      @include svg-background();
       display: block;
       width: 25px;
       height: 25px;
-      background: {
-        image: url("../img/main-menu__link--notext.svg");
-        position: center;
-        repeat: no-repeat;
-        size: cover;
-      }
+      background-image: url("../img/main-menu__link--notext.svg");
     }
   }
 }
-
-// TODO: вынести настройку фона SVG в миксин

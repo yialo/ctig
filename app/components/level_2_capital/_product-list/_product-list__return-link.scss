@@ -7,17 +7,13 @@
   color: white;
 
   &::before {
+    @include svg-background();
     content: "";
     position: absolute;
     top: 1px;
     left: 0;
     width: 5px;
     height: 9px;
-    background: {
-      image: url("../img/product-list__return-link.svg");
-      position: center;
-      repeat: no-repeat;
-      size: cover;
-    }
+    background-image: url("../img/product-list__return-link.svg");
   }
 }

@@ -7,6 +7,7 @@
     position: relative;
 
     &::before {
+      @include svg-background();
       content: "";
       position: absolute;
       top: 8px;
@@ -15,11 +16,7 @@
       transform: rotate(90deg);
       width: 43px;
       height: 9px;
-      background: {
-        image: url("../img/request-formgroup--route.svg");
-        repeat: no-repeat;
-        size: cover;
-      }
+      background-image: url("../img/request-formgroup--route.svg");
     }
   }
 

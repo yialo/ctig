@@ -1,4 +1,5 @@
 .modal__close-button {
+  @include svg-background();
   position: absolute;
   top: 16px;
   right: 16px;
@@ -9,9 +10,6 @@
   background: {
     color: transparent;
     image: url("../img/modal__close-button.svg");
-    position: center;
-    repeat: no-repeat;
-    size: cover;
   }
   border-style: none;
 }

@@ -1,11 +1,7 @@
 .navigation-toggle__button {
+  @include svg-background();
   padding: 0;
-  background: {
-    color: transparent;
-    position: center;
-    repeat: no-repeat;
-    size: cover;
-  }
+  background-color: transparent;
   border-style: none;
 
   @each $key, $value in (opener: (28px 12px block none), closer: (22px 21px none block)) {
