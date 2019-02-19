@@ -7,6 +7,10 @@
     max-width: 160px;
   }
 
+  &--copyright {
+    display: flex;
+  }
+
   @media (min-width: $m-min-width) {
     max-width: none;
 

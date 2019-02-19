@@ -1,7 +1,7 @@
 .glossary__word {
   @include font(400, 16px);
   letter-spacing: 0.08em;
-  color: #333333;
+  color: $dark-gray;
 
   $grid-line-counter: 9;
 

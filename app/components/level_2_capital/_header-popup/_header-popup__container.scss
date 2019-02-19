@@ -12,10 +12,11 @@
     grid: {
       template: {
         rows: auto 1fr;
-        columns: 80px 1fr;
+        columns: 48px 1fr;
       }
-      column-gap: 100px;
+      column-gap: 160px;
     }
+    justify-content: space-between;
     width: 100%;
     padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 24px);
   }
