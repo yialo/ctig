@@ -19,5 +19,9 @@
     .logo--outer & {
       @include margin-hor(0);
     }
+
+    .logo--inner & {
+      @include set-logo-sizes(119px);
+    }
   }
 }

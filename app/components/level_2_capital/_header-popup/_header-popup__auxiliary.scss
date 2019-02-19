@@ -14,4 +14,21 @@
     }
     border-top: 1px solid black;
   }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(32px);
+
+    &--leading {
+      grid-area: 1 / 2 / 2 / 3;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    &--references {
+      grid-area: 1 / 1 / 3 / 2;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-top-style: none;
+    }
+  }
 }

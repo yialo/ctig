@@ -4,4 +4,14 @@
   &--last {
     margin-right: 0;
   }
+
+  @media (min-width: $m-min-width) {
+    margin-right: 0;
+
+    @each $index, $value in (1 48px, 2 53px,) {
+      &--#{$index} {
+        margin-bottom: $value;
+      }
+    }
+  }
 }

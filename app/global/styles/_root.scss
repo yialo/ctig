@@ -2,4 +2,8 @@
   --directions__list-vertical-margin: 16px;
   --main-menu__navigation-toggle-height: 48px;
   --page-padding-top: 24px;
+
+  @media (min-width: $m-min-width) {
+    --page-padding-top: 32px;
+  }
 }

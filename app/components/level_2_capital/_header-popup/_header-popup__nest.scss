@@ -6,4 +6,16 @@
   &--socials {
     max-width: 160px;
   }
+
+  @media (min-width: $m-min-width) {
+    max-width: none;
+
+    &--logo {
+      margin-right: 48px;
+    }
+
+    &--socials {
+      margin-bottom: 80px;
+    }
+  }
 }

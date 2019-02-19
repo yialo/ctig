@@ -5,4 +5,16 @@
     top: var(--page-padding-top);
     bottom: var(--main-menu__navigation-toggle-height);
   }
+
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: auto 1fr;
+        columns: 80px 1fr;
+      }
+      column-gap: 100px;
+    }
+    width: 100%;
+  }
 }
