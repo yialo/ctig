@@ -1,3 +1,7 @@
 .about-brief__container {
   position: relative;
+
+  @media (min-width: $m-min-width) {
+    position: static;
+  }
 }

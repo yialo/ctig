@@ -4,4 +4,12 @@
   &--customs-service {
     margin-bottom: 0;
   }
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 96px;
+
+    &--customs-service {
+      margin-bottom: 0;
+    }
+  }
 }

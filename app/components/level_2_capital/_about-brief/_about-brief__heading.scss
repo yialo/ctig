@@ -1,4 +1,9 @@
 .about-brief__heading {
   @include padding-hor();
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }

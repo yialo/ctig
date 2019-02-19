@@ -1,3 +1,11 @@
 .about-brief__text-content {
   @include padding-hor();
+
+  @media (min-width: $m-min-width) {
+    position: relative;
+    padding: {
+      left: 48px;
+      right: 0;
+    }
+  }
 }

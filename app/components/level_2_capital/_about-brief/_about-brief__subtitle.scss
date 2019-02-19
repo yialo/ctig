@@ -22,4 +22,12 @@
     height: 2px;
     background-color: black;
   }
+
+  @media (min-width: $m-min-width) {
+    top: auto;
+    bottom: 400px;
+    left: 0;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+  }
 }
