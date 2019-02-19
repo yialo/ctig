@@ -1,3 +1,7 @@
 .customs__text-content {
   @include padding-hor();
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+  }
 }

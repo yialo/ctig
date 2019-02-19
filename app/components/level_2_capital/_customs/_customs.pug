@@ -30,7 +30,7 @@ mixin customs(customs_modifier)
                 ? 'customs__item--last'
                 : null;
             li.generic-textblock.customs__item(
-              class=lastCustomsItemModifier
+              class=lastCustomsItemModifier,
             )!= item
         each item, index in customsParagraphsRest
           -
