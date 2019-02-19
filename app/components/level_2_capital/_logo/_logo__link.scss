@@ -14,4 +14,10 @@
   .logo--inner & {
     @include set-logo-sizes(80px);
   }
+
+  @media (min-width: $m-min-width) {
+    .logo--outer & {
+      @include margin-hor(0);
+    }
+  }
 }

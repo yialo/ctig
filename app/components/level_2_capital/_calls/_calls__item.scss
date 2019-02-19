@@ -6,4 +6,13 @@
   &--1 {
     margin-bottom: 24px;
   }
+
+  @media (min-width: $m-min-width) {
+    @include margin-hor(0);
+    justify-content: space-between;
+
+    &--1 {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -7,4 +7,9 @@
   &--wide {
     @include padding-hor(0);
   }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(32px);
+    width: $m-min-width;
+  }
 }

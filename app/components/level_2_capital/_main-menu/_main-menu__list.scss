@@ -6,4 +6,8 @@
     gap: 8px;
   }
   justify-content: space-between;
+
+  @media (min-width: $m-min-width) {
+    display: flex;
+  }
 }

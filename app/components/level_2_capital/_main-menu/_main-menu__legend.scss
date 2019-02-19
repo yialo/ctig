@@ -1,0 +1,5 @@
+.main-menu__legend {
+  @media (min-width: $m-min-width) {
+    @include accessible-hiding();
+  }
+}
