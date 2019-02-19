@@ -1,4 +1,8 @@
 .clients__heading {
   @include padding-hor();
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 48px;
+  }
 }
