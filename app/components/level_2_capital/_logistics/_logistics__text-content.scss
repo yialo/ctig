@@ -1,4 +1,5 @@
 .logistics__text-content {
+  @include padding-hor();
   margin-bottom: 48px;
 
   @media (min-width: $m-min-width) {

@@ -2,4 +2,8 @@
   @include list();
   display: flex;
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 384px;
+  }
 }
