@@ -1,0 +1,12 @@
+.logistics__inner {
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: auto 1fr auto auto;
+        columns: auto 1fr;
+      }
+      column-gap: 32px;
+    }
+  }
+}
