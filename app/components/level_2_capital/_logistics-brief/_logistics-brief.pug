@@ -12,9 +12,13 @@ mixin logistics-brief()
               alt=string
             ).logistics-brief__image-wrapper
       ul.logistics-brief__list
-        each item in _LOGISTICS_ITEMS
+        each item, index in _LOGISTICS_ITEMS
           - const { caption, list, modifier } = item;
-          li.logistics-brief__item
+          li.logistics-brief__item(class=(
+            index === _LOGISTICS_ITEMS.length - 1
+            ? 'logistics-brief__item--last'
+            : null
+          ))
             +directions({
               heading: caption,
               items: list,

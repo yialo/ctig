@@ -1,12 +1,6 @@
 .subarticle__paragraph {
-  margin: {
-    top: 0;
-    bottom: 16px;
-  }
-
-  &--last {
-    margin-bottom: 0;
-  }
+  @include margin-bottom-last(16px);
+  margin-top: 0;
 
   @media (min-width: $m-min-width) {
     .subarticle--double-column & {

@@ -1,6 +1,8 @@
 .logistics-brief__list {
   @include list();
   @include padding-hor();
-  display: grid;
-  grid-row-gap: 32px;
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+  }
 }

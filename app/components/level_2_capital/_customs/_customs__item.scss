@@ -1,7 +1,7 @@
 .customs__item {
+  @include margin-bottom-last(8px);
   position: relative;
   display: flex;
-  margin-bottom: 8px;
   padding-left: 32px;
 
   &::before {
@@ -12,9 +12,5 @@
     width: 16px;
     height: 2px;
     background-color: black;
-  }
-
-  &--last {
-    margin-bottom: 0;
   }
 }

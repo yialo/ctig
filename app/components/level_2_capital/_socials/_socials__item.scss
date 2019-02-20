@@ -1,9 +1,5 @@
 .socials__item {
-  margin-right: 24px;
-
-  &--last {
-    margin-right: 0;
-  }
+  @include margin-bottom-last(24px);
 
   @media (min-width: $m-min-width) {
     margin-right: 0;

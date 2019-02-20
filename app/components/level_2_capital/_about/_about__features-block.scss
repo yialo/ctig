@@ -1,9 +1,5 @@
 .about__features-block {
-  margin-bottom: 48px;
-
-  &--last {
-    margin-bottom: 0;
-  }
+  @include margin-bottom-last(48px);
 
   @media (min-width: $m-min-width) {
     &--1 {

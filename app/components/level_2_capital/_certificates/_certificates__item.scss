@@ -1,17 +1,9 @@
 .certificates__item {
+  @include margin-bottom-last(24px);
   @include font(500, 20px);
-  margin-bottom: 24px;
   letter-spacing: normal;
 
-  &--last {
-    margin-bottom: 0;
-  }
-
   @media (min-width: $m-min-width) {
-    margin-bottom: 32px;
-
-    &--last {
-      margin-bottom: 0;
-    }
+    @include margin-bottom-last(32px);
   }
 }
