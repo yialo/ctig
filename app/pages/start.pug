@@ -1,0 +1,24 @@
+doctype html
+html(lang='ru')
+  -
+    const PAGELIST = [
+      ['index', 'Главная'],
+      ['about', 'О нас'],
+      ['glossary', 'Глоссарий'],
+      ['logistics', 'География перевозок'],
+      ['articles', 'Статьи'],
+      ['article', 'Статьи / Подробнее'],
+      ['contacts', 'Контакты'],
+      ['error404', 'Такой страницы нет'],
+    ];
+  head
+    meta(charset='utf-8')
+    title CTIG | Тестовая страница
+  body
+    h1 Это техническая страница для тестирования вёрстки
+    p Пожалуйста, выберите интересующую страницу сайта:
+    ul.tech__list
+      each item in PAGELIST
+        - const [path, title] = item;
+        li.tech__item
+          a.tech__link(href=`${path}.html` target='_blank')= title
