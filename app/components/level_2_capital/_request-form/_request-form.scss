@@ -8,4 +8,10 @@
   &--calculation {
     padding: 16px;
   }
+
+  @media (min-width: $m-min-width) {
+    &--calculation {
+      padding: 32px;
+    }
+  }
 }

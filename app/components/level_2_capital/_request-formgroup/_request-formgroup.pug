@@ -4,6 +4,7 @@ mixin request-formgroup(requestFormgroup_modifier)
     const requestFormgroup_data = REQUEST_FORMGROUP_DATA[requestFormgroup_modifier];
     const { caption, type, fields } = requestFormgroup_data;
   fieldset.request-formgroup(class=[
+    (type === 'text' ? `request-formgroup--text` : null),
     `request-formgroup--${requestFormgroup_modifier}`,
     attributes.class,
   ])

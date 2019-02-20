@@ -1,22 +1,19 @@
 .request-formgroup {
   @include margin-hor(0);
-  padding: 0;
   border-style: none;
 
+  &--text {
+    padding: 0;
+  }
+
   &--route {
-    position: relative;
+    @include route-fieldset-decorator();
 
     &::before {
-      @include svg-background();
-      content: "";
-      position: absolute;
       top: 8px;
       left: 5px;
       transform-origin: bottom left;
       transform: rotate(90deg);
-      width: 43px;
-      height: 9px;
-      background-image: url("../img/request-formgroup--route.svg");
     }
   }
 
@@ -50,6 +47,16 @@
     &:focus-within {
       &::before {
         border-color: $request-form-border;
+      }
+    }
+  }
+
+  @media (min-width: $m-min-width) {
+    &--route {
+      position: static;
+
+      &::before {
+        display: none;
       }
     }
   }

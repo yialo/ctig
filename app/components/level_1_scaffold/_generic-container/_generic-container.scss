@@ -11,5 +11,9 @@
   @media (min-width: $m-min-width) {
     @include padding-hor(32px);
     width: $m-min-width;
+
+    &--wide {
+      @include padding-hor(0);
+    }
   }
 }

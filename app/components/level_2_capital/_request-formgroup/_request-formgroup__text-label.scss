@@ -34,4 +34,11 @@
       }
     }
   }
+
+  @media (min-width: $m-min-width) {
+    .request-formgroup--route & {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }

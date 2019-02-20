@@ -14,6 +14,10 @@
     overflow-y: hidden;
   }
 
+  &.is-modal-shown {
+    overflow-y: hidden;
+  }
+
   @media (min-width: $m-min-width) {
     padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 64px);
 

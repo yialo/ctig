@@ -2,7 +2,7 @@
   z-index: 6;
   display: none;
 
-  .is-modal-shown {
+  .is-modal-shown & {
     display: block;
     overflow-y: scroll;
   }

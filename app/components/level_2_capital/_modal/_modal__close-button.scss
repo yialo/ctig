@@ -12,4 +12,9 @@
     image: url("../img/modal__close-button.svg");
   }
   border-style: none;
+
+  @media (min-width: $m-min-width) {
+    top: 32px;
+    right: 32px;
+  }
 }

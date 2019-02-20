@@ -11,4 +11,23 @@
     justify-items: stretch;
     grid-column-gap: 16px;
   }
+
+  @media (min-width: $m-min-width) {
+    .request-formgroup--text & {
+      grid: {
+        template-columns: repeat(2, 1fr);
+        column-gap: 128px;
+      }
+    }
+
+    .request-formgroup--route & {
+      @include route-fieldset-decorator();
+
+      &::before {
+        top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 }
