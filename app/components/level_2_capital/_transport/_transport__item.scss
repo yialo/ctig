@@ -7,7 +7,7 @@
     &--1 {
       width: 46%;
       margin: {
-        bottom: auto;
+        bottom: 64px;
         left: 16px;
       }
     }
@@ -16,21 +16,17 @@
       order: 1;
       align-self: flex-end;
       width: 38%;
-      margin-top: 160px;
+      margin-top: 150px;
     }
 
     &--3 {
       width: 46%;
-      margin: {
-        top: auto;
-        bottom: auto;
-      }
     }
 
     &--4 {
       order: 2;
       width: 46%;
-      margin-top: 120px;
+      margin-top: 80px;
     }
 
     &--5 {
