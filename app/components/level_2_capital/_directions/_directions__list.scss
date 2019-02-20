@@ -2,6 +2,8 @@
   @include list();
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: calc(var(--directions__list-vertical-margin) * -1);
+  margin: {
+    top: calc(var(--directions__list-vertical-margin) * -1);
+    left: calc(var(--directions__list-horizontal-margin) * -1);
+  }
 }
