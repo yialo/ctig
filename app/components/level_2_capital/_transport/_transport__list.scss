@@ -1,5 +1,13 @@
 .transport__list {
   @include list();
-  display: grid;
-  grid-row-gap: 48px;
+
+  @media (min-width: $m-min-width) {
+    display: flex;
+    flex: {
+      direction: column;
+      wrap: wrap;
+    }
+    align-content: space-between;
+    height: 1180px;
+  }
 }

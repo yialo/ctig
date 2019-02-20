@@ -1,4 +1,3 @@
 .transport__heading {
-  @include padding-hor();
-  margin-bottom: 32px;
+  @include accessible-hiding();
 }

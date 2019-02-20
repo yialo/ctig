@@ -1,0 +1,44 @@
+.transport__item {
+  @include margin-bottom-last(48px);
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 0;
+
+    &--1 {
+      width: 46%;
+      margin: {
+        bottom: auto;
+        left: 16px;
+      }
+    }
+
+    &--2 {
+      order: 1;
+      align-self: flex-end;
+      width: 38%;
+      margin-top: 160px;
+    }
+
+    &--3 {
+      width: 46%;
+      margin: {
+        top: auto;
+        bottom: auto;
+      }
+    }
+
+    &--4 {
+      order: 2;
+      width: 46%;
+      margin-top: 120px;
+    }
+
+    &--5 {
+      width: 38%;
+      margin: {
+        top: auto;
+        left: 32px;
+      }
+    }
+  }
+}
