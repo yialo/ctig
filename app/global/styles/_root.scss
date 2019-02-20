@@ -1,11 +1,12 @@
 :root {
-  --directions__list-horizontal-margin: 20px;
-  --directions__list-vertical-margin: 24px;
+  --directions__list-margin-left: 20px;
+  --directions__list-margin-top: 24px;
   --main-menu__item-margin-left: 24px;
   --main-menu__navigation-toggle-height: 48px;
   --page-padding-top: 24px;
 
   @media (min-width: $m-min-width) {
+    --main-menu__item-margin-left: 0;
     --page-padding-top: 32px;
   }
 }

@@ -1,6 +1,5 @@
 .main-menu__list {
   @include list();
-  align-self: center;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -9,5 +8,6 @@
   @media (min-width: $m-min-width) {
     flex-wrap: nowrap;
     justify-content: space-between;
+    width: auto;
   }
 }

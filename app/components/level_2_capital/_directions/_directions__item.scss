@@ -1,13 +1,9 @@
 .directions__item {
   margin: {
-    top: var(--directions__list-vertical-margin);
-    left: var(--directions__list-horizontal-margin);
+    top: var(--directions__list-margin-top);
+    left: var(--directions__list-margin-left);
   }
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
-  @media (min-width: $m-min-width) {
-
-  }
 }
