@@ -1,11 +1,19 @@
 .product-list {
-  padding: 24px 16px 16px;
   display: grid;
-  grid-template: {
-    rows: auto 1fr auto;
-    columns: 1fr;
+  grid: {
+    template: {
+      rows: auto minmax(50px, 1fr) auto;
+      columns: 1fr;
+    }
+    row-gap: 24px;
   }
-  align-content: space-between;
   height: 100%;
+  padding: 24px 16px 16px;
   background-color: $form-background;
+
+  @media (min-width: $m-min-width) {
+    row-gap: 32px;
+    height: 100%;
+    padding: 32px;
+  }
 }

@@ -3,4 +3,8 @@
   display: grid;
   grid-row-gap: 16px;
   padding-right: calc(16px + var(--product-list__wrapper-scrollbar-width));
+
+  @media (min-width: $m-min-width) {
+    grid-row-gap: 24px;
+  }
 }
