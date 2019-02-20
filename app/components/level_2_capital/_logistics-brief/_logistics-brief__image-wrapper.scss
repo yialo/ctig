@@ -10,17 +10,41 @@
   &--1 {
     bottom: 0;
     left: 16px;
-    z-index: 2;
+    z-index: 1;
   }
 
   &--2 {
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
 
   &--3 {
     top: -16px;
     right: 16px;
-    z-index: 3;
+    z-index: 2;
+  }
+
+  @media (min-width: $m-min-width) {
+    position: static;
+
+    &--1 {
+      width: 20%;
+      margin-top: auto;
+      box-shadow: none;
+    }
+
+    &--2 {
+      width: 56%;
+      margin: {
+        top: 64px;
+        bottom: 64px;
+      }
+    }
+
+    &--3 {
+      width: 18%;
+      margin-bottom: auto;
+      box-shadow: none;
+    }
   }
 }

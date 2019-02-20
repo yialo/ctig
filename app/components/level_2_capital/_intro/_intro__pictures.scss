@@ -3,6 +3,10 @@
   padding-bottom: 16px;
 
   @media (min-width: $m-min-width) {
-    padding-bottom: 160px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
   }
 }
+
+// TODO: вынести в blending / mixin
