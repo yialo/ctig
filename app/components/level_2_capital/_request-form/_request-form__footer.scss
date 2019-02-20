@@ -1,0 +1,12 @@
+.request-form__footer {
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        columns: repeat(2, 1fr);
+        rows: auto;
+      }
+      column-gap: 128px;
+    }
+  }
+}

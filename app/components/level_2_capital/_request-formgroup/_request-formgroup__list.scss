@@ -5,11 +5,17 @@
 
   .request-formgroup--transport-type & {
     clear: left;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    justify-items: stretch;
-    grid-column-gap: 16px;
+    grid: {
+      template: {
+        rows: repeat(2, 1fr);
+        columns: repeat(2, 1fr);
+      }
+      column-gap: 16px;
+    }
+    justify: {
+      content: space-between;
+      items: stretch;
+    }
   }
 
   @media (min-width: $m-min-width) {
@@ -28,6 +34,12 @@
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+
+    .request-formgroup--transport-type & {
+      float: right;
+      display: flex;
+      width: calc(100% - 160px);
     }
   }
 }

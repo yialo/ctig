@@ -9,4 +9,10 @@
     margin-bottom: 24px;
     padding-right: 38px;
   }
+
+  @media (min-width: $m-min-width) {
+    .request-form--calculation & {
+      margin-bottom: 32px;
+    }
+  }
 }

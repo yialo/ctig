@@ -4,4 +4,10 @@
   padding: 0;
   background-color: transparent;
   border-style: none;
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 0;
+    justify-self: start;
+    align-self: end;
+  }
 }

@@ -19,6 +19,7 @@
 
   &--transport-type {
     position: relative;
+    overflow: hidden;
     padding: 16px 8px;
 
     &::before {
@@ -54,6 +55,14 @@
   @media (min-width: $m-min-width) {
     &--route {
       position: static;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--transport-type {
+      padding: 0;
 
       &::before {
         display: none;

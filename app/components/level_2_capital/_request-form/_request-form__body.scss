@@ -14,6 +14,7 @@
   @media (min-width: $m-min-width) {
     .request-form--calculation & {
       grid-row-gap: 32px;
+      margin-bottom: 32px;
     }
   }
 }
