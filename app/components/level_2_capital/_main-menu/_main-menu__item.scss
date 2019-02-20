@@ -1,9 +1,6 @@
 .main-menu__item {
   @include font(500, 18px);
+  margin-left: var(--main-menu__item-margin-left);
   line-height: 1.5;
   letter-spacing: 0.08em;
-
-  &--5 {
-    grid-area: 3 / 1 / 4 / 3;
-  }
 }

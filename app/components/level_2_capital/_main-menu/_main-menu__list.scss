@@ -1,13 +1,13 @@
 .main-menu__list {
   @include list();
-  display: grid;
-  grid: {
-    template: repeat(3, 1fr) / repeat(2, auto);
-    gap: 8px;
-  }
-  justify-content: space-between;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: calc(var(--main-menu__item-margin-left) * -1);
 
   @media (min-width: $m-min-width) {
-    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
