@@ -10,7 +10,6 @@
     left: 16px;
     z-index: 1;
     width: 50%;
-    box-shadow: $index-box-shadow;
   }
 
   @media (min-width: $m-min-width) {
@@ -25,9 +24,6 @@
     &--2 {
       width: 25%;
       margin-top: auto;
-      box-shadow: none;
     }
   }
 }
-
-// TODO: продумать bem, модификаторы элеметонов с тенями

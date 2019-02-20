@@ -4,7 +4,7 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "autoprefixer": "9.4.7",
+    "autoprefixer": "9.4.8",
     "browser-sync": "2.26.3",
     "del": "3.0.0",
     "eslint": "5.14.1",

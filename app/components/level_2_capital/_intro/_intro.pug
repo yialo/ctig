@@ -1,4 +1,5 @@
 mixin intro()
+  - const INTRO_IMAGES_SHADOWED = [2];
   section.intro(class=attributes.class)
     .generic-container.generic-container--wide.intro__container
       .blending.intro__inner
@@ -6,7 +7,15 @@ mixin intro()
         .blending__pictures.intro__pictures
           each string, index in ['Ракета', 'Облака']
             +generic-picture.blending__picture(
-              class=`intro__image-wrapper--${index + 1}`
-              src=`img/intro__image--${index + 1}.jpg`
-              alt=string
-            ).intro__image-wrapper
+              class=[
+                (
+                  INTRO_IMAGES_SHADOWED.includes(index + 1)
+                  ? 'blending__picture--shadowed'
+                  : null
+                ),
+                'intro__image-wrapper',
+                `intro__image-wrapper--${index + 1}`,
+              ],
+              src=`img/intro__image--${index + 1}.jpg`,
+              alt=string,
+            )

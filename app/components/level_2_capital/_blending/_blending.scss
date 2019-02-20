@@ -5,39 +5,3 @@
     z-index: 0;
   }
 }
-
-.blending__heading-wrapper {
-  @media (min-width: $m-min-width) {
-    position: absolute;
-  }
-}
-
-.blending__heading {
-  margin-bottom: 0;
-
-  &--substrate {
-    display: none;
-  }
-
-  @media (min-width: $m-min-width) {
-    -webkit-text-stroke: 0.35px #ffffff;
-    position: absolute;
-    mix-blend-mode: overlay;
-
-    &--higher {
-      z-index: 2;
-      color: transparent;
-    }
-
-    &--substrate {
-      z-index: 0;
-      display: block;
-    }
-  }
-}
-
-.blending__pictures {
-  z-index: 1;
-}
-
-// TODO: разбить на отдельные файлы

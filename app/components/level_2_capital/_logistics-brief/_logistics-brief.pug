@@ -1,4 +1,5 @@
 mixin logistics-brief()
+  - const LOGISTICS_BRIEF_IMAGES_SHADOWED = [1, 3];
   section.logistics-brief(class=attributes.class)
     .generic-container.generic-container--wide.logistics-brief__container
       .blending.logistics-brief__inner
@@ -7,10 +8,18 @@ mixin logistics-brief()
         .blending__pictures.logistics__brief__pictures
           each string, index in ['Башня', 'Собор', 'Пагода']
             +generic-picture.blending__picture(
-              class=`logistics-brief__image-wrapper--${index + 1}`
-              src=`img/logistics-brief__image--${index + 1}.jpg`
-              alt=string
-            ).logistics-brief__image-wrapper
+              class=[
+                (
+                  LOGISTICS_BRIEF_IMAGES_SHADOWED.includes(index + 1)
+                  ? 'blending__picture--shadowed'
+                  : null
+                ),
+                'logistics-brief__image-wrapper',
+                `logistics-brief__image-wrapper--${index + 1}`,
+              ],
+              src=`img/logistics-brief__image--${index + 1}.jpg`,
+              alt=string,
+            )
       ul.logistics-brief__list
         each item, index in _LOGISTICS_ITEMS
           - const { caption, list, modifier } = item;
