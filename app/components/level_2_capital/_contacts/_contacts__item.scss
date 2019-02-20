@@ -13,4 +13,10 @@
       bottom: 0;
     }
   }
+
+  @media (min-width: $m-min-width) {
+    &--address {
+      grid-area: 2 / 2 / 4 / 3;
+    }
+  }
 }
