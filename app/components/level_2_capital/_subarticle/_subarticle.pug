@@ -1,0 +1,19 @@
+mixin subarticle(subarticle_modifier)
+  include _m_subarticle_Paragraphs
+  -
+    const SUBARTICLES_PARAGRAPHS_COUNT = {
+      'double-column': 4,
+      'illustrated': 2,
+    };
+  .subarticle(class=[
+    `subarticle--${subarticle_modifier}`,
+    attributes.class,
+  ])
+    if subarticle_modifier === 'illustrated'
+      +generic-picture(
+        src='img/article__image.jpg'
+        alt='Контейнеры на складе'
+    ).subarticle__image-wrapper
+    h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
+    .subarticle__textblock
+      +subarticle_Paragraphs(SUBARTICLES_PARAGRAPHS_COUNT[subarticle_modifier])

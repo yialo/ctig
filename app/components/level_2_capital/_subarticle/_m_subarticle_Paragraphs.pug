@@ -1,10 +1,10 @@
-mixin article_Paragraphs(paragraphsTotal)
+mixin subarticle_Paragraphs(paragraphsTotal)
   - for (let paragraphCounter = 1; paragraphCounter <= paragraphsTotal; paragraphCounter++)
     -
       const paragraphText =
         _TEMPLATE_PARAGRAPHS[(paragraphCounter + 1) % 2];
-    p.generic-textblock.article__paragraph(class=(
+    p.generic-textblock.subarticle__paragraph(class=(
       paragraphCounter === paragraphsTotal
-      ? 'article__paragraph--last'
+      ? 'subarticle__paragraph--last'
       : null
     ))= paragraphText

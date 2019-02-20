@@ -1,10 +1,10 @@
-.article__textblock {
-  &--regular {
+.subarticle__textblock {
+  .subarticle--regular & {
     margin-bottom: 32px;
   }
 
   @media (min-width: $m-min-width) {
-    &--double-column {
+    .subarticle--double-column & {
       display: grid;
       grid: {
         template: {
@@ -16,7 +16,7 @@
       }
     }
 
-    &--regular {
+    .subarticle--regular & {
       display: grid;
       margin-bottom: 0;
     }

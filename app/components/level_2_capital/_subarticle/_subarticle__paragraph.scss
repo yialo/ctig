@@ -1,4 +1,4 @@
-.article__paragraph {
+.subarticle__paragraph {
   margin: {
     top: 0;
     bottom: 16px;
@@ -9,6 +9,8 @@
   }
 
   @media (min-width: $m-min-width) {
-    margin-bottom: 0;
+    .subarticle--double-column & {
+      margin-bottom: 0;
+    }
   }
 }

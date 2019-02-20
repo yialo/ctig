@@ -1,9 +1,0 @@
-.article__image-wrapper {
-  order: 1;
-
-  @media (min-width: $m-min-width) {
-    order: 0;
-    float: right;
-    width: 300px;
-  }
-}

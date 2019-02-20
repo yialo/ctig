@@ -1,5 +1,4 @@
 mixin article()
-  include _m_article_Paragraphs
   article.article(class=attributes.class)
     header.article__header
       .generic-container.article__heading-wrapper
@@ -14,15 +13,6 @@ mixin article()
         ).article__banner
     .generic-container.article__container
       .generic-container__inner.article__inner
-        .article__row.article__row--top
-          h3.generic-heading-2.article__subtitle Подзаголовок для статьи
-          .article__textblock.article__textblock--double-column
-            +article_Paragraphs(4)
-        .article__row.article__row--bottom
-          +generic-picture(
-            src='img/article__image.jpg'
-            alt='Контейнеры на складе'
-          ).article__image-wrapper
-          h3.generic-heading-2.article__subtitle Подзаголовок для статьи
-          .article__textblock.article__textblock--regular
-            +article_Paragraphs(2)
+        +subarticle('double-column').article__row.article__row--top
+        +subarticle('illustrated').article__row.article__row--bottom
+

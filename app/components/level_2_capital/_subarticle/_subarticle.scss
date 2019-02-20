@@ -1,0 +1,7 @@
+.subarticle {
+  @media (min-width: $m-min-width) {
+    &--illustrated {
+      overflow: hidden;
+    }
+  }
+}
