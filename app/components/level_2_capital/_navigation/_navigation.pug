@@ -21,5 +21,6 @@ mixin navigation()
             +navigation-sublist(NAVIGATION_INNER_LISTS[modifier])(
               class='navigation__sublist',
             )
-    .navigation__certificates
-      +certificates()
+          if modifier === 'certificates'
+            .navigation__certificates
+              +certificates()

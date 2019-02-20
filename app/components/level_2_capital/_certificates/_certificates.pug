@@ -1,8 +1,13 @@
 mixin certificates()
   include _d_certificates
   .certificates
-    a.certificates__return-button(href='#') Вернуться
+    header.certificates__header
+      a.certificates__return-button(href='#') Вернуться
     ul.certificates__list
-      each text in CERTIFICATES_ITEMS
-        li.certificates__item
+      each text, index in CERTIFICATES_ITEMS
+        li.certificates__item(class=(
+          index === CERTIFICATES_ITEMS.length - 1
+          ? 'certificates__item--last'
+          : null
+        ))
           a.certificates__link(href='#')= text
