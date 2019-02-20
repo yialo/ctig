@@ -1,6 +1,14 @@
 .article__paragraph {
   margin: {
     top: 0;
-    bottom: 0;
+    bottom: 16px;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 0;
   }
 }

@@ -1,0 +1,10 @@
+mixin article_Paragraphs(paragraphsTotal)
+  - for (let paragraphCounter = 1; paragraphCounter <= paragraphsTotal; paragraphCounter++)
+    -
+      const paragraphText =
+        _TEMPLATE_PARAGRAPHS[(paragraphCounter + 1) % 2];
+    p.generic-textblock.article__paragraph(class=(
+      paragraphCounter === paragraphsTotal
+      ? 'article__paragraph--last'
+      : null
+    ))= paragraphText

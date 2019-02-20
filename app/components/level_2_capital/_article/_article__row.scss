@@ -1,0 +1,22 @@
+.article__row {
+  &--top {
+    margin-bottom: 48px;
+  }
+
+  &--bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $m-min-width) {
+    &--top {
+      margin-bottom: 64px;
+    }
+
+    &--bottom {
+      display: block;
+    }
+  }
+}
+
+// TODO: протестировать columns-layout

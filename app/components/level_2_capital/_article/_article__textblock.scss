@@ -1,4 +1,24 @@
 .article__textblock {
-  display: grid;
-  grid-row-gap: 16px;
+  &--regular {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $m-min-width) {
+    &--double-column {
+      display: grid;
+      grid: {
+        template: {
+          rows: repeat(2, auto);
+          columns: repeat(2, 1fr);
+        }
+        auto-flow: column;
+        gap: 24px 48px;
+      }
+    }
+
+    &--regular {
+      display: grid;
+      margin-bottom: 0;
+    }
+  }
 }
