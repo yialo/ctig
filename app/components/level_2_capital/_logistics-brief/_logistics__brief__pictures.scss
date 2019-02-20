@@ -1,10 +1,13 @@
 .logistics__brief__pictures {
-  position: relative;
-  padding-bottom: 16px;
+  padding: {
+    top: 16px;
+    bottom: 16px;
+  }
 
   @media (min-width: $m-min-width) {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
   }
 }
