@@ -1,10 +1,18 @@
 mixin subarticle(subarticle_modifier)
-  include _m_subarticle_Paragraphs
   -
     const SUBARTICLES_PARAGRAPHS_COUNT = {
       'double-column': 4,
       'illustrated': 2,
     };
+    const paragraphsTotal = SUBARTICLES_PARAGRAPHS_COUNT[subarticle_modifier];
+    const getParagraphsStack = function (amount) {
+      let paragraphsSet = [];
+      for (let i = 1; i <= amount; i += 1) {
+        paragraphsSet.push(_TEMPLATE_PARAGRAPHS[(i + 1) % 2]);
+      }
+      return paragraphsSet;
+    };
+
   .subarticle(class=[
     `subarticle--${subarticle_modifier}`,
     attributes.class,
@@ -16,4 +24,9 @@ mixin subarticle(subarticle_modifier)
     ).subarticle__image-wrapper
     h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
     .subarticle__textblock
-      +subarticle_Paragraphs(SUBARTICLES_PARAGRAPHS_COUNT[subarticle_modifier])
+      each paragraphText in getParagraphsStack(paragraphsTotal)
+        p.generic-textblock.subarticle__paragraph(class=(
+          paragraphCounter === paragraphsTotal
+          ? 'subarticle__paragraph--last'
+          : null
+        ))= paragraphText
