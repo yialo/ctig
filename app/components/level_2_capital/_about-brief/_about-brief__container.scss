@@ -2,6 +2,7 @@
   position: relative;
 
   @media (min-width: $m-min-width) {
+    @include padding-hor(32px);
     position: static;
     overflow: hidden;
   }

@@ -9,7 +9,7 @@ include _components_import
 doctype html
 html(lang='ru')
   include ../global/head/_head
-  body.page(class=`page--${page.id}`).is-modal-shown
+  body.page(class=`page--${page.id}`)
     header.page__header
       +page-header()
     main.page-main.page__main

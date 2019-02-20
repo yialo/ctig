@@ -1,6 +1,4 @@
 .intro__image-wrapper {
-  z-index: 1;
-
   &--1 {
     position: relative;
   }
@@ -11,5 +9,18 @@
     left: 16px;
     width: 50%;
     box-shadow: $index-box-shadow;
+  }
+
+  @media (min-width: $m-min-width) {
+    &--1 {
+      margin-left: auto;
+      width: 70%;
+    }
+
+    &--2 {
+      left: 0;
+      width: 25%;
+      box-shadow: none;
+    }
   }
 }

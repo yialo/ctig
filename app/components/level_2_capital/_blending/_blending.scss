@@ -1,13 +1,15 @@
 .blending {
-  // @media (min-width: $l-min-width) {
-  //   position: relative;
-  // }
+  @media (min-width: $m-min-width) {
+    -webkit-font-smoothing: subpixel-antialiased;
+    position: relative;
+    z-index: 0;
+  }
 }
 
 .blending__heading-wrapper {
-  // @media (min-width: $l-min-width) {
-  //   position: relative;
-  // }
+  @media (min-width: $m-min-width) {
+    position: absolute;
+  }
 }
 
 .blending__heading {
@@ -17,18 +19,23 @@
     display: none;
   }
 
-  // @media (min-width: $l-min-width) {
-  //   -webkit-font-smoothing: subpixel-antialiased;
-  //   -webkit-text-stroke: 0.35px #ffffff;
-  //   position: absolute;
-  //   mix-blend-mode: overlay;
+  @media (min-width: $m-min-width) {
+    -webkit-text-stroke: 0.35px #ffffff;
+    position: absolute;
+    mix-blend-mode: overlay;
 
-  //   &--higher {
-  //     color: transparent;
-  //   }
+    &--higher {
+      z-index: 2;
+      color: transparent;
+    }
 
-  //   &--substrate {
-  //     display: block;
-  //   }
-  // }
+    &--substrate {
+      z-index: 0;
+      display: block;
+    }
+  }
+}
+
+.blending__pictures {
+  z-index: 1;
 }

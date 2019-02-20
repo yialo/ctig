@@ -1,4 +1,10 @@
 .intro__heading-wrapper {
   @include padding-hor();
   margin-bottom: 16px;
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    top: 80px;
+    margin-bottom: 0;
+  }
 }
