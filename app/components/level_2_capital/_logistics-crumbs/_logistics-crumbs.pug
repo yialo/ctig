@@ -2,12 +2,7 @@ mixin logistics-crumbs(logisticsCrumbs_dataset)
   .logistics-crumbs(class=attributes.class)
     ul.logistics-crumbs__heading-list
       each item, index in logisticsCrumbs_dataset
-        -
-          const lastLogisticsCrumbsHeadingItemModifier =
-            (index === logisticsCrumbs_dataset.length - 1)
-            ? 'logistics-crumbs__heading-item--last'
-            : null;
-          const { modifier, caption, list } = item;
+        - const { modifier, caption, list } = item;
         li.logistics-crumbs__heading-item(class=[
           `logistics-crumbs__heading-item--${modifier}`,
           (
@@ -15,7 +10,6 @@ mixin logistics-crumbs(logisticsCrumbs_dataset)
             ? 'logistics-crumbs__heading-item--current'
             : null
           ),
-          lastLogisticsCrumbsHeadingItemModifier,
         ])
           a.logistics-crumbs__heading-link(href='#')= caption
     .logistics-crumbs__inner

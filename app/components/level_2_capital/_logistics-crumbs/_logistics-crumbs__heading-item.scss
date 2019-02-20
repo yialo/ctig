@@ -1,6 +1,6 @@
 .logistics-crumbs__heading-item {
   @include font(500, 16px);
-  margin-right: 8px;
+  margin-left: var(--logistics-crumbs__heading-list-margin-left);
 
   &--current {
     flex-grow: 1;
@@ -17,10 +17,4 @@
       background-color: $middle-gray;
     }
   }
-
-  &--last {
-    margin-right: 0;
-  }
 }
-
-// TODO: исправить через отрицательный margin

@@ -1,7 +1,10 @@
 .logistics-crumbs__heading-list {
   @include list();
   display: flex;
-  margin-bottom: 32px;
+  margin: {
+    bottom: 32px;
+    left: calc(var(--logistics-crumbs__heading-list-margin-left) * -1);
+  }
 
   @media (min-width: $m-min-width) {
     width: 384px;
