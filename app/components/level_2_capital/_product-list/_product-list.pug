@@ -1,7 +1,7 @@
 mixin product-list()
   include _d_product-list
   .product-list
-    header.product-list__header
+    .product-list__header
       a.product-list__return-link(href='#') Вернуться
     .product-list__wrapper
       ul.product-list__items
@@ -12,5 +12,5 @@ mixin product-list()
             : null
           ))
             a.product-list__link(href='#')= item
-    footer.product-list__footer
+    .product-list__footer
       a.generic-link.product-list__select-button(href='#') Выбрать

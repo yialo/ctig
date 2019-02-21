@@ -7,10 +7,8 @@
 
   &--calculation {
     padding: 16px;
-  }
 
-  @media (min-width: $m-min-width) {
-    &--calculation {
+    @include request-form-mq(append) {
       padding: 32px;
     }
   }

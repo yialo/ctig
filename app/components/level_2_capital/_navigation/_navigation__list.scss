@@ -3,7 +3,7 @@
   display: grid;
   grid-row-gap: 24px;
 
-  .are-certificates-shown & {
+  .is-certificates-shown & {
     position: relative;
 
     &::before {

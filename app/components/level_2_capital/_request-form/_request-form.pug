@@ -1,7 +1,7 @@
 mixin request-form(requestForm_props)
-  - const { modifier, heading } = requestForm_props;
+  - const { modifier, heading, mqToggle } = requestForm_props;
   form.request-form(
-    class=[`request-form--${modifier}`, attributes.class]
+    class=[`request-form--${modifier}`, attributes.class],
     method='POST',
     action=FORM_DEFAULT_ACTION,
     name=`${modifier}-request`,
@@ -17,7 +17,7 @@ mixin request-form(requestForm_props)
           +request-formgroup('transport-type').request-form__group
       +request-formgroup('person').request-form__group
 
-    footer.request-form__footer
+    .request-form__footer
       button.generic-link.request-form__button(type='submit') Рассчитать доставку
       p.request-form__caution
         = 'Нажимая кнопку "Рассчитать доставку", я соглашаюсь с '

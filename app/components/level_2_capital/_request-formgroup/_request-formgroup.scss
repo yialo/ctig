@@ -6,17 +6,6 @@
     padding: 0;
   }
 
-  &--route {
-    @include route-fieldset-decorator();
-
-    &::before {
-      top: 8px;
-      left: 5px;
-      transform-origin: bottom left;
-      transform: rotate(90deg);
-    }
-  }
-
   &--transport-type {
     position: relative;
     overflow: hidden;
@@ -39,34 +28,14 @@
       transition: border-color 0.3s;
     }
 
-    &:hover {
-      &::before {
+    @each $state in (hover, focus-within,) {
+      &:#{$state}::before {
         border-color: $request-form-border;
       }
     }
 
-    &:focus-within {
-      &::before {
-        border-color: $request-form-border;
-      }
-    }
-  }
-
-  @media (min-width: $m-min-width) {
-    &--route {
-      position: static;
-
-      &::before {
-        display: none;
-      }
-    }
-
-    &--transport-type {
+    @include request-form-mq(append) {
       padding: 0;
-
-      &::before {
-        display: none;
-      }
     }
   }
 }

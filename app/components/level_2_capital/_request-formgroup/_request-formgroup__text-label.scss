@@ -1,11 +1,6 @@
 .request-formgroup__text-label {
   display: block;
 
-  .request-formgroup--route & {
-    width: calc(100% - 28px);
-    margin-left: auto;
-  }
-
   .request-formgroup--dimensions & {
     @each $modifier in (length, width, height, weight,) {
       &--#{$modifier} {
@@ -32,13 +27,6 @@
         color: $emerald;
         cursor: pointer;
       }
-    }
-  }
-
-  @media (min-width: $m-min-width) {
-    .request-formgroup--route & {
-      width: 100%;
-      margin-left: 0;
     }
   }
 }

@@ -1,0 +1,19 @@
+@mixin request-form-mq($cascade: nest) {
+  $request-form-mq-toggle: (m: $m-min-width, l: $l-min-width,);
+
+  @each $mq-toggle, $min-width in $request-form-mq-toggle {
+    @media (min-width: $min-width) {
+      @if $cascade == nest {
+        .is-wide-on-#{$mq-toggle} & {
+          @content;
+        }
+      } @else if $cascade == append {
+        @at-root {
+          .is-wide-on-#{$mq-toggle}#{&} {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}

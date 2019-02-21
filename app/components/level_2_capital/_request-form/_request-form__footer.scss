@@ -1,5 +1,5 @@
 .request-form__footer {
-  @media (min-width: $m-min-width) {
+  @include request-form-mq(nested) {
     display: grid;
     grid: {
       template: {

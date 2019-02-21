@@ -13,16 +13,14 @@
     margin-bottom: 32px;
     color: $form-gray;
     transition: color 0.3s;
-  }
 
-  @each $state in (hover, focus-within,) {
-    .request-formgroup--transport-type:#{$state} & {
-      color: white;
+    @each $state in (hover, focus-within,) {
+      &:#{$state} & {
+        color: white;
+      }
     }
-  }
 
-  @media (min-width: $m-min-width) {
-    .request-formgroup--transport-type & {
+    @include request-form-mq(append) {
       position: absolute;
       float: none;
       width: 120px;
