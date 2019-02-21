@@ -1,22 +1,20 @@
 mixin transport-item(transportItem_props)
-  - const { heading, number } = transportItem_props;
-  li.transport-item(
-    class=([
-      heading === 'Ракетный транспорт' ? 'transport-item--special' : null,
-      attributes.class,
-    ])
-  )
+  -
+    const { modifier, heading, number } = transportItem_props;
+    const isSpecial = (modifier === 'rocket');
+  li.transport-item(class=[
+    isSpecial ? 'transport-item--special' : null,
+    attributes.class,
+  ])
     h3.generic-heading-2.transport-item__heading= heading
-    if heading === 'Ракетный транспорт'
-      .transport-item__wrapper
-        +generic-picture(
-          src=`img/transport-item__image--${number}.jpg`
-          alt=heading
-        ).transport-item__image-wrapper
-        span.transport-item__hint Скоро
-    else
+    mixin transport-item__image-wrapper()
       +generic-picture(
         src=`img/transport-item__image--${number}.jpg`
         alt=heading
       ).transport-item__image-wrapper
-
+    if isSpecial
+      .transport-item__wrapper
+        +transport-item__image-wrapper()
+        span.transport-item__hint Скоро
+    else
+      +transport-item__image-wrapper()

@@ -1,4 +1,9 @@
 .additional-service__heading {
   @include padding-hor();
   margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    margin-bottom: 48px;
+  }
 }

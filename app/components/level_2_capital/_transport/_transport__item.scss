@@ -16,7 +16,10 @@
       order: 1;
       align-self: flex-end;
       width: 38%;
-      margin-top: 150px;
+      margin: {
+        top: 150px;
+        bottom: 80px;
+      };
     }
 
     &--3 {
@@ -26,7 +29,6 @@
     &--4 {
       order: 2;
       width: 46%;
-      margin-top: 80px;
     }
 
     &--5 {

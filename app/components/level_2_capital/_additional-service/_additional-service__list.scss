@@ -1,5 +1,5 @@
 .additional-service__list {
-  @include list();
-  display: grid;
-  grid-row-gap: 16px;
+  @media (min-width: $m-min-width) {
+    height: 820px;
+  }
 }

@@ -1,3 +1,28 @@
 .additional-service__item {
+  @include margin-bottom-last(24px);
   position: relative;
+
+  @media (min-width: $m-min-width) {
+    &--1 {
+      width: 50%;
+      margin-bottom: 64px;
+    }
+
+    &--2 {
+      order: 1;
+      width: 30%;
+      margin-top: 128px;
+    }
+
+    &--3 {
+      width: 50%;
+      margin-left: 64px;
+    }
+
+    &--4 {
+      order: 2;
+      width: 30%;
+      margin-top: auto;
+    }
+  }
 }

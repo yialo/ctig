@@ -1,13 +1,5 @@
 .transport__list {
-  @include list();
-
   @media (min-width: $m-min-width) {
-    display: flex;
-    flex: {
-      direction: column;
-      wrap: wrap;
-    }
-    align-content: space-between;
     height: 1050px;
   }
 }

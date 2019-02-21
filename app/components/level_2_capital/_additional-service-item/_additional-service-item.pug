@@ -1,0 +1,12 @@
+mixin additional-service-item(additionalServicesItem_props)
+  - const { modifier, heading, number } = additionalServicesItem_props;
+  li.additional-service-item(class=[
+    `additional-service-item--${modifier}`,
+    attributes.class,
+  ])
+    h3.generic-heading-2.additional-service-item__heading
+      span.additional-service-item__string= heading
+    +generic-picture()(
+      src=`img/additional-service-item__image--${number}.jpg`
+      alt=heading
+    ).additional-service-item__image-wrapper

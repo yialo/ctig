@@ -1,18 +1,26 @@
 mixin transport()
   -
     const TRANSPORT_ITEMS = [
-      'Авиатранспорт',
-      'Ж/Д перевозки',
-      'Автотранспорт',
-      'Водный транспорт',
-      'Ракетный транспорт',
+      ['plane', 'Авиатранспорт'],
+      ['train', 'Ж/Д перевозки'],
+      ['truck', 'Автотранспорт'],
+      ['ship', 'Водный транспорт'],
+      ['rocket', 'Ракетный транспорт'],
     ];
-  section.transport(class=attributes.class)
-    .generic-container.generic-container--wide.transport__container
+  section.mixed-gallery.transport(class=attributes.class)
+    .generic-container.generic-container--wide(class=[
+      'mixed-gallery__container',
+      'transport__container',
+    ])
       h2.generic-heading-1.transport__heading Виды перевозок
-      ul.transport__list
+      ul.mixed-gallery__list.transport__list
         each item, index in TRANSPORT_ITEMS
-          +transport-item({ heading: item, number: index + 1 })(class=[
+          - const [modifier, heading] = item;
+          +transport-item({
+            modifier: modifier,
+            heading: heading,
+            number: index + 1,
+          })(class=[
             'transport__item',
             `transport__item--${index + 1}`,
             (
