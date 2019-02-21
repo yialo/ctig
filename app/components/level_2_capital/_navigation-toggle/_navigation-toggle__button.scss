@@ -3,8 +3,12 @@
   padding: 0;
   background-color: transparent;
   border-style: none;
+  outline-style: none;
 
-  @each $key, $value in (opener: (28px 12px block none), closer: (22px 21px none block)) {
+  @each $key, $value in (
+    opener: (28px 12px block none),
+    closer: (22px 21px none block),
+  ) {
     &--#{$key} {
       display: nth($value, 3);
       width: nth($value, 1);
@@ -14,6 +18,14 @@
       .is-nav-shown & {
         display: nth($value, 4);
       }
+    }
+  }
+
+  &--closer {
+    transition: transform ease-in-out 0.5s;
+
+    .is-nav-shown &:hover {
+      transform: rotate(0.5turn);
     }
   }
 }

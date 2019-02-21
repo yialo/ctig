@@ -12,6 +12,12 @@
     image: url("../img/modal__close-button.svg");
   }
   border-style: none;
+  outline-style: none;
+  transition: transform ease-in-out 0.5s;
+
+  .is-modal-shown &:hover {
+    transform: rotate(0.5turn);
+  }
 
   @media (min-width: $m-min-width) {
     top: 32px;

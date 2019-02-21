@@ -5,6 +5,10 @@
   color: $emerald;
   transition: color 200ms;
 
+  &:hover {
+    color: transparentize($emerald, 0.25);
+  }
+
   &:active {
     color: transparentize($emerald, 0.5);
   }

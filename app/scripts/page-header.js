@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
   var KEYCODE_ESC = 27;
+  var KEYCODE_SPACE = 32;
   var page = $('.page');
   var navOpener = $('.navigation-toggle__button--opener');
   var navCloser = $('.navigation-toggle__button--closer');
@@ -32,6 +33,14 @@ $(document).ready(function(){
   calcOpener.click(function(evt){
     evt.preventDefault();
     page.addClass('is-modal-shown');
+    calcCloser.focus();
+  });
+  calcOpener.keydown(function(evt){
+    if (evt.keyCode === KEYCODE_SPACE) {
+      evt.preventDefault();
+      page.addClass('is-modal-shown');
+      calcCloser.focus();
+    }
   });
   calcCloser.click(function(){
     page.removeClass('is-modal-shown');
