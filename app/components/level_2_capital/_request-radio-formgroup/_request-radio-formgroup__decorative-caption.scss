@@ -6,8 +6,12 @@
   color: $form-gray;
   transition: color 0.3s;
 
+  &:hover {
+    color: white;
+  }
+
   @each $state in (hover, focus-within,) {
-    &:#{$state} & {
+    .request-radio-formgroup__inner:#{$state} & {
       color: white;
     }
   }
