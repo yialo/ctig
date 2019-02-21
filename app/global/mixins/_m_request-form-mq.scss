@@ -1,4 +1,4 @@
-@mixin request-form-mq($cascade: nest) {
+@mixin request-form-mq($cascade) {
   $request-form-mq-toggle: (m: $m-min-width, l: $l-min-width,);
 
   @each $mq-toggle, $min-width in $request-form-mq-toggle {

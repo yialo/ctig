@@ -6,21 +6,19 @@
     cross-docking: (s: 120px 72px, m: 120px 24px,),
   );
 
-  @each $modifier, $value in $additions-service-item__string_Data {
-    .additional-service-item--#{$modifier} & {
-      $item: map-get($value, s);
-      width: nth($item, 1);
-      margin-top: nth($item, 2);
-    }
-  }
-
-  @media (min-width: $m-min-width) {
+  @mixin additional-services-item__string($viewport) {
     @each $modifier, $value in $additions-service-item__string_Data {
       .additional-service-item--#{$modifier} & {
-        $item: map-get($value, m);
+        $item: map-get($value, $viewport);
         width: nth($item, 1);
         margin-top: nth($item, 2);
       }
     }
+  }
+
+  @include additional-services-item__string(s);
+
+  @media (min-width: $m-min-width) {
+    @include additional-services-item__string(m);
   }
 }

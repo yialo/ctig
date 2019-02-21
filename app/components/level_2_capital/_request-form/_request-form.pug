@@ -8,14 +8,14 @@ mixin request-form(requestForm_props)
   )
     h3.generic-heading-3.request-form__heading= heading
     .request-form__body
-      +request-formgroup('route').request-form__group
+      +request-text-formgroup('route').request-form__group
       case modifier
         when 'shipping'
-          +request-formgroup('dimensions').request-form__group
+          +request-text-formgroup('dimensions').request-form__group
         when 'calculation'
-          +request-formgroup('cargo-type').request-form__group
-          +request-formgroup('transport-type').request-form__group
-      +request-formgroup('person').request-form__group
+          +request-text-formgroup('cargo-type').request-form__group
+          +request-radio-formgroup().request-form__group
+      +request-text-formgroup('person').request-form__group
 
     .request-form__footer
       button.generic-link.request-form__button(type='submit') Рассчитать доставку

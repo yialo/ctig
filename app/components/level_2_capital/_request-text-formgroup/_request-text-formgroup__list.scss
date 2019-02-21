@@ -1,0 +1,40 @@
+.request-text-formgroup__list {
+  @include list();
+  display: grid;
+  grid-row-gap: 16px;
+
+  @include request-form-mq(nest) {
+    grid: {
+      template-columns: repeat(2, 1fr);
+      column-gap: 128px;
+    }
+  }
+
+  .request-text-formgroup--route & {
+    position: relative;
+    padding-left: 28px;
+
+    &::before {
+      @include svg-background();
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      transform-origin: bottom left;
+      transform: rotate(90deg);
+      width: 43px;
+      height: 9px;
+      background-image: url("../img/request-text-formgroup--route__list.svg");
+    }
+
+    @include request-form-mq(nest) {
+      padding-left: 0;
+
+      &::before {
+        top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.request-radio-formgroup__decorative-caption {
+  @include form-text-s();
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  color: $form-gray;
+  transition: color 0.3s;
+
+  @each $state in (hover, focus-within,) {
+    &:#{$state} & {
+      color: white;
+    }
+  }
+
+  @media (min-width: $m-min-width) {
+    width: 120px;
+    margin-bottom: 0;
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
+  }
+}

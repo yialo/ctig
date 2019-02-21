@@ -1,4 +1,4 @@
-.request-formgroup__radio-label {
+.request-radio-formgroup__label {
   @include form-text-s();
   display: block;
   width: 100%;
@@ -15,7 +15,7 @@
     color: white;
   }
 
-  .request-formgroup__radiofield:checked ~ & {
+  .request-radio-formgroup__field:checked ~ & {
     @include emerald-line();
     font-weight: 500;
     color: white;

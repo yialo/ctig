@@ -1,4 +1,4 @@
-.request-formgroup__textfield {
+.request-text-formgroup__field {
   color: white;
   border-bottom-color: $request-form-border;
 
@@ -22,7 +22,7 @@
     }
   }
 
-  .request-formgroup--dimensions & {
+  .request-text-formgroup--dimensions & {
     padding-left: 42px;
   }
 }

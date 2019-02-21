@@ -1,11 +1,11 @@
-.request-formgroup__text-label {
+.request-text-formgroup__label {
   display: block;
 
-  .request-formgroup--dimensions & {
+  .request-text-formgroup--dimensions & {
     @each $modifier in (length, width, height, weight,) {
       &--#{$modifier} {
         background: {
-          image: url("../img/request-formgroup__label--#{$modifier}.svg");
+          image: url("../img/request-text-formgroup__label--#{$modifier}.svg");
           position: 12px calc(100% - 6px);
           repeat: no-repeat;
           size: 18px if($modifier == weight, 20px, 18px);
@@ -14,7 +14,7 @@
     }
   }
 
-  .request-formgroup--cargo-type & {
+  .request-text-formgroup--cargo-type & {
     &--type {
       position: relative;
 

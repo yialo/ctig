@@ -1,5 +1,5 @@
 .request-form__footer {
-  @include request-form-mq(nested) {
+  @include request-form-mq(append) {
     display: grid;
     grid: {
       template: {

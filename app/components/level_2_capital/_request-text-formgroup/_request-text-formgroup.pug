@@ -1,0 +1,35 @@
+mixin request-text-formgroup(requestTextFormgroup_modifier)
+  include _d_request-text-formgroup
+  -
+    const requestTextFormgroup_data =
+      REQUEST_TEXT_FORMGROUP_DATA[requestTextFormgroup_modifier];
+    const { caption, type, fields } = requestTextFormgroup_data;
+  fieldset(class=[
+    'request-text-formgroup',
+    `request-text-formgroup--${requestTextFormgroup_modifier}`,
+    attributes.class,
+  ])
+    legend.generic-hidden-box.request-text-formgroup__caption= caption
+    ul.request-text-formgroup__list
+      each field in fields
+        -
+          const { name, legend, placeholder } = field;
+          const isType = (name === 'type');
+        li.request-text-formgroup__item
+          label(class=[
+            'request-text-formgroup__label',
+            `request-text-formgroup__label--${name}`,
+          ])
+            span.generic-hidden-box.request-text-formgroup__legend= legend
+            input.generic-textfield(
+              class=[
+                'request-text-formgroup__field',
+                isType ? 'request-text-formgroup__field--readonly' : null,
+              ],
+              type='text',
+              name=name,
+              placeholder=placeholder,
+              readonly=isType,
+              required,
+            )
+
