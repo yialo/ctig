@@ -28,6 +28,7 @@
   @include request-form-mq(nest) {
     position: static;
     display: flex;
+    justify-content: space-between;
     padding: 0;
 
     &::before {
