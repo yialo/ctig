@@ -1,4 +1,11 @@
-.generic-picture__image {
-  width: 100%;
-  height: auto;
+.generic-picture {
+  &--shadowed {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  @media (min-width: $m-min-width) {
+    &--shadowed {
+      box-shadow: none;
+    }
+  }
 }

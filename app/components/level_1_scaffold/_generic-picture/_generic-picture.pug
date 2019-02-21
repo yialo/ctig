@@ -1,3 +1,10 @@
-mixin generic-picture()
-  picture.generic-picture(class=attributes.class)
+mixin generic-picture(genericPicture_modifier)
+  picture.generic-picture(class=[
+    (
+      genericPicture_modifier
+      ? `generic-picture--${genericPicture_modifier}`
+      : null
+    ),
+    attributes.class,
+  ])
     img.generic-picture__image(src=attributes.src alt=attributes.alt)

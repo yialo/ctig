@@ -1,21 +1,23 @@
 mixin intro()
-  - const INTRO_IMAGES_SHADOWED = [2];
+  -
+    const INTRO_PICTURES = [
+      { title: 'Ракета', isShadowed: false },
+      { title: 'Облака', isShadowed: true },
+    ];
   section.intro(class=attributes.class)
     .generic-container.generic-container--wide.intro__container
       .blending.intro__inner
         +blending__heading-wrapper().intro__heading-wrapper Международная перевозка сборных грузов
         .blending__pictures.intro__pictures
-          each string, index in ['Ракета', 'Облака']
-            +generic-picture.blending__picture(
+          each image, index in INTRO_PICTURES
+            - const { title, isShadowed } = image;
+            +generic-picture(
+              isShadowed ? 'shadowed' : null
+            ).blending__picture(
               class=[
-                (
-                  INTRO_IMAGES_SHADOWED.includes(index + 1)
-                  ? 'blending__picture--shadowed'
-                  : null
-                ),
                 'intro__image-wrapper',
                 `intro__image-wrapper--${index + 1}`,
               ],
               src=`img/intro__image--${index + 1}.jpg`,
-              alt=string,
+              alt=title,
             )
