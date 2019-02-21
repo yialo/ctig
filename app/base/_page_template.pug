@@ -9,7 +9,7 @@ include _components_import
 doctype html
 html(lang='ru')
   include ../global/head/_head
-  body.page(class=`page--${page.id}`).is-modal-shown
+  body.page(class=`page--${page.id}`)
     header.page__header
       +page-header()
     main.page-main.page__main
@@ -19,6 +19,6 @@ html(lang='ru')
     script(src='js/picturefill.js')
     script(src='js/jquery-3.3.1.js')
     script(src='js/mCustomScrollbar.concat.min.js')
+    script(src='js/page-header.js')
     script(src='js/custom-scrollbars.js')
-    script(src='js/navigation.js')
     block current-page-scripts

@@ -1,6 +1,7 @@
 .navigation {
   @include padding-hor();
   position: relative;
+  z-index: 0;
 
   @media (min-width: $m-min-width) {
     @include padding-hor(0);
