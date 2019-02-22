@@ -1,4 +1,13 @@
 .product-list__items {
   @include list();
   padding-right: calc(16px + var(--product-list__wrapper-scrollbar-width));
+
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template-columns: repeat(2, 1fr);
+      auto-rows: auto;
+      gap: 16px;
+    }
+  }
 }

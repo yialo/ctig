@@ -22,9 +22,16 @@
         @include form-text-s();
         content: "выбрать";
         position: absolute;
-        bottom: 6px;
-        right: 12px;
+        bottom: 1px;
+        right: 0;
+        height: calc(100% - 1px);
+        padding: 7px 12px 5px 36px;
         color: $emerald;
+        background-image: linear-gradient(
+          to right,
+          transparent 0,
+          $form-background 24px,
+        );
         cursor: pointer;
       }
     }

@@ -4,6 +4,6 @@
   line-height: normal;
 
   @media (min-width: $m-min-width) {
-    @include margin-bottom-last(16px);
+    margin-bottom: 0;
   }
 }

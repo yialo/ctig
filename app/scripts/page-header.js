@@ -12,8 +12,29 @@ $(document).ready(function(){
   var calcCloser = page.find('.modal__close-button');
   var calcOverlay = page.find('.modal__overlay');
   var productList = page.find('.modal__product-list');
+  var productListItems = productList.find('.product-list__items');
+  var products = productListItems.find('.product-list__link').toArray();
   var productListOpener = page.find('.request-text-formgroup__field--readonly');
   var productListCloser = productList.find('.product-list__return-link');
+  var productListChecker = productList.find('.product-list__select-button');
+
+  var productClickHandler = function (element) {
+    element.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      for (var i = 0; i < products.length; i++) {
+        products[i].classList.remove('product-list__link--current');
+        products[i].parentElement.classList
+          .remove('product-list__item--current');
+      }
+      evt.target.classList.add('product-list__link--current');
+      evt.target.parentElement.classList
+        .add('product-list__item--current');
+    });
+  };
+
+  for (var i = 0; i < products.length; i++) {
+    productClickHandler(products[i]);
+  }
 
   navOpener.click(function(){
     page.addClass('is-nav-shown');
@@ -55,15 +76,25 @@ $(document).ready(function(){
     }
   });
 
-  productListOpener.on('focus', function(evt) {
+  productListOpener.click(function(evt){
     evt.preventDefault();
     page.addClass('is-product-list-shown');
-    productList.find('.product-list__link--current').focus();
+    $('.product-list__link--current').focus();
   });
+
+  var currentProductValue = '';
+
   productListCloser.click(function(evt){
     evt.preventDefault();
     page.removeClass('is-product-list-shown');
     calcCloser.focus();
+  });
+
+  productListChecker.click(function(evt){
+    currentProductValue = productListItems
+    .find('.product-list__link--current').text();
+    page.removeClass('is-product-list-shown');
+    productListOpener.val(currentProductValue);
   });
 
   $(window).keydown(function(evt){
