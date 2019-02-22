@@ -24,3 +24,5 @@ $(document).ready(function(){
     variableWidth: true,
   });
 });
+
+//- TODO: реализовать переключение в заголовке и активацию нужных слайдеров
