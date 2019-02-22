@@ -18,7 +18,8 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
           const [modifier, heading] = item;
           const number = index + 1;
           const isSpecial = (modifier === 'rocket');
-        li.transport-item(class=[
+        li(class=[
+          'transport-item',
           isSpecial ? 'transport-item--special' : null,
           'transport__item',
           `transport__item--${number}`,
@@ -27,8 +28,8 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
           h3.generic-heading-2.transport-item__heading= heading
             mixin transport-item__image-wrapper()
               +generic-picture(
-                src=`img/transport-item__image--${number}.jpg`
-                alt=heading
+                src=`img/transport-item__image--${number}.jpg`,
+                alt=heading,
               ).transport-item__image-wrapper
             if isSpecial
               .transport-item__wrapper

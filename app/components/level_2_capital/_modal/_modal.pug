@@ -8,5 +8,7 @@
       heading: 'Запрос на расчет',
       modifier: 'calculation',
     }).modal__form.is-wide-on-m
+      +request-text-formgroup('cargo-type').request-form__group
+      include ../_request-radio-formgroup/_request-radio-formgroup
     .modal__product-list
       include ../_product-list/_product-list

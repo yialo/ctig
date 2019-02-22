@@ -7,13 +7,11 @@ fieldset.request-radio-formgroup.request-form__group
       { value: 'car', legend: 'Автомобилем' },
       { value: 'train', legend: 'Поездом' },
     ];
-  legend.generic-hidden-box(
-    class='request-radio-formgroup__caption',
-  )= REQUEST_RADIO_FORMGROUP_CAPTION
+  legend.generic-hidden-box.request-radio-formgroup__caption
+    = REQUEST_RADIO_FORMGROUP_CAPTION
   .request-radio-formgroup__inner
-    span.request-radio-formgroup__decorative-caption(
-      role='presentation',
-    )= REQUEST_RADIO_FORMGROUP_CAPTION
+    span.request-radio-formgroup__decorative-caption(role='presentation')
+      = REQUEST_RADIO_FORMGROUP_CAPTION
     ul.request-radio-formgroup__list
       each field in REQUEST_RADIO_FORMGROUP_FIELDS
         - const { value, legend, checked } = field;

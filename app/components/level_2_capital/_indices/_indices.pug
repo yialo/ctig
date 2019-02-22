@@ -14,7 +14,15 @@ section.indices(class=pageMain_getElClasses('indices'))
     ).indices__image-wrapper
     dl.indices__list
       each item, index in INDICES_ITEMS
-        - const [value, key] = item;
-        dt.indices__term(class=`indices__term--${index + 1}`)
+        -
+          const [value, key] = item;
+          const number = index + 1;
+        dt(class=[
+          'indices__term',
+          `indices__term--${number}`,
+        ])
           span.indices__string= key
-        dd.generic-heading-2.indices__details(class=`indices__details--${index + 1}`)= value
+        dd.generic-heading-2(class=[
+          'indices__details',
+          `indices__details--${number}`,
+        ])= value

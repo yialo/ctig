@@ -9,15 +9,15 @@ mixin request-form(requestForm_props)
     h3.generic-heading-3.request-form__heading= heading
     .request-form__body
       +request-text-formgroup('route').request-form__group
-      case modifier
-        when 'shipping'
-          +request-text-formgroup('dimensions').request-form__group
-        when 'calculation'
-          +request-text-formgroup('cargo-type').request-form__group
-          include ../_request-radio-formgroup/_request-radio-formgroup
+      block
       +request-text-formgroup('person').request-form__group
-
-    include _request-form__footer
+    .request-form__footer
+      button.generic-link.request-form__button(type='submit')
+        | Рассчитать доставку
+      p.request-form__caution
+        = 'Нажимая кнопку "Рассчитать доставку", я соглашаюсь с '
+        a.request-form__link(href='#')
+         | правилами обработки персональных данных
 
 //-TODO:
   исправить mq-классы для форм, чтобы не было сильного дублирования кода в CSS:

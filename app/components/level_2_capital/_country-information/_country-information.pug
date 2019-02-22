@@ -1,4 +1,7 @@
-.country-information.country-information--uk.logistics__text-content
+div(class=[
+  'country-information',
+  'country-information--uk',
+]).logistics__text-content
   -
     const COUNTRY_INFORMATION_LIST = [
       'Галантерея (вязаные изделия в виде шапок и шарфов, галстуки, часы)',
@@ -10,11 +13,14 @@
       'Техника',
     ];
   h3.generic-heading-2.country-information__heading Перевозка грузов из Англии
-  p.generic-textblock.country-information__paragraph В экономике Евросоюза Великобритания (Шотландия, Ирландия, Англия, Уэльс) занимает почетное третье место. Пальму первенства по общему товарообороту перехватывает Германия и Франция. Главные категории английского экспорта это: машины, ткани и производственное оборудование. Наиболее регулярно в Россию из Великобритании экспортируются такие виды товаров:
+  p.generic-textblock.country-information__paragraph
+    | В экономике Евросоюза Великобритания (Шотландия, Ирландия, Англия, Уэльс) занимает почетное третье место. Пальму первенства по общему товарообороту перехватывает Германия и Франция. Главные категории английского экспорта это: машины, ткани и производственное оборудование. Наиболее регулярно в Россию из Великобритании экспортируются такие виды товаров:
   +generic-list({
     modifier: 'bullet_top',
     data: COUNTRY_INFORMATION_LIST,
   }).country-information__list
-  p.generic-textblock.country-information__paragraph(
-    class='country-information__paragraph--last'
-  ) Грузоперевозки необходимых категорий товаров CTIG выполняет из Англии в Российскую Федерацию чаще всего при помощи автоперевозок - период доставки 7-14 дней.
+  p.generic-textblock(class=[
+    'country-information__paragraph',
+    'country-information__paragraph--last',
+  ])
+    | Грузоперевозки необходимых категорий товаров CTIG выполняет из Англии в Российскую Федерацию чаще всего при помощи автоперевозок - период доставки 7-14 дней.
