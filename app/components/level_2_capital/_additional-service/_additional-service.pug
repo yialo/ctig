@@ -14,20 +14,22 @@ mixin additional-service()
       h2.generic-heading-1.additional-service__heading Дополнительный сервис
       ul.mixed-gallery__list.additional-service__list
         each item, index in ADDITIONAL_ITEMS
-          - const [modifier, heading] = item;
-          +additional-service-item({
-            modifier: modifier,
-            heading: heading,
-            number: index + 1,
-          })(class=[
+          -
+            const [modifier, heading] = item;
+            const number = index + 1;
+          li.additional-service-item(class=[
+            `additional-service-item--${modifier}`,
             'additional-service__item',
-            `additional-service__item--${index + 1}`,
+            `additional-service__item--${number}`,
             (
-              index === ADDITIONAL_ITEMS.length - 1
+              number === ADDITIONAL_ITEMS.length
               ? 'additional-service__item--last'
               : null
             ),
           ])
-
-//- TODO:
-  возможно, объединить файл с additional-service-item без изменения bem-структуры
+            h3.generic-heading-2.additional-service-item__heading
+              span.additional-service-item__string= heading
+          +generic-picture()(
+            src=`img/additional-service-item__image--${number}.jpg`
+            alt=heading
+          ).additional-service-item__image-wrapper
