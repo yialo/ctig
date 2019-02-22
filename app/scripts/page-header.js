@@ -4,13 +4,16 @@ $(document).ready(function(){
   var KEYCODE_ESC = 27;
   var KEYCODE_SPACE = 32;
   var page = $('.page');
-  var navOpener = $('.navigation-toggle__button--opener');
-  var navCloser = $('.navigation-toggle__button--closer');
-  var certsOpener = $('.navigation__link--certificates');
-  var certsCloser = $('.certificates__return-button');
-  var calcOpener = $('.calculator-toggle__button');
-  var calcCloser = $('.modal__close-button');
-  var calcOverlay = $('.modal__overlay');
+  var navOpener = page.find('.navigation-toggle__button--opener');
+  var navCloser = page.find('.navigation-toggle__button--closer');
+  var certsOpener = page.find('.navigation__link--certificates');
+  var certsCloser = page.find('.certificates__return-button');
+  var calcOpener = page.find('.calculator-toggle__button');
+  var calcCloser = page.find('.modal__close-button');
+  var calcOverlay = page.find('.modal__overlay');
+  var productList = page.find('.modal__product-list');
+  var productListOpener = page.find('.request-text-formgroup__field--readonly');
+  var productListCloser = productList.find('.product-list__return-link');
 
   navOpener.click(function(){
     page.addClass('is-nav-shown');
@@ -42,17 +45,34 @@ $(document).ready(function(){
     }
   });
   calcCloser.click(function(){
-    page.removeClass('is-modal-shown');
+    if (page.hasClass('is-modal-shown')) {
+      page.removeClass('is-modal-shown is-product-list-shown');
+    }
   });
   calcOverlay.click(function(){
     if (page.hasClass('is-modal-shown')) {
-      page.removeClass('is-modal-shown');
+      page.removeClass('is-modal-shown is-product-list-shown');
     }
+  });
+
+  productListOpener.on('focus', function(evt) {
+    evt.preventDefault();
+    page.addClass('is-product-list-shown');
+    productList.find('.product-list__link--current').focus();
+  });
+  productListCloser.click(function(evt){
+    evt.preventDefault();
+    page.removeClass('is-product-list-shown');
+    calcCloser.focus();
   });
 
   $(window).keydown(function(evt){
     if (evt.keyCode === KEYCODE_ESC) {
-      if (page.hasClass('is-modal-shown')) {
+      if (page.hasClass('is-product-list-shown')) {
+        evt.preventDefault();
+        page.removeClass('is-product-list-shown');
+        calcCloser.focus();
+      } else if (page.hasClass('is-modal-shown')) {
         evt.preventDefault();
         page.removeClass('is-modal-shown');
       } else if (page.hasClass('is-certificates-shown')) {

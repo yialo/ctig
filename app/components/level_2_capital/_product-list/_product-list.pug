@@ -4,12 +4,19 @@
     a.product-list__return-link(href='#') Вернуться
   .product-list__wrapper
     ul.product-list__items
-      each item in PRODUCT_LIST_ITEMS
-        li.product-list__item(class=(
-          item === 'Декоративные изделия для интерьера'
-          ? 'product-list__item--current'
-          : null
-        ))
-          a.product-list__link(href='#')= item
+      each item, index in PRODUCT_LIST_ITEMS
+        - const isCurrent = (item === 'Декоративные изделия для интерьера');
+        li.product-list__item(class=[
+          isCurrent ? 'product-list__item--current' : null,
+          (
+            index === PRODUCT_LIST_ITEMS.length - 1
+            ? 'product-list__item--last'
+            : null
+          ),
+        ])
+          a.product-list__link(
+            class=(isCurrent ? 'product-list__link--current' : null),
+            href='#',
+          )= item
   .product-list__footer
     a.generic-link.product-list__select-button(href='#') Выбрать
