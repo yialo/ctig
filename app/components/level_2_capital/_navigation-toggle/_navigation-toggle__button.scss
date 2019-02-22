@@ -3,7 +3,6 @@
   padding: 0;
   background-color: transparent;
   border-style: none;
-  outline-style: none;
 
   @each $key, $value in (
     opener: (28px 12px block none),
@@ -22,6 +21,7 @@
   }
 
   &--closer {
+    outline-style: none;
     transition: transform ease-in-out 0.5s;
 
     .is-nav-shown &:hover {

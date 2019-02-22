@@ -3,6 +3,7 @@
   margin-left: var(--logistics-crumbs__heading-list-margin-left);
 
   &--current {
+    order: -1;
     flex-grow: 1;
     display: flex;
     color: $emerald;

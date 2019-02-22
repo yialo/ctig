@@ -1,16 +1,10 @@
 .search-form__button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 30px;
   padding: 0;
-  background: {
-    color: transparent;
-    image: url("../img/search-form__button.svg");
-    repeat: no-repeat;
-    position: center;
-    size: 16px 13px;
-  }
+  background-color: transparent;
   border-style: none;
 }
-
-// TODO: добавить inline-SVG в кнопку

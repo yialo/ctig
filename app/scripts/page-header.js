@@ -18,7 +18,6 @@ $(document).ready(function(){
   });
   navCloser.click(function(){
     page.removeClass('is-nav-shown is-certificates-shown');
-    navOpener.focus();
   });
 
   certsOpener.click(function(evt){
