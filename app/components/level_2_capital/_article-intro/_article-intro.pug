@@ -1,10 +1,13 @@
-article.article-intro(class=`article-intro--${number}`)
+article(class=[
+  'article-intro',
+  `article-intro--${number}`,
+])
   header.article-intro__header
     h3.generic-heading-2.article-intro__heading Праздники в странах
-  +generic-picture(
+  +generic-picture().article-intro__image-wrapper(
     src=`img/article-intro__image--${number}.jpg`,
     alt='Праздники в странах',
-  ).article-intro__image-wrapper
+  )
   p.generic-textblock.article-intro__excerpt= _TEMPLATE_PARAGRAPHS[0]
   footer.generic-link.article-intro__footer
     a.article-intro__details(href='article.html') Подробнее

@@ -8,12 +8,15 @@ nav.navigation.header-popup__navigation
           const linkPath = _EMPTY_NAVIGATION_LINKS.includes(modifier)
             ? '#'
             : `${modifier}.html`;
-        a.navigation__link(
-          class=(
-            modifier === 'certificates'
-            ? 'navigation__link--certificates'
-            : null
-          ),
+        a(
+          class=[
+            'navigation__link',
+            (
+              modifier === 'certificates'
+              ? 'navigation__link--certificates'
+              : null
+            ),
+          ],
           href=(modifier === page.id ? null : linkPath),
         )= text
         if modifier in NAVIGATION_INNER_LISTS

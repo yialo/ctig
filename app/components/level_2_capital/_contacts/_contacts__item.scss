@@ -1,10 +1,12 @@
 .contacts__item {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
 
   &--address {
     width: 270px;
+    margin-bottom: 0;
   }
 
   &--stock {
@@ -15,6 +17,8 @@
   }
 
   @media (min-width: $m-min-width) {
+    margin-bottom: 0;
+
     &--address {
       grid-area: 2 / 2 / 4 / 3;
     }

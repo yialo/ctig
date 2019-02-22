@@ -4,9 +4,12 @@
     a.certificates__return-button(href='#') Вернуться
   ul.certificates__list
     each text, index in CERTIFICATES_ITEMS
-      li.certificates__item(class=(
-        index === CERTIFICATES_ITEMS.length - 1
-        ? 'certificates__item--last'
-        : null
-      ))
+      li(class=[
+        'certificates__item',
+        (
+          index === CERTIFICATES_ITEMS.length - 1
+          ? 'certificates__item--last'
+          : null
+        )
+      ])
         a.certificates__link(href='#')= text

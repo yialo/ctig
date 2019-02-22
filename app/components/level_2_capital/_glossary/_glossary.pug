@@ -4,12 +4,13 @@
     h1(class=[
       'generic-heading-1',
       'generic-container__heading',
-    ]).glossary__heading= page.heading()
+      'glossary__heading',
+    ])= page.heading()
     .generic-container__inner.glossary__inner
-      +generic-picture(
+      +generic-picture().glossary__image-wrapper(
         src='img/glossary__image.jpg',
         alt='Словарь',
-      ).glossary__image-wrapper
+      )
       ul.glossary__menu
         each item in GLOSSARY_MENU_ITEMS
           li.generic-heading-3.glossary__menu-item
@@ -18,5 +19,8 @@
         h3.generic-heading-3.glossary__wordlist-title Толковый словарь
         ul.glossary__wordlist
           each item, index in GLOSSARY_DICTIONARY_ITEMS
-            li.glossary__word(class=`glossary__word--${index + 1}`)
+            li(class=[
+              'glossary__word',
+              `glossary__word--${index + 1}`,
+            ])
               a.glossary__word-link(href='#')= item

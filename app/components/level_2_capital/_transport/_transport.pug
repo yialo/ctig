@@ -7,7 +7,9 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
       ['ship', 'Водный транспорт'],
       ['rocket', 'Ракетный транспорт'],
     ];
-  .generic-container.generic-container--wide(class=[
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
     'mixed-gallery__container',
     'transport__container',
   ])
@@ -27,10 +29,10 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
         ])
           h3.generic-heading-2.transport-item__heading= heading
             mixin transport-item__image-wrapper()
-              +generic-picture(
+              +generic-picture().transport-item__image-wrapper(
                 src=`img/transport-item__image--${number}.jpg`,
                 alt=heading,
-              ).transport-item__image-wrapper
+              )
             if isSpecial
               .transport-item__wrapper
                 +transport-item__image-wrapper()

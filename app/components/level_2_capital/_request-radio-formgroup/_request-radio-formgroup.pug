@@ -16,12 +16,12 @@ fieldset.request-radio-formgroup.request-form__group
       each field in REQUEST_RADIO_FORMGROUP_FIELDS
         - const { value, legend, checked } = field;
         li.request-radio-formgroup__item
-          input(
+          input.generic-hidden-box.request-radio-formgroup__field(
             type='radio',
             name='transport_type',
             value=value,
             checked=checked,
             id=value,
             required,
-          ).generic-hidden-box.request-radio-formgroup__field
+          )
           label.request-radio-formgroup__label(for=value)= legend

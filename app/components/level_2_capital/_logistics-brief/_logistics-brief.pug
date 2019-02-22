@@ -5,7 +5,11 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
       { title: 'Собор', isShadowed: false },
       { title: 'Пагода', isShadowed: true },
     ];
-  .generic-container.generic-container--wide.logistics-brief__container
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
+    'logistics-brief__container',
+  ])
     .blending.logistics-brief__inner
       +blending__heading-wrapper().logistics__brief__heading-wrapper
         | География перевозок
@@ -25,18 +29,24 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
     ul.logistics-brief__list
       each listItem, index in _LOGISTICS_ITEMS
         - const { caption, list: innerList, modifier } = listItem;
-        li.logistics-brief__item(class=(
-          index === _LOGISTICS_ITEMS.length - 1
-          ? 'logistics-brief__item--last'
-          : null
-        ))
-          .directions(class=`directions--${modifier}`)
+        li(class=[
+          'logistics-brief__item',
+          (
+            index === _LOGISTICS_ITEMS.length - 1
+            ? 'logistics-brief__item--last'
+            : null
+          ),
+        ])
+          div(class=['directions', `directions--${modifier}`])
             h3.generic-heading-2.directions__heading= caption
             ul.directions__list
               each item, index in innerList
-                li.directions__item(class=(
-                  index === innerList.length - 1
-                  ? 'directions__item--last'
-                  : null
-                ))
+                li(class=[
+                  'directions__item',
+                  (
+                    index === innerList.length - 1
+                    ? 'directions__item--last'
+                    : null
+                  ),
+                ])
                   a.directions__link(href='#')= item

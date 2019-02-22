@@ -1,5 +1,5 @@
 mixin logo(logo_modifier)
-  .logo(class=[`logo--${logo_modifier}`, attributes.class])
+  div(class=['logo', `logo--${logo_modifier}`, attributes.class])
     a.logo__link(href=(page.id == 'index' ? null : 'index.html'))
       img.logo__image(
         src='img/logo__image.svg',

@@ -1,7 +1,11 @@
 .modal
   .generic-fixed-fullscreen.modal__overlay
     span.generic-hidden-box.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
-  .generic-container.generic-container--wide.modal__container
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
+    'modal__container',
+  ])
     button.modal__close-button(type='button')
       span.generic-hidden-box.modal__button-legend Закрыть окно
     +request-form({

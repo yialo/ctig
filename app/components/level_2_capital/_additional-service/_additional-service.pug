@@ -1,6 +1,7 @@
-section.additional-service.mixed-gallery(
-  class=pageMain_getElClasses('additional-service'),
-)
+section.additional-service(class=[
+  'mixed-gallery',
+  pageMain_getElClasses('additional-service'),
+])
   -
     const ADDITIONAL_ITEMS = [
       ['insurance', 'Страхование грузов'],
@@ -8,7 +9,9 @@ section.additional-service.mixed-gallery(
       ['contract', 'Предоставление контрактодержателя'],
       ['cross-docking', 'Кросс докинг'],
     ];
-  .generic-container.generic-container--wide(class=[
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
     'mixed-gallery__container',
     'additional-service__container',
   ])
@@ -18,7 +21,8 @@ section.additional-service.mixed-gallery(
         -
           const [modifier, heading] = item;
           const number = index + 1;
-        li.additional-service-item(class=[
+        li(class=[
+          'additional-service-item',
           `additional-service-item--${modifier}`,
           'additional-service__item',
           `additional-service__item--${number}`,
@@ -30,7 +34,7 @@ section.additional-service.mixed-gallery(
         ])
           h3.generic-heading-2.additional-service-item__heading
             span.additional-service-item__string= heading
-          +generic-picture()(
-            src=`img/additional-service-item__image--${number}.jpg`
-            alt=heading
-          ).additional-service-item__image-wrapper
+          +generic-picture().additional-service-item__image-wrapper(
+            src=`img/additional-service-item__image--${number}.jpg`,
+            alt=heading,
+          )

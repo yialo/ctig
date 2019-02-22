@@ -6,7 +6,8 @@
     ul.product-list__items
       each item, index in PRODUCT_LIST_ITEMS
         - const isCurrent = (item === 'Декоративные изделия для интерьера');
-        li.product-list__item(class=[
+        li(class=[
+          'product-list__item',
           isCurrent ? 'product-list__item--current' : null,
           (
             index === PRODUCT_LIST_ITEMS.length - 1
@@ -14,8 +15,11 @@
             : null
           ),
         ])
-          a.product-list__link(
-            class=(isCurrent ? 'product-list__link--current' : null),
+          a(
+            class=[
+              'product-list__link',
+              isCurrent ? 'product-list__link--current' : null,
+            ],
             href='#',
           )= item
   .product-list__footer

@@ -14,12 +14,16 @@ section.clients(class=pageMain_getElClasses('clients'))
   div(class=[
     'generic-container',
     'generic-container--wide',
-  ]).clients__container
+    'clients__container',
+  ])
     h2.generic-heading-1.clients__heading Наши клиенты
     ul.clients__list
       each item, index in CLIENTS_LOGO_ALTS
         - const number = index + 1;
-        li.clients__item
+        li(class=[
+          'clients__item',
+          number === CLIENTS_LOGO_ALTS ? 'clients__item--last' : null,
+        ])
           +generic-picture(
             class=[
               'clients__image-wrapper',

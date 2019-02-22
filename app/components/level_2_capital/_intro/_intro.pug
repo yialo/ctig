@@ -4,7 +4,11 @@ section.intro(class=pageMain_getElClasses('intro'))
       { title: 'Ракета', isShadowed: false },
       { title: 'Облака', isShadowed: true },
     ];
-  .generic-container.generic-container--wide.intro__container
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
+    'intro__container',
+  ])
     .blending.intro__inner
       +blending__heading-wrapper().intro__heading-wrapper
         | Международная перевозка сборных грузов

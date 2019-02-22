@@ -1,7 +1,7 @@
 mixin request-form(requestForm_props)
   - const { modifier, heading, mqToggle } = requestForm_props;
-  form.request-form(
-    class=[`request-form--${modifier}`, attributes.class],
+  form(
+    class=['request-form', `request-form--${modifier}`, attributes.class],
     method='POST',
     action=FORM_DEFAULT_ACTION,
     name=`${modifier}-request`,

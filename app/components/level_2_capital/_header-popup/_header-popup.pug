@@ -1,12 +1,21 @@
 .header-popup
   .header-popup__container
-    .header-popup__auxiliary.header-popup__auxiliary--leading
-      +logo('inner').header-popup__nest.header-popup__nest--logo
+    div(class=[
+      'header-popup__auxiliary',
+      'header-popup__auxiliary--leading',
+    ])
+      +logo('inner')(class=[
+        'header-popup__nest',
+        'header-popup__nest--logo',
+      ])
       +calculator-toggle('inner')(class=[
         'header-popup__nest',
         'header-popup__nest--calculator-toggle',
       ])
     include ../_navigation/_navigation
-    .header-popup__auxiliary.header-popup__auxiliary--references
+    div(class=[
+      'header-popup__auxiliary',
+      'header-popup__auxiliary--references',
+    ])
       include ../_socials/_socials
       include ../_copyright/_copyright

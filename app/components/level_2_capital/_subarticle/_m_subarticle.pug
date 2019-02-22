@@ -13,17 +13,24 @@ mixin subarticle(subarticle_modifier)
       return paragraphsSet;
     };
 
-  .subarticle(class=[`subarticle--${subarticle_modifier}`, attributes.class])
+  div(class=[
+    'subarticle',
+    `subarticle--${subarticle_modifier}`,
+    attributes.class,
+  ])
     if subarticle_modifier === 'illustrated'
-      +generic-picture(
+      +generic-picture().subarticle__image-wrapper(
         src='img/article__image.jpg',
         alt='Контейнеры на складе',
-    ).subarticle__image-wrapper
+    )
     h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
     .subarticle__textblock
       each paragraphText in getParagraphsStack(paragraphsTotal)
-        p.generic-textblock.subarticle__paragraph(class=(
-          paragraphCounter === paragraphsTotal
-          ? 'subarticle__paragraph--last'
-          : null
-        ))= paragraphText
+        p.generic-textblock(class=[
+          'subarticle__paragraph',
+          (
+            paragraphCounter === paragraphsTotal
+            ? 'subarticle__paragraph--last'
+            : null
+          ),
+        ])= paragraphText

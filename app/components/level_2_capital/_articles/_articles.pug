@@ -3,9 +3,13 @@
     h1(class=[
       'generic-heading-1',
       'generic-container__heading',
-    ]).articles__heading= page.heading()
+      'articles__heading',
+    ])= page.heading()
     .generic-container__inner.articles__inner
       ul.articles__list
         - for (let number = 1; number <= 3; number += 1)
-          li.articles__item
+          li(class=[
+            'articles__item',
+            number === 3 ? 'articles__item--last' : null,
+          ])
             include ../_article-intro/_article-intro

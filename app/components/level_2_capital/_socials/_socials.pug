@@ -1,4 +1,7 @@
-.socials.header-popup__nest--socials
+.socials(class=[
+  'header-popup__nest',
+  'header-popup__nest--socials',
+])
   -
     const SOCIALS_ITEMS = [
       ['facebook', 'Facebook'],
@@ -10,12 +13,13 @@
       -
         const [path, text] = item;
         const number = index + 1;
-      li.socials__item(class=[
+      li(class=[
+        'socials__item',
         `socials__item--${number}`,
         number === SOCIALS_ITEMS.length ? 'socials__item--last' : null,
       ])
-        a.socials__link(
-          class=`socials__link--${path}`,
+        a(
+          class=['socials__link', `socials__link--${path}`],
           href=`https://${path}.com/`,
         )
           span.generic-hidden-box.socials__legend= text

@@ -1,16 +1,15 @@
 .contacts__list {
   @include list();
-  display: grid;
-  grid-row-gap: 16px;
 
   @media (min-width: $m-min-width) {
+    display: grid;
     grid: {
       template: {
         rows: repeat(2, auto) 1fr;
         columns: repeat(2, 1fr);
       }
       auto-flow: column;
-      column-gap: 48px;
+      gap: 16px 48px;
     }
   }
 }

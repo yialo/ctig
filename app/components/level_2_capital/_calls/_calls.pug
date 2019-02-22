@@ -7,7 +7,10 @@
   ul.calls__list
     each item, index in CALLS_LINKS
       - const [tel, text] = item;
-      li.calls__item(class=`calls__item--${index + 1}`)
+      li(class=[
+        'calls__item',
+        `calls__item--${index + 1}`,
+      ])
         a.calls__link(href=`tel:${tel}`)= text
         a.calls__request(href='#')
           span.calls__string Заказать звонок
