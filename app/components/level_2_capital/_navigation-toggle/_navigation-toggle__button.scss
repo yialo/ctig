@@ -20,6 +20,16 @@
     }
   }
 
+  &--opener {
+    &:hover {
+      animation: {
+        name: bounce;
+        duration: 1s;
+        timing-function: ease-in-out;
+      }
+    }
+  }
+
   &--closer {
     outline-style: none;
     transition: transform ease-in-out 0.5s;

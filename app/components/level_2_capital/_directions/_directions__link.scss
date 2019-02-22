@@ -1,0 +1,7 @@
+.directions__item {
+  transition: color 0.2s;
+
+  &:hover {
+    color: transparentize(black, 0.25);
+  }
+}
