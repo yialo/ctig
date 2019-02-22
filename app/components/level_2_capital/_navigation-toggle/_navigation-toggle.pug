@@ -1,10 +1,10 @@
-mixin navigation-toggle()
+.navigation-toggle
   - const NAVIGATION_TOGGLES = [['opener', 'Показать'], ['closer', 'Скрыть']];
-  .navigation-toggle
-    each item in NAVIGATION_TOGGLES
-      - const [modifier, string] = item;
-      button.navigation-toggle__button(
-        class=`navigation-toggle__button--${modifier}`
-        type='button'
-      )
-        span.generic-hidden-box.navigation-toggle__legend= `${string} главное меню`
+  each item in NAVIGATION_TOGGLES
+    - const [modifier, string] = item;
+    button.navigation-toggle__button(
+      class=`navigation-toggle__button--${modifier}`,
+      type='button',
+    )
+      span.generic-hidden-box.navigation-toggle__legend
+        = `${string} главное меню`

@@ -13,14 +13,11 @@ mixin subarticle(subarticle_modifier)
       return paragraphsSet;
     };
 
-  .subarticle(class=[
-    `subarticle--${subarticle_modifier}`,
-    attributes.class,
-  ])
+  .subarticle(class=[`subarticle--${subarticle_modifier}`, attributes.class])
     if subarticle_modifier === 'illustrated'
       +generic-picture(
-        src='img/article__image.jpg'
-        alt='Контейнеры на складе'
+        src='img/article__image.jpg',
+        alt='Контейнеры на складе',
     ).subarticle__image-wrapper
     h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
     .subarticle__textblock

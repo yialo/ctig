@@ -1,30 +1,29 @@
-mixin contacts()
+.contacts.page-main__contacts
   -
     const CONTACTS_TELS = [
       ['+74957446983', '+7 495 744 69 83'],
       ['+78002220733', '+7 800 222 07 33'],
       ['+79265333737', '+7 926 533 37 37 (WhatsApp, Viber)'],
     ];
-  .contacts(class=attributes.class)
-    .generic-container.contacts__container
-      h1(class=[
-        'generic-heading-1',
-        'generic-container__heading',
-      ]).contacts__heading= page.heading()
-      .generic-container__inner.contacts__inner
-        .contacts__office
-          h3.generic-heading-3.contacts__subheading Офис в Москве
-          ul.contacts__list
-            each item in CONTACTS_TELS
-              - const [tel, text] = item;
-              li.contacts__item.contacts__item--tel
-                a.contacts__link(href=`tel:${tel}`)= text
-            li.contacts__item.contacts__item--email
-              a.contacts__link(href='mailto:info@ctig.ru') info@ctig.ru
-            li.contacts__item.contacts__item--address Москва, Пресненская наб. 6, стр. 2, башня «Империя», 16 этаж, ММДЦ «Москва-Сити»
-        .contacts__stock
-          h3.generic-heading-3.contacts__subheading Склад консолидации
-          p.contacts__item.contacts__item--stock
-            a.contacts__link(href='#') Vilnius, Lithuania
-    footer.contacts__map-wrapper
-      .contacts__map#map
+  .generic-container.contacts__container
+    h1(class=[
+      'generic-heading-1',
+      'generic-container__heading',
+    ]).contacts__heading= page.heading()
+    .generic-container__inner.contacts__inner
+      .contacts__office
+        h3.generic-heading-3.contacts__subheading Офис в Москве
+        ul.contacts__list
+          each item in CONTACTS_TELS
+            - const [tel, text] = item;
+            li.contacts__item.contacts__item--tel
+              a.contacts__link(href=`tel:${tel}`)= text
+          li.contacts__item.contacts__item--email
+            a.contacts__link(href='mailto:info@ctig.ru') info@ctig.ru
+          li.contacts__item.contacts__item--address Москва, Пресненская наб. 6, стр. 2, башня «Империя», 16 этаж, ММДЦ «Москва-Сити»
+      .contacts__stock
+        h3.generic-heading-3.contacts__subheading Склад консолидации
+        p.contacts__item.contacts__item--stock
+          a.contacts__link(href='#') Vilnius, Lithuania
+  footer.contacts__map-wrapper
+    .contacts__map#map

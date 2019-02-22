@@ -1,6 +1,6 @@
 mixin logo(logo_modifier)
   .logo(class=[`logo--${logo_modifier}`, attributes.class])
-    a.logo__link(href=(page.id !== 'index' ? 'index.html' : null))
+    a.logo__link(href=(page.id == 'index' ? null : 'index.html'))
       img.logo__image(
         src='img/logo__image.svg',
         alt=`Логотип компании ${SITE_TITLE}`,

@@ -14,7 +14,7 @@ mixin request-form(requestForm_props)
           +request-text-formgroup('dimensions').request-form__group
         when 'calculation'
           +request-text-formgroup('cargo-type').request-form__group
-          +request-radio-formgroup().request-form__group
+          include ../_request-radio-formgroup/_request-radio-formgroup
       +request-text-formgroup('person').request-form__group
 
     .request-form__footer

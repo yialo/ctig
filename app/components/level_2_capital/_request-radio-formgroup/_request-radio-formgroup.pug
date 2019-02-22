@@ -1,4 +1,4 @@
-mixin request-radio-formgroup()
+fieldset.request-radio-formgroup.request-form__group
   -
     const REQUEST_RADIO_FORMGROUP_CAPTION = 'Тип доставки:';
     const REQUEST_RADIO_FORMGROUP_FIELDS = [
@@ -7,24 +7,23 @@ mixin request-radio-formgroup()
       { value: 'car', legend: 'Автомобилем' },
       { value: 'train', legend: 'Поездом' },
     ];
-  fieldset.request-radio-formgroup(class=attributes.class)
-    legend.generic-hidden-box(
-      class='request-radio-formgroup__caption',
+  legend.generic-hidden-box(
+    class='request-radio-formgroup__caption',
+  )= REQUEST_RADIO_FORMGROUP_CAPTION
+  .request-radio-formgroup__inner
+    span.request-radio-formgroup__decorative-caption(
+      role='presentation',
     )= REQUEST_RADIO_FORMGROUP_CAPTION
-    .request-radio-formgroup__inner
-      span.request-radio-formgroup__decorative-caption(
-        role='presentation',
-      )= REQUEST_RADIO_FORMGROUP_CAPTION
-      ul.request-radio-formgroup__list
-        each field in REQUEST_RADIO_FORMGROUP_FIELDS
-          - const { value, legend, checked } = field;
-          li.request-radio-formgroup__item
-            input(
-              type='radio',
-              name='transport_type',
-              value=value,
-              checked=checked,
-              id=value,
-              required,
-            ).generic-hidden-box.request-radio-formgroup__field
-            label.request-radio-formgroup__label(for=value)= legend
+    ul.request-radio-formgroup__list
+      each field in REQUEST_RADIO_FORMGROUP_FIELDS
+        - const { value, legend, checked } = field;
+        li.request-radio-formgroup__item
+          input(
+            type='radio',
+            name='transport_type',
+            value=value,
+            checked=checked,
+            id=value,
+            required,
+          ).generic-hidden-box.request-radio-formgroup__field
+          label.request-radio-formgroup__label(for=value)= legend

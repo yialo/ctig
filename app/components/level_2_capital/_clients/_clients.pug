@@ -1,13 +1,13 @@
-mixin clients()
+section.clients(class=pageMain_getElClasses('clients'))
   include _d_clients
-  section.clients(class=attributes.class)
-    .generic-container.generic-container--wide.clients__container
-      h2.generic-heading-1.clients__heading Наши клиенты
-      ul.clients__list
-        each item, index in CLIENTS_LOGO_ALTS
-          li.clients__item
-            +generic-picture(
-              class=`.clients__image-wrapper----${index + 1}`
-              src=`img/clients__image--${index + 1}.png`
-              alt=item
-            ).clients__image-wrapper
+  .generic-container.generic-container--wide.clients__container
+    h2.generic-heading-1.clients__heading Наши клиенты
+    ul.clients__list
+      each item, index in CLIENTS_LOGO_ALTS
+        - const number = index + 1;
+        li.clients__item
+          +generic-picture(
+            class=`.clients__image-wrapper----${number}`
+            src=`img/clients__image--${number}.png`
+            alt=item
+          ).clients__image-wrapper

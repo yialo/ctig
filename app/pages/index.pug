@@ -5,20 +5,23 @@ block page-variable
 
 block page-main
   -
-    const getElMod = function getPageMainElementModifierClass(modifier) {
-      const pageMainElementBasicClass = 'page-main__longpage-inner';
-      const pageMainElementClasses = [
-        pageMainElementBasicClass,
-        `${pageMainElementBasicClass}--${modifier}`,
-      ];
-      return pageMainElementClasses;
-    };
-  +intro()(class=getElMod('intro'))
-  +about-brief()(class=getElMod('about-brief'))
-  +indices()(class=getElMod('indices'))
-  +logistics-brief()(class=getElMod('logistics-brief'))
-  +transport()(class=getElMod('transport'))
-  +additional-service()(class=getElMod('additional-service'))
-  +clients()(class=getElMod('clients'))
-  +customs('agent')(class=getElMod('customs-agent'))
-  +customs('service')(class=getElMod('customs-service'))
+    const pageMain_getElClasses =
+      function getPageMainElementModifierClass(modifier) {
+        const pageMainElementBasicClass = 'page-main__longpage-inner';
+        const pageMainElementClasses = [
+          pageMainElementBasicClass,
+          `${pageMainElementBasicClass}--${modifier}`,
+        ];
+        return pageMainElementClasses;
+      };
+
+  include ../components/level_2_capital/_intro/_intro
+  include ../components/level_2_capital/_about-brief/_about-brief
+  include ../components/level_2_capital/_indices/_indices
+  include ../components/level_2_capital/_logistics-brief/_logistics-brief
+  include ../components/level_2_capital/_transport/_transport
+  include ../components/level_2_capital/_additional-service/_additional-service
+  include ../components/level_2_capital/_clients/_clients
+
+  +customs('agent')(class=pageMain_getElClasses('customs-agent'))
+  +customs('service')(class=pageMain_getElClasses('customs-service'))

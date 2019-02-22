@@ -1,24 +1,21 @@
-mixin socials()
+.socials.header-popup__nest--socials
   -
     const SOCIALS_ITEMS = [
       ['facebook', 'Facebook'],
       ['instagram', 'Instagram'],
       ['vk', 'ВКонтакте'],
     ];
-  .socials(class=attributes.class)
-    ul.socials__list
-      each item, index in SOCIALS_ITEMS
-        - const [path, text] = item;
-        li.socials__item(class=[
-          `socials__item--${index + 1}`,
-          (
-            index + 1 === SOCIALS_ITEMS.length
-            ? 'socials__item--last'
-            : null
-          ),
-        ])
-          a.socials__link(
-            class=`socials__link--${path}`
-            href=`https://${path}.com/`
-          )
-            span.generic-hidden-box.socials__legend= text
+  ul.socials__list
+    each item, index in SOCIALS_ITEMS
+      -
+        const [path, text] = item;
+        const number = index + 1;
+      li.socials__item(class=[
+        `socials__item--${number}`,
+        number === SOCIALS_ITEMS.length ? 'socials__item--last' : null,
+      ])
+        a.socials__link(
+          class=`socials__link--${path}`,
+          href=`https://${path}.com/`,
+        )
+          span.generic-hidden-box.socials__legend= text

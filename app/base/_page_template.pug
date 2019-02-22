@@ -11,11 +11,11 @@ html(lang='ru')
   include ../global/head/_head
   body.page(class=`page--${page.id}`)
     header.page__header
-      +page-header()
+      include ../components/level_2_capital/_page-header/_page-header
     main.page-main.page__main
       block page-main
     .generic-fixed-fullscreen.page__modal
-      +modal()
+      include ../components/level_2_capital/_modal/_modal
     script(src='js/picturefill.js')
     script(src='js/jquery-3.3.1.js')
     script(src='js/mCustomScrollbar.concat.min.js')

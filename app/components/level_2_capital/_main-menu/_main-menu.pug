@@ -1,4 +1,4 @@
-mixin main-menu()
+nav.main-menu
   -
     const MAIN_MENU_ITEMS = [
       ['index', 'Главная'],
@@ -7,22 +7,21 @@ mixin main-menu()
       ['transport', 'Транспорт'],
       ['registration', 'Таможенное оформление'],
     ];
-  nav.main-menu
-    .main-menu__navigation-toggle
-      +navigation-toggle()
-    ul.main-menu__list
-      each item, index in MAIN_MENU_ITEMS
-        - const [modifier, text] = item;
-        li.main-menu__item(class=`main-menu__item--${index + 1}`)
-          -
-            const itemLink = _EMPTY_NAVIGATION_LINKS.includes(modifier)
-              ? '#'
-              : `${modifier}.html`;
-          a.main-menu__link(
-            href=(modifier === page.id ? null : itemLink)
-            class=(modifier === 'index' ? 'main-menu__link--notext': null)
-          )
-            if modifier === 'index'
-              span.main-menu__legend= text
-            else
-              = text
+  .main-menu__navigation-toggle
+    include ../_navigation-toggle/_navigation-toggle
+  ul.main-menu__list
+    each item, index in MAIN_MENU_ITEMS
+      - const [modifier, text] = item;
+      li.main-menu__item(class=`main-menu__item--${index + 1}`)
+        -
+          const itemLink = _EMPTY_NAVIGATION_LINKS.includes(modifier)
+            ? '#'
+            : `${modifier}.html`;
+        a.main-menu__link(
+          class=(modifier === 'index' ? 'main-menu__link--notext': null),
+          href=(modifier === page.id ? null : itemLink),
+        )
+          if modifier === 'index'
+            span.main-menu__legend= text
+          else
+            = text

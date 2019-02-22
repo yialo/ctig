@@ -1,25 +1,26 @@
-mixin about()
+.about.page-main__about
   include _d_about
-  .about(class=attributes.class)
-    .generic-container.about__container
-      h1(class=[
-        'generic-heading-1',
-        'generic-container__heading',
-      ]).about__heading= page.heading()
-      .generic-container__inner.about__inner
-        +generic-picture(
-          src='img/about__image.jpg'
-          alt='Склад'
-        ).about__image-wrapper
-        each item, index in ABOUT_FEATURES_LISTS
-          - const { heading, list } = item;
-          .about__features-block(class=[
-            `about__features-block--${index + 1}`,
-            (
-              index === ABOUT_FEATURES_LISTS.length - 1
-              ? 'about__features-block--last'
-              : null
-            ),
-          ])
-            h3.generic-heading-3.about__list-caption= `${heading}:`
-            +generic-list({ modifier: 'bullet_bottom', data: list }).about__list
+  .generic-container.about__container
+    h1(class=[
+      'generic-heading-1',
+      'generic-container__heading',
+    ]).about__heading= page.heading()
+    .generic-container__inner.about__inner
+      +generic-picture(
+        src='img/about__image.jpg'
+        alt='Склад'
+      ).about__image-wrapper
+      each item, index in ABOUT_FEATURES_LISTS
+        -
+          const { heading, list } = item;
+          const number = index + 1;
+        .about__features-block(class=[
+          `about__features-block--${number}`,
+          (
+            number === ABOUT_FEATURES_LISTS.length
+            ? 'about__features-block--last'
+            : null
+          ),
+        ])
+          h3.generic-heading-3.about__list-caption= `${heading}:`
+          +generic-list({ modifier: 'bullet_bottom', data: list }).about__list

@@ -14,30 +14,23 @@ mixin customs(customs_modifier)
         h2.generic-heading-1.customs__title= title
         p.generic-heading-3.customs__subtitle= subtitle
       +generic-picture(
-        src=`img/customs--${customs_modifier}__image.jpg`
-        alt=imageDescription
+        src=`img/customs--${customs_modifier}__image.jpg`,
+        alt=imageDescription,
       ).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
-        p.generic-textblock.customs__paragraph(
-          class='customs__paragraph--lone'
-        )!= paragraphs[0]
+        p.generic-textblock(class=[
+          'customs__paragraph',
+          'customs__paragraph--lone',
+        ])!= paragraphs[0]
         ul.customs__list
           each item, index in listItems
-            -
-              const lastCustomsItemModifier =
-                (index === listItems.length - 1)
-                ? 'customs__item--last'
-                : null;
-            li.generic-textblock.customs__item(
-              class=lastCustomsItemModifier,
-            )!= item
+            li.generic-textblock.customs__item(class=(
+              index === listItems.length - 1 ? 'customs__item--last' : null
+            ))!= item
         each item, index in customsParagraphsRest
-          -
-            const lastCustomsParagraphModifier =
-              (index === customsParagraphsRest.length - 1)
-              ? 'customs__paragraph--last'
-              : null;
-          p.generic-textblock.customs__paragraph(
-            class=lastCustomsParagraphModifier
-          )!= item
+          p.generic-textblock.customs__paragraph(class=(
+            index === customsParagraphsRest.length - 1
+            ? 'customs__paragraph--last'
+            : null
+          ))!= item

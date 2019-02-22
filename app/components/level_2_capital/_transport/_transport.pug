@@ -1,4 +1,4 @@
-mixin transport()
+section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
   -
     const TRANSPORT_ITEMS = [
       ['plane', 'Авиатранспорт'],
@@ -7,40 +7,32 @@ mixin transport()
       ['ship', 'Водный транспорт'],
       ['rocket', 'Ракетный транспорт'],
     ];
-  section.mixed-gallery.transport(class=attributes.class)
-    .generic-container.generic-container--wide(class=[
-      'mixed-gallery__container',
-      'transport__container',
-    ])
-      h2.generic-heading-1.transport__heading Виды перевозок
-      ul.mixed-gallery__list.transport__list
-        each item, index in TRANSPORT_ITEMS
-          -
-            const [modifier, heading] = item;
-            const number = index + 1;
-            const isSpecial = (modifier === 'rocket');
-          li.transport-item(class=[
-            isSpecial ? 'transport-item--special' : null,
-            'transport__item',
-            `transport__item--${number}`,
-            number === TRANSPORT_ITEMS.length ? 'transport__item--last' : null,
-          ])
-            h3.generic-heading-2.transport-item__heading= heading
-              mixin transport-item__image-wrapper()
-                +generic-picture(
-                  src=`img/transport-item__image--${number}.jpg`
-                  alt=heading
-                ).transport-item__image-wrapper
-              if isSpecial
-                .transport-item__wrapper
-                  +transport-item__image-wrapper()
-                  span.transport-item__hint Скоро
-              else
+  .generic-container.generic-container--wide(class=[
+    'mixed-gallery__container',
+    'transport__container',
+  ])
+    h2.generic-heading-1.transport__heading Виды перевозок
+    ul.mixed-gallery__list.transport__list
+      each item, index in TRANSPORT_ITEMS
+        -
+          const [modifier, heading] = item;
+          const number = index + 1;
+          const isSpecial = (modifier === 'rocket');
+        li.transport-item(class=[
+          isSpecial ? 'transport-item--special' : null,
+          'transport__item',
+          `transport__item--${number}`,
+          number === TRANSPORT_ITEMS.length ? 'transport__item--last' : null,
+        ])
+          h3.generic-heading-2.transport-item__heading= heading
+            mixin transport-item__image-wrapper()
+              +generic-picture(
+                src=`img/transport-item__image--${number}.jpg`
+                alt=heading
+              ).transport-item__image-wrapper
+            if isSpecial
+              .transport-item__wrapper
                 +transport-item__image-wrapper()
-
-
-
-
-
-//- TODO:
-  объединить файл с additional-service-item без изменения bem-структуры
+                span.transport-item__hint Скоро
+            else
+              +transport-item__image-wrapper()

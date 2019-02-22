@@ -2,9 +2,5 @@ mixin generic-list(genericList_props)
   - const { modifier, data } = genericList_props;
   ul.generic-list(class=[`generic-list--${modifier}`, attributes.class])
     each item, index in data
-      -
-        const itemFinalCharacter =
-          index !== (data.length - 1)
-          ? ';'
-          : '.';
+      - const itemFinalCharacter = (index == data.length - 1 ? '.' : ';');
       li.generic-list__item= `${item}${itemFinalCharacter}`

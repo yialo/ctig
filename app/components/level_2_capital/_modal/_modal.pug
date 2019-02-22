@@ -1,13 +1,12 @@
-mixin modal()
-  .modal
-    .generic-fixed-fullscreen.modal__overlay
-      span.generic-hidden-box.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
-    .generic-container.generic-container--wide.modal__container
-      button.modal__close-button(type='button')
-        span.generic-hidden-box.modal__button-legend Закрыть окно
-      +request-form({
-        heading: 'Запрос на расчет',
-        modifier: 'calculation',
-      }).modal__form.is-wide-on-m
-      .modal__product-list
-        +product-list()
+.modal
+  .generic-fixed-fullscreen.modal__overlay
+    span.generic-hidden-box.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
+  .generic-container.generic-container--wide.modal__container
+    button.modal__close-button(type='button')
+      span.generic-hidden-box.modal__button-legend Закрыть окно
+    +request-form({
+      heading: 'Запрос на расчет',
+      modifier: 'calculation',
+    }).modal__form.is-wide-on-m
+    .modal__product-list
+      include ../_product-list/_product-list

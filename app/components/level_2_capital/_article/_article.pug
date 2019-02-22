@@ -1,18 +1,16 @@
-mixin article()
-  article.article(class=attributes.class)
-    header.article__header
-      .generic-container.article__heading-wrapper
-        h1(class=[
-          'generic-heading-1',
-          'generic-container__heading',
-        ]).article__heading= page.heading
-      .article__banner-wrapper
-        +generic-picture()(
-          src='img/article__banner-image.jpg'
-          alt=page.heading
-        ).article__banner
-    .generic-container.article__container
-      .generic-container__inner.article__inner
-        +subarticle('double-column').article__row.article__row--top
-        +subarticle('illustrated').article__row.article__row--bottom
-
+article.article.page-main__article
+  header.article__header
+    .generic-container.article__heading-wrapper
+      h1(class=[
+        'generic-heading-1',
+        'generic-container__heading',
+      ]).article__heading= page.heading
+    .article__banner-wrapper
+      +generic-picture()(
+        src='img/article__banner-image.jpg'
+        alt=page.heading
+      ).article__banner
+  .generic-container.article__container
+    .generic-container__inner.article__inner
+      +subarticle('double-column').article__row.article__row--top
+      +subarticle('illustrated').article__row.article__row--bottom

@@ -1,44 +1,43 @@
-mixin logistics()
-  .logistics(class=attributes.class)
-    .generic-container.generic-container--wide.logistics__container
-      h1(class=[
-        'generic-heading-1',
-        'generic-container__heading',
-      ]).logistics__heading= page.heading()
-      .generic-container__inner.logistics__inner
+.logistics.page-main__logistics
+  .generic-container.generic-container--wide.logistics__container
+    h1(class=[
+      'generic-heading-1',
+      'generic-container__heading',
+    ]).logistics__heading= page.heading()
+    .generic-container__inner.logistics__inner
 
-        .logistics-crumbs.logistics__breadcrumbs
-          ul.logistics-crumbs__heading-list
-            each item, index in _LOGISTICS_ITEMS
-              - const { modifier, caption, list } = item;
-              li(class=[
-                'logistics-crumbs__heading-item',
-                `logistics-crumbs__heading-item--${index + 1}`,
-                index === 0 ? 'logistics-crumbs__heading-item--current' : null,
-              ])
-                a.logistics-crumbs__heading-link(href='#')= caption
-          .logistics-crumbs__inner
-            each item, index in _LOGISTICS_ITEMS
-              - const { modifier, caption, list } = item;
-              .logistics-crumbs__list(class=[
-                `logistics-crumbs__list--${modifier}`,
-                modifier === 'europe' ? 'logistics-crumbs__list--current' : null,
-              ])
-                each listItem in list
-                  .logistics-crumbs__item(class=(
-                    listItem === list[0]
-                    ? 'logistics-crumbs__item--current'
-                    : null
-                  ))
-                    a.logistics-crumbs__link(href='#')= listItem
+      .logistics-crumbs.logistics__breadcrumbs
+        ul.logistics-crumbs__heading-list
+          each item, index in _LOGISTICS_ITEMS
+            -
+              const { modifier, caption, list } = item;
+              number = index + 1;
+            li(class=[
+              'logistics-crumbs__heading-item',
+              `logistics-crumbs__heading-item--${number}`,
+              number === 1 ? 'logistics-crumbs__heading-item--current' : null,
+            ])
+              a.logistics-crumbs__heading-link(href='#')= caption
+        .logistics-crumbs__inner
+          each item in _LOGISTICS_ITEMS
+            - const { modifier, caption, list } = item;
+            .logistics-crumbs__list(class=[
+              `logistics-crumbs__list--${modifier}`,
+              modifier === 'europe' ? 'logistics-crumbs__list--current' : null,
+            ])
+              each listItem, index in list
+                .logistics-crumbs__item(class=(
+                  index === 0 ? 'logistics-crumbs__item--current' : null
+                ))
+                  a.logistics-crumbs__link(href='#')= listItem
 
-        +generic-picture(
-          src='img/logistics__image.jpg'
-          alt=page.heading()
-        ).logistics__image-wrapper
-        +country-information('uk').logistics__text-content
-        .logistics__form-wrapper
-          +request-form({
-            heading: 'Заявка на перевозку',
-            modifier: 'shipping',
-          }).is-wide-on-l
+      +generic-picture(
+        src='img/logistics__image.jpg'
+        alt=page.heading()
+      ).logistics__image-wrapper
+      include ../_country-information/_country-information
+      .logistics__form-wrapper
+        +request-form({
+          heading: 'Заявка на перевозку',
+          modifier: 'shipping',
+        }).is-wide-on-l

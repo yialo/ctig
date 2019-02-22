@@ -1,14 +1,13 @@
-mixin calls()
+.calls
   -
     const CALLS_LINKS = [
       ['+74957446983', '8 495 744 69 83'],
       ['88002220733', '8 800 222 07 33'],
     ];
-  .calls
-    ul.calls__list
-      each item, index in CALLS_LINKS
-        - const [tel, text] = item;
-        li.calls__item(class=`calls__item--${index + 1}`)
-          a.calls__link(href=`tel:${tel}`)= text
-          a.calls__request(href='#')
-            span.calls__string Заказать звонок
+  ul.calls__list
+    each item, index in CALLS_LINKS
+      - const [tel, text] = item;
+      li.calls__item(class=`calls__item--${index + 1}`)
+        a.calls__link(href=`tel:${tel}`)= text
+        a.calls__request(href='#')
+          span.calls__string Заказать звонок
