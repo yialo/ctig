@@ -17,11 +17,7 @@ mixin request-form(requestForm_props)
           include ../_request-radio-formgroup/_request-radio-formgroup
       +request-text-formgroup('person').request-form__group
 
-    .request-form__footer
-      button.generic-link.request-form__button(type='submit') Рассчитать доставку
-      p.request-form__caution
-        = 'Нажимая кнопку "Рассчитать доставку", я соглашаюсь с '
-        a.request-form__link(href='#') правилами обработки персональных данных
+    include _request-form__footer
 
 //-TODO:
   исправить mq-классы для форм, чтобы не было сильного дублирования кода в CSS:
