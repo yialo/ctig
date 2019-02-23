@@ -1,16 +1,16 @@
-mixin request-text-formgroup(requestTextFormgroup_props)
+mixin request-text-formgroup(modifier)
   include _d_request-text-formgroup
   -
-    const { modifier, place } = requestTextFormgroup_props;
-    const requestTextFormgroup_data =
-      REQUEST_TEXT_FORMGROUP_DATA[modifier];
-    const { multiPlaced, caption, type, fields } = requestTextFormgroup_data;
+    const { caption, fields } = REQUEST_TEXT_FORMGROUPS_DATA[modifier];
   fieldset(class=[
     'request-text-formgroup',
     `request-text-formgroup--${modifier}`,
-    `request-text-formgroup--${place}`,
-    multiPlaced ? `request-text-formgroup--${place}_${modifier}` : null,
-    attributes.class,
+    (
+      attributes.place
+      ? `request-text-formgroup--${modifier}_${attributes.place}`
+      : null
+    ),
+    'request-form__formgroup',
   ])
     legend.generic-hidden-box.request-text-formgroup__caption= caption
     ul.request-text-formgroup__list

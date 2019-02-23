@@ -22,16 +22,7 @@
         )
           h3.generic-heading-3.request-form__heading Заявка на перевозку
           .request-form__body
-            +request-text-formgroup({
-              modifier: 'route',
-              place: modifier,
-            }).request-form__group
-            +request-text-formgroup({
-              modifier: 'dimensions',
-              place: modifier,
-            }).request-form__group
-            +request-text-formgroup({
-              modifier: 'person',
-              place: modifier,
-            }).request-form__group
+            +request-text-formgroup('route')(place='at-flow')
+            +request-text-formgroup('dimensions')
+            +request-text-formgroup('person')(place='at-flow')
           include ../_request-form/_request-form__footer

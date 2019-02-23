@@ -16,19 +16,10 @@
     )
       h3.generic-heading-3.request-form__heading Запрос на расчет
       .request-form__body
-        +request-text-formgroup({
-          modifier: 'route',
-          place: modifier,
-        }).request-form__group
-        +request-text-formgroup({
-          modifier: 'cargo-type',
-          place: modifier,
-        }).request-form__group
+        +request-text-formgroup('route')(place='at-modal')
+        +request-text-formgroup('cargo-type')
         include ../_request-radio-formgroup/_request-radio-formgroup
-        +request-text-formgroup({
-          modifier: 'person',
-          place: modifier,
-        }).request-form__group
+        +request-text-formgroup('person')(place='at-modal')
       include ../_request-form/_request-form__footer
     .modal__product-list
       include ../_product-list/_product-list

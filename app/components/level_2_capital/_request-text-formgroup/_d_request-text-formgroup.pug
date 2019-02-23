@@ -1,9 +1,7 @@
 -
-  const REQUEST_TEXT_FORMGROUP_DATA = {
-    route: {
-      multiPlaced: true,
+  const REQUEST_TEXT_FORMGROUPS_DATA = {
+    'route': {
       caption: 'Маршрут',
-      type: 'text',
       fields: [
         {
           name: 'departure',
@@ -17,10 +15,8 @@
         },
       ],
     },
-    dimensions: {
-      multiPlaced: false,
+    'dimensions': {
       caption: 'Параметры груза',
-      type: 'text',
       fields: [
         { name: 'length', legend: 'Длина', placeholder: 'Длина (см)' },
         { name: 'width', legend: 'Ширина', placeholder: 'Ширина (см)' },
@@ -29,9 +25,7 @@
       ],
     },
     'cargo-type': {
-      multiPlaced: false,
       caption: 'Сведения о грузе',
-      type: 'text',
       fields: [
         {
           name: 'type',
@@ -45,10 +39,8 @@
         },
       ],
     },
-    person: {
-      multiPlaced: true,
+    'person': {
       caption: 'Персональные данные',
-      type: 'text',
       fields: [
         {
           name: 'fullname',
