@@ -25,7 +25,7 @@
     }
   }
 
-  @include request-form-mq(nest) {
+  @media (min-width: $m-min-width) {
     position: static;
     display: flex;
     justify-content: space-between;

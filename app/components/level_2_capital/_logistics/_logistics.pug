@@ -14,8 +14,24 @@
       )
       include ../_country-information/_country-information
       .logistics__form-wrapper
-        +request-form({
-          heading: 'Заявка на перевозку',
-          modifier: 'shipping',
-        })
-          +request-text-formgroup('dimensions').request-form__group
+        form(
+          class=['request-form', 'request-form--shipping'],
+          method='POST',
+          action=FORM_DEFAULT_ACTION,
+          name=`shipping-request`,
+        )
+          h3.generic-heading-3.request-form__heading Заявка на перевозку
+          .request-form__body
+            +request-text-formgroup({
+              modifier: 'route',
+              place: modifier,
+            }).request-form__group
+            +request-text-formgroup({
+              modifier: 'dimensions',
+              place: modifier,
+            }).request-form__group
+            +request-text-formgroup({
+              modifier: 'person',
+              place: modifier,
+            }).request-form__group
+          include ../_request-form/_request-form__footer

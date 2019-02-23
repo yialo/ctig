@@ -7,9 +7,15 @@
 
   &--calculation {
     padding: 16px;
+  }
 
-    @include request-form-mq(append) {
+  @media (min-width: $m-min-width) {
+    &--calculation {
       padding: 32px;
     }
+  }
+
+  @media (min-width: $l-min-width) {
+    padding: 64px;
   }
 }

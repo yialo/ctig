@@ -1,12 +1,14 @@
 .request-form__footer {
-  @include request-form-mq(nest) {
-    display: grid;
-    grid: {
-      template: {
-        columns: repeat(2, 1fr);
-        rows: auto;
+  @media (min-width: $m-min-width) {
+    .request-form--calculation & {
+      display: grid;
+      grid: {
+        template: {
+          columns: repeat(2, 1fr);
+          rows: auto;
+        }
+        column-gap: 128px;
       }
-      column-gap: 128px;
     }
   }
 }

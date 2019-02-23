@@ -13,7 +13,7 @@
     items: stretch;
   }
 
-  @include request-form-mq(nest) {
+  @media (min-width: $m-min-width) {
     display: flex;
     width: calc(100% - 160px);
   }

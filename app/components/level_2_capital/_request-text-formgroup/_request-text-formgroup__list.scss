@@ -3,13 +3,6 @@
   display: grid;
   grid-row-gap: 16px;
 
-  @include request-form-mq(nest) {
-    grid: {
-      template-columns: repeat(2, 1fr);
-      column-gap: 128px;
-    }
-  }
-
   .request-text-formgroup--route & {
     position: relative;
     padding-left: 28px;
@@ -26,8 +19,17 @@
       height: 9px;
       background-image: url("../img/request-text-formgroup--route__list.svg");
     }
+  }
 
-    @include request-form-mq(nest) {
+  @media (min-width: $m-min-width) {
+    .request-text-formgroup--calculation & {
+      grid: {
+        template-columns: repeat(2, 1fr);
+        column-gap: 128px;
+      }
+    }
+
+    .request-text-formgroup--calculation_route & {
       padding-left: 0;
 
       &::before {

@@ -4,9 +4,11 @@
   background-color: transparent;
   border-style: none;
 
-  @include request-form-mq(nest) {
-    margin-bottom: 0;
-    justify-self: start;
-    align-self: end;
+  @media (min-width: $m-min-width) {
+    .request-form--calculation & {
+      margin-bottom: 0;
+      justify-self: start;
+      align-self: end;
+    }
   }
 }

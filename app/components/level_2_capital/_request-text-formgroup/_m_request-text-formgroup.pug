@@ -1,12 +1,15 @@
-mixin request-text-formgroup(requestTextFormgroup_modifier)
+mixin request-text-formgroup(requestTextFormgroup_props)
   include _d_request-text-formgroup
   -
+    const { modifier, place } = requestTextFormgroup_props;
     const requestTextFormgroup_data =
-      REQUEST_TEXT_FORMGROUP_DATA[requestTextFormgroup_modifier];
-    const { caption, type, fields } = requestTextFormgroup_data;
+      REQUEST_TEXT_FORMGROUP_DATA[modifier];
+    const { multiPlaced, caption, type, fields } = requestTextFormgroup_data;
   fieldset(class=[
     'request-text-formgroup',
-    `request-text-formgroup--${requestTextFormgroup_modifier}`,
+    `request-text-formgroup--${modifier}`,
+    `request-text-formgroup--${place}`,
+    multiPlaced ? `request-text-formgroup--${place}_${modifier}` : null,
     attributes.class,
   ])
     legend.generic-hidden-box.request-text-formgroup__caption= caption
@@ -32,3 +35,7 @@ mixin request-text-formgroup(requestTextFormgroup_modifier)
               readonly=isType,
               required,
             )
+
+//-TODO:
+  исправить mq-классы для форм, чтобы не было сильного дублирования кода в CSS:
+  1). Возможно, стоит ввести составные модификаторы для разных форм.
