@@ -1,13 +1,15 @@
-mixin request-text-formgroup(modifier)
+mixin request-text-formgroup()
   include _d_request-text-formgroup
   -
+    const { modifier, place } = attributes;
     const { caption, fields } = REQUEST_TEXT_FORMGROUPS_DATA[modifier];
   fieldset(class=[
     'request-text-formgroup',
     `request-text-formgroup--${modifier}`,
+    `request-text-formgroup--${place}`,
     (
-      attributes.place
-      ? `request-text-formgroup--${modifier}_${attributes.place}`
+      MULTIPLACED_FORMGROUPS.includes(modifier)
+      ? `request-text-formgroup--${modifier}_${place}`
       : null
     ),
     'request-form__formgroup',
@@ -35,7 +37,3 @@ mixin request-text-formgroup(modifier)
               readonly=isType,
               required,
             )
-
-//-TODO:
-  исправить mq-классы для форм, чтобы не было сильного дублирования кода в CSS:
-  1). Возможно, стоит ввести составные модификаторы для разных форм.

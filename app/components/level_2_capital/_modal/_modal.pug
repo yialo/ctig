@@ -1,6 +1,4 @@
 .modal
-  .generic-fixed-fullscreen.modal__overlay
-    span.generic-hidden-box.modal__overlay-hint Кликните здесь, чтобы закрыть калькулятор
   div(class=[
     'generic-container',
     'generic-container--wide',
@@ -8,18 +6,18 @@
   ])
     button.modal__close-button(type='button')
       span.generic-hidden-box.modal__button-legend Закрыть окно
-    form(
-      class=['request-form', 'request-form--calculation', 'modal__form'],
-      method='POST',
-      action=FORM_DEFAULT_ACTION,
-      name=`calculation-request`,
+    +request-form().modal__form(
+      modifier='calculation',
+      heading='Запрос на расчет',
     )
-      h3.generic-heading-3.request-form__heading Запрос на расчет
       .request-form__body
-        +request-text-formgroup('route')(place='at-modal')
-        +request-text-formgroup('cargo-type')
+        +request-text-formgroup()(modifier='route' place='at-modal')
+        +request-text-formgroup()(modifier='cargo-type' place='at-modal')
         include ../_request-radio-formgroup/_request-radio-formgroup
-        +request-text-formgroup('person')(place='at-modal')
+        +request-text-formgroup()(modifier='person' place='at-modal')
       include ../_request-form/_request-form__footer
-    .modal__product-list
-      include ../_product-list/_product-list
+      .request-form__product-list.modal__product-list
+        include ../_product-list/_product-list
+  .generic-fixed-fullscreen.modal__overlay
+    span.generic-hidden-box.modal__overlay-hint
+      | Кликните здесь, чтобы закрыть калькулятор

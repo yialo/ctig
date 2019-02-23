@@ -22,14 +22,14 @@
   }
 
   @media (min-width: $m-min-width) {
-    .request-text-formgroup--calculation & {
+    .request-text-formgroup--at-modal & {
       grid: {
         template-columns: repeat(2, 1fr);
         column-gap: 128px;
       }
     }
 
-    .request-text-formgroup--calculation_route & {
+    .request-text-formgroup--route_at-modal & {
       padding-left: 0;
 
       &::before {

@@ -1,0 +1,10 @@
+mixin request-form()
+  - const { class: classes, heading, modifier } = attributes;
+  form(
+    class=['request-form', `request-form--${modifier}`, classes],
+    method='POST',
+    action=FORM_DEFAULT_ACTION,
+    name=`${modifier}-request`,
+  )
+    h3.generic-heading-3.request-form__heading= heading
+    block
