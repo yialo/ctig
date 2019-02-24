@@ -15,4 +15,14 @@
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      @include margin-hor();
+    }
+
+    &--2 {
+      margin-right: auto;
+    }
+  }
 }

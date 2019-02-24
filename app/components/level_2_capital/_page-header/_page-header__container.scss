@@ -23,11 +23,12 @@
     grid: {
       template: {
         rows: 1fr;
-        columns:
-          repeat(2, auto) 1fr 212px;
+        columns: auto 1fr 256px 212px;
       }
       gap: 0;
     }
+    justify-content: start;
+    align-items: start;
     width: auto;
     margin: {
       left: calc((100% - #{$l-min-width}) / 2);

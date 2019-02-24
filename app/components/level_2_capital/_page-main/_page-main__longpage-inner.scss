@@ -12,4 +12,14 @@
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--additional-service {
+      display: none;
+    }
+
+    &--transport {
+      display: none;
+    }
+  }
 }
