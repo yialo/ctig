@@ -46,7 +46,7 @@
 
     &--language-toggle {
       grid-area: 1 / 4 / 2 / 5;
-      z-index: 2;
+      z-index: 3;
       justify-self: end;
       align-self: start;
     }
@@ -55,7 +55,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 1;
+      z-index: 2;
       width: var(--page-header__main-menu-width);
       height: 100vh;
     }
