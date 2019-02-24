@@ -3,4 +3,14 @@
     @include padding-hor(32px);
     overflow: hidden;
   }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+
+    .customs--agent & {
+      align-items: center;
+    }
+  }
 }

@@ -4,4 +4,17 @@
   @media (min-width: $m-min-width) {
     @include padding-hor(0);
   }
+
+  @media (min-width: $l-min-width) {
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 50px;
+    }
+    max-width: 780px;
+
+    .customs--service & {
+      padding-top: 64px;
+    }
+  }
 }

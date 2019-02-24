@@ -9,4 +9,13 @@
       right: 32px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    float: none;
+    width: 420px;
+    margin: {
+      bottom: 0;
+      right: 60px;
+    }
+  }
 }
