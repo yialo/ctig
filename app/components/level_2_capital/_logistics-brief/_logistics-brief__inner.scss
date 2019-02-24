@@ -1,3 +1,9 @@
 .logistics-brief__inner {
   margin-bottom: 48px;
+
+  @media (min-width: $l-min-width) {
+    grid-area: 1 / 1 / 2 / 3;
+    max-width: 1570px;
+    margin-bottom: 0;
+  }
 }

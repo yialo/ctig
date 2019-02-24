@@ -5,4 +5,9 @@
   @media (min-width: $m-min-width) {
     @include padding-hor(0);
   }
+
+  @media (min-width: $l-min-width) {
+    grid-area: 2 / 2 / 3 / 3;
+    margin-left: 10%;
+  }
 }

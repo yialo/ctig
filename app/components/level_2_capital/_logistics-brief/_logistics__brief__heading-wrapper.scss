@@ -10,4 +10,8 @@
     top: 80px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $l-min-width) {
+    top: 386px;
+  }
 }
