@@ -8,4 +8,10 @@
       right: 32px;
     };
   }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 1 / 3 / 2;
+    width: auto;
+    margin-right: 0;
+  }
 }

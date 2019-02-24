@@ -20,4 +20,15 @@
       margin-top: 48px;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    &--1 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &--2 {
+      grid-area: 2 / 2 / 3 / 3;
+      margin-top: 0;
+    }
+  }
 }

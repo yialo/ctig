@@ -19,4 +19,8 @@
     --page-header__main-menu-width: 180px;
     --scrollbar-width: 17px;
   }
+
+  @media (min-width: $xl-min-width) {
+    --page-header__main-menu-width: 256px;
+  }
 }

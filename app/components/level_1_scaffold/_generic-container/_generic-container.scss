@@ -25,4 +25,8 @@
       @include padding-hor(0);
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    width: $xl-min-width;
+  }
 }
