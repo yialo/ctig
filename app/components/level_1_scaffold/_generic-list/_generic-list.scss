@@ -1,10 +1,4 @@
 .generic-list {
   @include list();
-  display: grid;
-  grid-row-gap: 16px;
-  padding-left: 21px;
-
-  @media (min-width: $m-min-width) {
-    grid-row-gap: 24px;
-  }
+  padding-left: var(--generic-list-padding);
 }

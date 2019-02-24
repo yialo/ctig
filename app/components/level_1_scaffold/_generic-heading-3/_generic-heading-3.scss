@@ -6,4 +6,9 @@
   @media (min-width: $m-min-width) {
     font-size: 24px;
   }
+
+  @media (min-width: $m-min-width) {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
 }

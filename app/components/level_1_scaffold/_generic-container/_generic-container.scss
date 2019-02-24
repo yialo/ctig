@@ -16,4 +16,13 @@
       @include padding-hor(0);
     }
   }
+
+  @media (min-width: $l-min-width) {
+    @include padding-hor(56px);
+    width: $l-min-width;
+
+    &--wide {
+      @include padding-hor(0);
+    }
+  }
 }
