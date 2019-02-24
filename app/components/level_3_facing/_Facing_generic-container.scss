@@ -1,14 +1,12 @@
 .generic-container {
   @media (min-width: $l-min-width) {
-    width: auto;
     margin: {
-      left: calc((100% - #{$l-min-width}) / 2);
+      left: calc((100% - var(--page-min-width)) / 2);
       right: 0;
     };
-    padding-right: calc(var(--page-header__main-menu-width) + 32px);
-  }
-
-  @media (min-width: $xl-min-width) {
-    margin-left: calc((100% - #{$xl-min-width}) / 2);
+    padding-right: calc(
+      var(--page-header__main-menu-width)
+      + var(--page-padding-right)
+    );
   }
 }

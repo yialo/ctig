@@ -1,9 +1,5 @@
 .modal
-  div(class=[
-    'generic-container',
-    'generic-container--wide',
-    'modal__container',
-  ])
+  .modal__container
     button.modal__close-button(type='button')
       span.generic-hidden-box.modal__button-legend Закрыть окно
     +request-form().modal__form(

@@ -5,10 +5,12 @@
   --logistics-crumbs__heading-list-margin-left: 8px;
   --main-menu__item-margin-left: 24px;
   --main-menu__navigation-toggle-height: 48px;
+  --page-min-width: #{$s-min-width};
   --page-padding-top: 24px;
 
   @media (min-width: $m-min-width) {
     --main-menu__item-margin-left: 0;
+    --page-min-width: #{$m-min-width};
     --page-padding-top: 32px;
   }
 
@@ -17,10 +19,14 @@
     --directions__list-margin-top: 42px;
     --main-menu__item-margin-left: 24px;
     --page-header__main-menu-width: 180px;
+    --page-min-width: #{$l-min-width};
+    --page-padding-right: 32px;
     --scrollbar-width: 17px;
   }
 
   @media (min-width: $xl-min-width) {
     --page-header__main-menu-width: 256px;
+    --page-min-width: #{$xl-min-width};
+    --page-padding-right: 56px;
   }
 }

@@ -48,8 +48,12 @@
     &--language-toggle {
       position: fixed;
       top: 38px;
-      right: 32px;
+      right: var(--page-padding-right);
       z-index: 3;
+
+      .is-nav-shown & {
+        right: calc(var(--page-padding-right) + var(--scrollbar-width));
+      }
     }
 
     &--main-menu {

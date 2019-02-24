@@ -14,7 +14,16 @@
     justify-content: space-between;
     align-items: center;
     width: calc(100vh - 96px);
-    height: 164px;
-    padding: 22px 32px 32px 48px;
+    height: calc(var(--page-header__main-menu-width) - 2px);
+    padding: {
+      top: 22px;
+      bottom: var(--page-padding-right);
+      right: 32px;
+      left: 48px;
+    };
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-top: 44px;
   }
 }

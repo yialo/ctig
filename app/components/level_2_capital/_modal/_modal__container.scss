@@ -1,8 +1,16 @@
 .modal__container {
+  @include margin-hor(0);
+  @include padding-hor(0);
   position: relative;
   z-index: 0;
+  width: $s-min-width;
 
   @media (min-width: $m-min-width) {
     @include margin-hor(0);
+    width: $m-min-width;
+  }
+
+  @media (min-width: $l-min-width) {
+    width: 960px;
   }
 }
