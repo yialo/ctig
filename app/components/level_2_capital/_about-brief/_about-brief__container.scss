@@ -8,6 +8,7 @@
   }
 
   @media (min-width: $l-min-width) {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     overflow: visible;

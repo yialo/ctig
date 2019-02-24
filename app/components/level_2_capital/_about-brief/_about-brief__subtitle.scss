@@ -31,10 +31,13 @@
     transform: rotate(90deg);
   }
 
-  @media (min-width: $m-min-width) {
+  @media (min-width: $l-min-width) {
     top: -12px;
     bottom: auto;
-    left: calc(100% - 20px);
+    left: auto;
+    right: (calc(var(--page-header__main-menu-width)));
+    transform-origin: bottom left;
+    transform: translate(calc(100% - 48px), 144px) rotate(90deg);
     font-size: 18px;
   }
 }

@@ -26,4 +26,14 @@
       margin-top: auto;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      max-width: 840px;
+    }
+
+    &--2 {
+      max-width: 300px;
+    }
+  }
 }
