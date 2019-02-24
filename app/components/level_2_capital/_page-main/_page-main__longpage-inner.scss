@@ -14,6 +14,12 @@
   }
 
   @media (min-width: $l-min-width) {
+    margin-bottom: 200px;
+
+    &--customs-service {
+      margin-bottom: 0;
+    }
+
     &--additional-service {
       display: none;
     }
