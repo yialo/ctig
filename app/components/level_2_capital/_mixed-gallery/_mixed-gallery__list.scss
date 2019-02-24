@@ -9,4 +9,9 @@
     }
     align-content: space-between;
   }
+
+  @media (min-width: $l-min-width) {
+    @include margin-hor();
+    width: 946px;
+  }
 }

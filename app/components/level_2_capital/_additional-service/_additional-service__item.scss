@@ -25,4 +25,14 @@
       margin-top: auto;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      margin-bottom: 144px;
+    }
+
+    &--2 {
+      margin-top: 200px;
+    }
+  }
 }

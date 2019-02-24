@@ -39,4 +39,20 @@
       }
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      margin: {
+        bottom: 128px;
+        left: 48px;
+      }
+    }
+
+    &--2 {
+      margin: {
+        top: 156px;
+        bottom: 96px;
+      }
+    }
+  }
 }

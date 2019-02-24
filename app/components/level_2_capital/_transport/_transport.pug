@@ -28,14 +28,14 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
           number === TRANSPORT_ITEMS.length ? 'transport__item--last' : null,
         ])
           h3.generic-heading-2.transport-item__heading= heading
-            mixin transport-item__image-wrapper()
-              +generic-picture().transport-item__image-wrapper(
-                src=`img/transport-item__image--${number}.jpg`,
-                alt=heading,
-              )
-            if isSpecial
-              .transport-item__wrapper
-                +transport-item__image-wrapper()
-                span.transport-item__hint Скоро
-            else
+          mixin transport-item__image-wrapper()
+            +generic-picture().transport-item__image-wrapper(
+              src=`img/transport-item__image--${number}.jpg`,
+              alt=heading,
+            )
+          if isSpecial
+            .transport-item__wrapper
               +transport-item__image-wrapper()
+              span.transport-item__hint Скоро
+          else
+            +transport-item__image-wrapper()
