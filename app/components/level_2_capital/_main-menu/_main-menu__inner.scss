@@ -1,0 +1,19 @@
+.main-menu__inner {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $m-min-width) {
+    display: block;
+  }
+
+  @media (min-width: $l-min-width) {
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(calc(-100% - 32px), 22px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vh - 176px);
+    height: 116px;
+  }
+}

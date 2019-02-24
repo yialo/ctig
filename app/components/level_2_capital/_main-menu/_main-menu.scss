@@ -1,8 +1,10 @@
 .main-menu {
-  display: flex;
-  justify-content: center;
-
-  @media (min-width: $m-min-width) {
-    display: block;
+  @media (min-width: $l-min-width) {
+    height: 100%;
+    padding: {
+      top: 96px;
+      left: 14px;
+    }
+    background-color: white;
   }
 }

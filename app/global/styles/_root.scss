@@ -11,4 +11,8 @@
     --main-menu__item-margin-left: 0;
     --page-padding-top: 32px;
   }
+
+  @media (min-width: $l-min-width) {
+    --page-header__main-menu-width: 180px;
+  }
 }

@@ -3,4 +3,13 @@
   margin-left: var(--main-menu__item-margin-left);
   line-height: 1.5;
   letter-spacing: 0.08em;
+
+  @media (min-width: $l-min-width) {
+    font-size: 16px;
+
+    &--5 {
+      @include margin-hor();
+      margin-top: 4px;
+    }
+  }
 }

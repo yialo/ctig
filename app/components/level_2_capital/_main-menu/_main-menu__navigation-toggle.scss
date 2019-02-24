@@ -6,4 +6,13 @@
   width: 100%;
   height: var(--main-menu__navigation-toggle-height);
   background-color: white;
+
+  @media (min-width: $l-min-width) {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
 }

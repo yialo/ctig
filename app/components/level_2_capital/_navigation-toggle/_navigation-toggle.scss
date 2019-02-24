@@ -10,4 +10,9 @@
   .is-nav-shown & {
     border-top-color: black;
   }
+
+  @media (min-width: $l-min-width) {
+    width: auto;
+    height: auto;
+  }
 }
