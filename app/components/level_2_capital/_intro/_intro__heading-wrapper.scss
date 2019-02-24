@@ -7,4 +7,8 @@
     top: 64px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $l-min-width) {
+    top: 130px;
+  }
 }

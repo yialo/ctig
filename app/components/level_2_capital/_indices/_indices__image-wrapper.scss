@@ -8,4 +8,8 @@
       right: 32px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    width: 480px;
+  }
 }

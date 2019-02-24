@@ -14,9 +14,10 @@
 
   @media (min-width: $m-min-width) {
     grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 7px;
-    padding-bottom: 4px;
-    text-align: right;
+    padding-bottom: 3px;
     border-bottom: 1px solid $middle-gray;
 
     @for $number from 1 through 4 {
@@ -24,5 +25,9 @@
         grid-row: #{$number} / #{$number + 1};
       }
     }
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 13px;
   }
 }

@@ -22,4 +22,9 @@
     }
     align-items: end;
   }
+
+  @media (min-width: $l-min-width) {
+    grid-gap: 96px 64px;
+    align-content: start;
+  }
 }
