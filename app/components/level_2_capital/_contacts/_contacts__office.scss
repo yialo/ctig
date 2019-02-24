@@ -4,4 +4,11 @@
   @media (min-width: $m-min-width) {
     margin-bottom: 32px;
   }
+
+  @media (min-width: $l-min-width) {
+    margin: {
+      bottom: 0;
+      right: 48px;
+    }
+  }
 }

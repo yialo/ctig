@@ -13,7 +13,7 @@
         h3.generic-heading-3.contacts__subheading Офис в Москве
         ul.contacts__list
           mixin contacts__item(contactsItem_modifier)
-            li(class=[
+            li.generic-textblock(class=[
               'contacts__item',
               `contacts__item--${contactsItem_modifier}`,
             ])
@@ -28,7 +28,7 @@
             | Москва, Пресненская наб. 6, стр. 2, башня «Империя», 16 этаж, ММДЦ «Москва-Сити»
       .contacts__stock
         h3.generic-heading-3.contacts__subheading Склад консолидации
-        p(class=['contacts__item', 'contacts__item--stock'])
+        p.generic-textblock(class=['contacts__item', 'contacts__item--stock'])
           a.contacts__link(href='#') Vilnius, Lithuania
   footer.contacts__map-wrapper
     .contacts__map#map

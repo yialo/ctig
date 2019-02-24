@@ -1,0 +1,5 @@
+.contacts__stock {
+  @media (min-width: $l-min-width) {
+    flex-grow: 1;
+  }
+}

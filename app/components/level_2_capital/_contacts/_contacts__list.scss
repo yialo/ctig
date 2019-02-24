@@ -12,4 +12,8 @@
       gap: 16px 48px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    grid-template-columns: 300px 384px;
+  }
 }
