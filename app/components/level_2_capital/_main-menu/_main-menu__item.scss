@@ -10,9 +10,5 @@
       left: var(--main-menu__item-margin-left);
     }
     font-size: 16px;
-
-    &--last {
-      @include margin-hor();
-    }
   }
 }
