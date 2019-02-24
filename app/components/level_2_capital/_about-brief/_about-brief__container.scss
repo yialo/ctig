@@ -6,4 +6,16 @@
     position: static;
     overflow: hidden;
   }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    overflow: visible;
+    margin: {
+      left: calc((100% - #{$l-min-width}) / 2);
+      right: 0;
+    };
+    padding-right: calc(var(--page-header__main-menu-width) + 32px);
+  }
 }

@@ -46,14 +46,13 @@
     }
 
     &--language-toggle {
-      grid-area: 1 / 4 / 2 / 5;
+      position: fixed;
+      top: 38px;
+      right: 32px;
       z-index: 3;
-      justify-self: end;
-      align-self: start;
     }
 
     &--main-menu {
-      grid-area: 1 / 3 / 2 / 4;
       position: fixed;
       top: 0;
       right: 0;

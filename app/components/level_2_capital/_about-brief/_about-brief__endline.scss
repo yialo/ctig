@@ -9,4 +9,9 @@
     font-size: 30px;
     text-align: right;
   }
+
+  @media (min-width: $l-min-width) {
+    width: 600px;
+    text-align: left;
+  }
 }

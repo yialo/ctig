@@ -5,4 +5,12 @@
   @media (min-width: $m-min-width) {
     @include margin-bottom-last(24px, 32px);
   }
+
+  @media (min-width: $l-min-width) {
+    width: 600px;
+
+    &--last {
+      margin-bottom: 64px;
+    }
+  }
 }

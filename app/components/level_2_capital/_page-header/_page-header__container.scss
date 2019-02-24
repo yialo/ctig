@@ -23,7 +23,7 @@
     grid: {
       template: {
         rows: 1fr;
-        columns: auto 1fr 256px 212px;
+        columns: auto 1fr 256px;
       }
       gap: 0;
     }
@@ -37,7 +37,7 @@
     padding: {
       top: 40px;
       bottom: 48px;
-      right: 24px;
+      right: calc(var(--page-header__main-menu-width) + 32px);
     }
   }
 }

@@ -8,4 +8,15 @@
       right: 0;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 50px;
+    }
+    padding: {
+      left: 0;
+    }
+  }
 }
