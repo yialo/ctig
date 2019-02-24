@@ -5,11 +5,14 @@
   letter-spacing: 0.08em;
 
   @media (min-width: $l-min-width) {
+    margin: {
+      top: 4px;
+      left: var(--main-menu__item-margin-left);
+    }
     font-size: 16px;
 
-    &--5 {
+    &--last {
       @include margin-hor();
-      margin-top: 4px;
     }
   }
 }

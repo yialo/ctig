@@ -13,6 +13,8 @@
   }
 
   @media (min-width: $l-min-width) {
+    --main-menu__item-margin-left: 24px;
     --page-header__main-menu-width: 180px;
+    --scrollbar-width: 17px;
   }
 }

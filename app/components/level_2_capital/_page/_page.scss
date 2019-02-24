@@ -12,10 +12,12 @@
 
   &.is-nav-shown {
     overflow-y: hidden;
+    padding-right: var(--scrollbar-width);
   }
 
   &.is-modal-shown {
     overflow-y: hidden;
+    padding-right: var(--scrollbar-width);
   }
 
   @media (min-width: $m-min-width) {

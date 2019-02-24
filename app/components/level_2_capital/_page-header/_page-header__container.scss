@@ -29,15 +29,9 @@
     }
     justify-content: start;
     align-items: start;
-    width: auto;
-    margin: {
-      left: calc((100% - #{$l-min-width}) / 2);
-      right: 0;
-    };
     padding: {
       top: 40px;
       bottom: 48px;
-      right: calc(var(--page-header__main-menu-width) + 32px);
     }
   }
 }

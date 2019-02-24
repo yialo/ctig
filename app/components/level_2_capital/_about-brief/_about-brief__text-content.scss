@@ -10,11 +10,13 @@
   }
 
   @media (min-width: $l-min-width) {
+    position: static;
     flex: {
       grow: 1;
       shrink: 0;
       basis: 50px;
     }
+    max-width: 600px;
     padding: {
       left: 0;
     }

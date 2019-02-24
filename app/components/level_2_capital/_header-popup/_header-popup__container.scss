@@ -17,7 +17,8 @@
       column-gap: 120px;
     }
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - var(--page-header__main-menu-width));
+    margin-left: 0;
     padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 24px);
   }
 }

@@ -1,0 +1,10 @@
+.generic-container {
+  width: auto;
+  margin: {
+    left: calc((100% - #{$l-min-width}) / 2);
+    right: 0;
+  };
+  padding: {
+    right: calc(var(--page-header__main-menu-width) + 32px);
+  }
+}

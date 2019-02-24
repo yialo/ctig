@@ -18,7 +18,12 @@ nav.main-menu
             const itemLink = _EMPTY_NAVIGATION_LINKS.includes(modifier)
               ? '#'
               : `${modifier}.html`;
-          li(class=['main-menu__item', `main-menu__item--${index + 1}`])
+            const number = index + 1;
+          li(class=[
+            'main-menu__item',
+            `main-menu__item--${number}`,
+            number === MAIN_MENU_ITEMS.length ? 'main-menu__item--last' : null,
+          ])
             a(
               class=[
                 'main-menu__link',
