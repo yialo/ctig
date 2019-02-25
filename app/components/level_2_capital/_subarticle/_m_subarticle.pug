@@ -25,11 +25,11 @@ mixin subarticle(subarticle_modifier)
     )
     h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
     .subarticle__textblock
-      each paragraphText in getParagraphsStack(paragraphsTotal)
+      each paragraphText, index in getParagraphsStack(paragraphsTotal)
         p.generic-textblock(class=[
           'subarticle__paragraph',
           (
-            paragraphCounter === paragraphsTotal
+            index === paragraphsTotal - 1
             ? 'subarticle__paragraph--last'
             : null
           ),

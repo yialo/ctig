@@ -1,5 +1,5 @@
 .subarticle__textblock {
-  .subarticle--regular & {
+  .subarticle--illustrated & {
     margin-bottom: 32px;
   }
 
@@ -16,8 +16,8 @@
       }
     }
 
-    .subarticle--regular & {
-      display: grid;
+    .subarticle--illustrated & {
+      display: block;
       margin-bottom: 0;
     }
   }

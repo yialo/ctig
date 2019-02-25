@@ -4,4 +4,15 @@
       overflow: hidden;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    &--illustrated {
+      display: grid;
+      grid: {
+        template: auto 1fr / repeat(2, 1fr);
+        column-gap: 48px;
+      }
+      overflow: visible;
+    }
+  }
 }

@@ -17,4 +17,10 @@
       display: block;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--top {
+      margin-bottom: 72px;
+    }
+  }
 }
