@@ -32,11 +32,6 @@
     padding: {
       top: 40px;
       bottom: 48px;
-      right: calc(var(--page-header__main-menu-width) + 80px);
     }
-  }
-
-  @media (min-width: $xl-min-width) {
-    padding-right: calc(var(--page-header__main-menu-width) + 120px);
   }
 }
