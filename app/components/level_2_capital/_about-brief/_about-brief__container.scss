@@ -7,7 +7,6 @@
   }
 
   @media (min-width: $l-min-width) {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,7 +14,6 @@
   }
 
   @media (min-width: $xl-min-width) {
-    position: static;
     align-items: stretch;
   }
 }

@@ -10,20 +10,12 @@
   }
 
   @media (min-width: $l-min-width) {
-    position: static;
     flex: {
       grow: 1;
       shrink: 0;
       basis: 50px;
     }
-    max-width: 632px;
-    padding: {
-      left: 0;
-      right: 32px;
-    }
-  }
-
-  @media (min-width: $xl-min-width) {
-    position: relative;
+    max-width: 600px;
+    padding-left: 0;
   }
 }
