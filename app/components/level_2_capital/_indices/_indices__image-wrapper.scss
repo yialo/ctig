@@ -13,4 +13,8 @@
     width: 480px;
     margin-right: 48px;
   }
+
+  @media (min-width: $xl-min-width) {
+    margin-right: 180px;
+  }
 }
