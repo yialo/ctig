@@ -8,11 +8,10 @@
 
   @media (min-width: $l-min-width) {
     grid-area: 2 / 2 / 3 / 3;
-    margin-left: 10%;
+    margin-left: auto;
   }
 
   @media (min-width: $xl-min-width) {
     max-width: 1028px;
-    margin-left: auto;
   }
 }

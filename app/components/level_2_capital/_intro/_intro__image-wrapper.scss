@@ -23,27 +23,32 @@
     }
 
     &--2 {
-      width: 176px;
-      margin-top: auto;
+      width: 186px;
+      margin: {
+        top: auto;
+        right: auto;
+      }
     }
   }
 
   @media (min-width: $l-min-width) {
     &--1 {
-      max-width: 840px;
+      width: 640px;
     }
 
     &--2 {
-      max-width: 300px;
+      width: 240px;
     }
   }
 
   @media (min-width: $xl-min-width) {
+    &--1 {
+      width: 840px;
+    }
+
     &--2 {
-      margin: {
-        left: 70px;
-        right: auto;
-      }
+      width: 300px;
+      margin-left: 70px;
     }
   }
 }

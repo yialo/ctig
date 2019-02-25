@@ -25,7 +25,10 @@
 
     &--1 {
       width: 140px;
-      margin-top: auto;
+      margin: {
+        top: auto;
+        right: auto;
+      }
     }
 
     &--2 {
@@ -33,6 +36,7 @@
       margin: {
         top: 64px;
         bottom: 64px;
+        right: auto;
       }
     }
 
@@ -44,20 +48,20 @@
 
   @media (min-width: $l-min-width) {
     &--1 {
-      transform: translateY(200px);
-      max-width: 300px;
+      transform: translateY(128px);
+      width: 164px;
     }
 
     &--2 {
-      max-width: 840px;
+      width: 520px;
       margin: {
         top: 128px;
-        bottom: 128px;
+        bottom: 0;
       }
     }
 
     &--3 {
-      max-width: 270px;
+      width: 164px;
     }
   }
 
@@ -72,7 +76,6 @@
 
     &--2 {
       margin: {
-        bottom: 0;
         right: auto;
       }
     }
