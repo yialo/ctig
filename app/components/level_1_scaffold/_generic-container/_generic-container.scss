@@ -16,17 +16,6 @@
   }
 
   @media (min-width: $l-min-width) {
-    width: auto;
-    margin: {
-      left: calc((100% - var(--page-min-width)) / 2);
-      right: 0;
-    };
-    padding: {
-      left: 56px;
-      right: calc(
-        var(--page-header__main-menu-width)
-        + var(--page-padding-right)
-      );
-    }
+    margin-left: calc((100% - var(--page-min-width)) / 2);
   }
 }
