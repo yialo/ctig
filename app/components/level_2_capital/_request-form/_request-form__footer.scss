@@ -1,6 +1,6 @@
 .request-form__footer {
-  @media (min-width: $m-min-width) {
-    .request-form--calculation & {
+  @mixin request-fomr__footer-wide($modifier: calculation) {
+    .request-form--#{$modifier} & {
       display: grid;
       grid: {
         template: {
@@ -10,5 +10,13 @@
         column-gap: 128px;
       }
     }
+  }
+
+  @media (min-width: $m-min-width) {
+    @include request-fomr__footer-wide(calculation);
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    @include request-fomr__footer-wide(shipping);
   }
 }

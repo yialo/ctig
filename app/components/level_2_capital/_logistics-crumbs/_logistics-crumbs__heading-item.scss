@@ -1,5 +1,4 @@
 .logistics-crumbs__heading-item {
-  @include font(500, 16px);
   margin-left: var(--logistics-crumbs__heading-list-margin-left);
 
   &--current {

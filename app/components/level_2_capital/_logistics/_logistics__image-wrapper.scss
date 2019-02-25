@@ -3,7 +3,10 @@
 
   @media (min-width: $m-min-width) {
     grid-area: 2 / 1 / 4 / 2;
-    width: 412px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    grid-row-end: 3;
   }
 }

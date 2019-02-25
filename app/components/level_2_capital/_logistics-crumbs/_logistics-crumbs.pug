@@ -4,7 +4,7 @@
       -
         const { modifier, caption, list } = item;
         const number = index + 1;
-      li(class=[
+      li.generic-textblock(class=[
         'logistics-crumbs__heading-item',
         `logistics-crumbs__heading-item--${number}`,
         number === 1 ? 'logistics-crumbs__heading-item--current' : null,

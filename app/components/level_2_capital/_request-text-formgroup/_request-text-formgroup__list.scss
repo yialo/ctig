@@ -1,4 +1,23 @@
 .request-text-formgroup__list {
+  @mixin request-text-formgroup__list-wide($place: at-modal) {
+    .request-text-formgroup--#{$place} & {
+      grid: {
+        template-columns: repeat(2, 1fr);
+        column-gap: 128px;
+      }
+    }
+
+    .request-text-formgroup--route_#{$place} & {
+      padding-left: 0;
+
+      &::before {
+        top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   @include list();
   display: grid;
   grid-row-gap: 16px;
@@ -22,20 +41,16 @@
   }
 
   @media (min-width: $m-min-width) {
-    .request-text-formgroup--at-modal & {
+    @include request-text-formgroup__list-wide(at-modal);
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    @include request-text-formgroup__list-wide(at-flow);
+
+    .request-text-formgroup--dimensions & {
       grid: {
-        template-columns: repeat(2, 1fr);
-        column-gap: 128px;
-      }
-    }
-
-    .request-text-formgroup--route_at-modal & {
-      padding-left: 0;
-
-      &::before {
-        top: 4px;
-        left: 50%;
-        transform: translateX(-50%);
+        template-rows: repeat(2, 1fr);
+        row-gap: 32px;
       }
     }
   }

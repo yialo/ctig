@@ -15,4 +15,16 @@
       margin-bottom: 32px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    .request-form--calculation & {
+      margin-bottom: 42px;
+    }
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    .request-form--shipping & {
+      margin-bottom: 42px;
+    }
+  }
 }

@@ -3,6 +3,12 @@
     grid-area: 3 / 1 / 5 / 2;
     z-index: 1;
     width: 360px;
-    margin-left: 32px;
+    margin-left: 24px;
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    @include margin-hor();
+    grid-area: 3 / 1 / 4 / 3;
+    width: $request-form-wide-width;
   }
 }

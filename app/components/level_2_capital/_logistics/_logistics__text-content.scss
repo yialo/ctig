@@ -11,4 +11,8 @@
       right: 32px;
     }
   }
+
+  @media (min-width: $logistics-request-form-resize) {
+    grid-row-end: 4;
+  }
 }
