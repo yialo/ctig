@@ -1,13 +1,15 @@
 .navigation-toggle
-  - const NAVIGATION_TOGGLES = [['opener', 'Показать'], ['closer', 'Скрыть']];
-  each item in NAVIGATION_TOGGLES
-    - const [modifier, string] = item;
-    button(
-      class=[
-        'navigation-toggle__button',
-        `navigation-toggle__button--${modifier}`,
-      ],
-      type='button',
-    )
-      span.generic-hidden-box.navigation-toggle__legend
-        = `${string} главное меню`
+  button(
+    class=['navigation-toggle__button', 'navigation-toggle__button--opener'],
+    type='button',
+  )
+    span.generic-hidden-box.navigation-toggle__legend
+      | Показать главное меню
+  button(
+    class=['navigation-toggle__button', 'navigation-toggle__button--closer'],
+    type='button',
+  )
+    svg.navigation-toggle__icon-wrapper(width='22' height='22')
+      use.navigation-toggle__icon(href='#close-button' fill='#000000')
+    span.generic-hidden-box.navigation-toggle__legend
+      | Скрыть главное меню

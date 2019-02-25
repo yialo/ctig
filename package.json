@@ -4,7 +4,7 @@
     "last 2 versions"
   ],
   "devDependencies": {
-    "autoprefixer": "9.4.8",
+    "autoprefixer": "9.4.9",
     "browser-sync": "2.26.3",
     "del": "3.0.0",
     "eslint": "5.14.1",
@@ -25,7 +25,7 @@
     "imagemin-pngquant": "7.0.0",
     "imagemin-zopfli": "6.0.0",
     "stylelint": "9.10.1",
-    "stylelint-scss": "3.5.3"
+    "stylelint-scss": "3.5.4"
   },
   "engines": {
     "node": "10.15.0"

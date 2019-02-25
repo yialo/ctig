@@ -1,6 +1,8 @@
 .modal
   .modal__container
     button.modal__close-button(type='button')
+      svg.modal__close-icon-wrapper(width='22' height='22')
+        use.modal__close-icon(href='#close-button' fill='#ffffff')
       span.generic-hidden-box.modal__button-legend Закрыть окно
     +request-form().modal__form(
       modifier='calculation',

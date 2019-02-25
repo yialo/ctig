@@ -1,26 +1,15 @@
 .navigation-toggle__button {
-  @include svg-background();
   padding: 0;
   background-color: transparent;
   border-style: none;
 
-  @each $key, $value in (
-    opener: (28px 12px block none),
-    closer: (22px 21px none block),
-  ) {
-    &--#{$key} {
-      display: nth($value, 3);
-      width: nth($value, 1);
-      height: nth($value, 2);
-      background-image: url("../img/navigation-toggle__button--#{$key}.svg");
-
-      .is-nav-shown & {
-        display: nth($value, 4);
-      }
-    }
-  }
-
   &--opener {
+    @include svg-background();
+    display: block;
+    width: 22px;
+    height: 12px;
+    background-image: url("../img/navigation-toggle__button--opener.svg");
+
     &:hover {
       animation: {
         name: bounce;
@@ -28,14 +17,25 @@
         timing-function: ease-in-out;
       }
     }
+
+    .is-nav-shown & {
+      display: none;
+    }
   }
 
   &--closer {
+    display: none;
+    width: 22px;
+    height: 22px;
     outline-style: none;
     transition: transform ease-in-out 0.5s;
 
-    .is-nav-shown &:hover {
+    &:hover {
       transform: rotate(0.5turn);
+    }
+
+    .is-nav-shown & {
+      display: block;
     }
   }
 }
