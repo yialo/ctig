@@ -17,17 +17,15 @@
 
   @media (min-width: $l-min-width) {
     @include padding-hor(56px);
-    width: calc(var(--page-min-width) - var(--page-header__main-menu-width));
+    width: calc(
+      var(--page-min-width)
+      + var(--page-margin-left)
+      - var(--page-header__main-menu-width)
+    );
+    max-width: var(--page-min-width);
     margin: {
-      left: calc((100% - var(--page-min-width)) / 2);
+      left: var(--page-margin-left);
       right: auto;
     };
-    padding: {
-      left: 56px;
-      right: calc(
-        var(--page-header__main-menu-width)
-        + var(--page-padding-right)
-      );
-    }
   }
 }

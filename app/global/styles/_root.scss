@@ -20,6 +20,7 @@
     --main-menu__item-margin-left: 24px;
     --page-header__main-menu-width: 180px;
     --page-min-width: #{$l-min-width};
+    --page-margin-left: calc((100% - var(--page-min-width)) / 2);
     --page-padding-right: 32px;
     --scrollbar-width: 17px;
   }
