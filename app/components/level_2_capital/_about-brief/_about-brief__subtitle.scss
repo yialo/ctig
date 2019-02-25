@@ -32,18 +32,14 @@
   }
 
   @media (min-width: $l-min-width) {
-    top: -12px;
     bottom: auto;
-    left: auto;
-    right: (calc(var(--page-header__main-menu-width)));
-    transform-origin: bottom left;
-    transform: translate(calc(100% - 48px), 144px) rotate(90deg);
+    left: 100%;
+    transform-origin: top left;
+    transform: rotate(90deg) translate(4px, -28px);
     font-size: 18px;
   }
 
   @media (min-width: $xl-min-width) {
     right: -170px;
-    transform-origin: bottom right;
-    transform: rotate(90deg) translateX(100%);
   }
 }
