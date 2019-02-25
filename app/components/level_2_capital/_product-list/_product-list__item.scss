@@ -6,4 +6,8 @@
   @media (min-width: $m-min-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+  }
 }

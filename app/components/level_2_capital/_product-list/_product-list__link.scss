@@ -3,6 +3,10 @@
   padding: 4px 8px;
   text-align: center;
   color: $middle-gray;
+  transition: {
+    property: color;
+    duration: 0.3s;
+  }
 
   &:hover {
     color: white;
@@ -23,6 +27,22 @@
       width: 100%;
       height: 100%;
       border: 1px solid $emerald;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    max-width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+
+    &--current {
+      @include emerald-line();
+
+      &::before {
+        border-style: none;
+      }
     }
   }
 }

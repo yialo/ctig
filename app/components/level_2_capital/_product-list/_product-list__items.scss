@@ -10,4 +10,8 @@
       gap: 16px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    grid-column-gap: 56px;
+  }
 }
