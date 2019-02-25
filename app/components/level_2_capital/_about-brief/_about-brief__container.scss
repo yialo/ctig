@@ -12,4 +12,8 @@
     flex-wrap: wrap;
     overflow: visible;
   }
+
+  @media (min-width: $xl-min-width) {
+    position: static;
+  }
 }

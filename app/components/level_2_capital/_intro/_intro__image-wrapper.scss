@@ -36,4 +36,10 @@
       max-width: 300px;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--2 {
+      margin-left: 70px;
+    }
+  }
 }

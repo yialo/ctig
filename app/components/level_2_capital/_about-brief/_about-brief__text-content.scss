@@ -21,4 +21,8 @@
       left: 0;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    position: relative;
+  }
 }
