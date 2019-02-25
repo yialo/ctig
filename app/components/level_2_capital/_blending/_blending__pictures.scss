@@ -6,4 +6,8 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $xl-min-width) {
+    justify-content: flex-start;
+  }
 }

@@ -60,4 +60,17 @@
       max-width: 270px;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    &--1 {
+      margin: {
+        left: 64px;
+        right: 60px;
+      }
+    }
+
+    &--2 {
+      margin-right: auto;
+    }
+  }
 }
