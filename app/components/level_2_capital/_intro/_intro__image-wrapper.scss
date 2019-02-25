@@ -2,6 +2,7 @@
   &--1 {
     position: relative;
     z-index: 0;
+    width: 320px;
   }
 
   &--2 {
@@ -9,7 +10,7 @@
     bottom: 0;
     left: 16px;
     z-index: 1;
-    width: 50%;
+    width: 160px;
   }
 
   @media (min-width: $m-min-width) {
@@ -17,12 +18,12 @@
 
     &--1 {
       order: 1;
-      width: 70%;
+      width: 488px;
       margin-bottom: 160px;
     }
 
     &--2 {
-      width: 25%;
+      width: 176px;
       margin-top: auto;
     }
   }

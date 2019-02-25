@@ -1,7 +1,6 @@
 .intro__inner {
   @media (min-width: $l-min-width) {
     @include padding-hor(0);
-    max-width: 1320px;
   }
 
   @media (min-width: $xl-min-width) {

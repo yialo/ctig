@@ -4,24 +4,24 @@
 
   @media (min-width: $m-min-width) {
     &--1 {
-      width: 50%;
+      width: 352px;
       margin-bottom: 64px;
     }
 
     &--2 {
       order: 1;
-      width: 30%;
+      width: 212px;
       margin-top: 128px;
     }
 
     &--3 {
-      width: 50%;
+      width: 352px;
       margin-left: 64px;
     }
 
     &--4 {
       order: 2;
-      width: 30%;
+      width: 212px;
       margin-top: auto;
     }
   }

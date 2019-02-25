@@ -24,12 +24,12 @@
     position: static;
 
     &--1 {
-      width: 20%;
+      width: 140px;
       margin-top: auto;
     }
 
     &--2 {
-      width: 56%;
+      width: 400px;
       margin: {
         top: 64px;
         bottom: 64px;
@@ -37,7 +37,7 @@
     }
 
     &--3 {
-      width: 18%;
+      width: 128px;
       margin-bottom: auto;
     }
   }
