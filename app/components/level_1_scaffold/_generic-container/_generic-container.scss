@@ -1,27 +1,32 @@
 .generic-container {
   @include outline();
   @include margin-hor();
-  @include padding-hor();
   width: var(--page-min-width);
 
-  &--wide {
-    @include padding-hor(0);
-  }
+  @media (max-width: $s-max-width) {
+    @include padding-hor();
 
-  @media (min-width: $m-min-width) {
-    @include padding-hor(32px);
-
-    &--wide {
+    &--wide-s {
       @include padding-hor(0);
     }
   }
 
-  @media (min-width: $l-min-width) {
-    @include padding-hor(56px);
-    width: auto;
+  @media (min-width: $m-min-width) and (max-width: $m-max-width) {
+    @include padding-hor(32px);
+  }
 
-    &--wide {
-      @include padding-hor(0);
+  @media (min-width: $l-min-width) {
+    width: auto;
+    margin: {
+      left: calc((100% - var(--page-min-width)) / 2);
+      right: 0;
+    };
+    padding: {
+      left: 56px;
+      right: calc(
+        var(--page-header__main-menu-width)
+        + var(--page-padding-right)
+      );
     }
   }
 }

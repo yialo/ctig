@@ -1,6 +1,10 @@
 section.about-brief(class=pageMain_getElClasses('about-brief'))
   include _d_about-brief
-  .generic-container.generic-container--wide.about-brief__container
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'about-brief__container',
+  ])
     h2.generic-heading-1.about-brief__heading О нас
     +generic-picture().about-brief__image-wrapper(
       src='img/about-brief__image.jpg',

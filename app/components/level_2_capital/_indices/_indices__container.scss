@@ -1,6 +1,5 @@
 .indices__container {
   @media (min-width: $m-min-width) {
-    @include padding-hor(32px);
     display: flex;
     flex-wrap: wrap;
   }

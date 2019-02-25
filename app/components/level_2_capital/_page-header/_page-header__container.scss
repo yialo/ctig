@@ -1,6 +1,4 @@
 .page-header__container {
-  @include margin-hor();
-  @include padding-hor();
   display: grid;
   grid: {
     template: {
@@ -9,10 +7,8 @@
     }
     row-gap: 24px;
   }
-  width: $s-min-width;
 
   @media (min-width: $m-min-width) {
-    @include padding-hor(32px);
     grid: {
       template: {
         rows: 1fr repeat(2, auto);
@@ -21,11 +17,9 @@
       gap: 32px;
     }
     align-items: center;
-    width: $m-min-width;
   }
 
   @media (min-width: $l-min-width) {
-    @include padding-hor(56px);
     grid: {
       template: {
         rows: 1fr;
@@ -35,11 +29,6 @@
     }
     justify-content: start;
     align-items: start;
-    width: auto;
-    margin: {
-      left: calc((100% - #{$l-min-width}) / 2);
-      right: 0;
-    };
     padding: {
       top: 40px;
       bottom: 48px;
@@ -48,7 +37,6 @@
   }
 
   @media (min-width: $xl-min-width) {
-    margin-left: calc((100% - #{$xl-min-width}) / 2);
     padding-right: calc(var(--page-header__main-menu-width) + 120px);
   }
 }
