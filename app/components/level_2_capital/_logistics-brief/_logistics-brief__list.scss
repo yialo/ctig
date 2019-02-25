@@ -10,4 +10,9 @@
     grid-area: 2 / 2 / 3 / 3;
     margin-left: 10%;
   }
+
+  @media (min-width: $xl-min-width) {
+    width: 1028px;
+    margin-left: 116px;
+  }
 }

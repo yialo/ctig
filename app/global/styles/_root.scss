@@ -1,8 +1,8 @@
 :root {
-  --directions__list-margin-left: 20px;
-  --directions__list-margin-top: 24px;
   --generic-list-padding: 21px;
   --logistics-crumbs__heading-list-margin-left: 8px;
+  --logistics-directions__list-margin-left: 20px;
+  --logistics-directions__list-margin-top: 24px;
   --main-menu__item-margin-left: 24px;
   --main-menu__navigation-toggle-height: 48px;
   --page-min-width: #{$s-min-width};
@@ -15,8 +15,8 @@
   }
 
   @media (min-width: $l-min-width) {
-    --directions__list-margin-left: 40px;
-    --directions__list-margin-top: 42px;
+    --logistics-directions__list-margin-left: 40px;
+    --logistics-directions__list-margin-top: 42px;
     --main-menu__item-margin-left: 24px;
     --page-header__main-menu-width: 180px;
     --page-min-width: #{$l-min-width};

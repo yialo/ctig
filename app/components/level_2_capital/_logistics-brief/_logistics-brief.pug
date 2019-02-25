@@ -37,16 +37,19 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
             : null
           ),
         ])
-          div(class=['directions', `directions--${modifier}`])
-            h3.generic-heading-2.directions__heading= caption
-            ul.directions__list
+          div(class=[
+            'logistics-directions',
+            `logistics-directions--${modifier}`,
+          ])
+            h3.generic-heading-2.logistics-directions__heading= caption
+            ul.logistics-directions__list
               each item, index in innerList
                 li(class=[
-                  'directions__item',
+                  'logistics-directions__item',
                   (
                     index === innerList.length - 1
-                    ? 'directions__item--last'
+                    ? 'logistics-directions__item--last'
                     : null
                   ),
                 ])
-                  a.directions__link(href='#')= item
+                  a.logistics-directions__link(href='#')= item

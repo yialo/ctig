@@ -8,4 +8,11 @@
       }
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template-columns: 364px 1fr;
+      gap: 104px 60px;
+    }
+  }
 }
