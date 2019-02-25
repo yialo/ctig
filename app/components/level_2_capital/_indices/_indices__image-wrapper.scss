@@ -10,11 +10,12 @@
   }
 
   @media (min-width: $l-min-width) {
-    width: 480px;
+    width: 300px;
     margin-right: 48px;
   }
 
   @media (min-width: $xl-min-width) {
+    width: 480px;
     margin-right: 180px;
   }
 }

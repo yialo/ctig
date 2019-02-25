@@ -12,7 +12,7 @@
   }
 
   @media (min-width: $xl-min-width) {
-    width: 1028px;
-    margin-left: 116px;
+    max-width: 1028px;
+    margin-left: auto;
   }
 }

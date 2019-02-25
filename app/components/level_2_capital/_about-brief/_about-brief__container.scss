@@ -10,10 +10,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     overflow: visible;
   }
 
   @media (min-width: $xl-min-width) {
     position: static;
+    align-items: stretch;
   }
 }

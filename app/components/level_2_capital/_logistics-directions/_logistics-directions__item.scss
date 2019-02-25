@@ -6,4 +6,19 @@
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  @media (min-width: $xl-min-width) {
+    .logistics-directions--europe & {
+      margin: {
+        left: 0;
+        right: 40px;
+      }
+
+      @each $number in (9, 18) {
+        &--#{$number} {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

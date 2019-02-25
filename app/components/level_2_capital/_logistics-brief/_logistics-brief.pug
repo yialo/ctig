@@ -44,10 +44,12 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
             h3.generic-heading-2.logistics-directions__heading= caption
             ul.logistics-directions__list
               each item, index in innerList
+                - const number = index + 1;
                 li(class=[
                   'logistics-directions__item',
+                  `logistics-directions__item--${number}`,
                   (
-                    index === innerList.length - 1
+                    index === number
                     ? 'logistics-directions__item--last'
                     : null
                   ),

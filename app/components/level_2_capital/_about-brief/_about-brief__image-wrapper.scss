@@ -14,9 +14,12 @@
     float: none;
     width: 360px;
     margin: {
-      top: auto;
       bottom: 0;
       right: 60px;
     }
+  }
+
+  @media (min-width: $xl-min-width) {
+    margin-top: auto;
   }
 }
