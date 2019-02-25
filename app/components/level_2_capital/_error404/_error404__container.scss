@@ -1,0 +1,12 @@
+.error404__container {
+  @media (min-width: $l-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: 1fr;
+        columns: minmax(auto, 835px) minmax(auto, 654px);
+      }
+      column-gap: 64px;
+    }
+  }
+}

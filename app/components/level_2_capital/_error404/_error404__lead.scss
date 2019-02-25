@@ -20,4 +20,8 @@
       size: 100% auto;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 0;
+  }
 }
