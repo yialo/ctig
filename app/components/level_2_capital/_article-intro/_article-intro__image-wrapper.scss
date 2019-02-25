@@ -5,4 +5,8 @@
     grid-area: 2 / 1 / 3 / 2;
     margin-bottom: 0;
   }
+
+  @media (min-width: $l-min-width) {
+    grid-row: 1 / 4;
+  }
 }
