@@ -1,0 +1,14 @@
+.about-brief__paragraph {
+  @include margin-bottom-last(16px, 24px);
+  margin-top: 0;
+
+  @media (min-width: $m-min-width) {
+    @include margin-bottom-last(24px, 32px);
+  }
+
+  @media (min-width: $l-min-width) {
+    &--last {
+      margin-bottom: 64px;
+    }
+  }
+}

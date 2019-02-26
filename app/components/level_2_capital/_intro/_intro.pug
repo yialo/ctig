@@ -1,0 +1,24 @@
+section.intro(class=pageMain_getElClasses('intro'))
+  -
+    const INTRO_PICTURES = [
+      { title: 'Ракета', isShadowed: false },
+      { title: 'Облака', isShadowed: true },
+    ];
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'intro__container',
+  ])
+    .blending.intro__inner
+      +blending__heading-wrapper().intro__heading-wrapper
+        | Международная перевозка сборных грузов
+      .blending__pictures.intro__pictures
+        each image, index in INTRO_PICTURES
+          -
+            const { title, isShadowed } = image;
+            const number = index + 1;
+          +generic-picture(isShadowed ? 'shadowed' : null).blending__picture(
+            class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
+            src=`img/intro__image--${number}.jpg`,
+            alt=title,
+          )

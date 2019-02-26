@@ -1,0 +1,4 @@
+.generic-list {
+  @include list();
+  padding-left: var(--generic-list-padding);
+}

@@ -1,0 +1,26 @@
+.logistics-crumbs.logistics__breadcrumbs
+  ul.logistics-crumbs__heading-list
+    each item, index in _LOGISTICS_ITEMS
+      -
+        const { modifier, caption, list } = item;
+        const number = index + 1;
+      li.generic-textblock(class=[
+        'logistics-crumbs__heading-item',
+        `logistics-crumbs__heading-item--${number}`,
+        number === 1 ? 'logistics-crumbs__heading-item--current' : null,
+      ])
+        a.logistics-crumbs__heading-link(href='#')= caption
+  .logistics-crumbs__inner
+    each item in _LOGISTICS_ITEMS
+      - const { modifier, caption, list } = item;
+      div(class=[
+        'logistics-crumbs__list',
+        `logistics-crumbs__list--${modifier}`,
+        modifier === 'europe' ? 'logistics-crumbs__list--current' : null,
+      ])
+        each listItem, index in list
+          div(class=[
+            'logistics-crumbs__item',
+            index === 0 ? 'logistics-crumbs__item--current' : null,
+          ])
+            a.logistics-crumbs__link(href='#')= listItem

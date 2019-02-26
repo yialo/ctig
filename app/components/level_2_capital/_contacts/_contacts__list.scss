@@ -1,0 +1,23 @@
+.contacts__list {
+  @include list();
+
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: repeat(2, auto) 1fr;
+        columns: repeat(2, 1fr);
+      }
+      auto-flow: column;
+      gap: 16px 48px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    grid-template-columns: 300px 384px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-column-gap: 120px;
+  }
+}

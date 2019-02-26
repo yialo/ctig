@@ -1,0 +1,30 @@
+.request-form__heading {
+  color: white;
+
+  .request-form--shipping & {
+    margin-bottom: 32px;
+  }
+
+  .request-form--calculation & {
+    margin-bottom: 24px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: $m-min-width) {
+    .request-form--calculation & {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    .request-form--calculation & {
+      margin-bottom: 42px;
+    }
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    .request-form--shipping & {
+      margin-bottom: 42px;
+    }
+  }
+}

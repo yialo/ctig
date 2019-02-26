@@ -1,0 +1,11 @@
+.contacts__container {
+  margin-bottom: 48px;
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,11 @@
+mixin logo(logo_modifier)
+  div(class=['logo', `logo--${logo_modifier}`, attributes.class])
+    a.logo__link(href=(page.id == 'index' ? null : 'index.html'))
+      img.logo__image(
+        src='img/logo__image.svg',
+        alt=`Логотип компании ${SITE_TITLE}`,
+        width=119,
+        height=39,
+      )
+      if _IS_MAINPAGE
+        h1.generic-hidden-box.logo__heading= page.heading

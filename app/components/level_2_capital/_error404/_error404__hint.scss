@@ -1,0 +1,8 @@
+.error404__hint {
+  margin-bottom: 0;
+  line-height: 1.35;
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}

@@ -1,0 +1,10 @@
+mixin generic-list(genericList_props)
+  - const { modifier, data } = genericList_props;
+  ul(class=['generic-list', `generic-list--${modifier}`, attributes.class])
+    each item, index in data
+      - const number = index + 1;
+      li(class=[
+        'generic-list__item',
+        number === data.length ? 'generic-list__item--last' : null,
+      ])
+        = `${item}${number === data.length ? '.' : ';'}`

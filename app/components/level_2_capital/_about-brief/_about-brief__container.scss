@@ -1,0 +1,19 @@
+.about-brief__container {
+  position: relative;
+
+  @media (min-width: $m-min-width) {
+    position: static;
+    overflow: hidden;
+  }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: visible;
+  }
+
+  @media (min-width: $xl-min-width) {
+    align-items: stretch;
+  }
+}

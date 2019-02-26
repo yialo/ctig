@@ -1,0 +1,14 @@
+.glossary__content {
+  @media (min-width: $m-min-width) {
+    flex: {
+      grow: 0;
+      shrink: 0;
+      basis: 100%;
+    }
+    margin-top: 128px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    flex-basis: 1392px;
+  }
+}

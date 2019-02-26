@@ -1,0 +1,27 @@
+fieldset.request-radio-formgroup.request-form__group
+  -
+    const REQUEST_RADIO_FORMGROUP_CAPTION = 'Тип доставки:';
+    const REQUEST_RADIO_FORMGROUP_FIELDS = [
+      { value: 'plane', legend: 'Самолетом', checked: true },
+      { value: 'ship', legend: 'Кораблем' },
+      { value: 'car', legend: 'Автомобилем' },
+      { value: 'train', legend: 'Поездом' },
+    ];
+  legend.generic-hidden-box.request-radio-formgroup__caption
+    = REQUEST_RADIO_FORMGROUP_CAPTION
+  .request-radio-formgroup__inner
+    span.request-radio-formgroup__decorative-caption(role='presentation')
+      = REQUEST_RADIO_FORMGROUP_CAPTION
+    ul.request-radio-formgroup__list
+      each field in REQUEST_RADIO_FORMGROUP_FIELDS
+        - const { value, legend, checked } = field;
+        li.request-radio-formgroup__item
+          input.generic-hidden-box.request-radio-formgroup__field(
+            type='radio',
+            name='transport_type',
+            value=value,
+            checked=checked,
+            id=value,
+            required,
+          )
+          label.request-radio-formgroup__label(for=value)= legend

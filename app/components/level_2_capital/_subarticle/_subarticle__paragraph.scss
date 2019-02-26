@@ -1,0 +1,10 @@
+.subarticle__paragraph {
+  @include margin-bottom-last(16px);
+  margin-top: 0;
+
+  @media (min-width: $m-min-width) {
+    .subarticle--double-column & {
+      margin-bottom: 0;
+    }
+  }
+}

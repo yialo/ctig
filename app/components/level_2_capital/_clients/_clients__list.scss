@@ -1,0 +1,38 @@
+.clients__list {
+  @include list();
+  display: grid;
+  grid-row-gap: 16px;
+
+  @media (min-width: $m-min-width) {
+    grid: {
+      template: {
+        rows: repeat(3, 1fr);
+        columns: repeat(3, 1fr);
+      }
+      gap: 24px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    grid: {
+      template: {
+        rows: repeat(3, 142px);
+        columns: repeat(3, 256px);
+      }
+      gap: 32px 0;
+    }
+    justify-content: space-between;
+    width: $index-images-container-l;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template: {
+        rows: repeat(3, 232px);
+        columns: repeat(3, 420px);
+      }
+      row-gap: 56px;
+    }
+    width: 1506px;
+  }
+}

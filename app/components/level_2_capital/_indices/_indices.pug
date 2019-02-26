@@ -1,0 +1,29 @@
+section.indices(class=pageMain_getElClasses('indices'))
+  -
+    const INDICES_ITEMS = [
+      ['15 733 000', 'тонн перевезено'],
+      ['156', 'партнеров'],
+      ['15', 'лет на рынке перевозок'],
+      ['58', 'человек в команде'],
+    ];
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'indices__container',
+  ])
+    h2.generic-heading-1.indices__heading Показатели
+    +generic-picture().indices__image-wrapper(
+      src='img/indices__image.jpg',
+      alt='Контейнеры',
+    )
+    dl.indices__list
+      each item, index in INDICES_ITEMS
+        -
+          const [value, key] = item;
+          const number = index + 1;
+        dt(class=['indices__term', `indices__term--${number}`])
+          span.indices__string= key
+        dd.generic-heading-2(class=[
+          'indices__details',
+          `indices__details--${number}`,
+        ])= value

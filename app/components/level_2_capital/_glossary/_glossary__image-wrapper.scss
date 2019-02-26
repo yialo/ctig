@@ -1,0 +1,23 @@
+.glossary__image-wrapper {
+  margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    align-self: center;
+    width: 360px;
+    margin: {
+      bottom: 0;
+      right: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    align-self: stretch;
+    width: 420px;
+    margin-right: 48px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 720px;
+    margin-right: 58px;
+  }
+}

@@ -1,0 +1,21 @@
+.logistics-brief__list {
+  @include list();
+  @include padding-hor();
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+  }
+
+  @media (min-width: $l-min-width) {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: {
+      left: 64px;
+      right: auto;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1028px;
+    margin-left: 100px;
+  }
+}

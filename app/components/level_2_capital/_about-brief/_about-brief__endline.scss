@@ -1,0 +1,16 @@
+.about-brief__endline {
+  @include font($fontSize: 24px, $fontFamily: caveat);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+
+  @media (min-width: $m-min-width) {
+    font-size: 30px;
+    text-align: right;
+  }
+
+  @media (min-width: $l-min-width) {
+    text-align: left;
+  }
+}

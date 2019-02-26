@@ -1,0 +1,16 @@
+.logistics__image-wrapper {
+  margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    grid-area: 2 / 1 / 4 / 2;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 2 / 1 / 4 / 3;
+  }
+}

@@ -1,0 +1,23 @@
+.product-list {
+  display: grid;
+  grid: {
+    template: {
+      rows: auto minmax(50px, 1fr) auto;
+      columns: 1fr;
+    }
+    row-gap: 24px;
+  }
+  height: 100%;
+  padding: 24px 16px 16px;
+  background-color: $form-background;
+
+  @media (min-width: $m-min-width) {
+    row-gap: 32px;
+    height: 100%;
+    padding: 32px;
+  }
+
+  @media (min-width: $l-min-width) {
+    grid-template-rows: auto 320px auto;
+  }
+}

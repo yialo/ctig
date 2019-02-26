@@ -1,0 +1,25 @@
+.about-brief__image-wrapper {
+  margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    float: left;
+    width: 200px;
+    margin: {
+      bottom: 8px;
+      right: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    float: none;
+    width: 360px;
+    margin: {
+      bottom: 0;
+      right: 60px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    margin-top: auto;
+  }
+}

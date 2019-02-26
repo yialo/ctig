@@ -1,0 +1,41 @@
+.navigation-toggle__button {
+  padding: 0;
+  background-color: transparent;
+  border-style: none;
+
+  &--opener {
+    @include svg-background();
+    display: block;
+    width: 22px;
+    height: 12px;
+    background-image: url("../img/navigation-toggle__button--opener.svg");
+
+    &:hover {
+      animation: {
+        name: bounce;
+        duration: 1s;
+        timing-function: ease-in-out;
+      }
+    }
+
+    .is-nav-shown & {
+      display: none;
+    }
+  }
+
+  &--closer {
+    display: none;
+    width: 22px;
+    height: 22px;
+    outline-style: none;
+    transition: transform ease-in-out 0.5s;
+
+    &:hover {
+      transform: rotate(0.5turn);
+    }
+
+    .is-nav-shown & {
+      display: block;
+    }
+  }
+}

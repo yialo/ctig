@@ -1,0 +1,48 @@
+mixin customs(customs_modifier)
+  include _d_customs
+  -
+    const {
+      imageDescription,
+      listItems,
+      paragraphs,
+      subtitle,
+      title,
+    } = CUSTOMS_DATA[customs_modifier];
+  section(class=[
+    'customs',
+    `customs--${customs_modifier}`,
+    attributes.class,
+  ])
+    div(class=[
+      'generic-container',
+      'generic-container--wide-s',
+      'customs__container',
+    ])
+      header.customs__headline
+        h2.generic-heading-1.customs__title= title
+        p.generic-heading-3.customs__subtitle= subtitle
+      +generic-picture().customs__image-wrapper(
+        src=`img/customs--${customs_modifier}__image.jpg`,
+        alt=imageDescription,
+      )
+      .customs__text-content
+        - const customsParagraphsRest = paragraphs.slice(1);
+        p.generic-textblock(class=[
+          'customs__paragraph',
+          'customs__paragraph--lone',
+        ])!= paragraphs[0]
+        ul.customs__list
+          each item, index in listItems
+            li.generic-textblock(class=[
+              'customs__item',
+              index === listItems.length - 1 ? 'customs__item--last' : null,
+            ])!= item
+        each item, index in customsParagraphsRest
+          p.generic-textblock(class=[
+            'customs__paragraph',
+            (
+              index === customsParagraphsRest.length - 1
+              ? 'customs__paragraph--last'
+              : null
+            ),
+          ])!= item

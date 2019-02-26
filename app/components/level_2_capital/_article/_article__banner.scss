@@ -1,0 +1,7 @@
+.article__banner {
+  width: 100%;
+
+  @media (min-width: $xl-min-width) {
+    width: 1440px;
+  }
+}

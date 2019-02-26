@@ -1,0 +1,22 @@
+.mixed-gallery__list {
+  @include list();
+
+  @media (min-width: $m-min-width) {
+    display: flex;
+    flex: {
+      direction: column;
+      wrap: wrap;
+    }
+    align-content: space-between;
+  }
+
+  @media (min-width: $l-min-width) {
+    @include margin-hor();
+    width: $index-images-container-l;
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1560px;
+    margin-left: 0;
+  }
+}

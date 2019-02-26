@@ -1,0 +1,7 @@
+@mixin hover-focus_set() {
+  @each $state in (focus, hover) {
+    &:#{$state} {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@mixin emerald-line() {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100%;
+    height: 3px;
+    background-color: $emerald;
+  }
+}

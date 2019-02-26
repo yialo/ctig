@@ -1,0 +1,16 @@
+@mixin return-button() {
+  position: relative;
+  display: block;
+  padding-left: 21px;
+  text-transform: uppercase;
+
+  &::before {
+    @include svg-background();
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 5px;
+    height: 9px;
+  }
+}

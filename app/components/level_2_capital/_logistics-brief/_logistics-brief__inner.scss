@@ -1,0 +1,13 @@
+.logistics-brief__inner {
+  margin-bottom: 48px;
+
+  @media (min-width: $l-min-width) {
+    grid-area: 1 / 1 / 2 / 3;
+    width: $index-images-container-l;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1570px;
+  }
+}

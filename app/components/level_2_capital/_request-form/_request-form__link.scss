@@ -1,0 +1,13 @@
+.request-form__link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: rgba(77, 77, 77, 0.75);
+  }
+
+  &:active {
+    text-decoration: underline;
+    color: rgba(77, 77, 77, 0.5);
+  }
+}

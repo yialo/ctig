@@ -1,0 +1,14 @@
+.generic-heading-2 {
+  @include font(500, 24px);
+  margin-top: 0;
+  letter-spacing: 0.5px;
+
+  @media (min-width: $m-min-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $l-min-width) {
+    font-size: 48px;
+    letter-spacing: 1px;
+  }
+}

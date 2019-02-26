@@ -1,0 +1,16 @@
+.customs__item {
+  @include margin-bottom-last(8px);
+  position: relative;
+  display: flex;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: black;
+  }
+}

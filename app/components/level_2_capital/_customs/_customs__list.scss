@@ -1,0 +1,4 @@
+.customs__list {
+  @include list();
+  margin-bottom: 24px;
+}

@@ -1,6 +1,6 @@
 .git/
 .vscode/
-app/js/jquery
-app/js/vendors/
+app/vendors/
+app/vendors_customized/
 dist/
 node_modules/

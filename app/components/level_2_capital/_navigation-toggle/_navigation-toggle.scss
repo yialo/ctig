@@ -1,0 +1,19 @@
+.navigation-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid white;
+
+  .is-nav-shown & {
+    border-top-color: black;
+  }
+
+  @media (min-width: $l-min-width) {
+    width: auto;
+    height: 22px;
+    border-top-style: none;
+  }
+}

@@ -1,0 +1,9 @@
+.socials__list {
+  @include list();
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $m-min-width) {
+    flex-direction: column;
+  }
+}

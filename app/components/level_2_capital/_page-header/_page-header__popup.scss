@@ -1,0 +1,10 @@
+.page-header__popup {
+  z-index: 1;
+  display: none;
+  background-color: white;
+
+  .is-nav-shown & {
+    display: block;
+    overflow-y: scroll;
+  }
+}

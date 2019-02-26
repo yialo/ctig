@@ -1,0 +1,13 @@
+.glossary__menu-item {
+  @include margin-bottom-last(24px);
+
+  @media (min-width: $m-min-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    @include margin-bottom-last(32px);
+    font-size: 32px;
+    line-height: normal;
+  }
+}

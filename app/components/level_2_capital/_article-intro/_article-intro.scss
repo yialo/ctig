@@ -1,0 +1,32 @@
+.article-intro {
+  @media (min-width: $m-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: auto auto 1fr;
+        columns: 280px 1fr;
+      }
+      gap: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    grid: {
+      template: {
+        columns: 422px 1fr;
+      }
+      column-gap: 48px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template: {
+        rows: auto 1fr auto;
+        columns: 720px 1fr;
+      }
+      row-gap: 0;
+      column-gap: 60px;
+    }
+  }
+}

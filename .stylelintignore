@@ -1,2 +1,4 @@
-app/sass/vendors/
+*.js
+app/vendors/
+app/vendors_customized/
 dist/css/

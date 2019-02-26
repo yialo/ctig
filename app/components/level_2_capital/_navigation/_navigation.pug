@@ -1,0 +1,30 @@
+nav.navigation.header-popup__navigation
+  include _d_navigation
+  ul.navigation__list
+    each item in NAVIGATION_ITEMS
+      - const [modifier, text] = item;
+      li.generic-heading-2.navigation__item
+        -
+          const linkPath = _EMPTY_NAVIGATION_LINKS.includes(modifier)
+            ? '#'
+            : `${modifier}.html`;
+        a(
+          class=[
+            'navigation__link',
+            (
+              modifier === 'certificates'
+              ? 'navigation__link--certificates'
+              : null
+            ),
+          ],
+          href=(modifier === page.id ? null : linkPath),
+        )= text
+        if modifier in NAVIGATION_INNER_LISTS
+          ul.navigation-sublist.navigation__sublist
+            each item in NAVIGATION_INNER_LISTS[modifier]
+              - const [text, path] = item;
+              li.generic-textblock.navigation-sublist__item
+                a.navigation-sublist__link(href=path)= text
+        if modifier === 'certificates'
+          .navigation__certificates
+            include ../_certificates/_certificates

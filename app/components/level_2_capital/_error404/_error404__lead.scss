@@ -1,0 +1,38 @@
+.error404__lead {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  margin-bottom: 48px;
+  padding-top: calc(100% * 292 / 778);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: {
+      image: url("../img/error404__lead.svg");
+      position: top;
+      repeat: no-repeat;
+      size: 100% auto;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 2 / 1 / 3 / 2;
+
+    &::before {
+      background: {
+        position: 0 80px;
+        size: 780px auto;
+      }
+    }
+  }
+}

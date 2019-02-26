@@ -1,0 +1,20 @@
+.request-radio-formgroup__list {
+  @include list();
+  display: grid;
+  grid: {
+    template: {
+      rows: repeat(2, 1fr);
+      columns: repeat(2, 1fr);
+    }
+    gap: 16px;
+  }
+  justify: {
+    content: space-between;
+    items: stretch;
+  }
+
+  @media (min-width: $m-min-width) {
+    display: flex;
+    width: calc(100% - 160px);
+  }
+}

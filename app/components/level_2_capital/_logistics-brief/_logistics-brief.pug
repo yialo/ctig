@@ -1,0 +1,57 @@
+section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
+  -
+    const LOGISTICS_BRIEF_PICTURES = [
+      { title: 'Башня', isShadowed: true },
+      { title: 'Собор', isShadowed: false },
+      { title: 'Пагода', isShadowed: true },
+    ];
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'logistics-brief__container',
+  ])
+    .blending.logistics-brief__inner
+      +blending__heading-wrapper().logistics__brief__heading-wrapper
+        | География перевозок
+      .blending__pictures.logistics__brief__pictures
+        each image, index in LOGISTICS_BRIEF_PICTURES
+          -
+            const { title, isShadowed } = image;
+            const number = index + 1;
+          +generic-picture(isShadowed ? 'shadowed' : null).blending__picture(
+            class=[
+              'logistics-brief__image-wrapper',
+              `logistics-brief__image-wrapper--${number}`,
+            ],
+            src=`img/logistics-brief__image--${number}.jpg`,
+            alt=title,
+          )
+    ul.logistics-brief__list
+      each listItem, index in _LOGISTICS_ITEMS
+        - const { caption, list: innerList, modifier } = listItem;
+        li(class=[
+          'logistics-brief__item',
+          (
+            index === _LOGISTICS_ITEMS.length - 1
+            ? 'logistics-brief__item--last'
+            : null
+          ),
+        ])
+          div(class=[
+            'logistics-directions',
+            `logistics-directions--${modifier}`,
+          ])
+            h3.generic-heading-2.logistics-directions__heading= caption
+            ul.logistics-directions__list
+              each item, index in innerList
+                - const number = index + 1;
+                li(class=[
+                  'logistics-directions__item',
+                  `logistics-directions__item--${number}`,
+                  (
+                    index === number
+                    ? 'logistics-directions__item--last'
+                    : null
+                  ),
+                ])
+                  a.logistics-directions__link(href='#')= item

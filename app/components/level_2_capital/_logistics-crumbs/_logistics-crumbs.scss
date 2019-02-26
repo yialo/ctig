@@ -1,0 +1,9 @@
+.logistics-crumbs {
+  @media (min-width: $m-min-width) {
+    padding-left: 32px;
+  }
+
+  @media (min-width: $l-min-width) {
+    padding-left: 0;
+  }
+}

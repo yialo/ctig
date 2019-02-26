@@ -1,0 +1,29 @@
+.main-menu__inner {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $m-min-width) {
+    display: block;
+  }
+
+  @media (min-width: $l-min-width) {
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vh - 96px);
+    height: calc(var(--page-header__main-menu-width) - 2px);
+    padding: {
+      top: 22px;
+      bottom: var(--page-padding-right);
+      right: 32px;
+      left: 48px;
+    };
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-top: 44px;
+  }
+}

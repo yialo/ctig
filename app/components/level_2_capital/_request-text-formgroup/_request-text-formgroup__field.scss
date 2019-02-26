@@ -1,0 +1,28 @@
+.request-text-formgroup__field {
+  color: white;
+  border-bottom-color: $request-form-border;
+
+  @include hover-focus_set() {
+    border-bottom-color: white;
+  }
+
+  &--readonly {
+    cursor: pointer;
+
+    &::placeholder {
+      @include hover-focus_set() {
+        color: white;
+      }
+    }
+
+    &:focus {
+      &::placeholder {
+        visibility: visible;
+      }
+    }
+  }
+
+  .request-text-formgroup--dimensions & {
+    padding-left: 42px;
+  }
+}

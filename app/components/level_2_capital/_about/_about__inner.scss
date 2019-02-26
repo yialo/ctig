@@ -1,0 +1,17 @@
+.about__inner {
+  @media (min-width: $m-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $xl-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: auto 1fr;
+        columns: 720px 1fr;
+      }
+      gap: 64px 56px;
+    }
+  }
+}

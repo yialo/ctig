@@ -1,0 +1,13 @@
+.logistics__brief__pictures {
+  padding: {
+    top: 16px;
+    bottom: 16px;
+  }
+
+  @media (min-width: $m-min-width) {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}

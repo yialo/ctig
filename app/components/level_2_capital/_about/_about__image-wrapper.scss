@@ -1,0 +1,17 @@
+.about__image-wrapper {
+  margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    width: 300px;
+    margin: {
+      bottom: 0;
+      right: 32px;
+    };
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 1 / 3 / 2;
+    width: auto;
+    margin-right: 0;
+  }
+}

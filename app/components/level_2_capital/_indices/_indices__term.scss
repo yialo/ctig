@@ -1,0 +1,33 @@
+.indices__term {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @for $number from 1 through 4 {
+    &--#{$number} {
+      @if $number != 4 {
+        margin-bottom: 16px;
+      }
+      grid-row: #{2 * $number} / #{2 * $number + 1};
+    }
+  }
+
+  @media (min-width: $m-min-width) {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $middle-gray;
+
+    @for $number from 1 through 4 {
+      &--#{$number} {
+        grid-row: #{$number} / #{$number + 1};
+      }
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 13px;
+  }
+}

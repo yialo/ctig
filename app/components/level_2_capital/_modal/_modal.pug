@@ -1,0 +1,21 @@
+.modal
+  .modal__container
+    button.modal__close-button(type='button')
+      svg.modal__close-icon-wrapper(width='22' height='22')
+        use.modal__close-icon(href='#close-button' fill='#ffffff')
+      span.generic-hidden-box.modal__button-legend Закрыть окно
+    +request-form().modal__form(
+      modifier='calculation',
+      heading='Запрос на расчет',
+    )
+      .request-form__body
+        +request-text-formgroup()(modifier='route' place='at-modal')
+        +request-text-formgroup()(modifier='cargo-type' place='at-modal')
+        include ../_request-radio-formgroup/_request-radio-formgroup
+        +request-text-formgroup()(modifier='person' place='at-modal')
+      include ../_request-form/_request-form__footer
+      .request-form__product-list.modal__product-list
+        include ../_product-list/_product-list
+  .generic-fixed-fullscreen.modal__overlay
+    span.generic-hidden-box.modal__overlay-hint
+      | Кликните здесь, чтобы закрыть калькулятор

@@ -1,0 +1,26 @@
+include ../global/data/_d_site
+include ../global/data/_d_pages
+
+block page-variable
+
+include ../global/data/_d_components
+include _components_import
+
+doctype html
+html(lang='ru')
+  include ../global/head/_head
+  body.page(class=`page--${page.id}`)
+    .generic-hidden-box.page__icon-templates
+      include ../components/level_2_capital/_icon-templates/_icon-templates
+    header.page__header
+      include ../components/level_2_capital/_page-header/_page-header
+    main.page-main.page__main
+      block page-main
+    .generic-fixed-fullscreen.page__modal
+      include ../components/level_2_capital/_modal/_modal
+    script(src='js/picturefill.js')
+    script(src='js/jquery-3.3.1.js')
+    script(src='js/mCustomScrollbar.concat.min.js')
+    script(src='js/page-header.js')
+    script(src='js/custom-scrollbars.js')
+    block current-page-scripts

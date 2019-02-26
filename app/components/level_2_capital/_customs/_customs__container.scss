@@ -1,0 +1,15 @@
+.customs__container {
+  @media (min-width: $m-min-width) {
+    overflow: hidden;
+  }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+
+    .customs--agent & {
+      align-items: center;
+    }
+  }
+}

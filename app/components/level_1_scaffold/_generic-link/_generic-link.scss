@@ -1,0 +1,17 @@
+.generic-link {
+  font-size: 16px;
+  line-height: 1.5;
+  text: {
+    decoration: underline;
+    transform: uppercase;
+  }
+  color: $emerald;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: transparentize($emerald, 0.5);
+  }
+}

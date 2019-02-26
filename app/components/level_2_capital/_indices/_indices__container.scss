@@ -1,0 +1,6 @@
+.indices__container {
+  @media (min-width: $m-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

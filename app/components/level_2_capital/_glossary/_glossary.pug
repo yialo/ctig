@@ -1,0 +1,33 @@
+.glossary.page-main__glossary
+  include _d_glossary
+  .generic-container.glossary__container
+    h1(class=[
+      'generic-heading-1',
+      'generic-container__heading',
+      'glossary__heading',
+    ])= page.heading()
+    .generic-container__inner.glossary__inner
+      +generic-picture().glossary__image-wrapper(
+        src='img/glossary__image.jpg',
+        alt='Словарь',
+      )
+      ul.glossary__menu
+        each item, index in GLOSSARY_MENU_ITEMS
+          li.generic-heading-3(class=[
+            'glossary__menu-item',
+            (
+              index === GLOSSARY_MENU_ITEMS.length - 1
+              ? 'glossary__menu-item--last'
+              : null
+            ),
+          ])
+            a.glossary__menu-link(href='#')= item
+      .glossary__content
+        h3.generic-heading-3.glossary__wordlist-title Толковый словарь
+        ul.glossary__wordlist
+          each item, index in GLOSSARY_DICTIONARY_ITEMS
+            li(class=[
+              'glossary__word',
+              `glossary__word--${index + 1}`,
+            ])
+              a.glossary__word-link(href='#')= item

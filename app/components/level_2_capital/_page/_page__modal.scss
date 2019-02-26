@@ -1,0 +1,13 @@
+.page__modal {
+  z-index: 3;
+  display: none;
+
+  .is-modal-shown & {
+    display: block;
+    overflow-y: scroll;
+  }
+
+  @media (min-width: $l-min-width) {
+    z-index: 4;
+  }
+}

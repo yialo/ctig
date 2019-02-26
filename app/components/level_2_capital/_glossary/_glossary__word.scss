@@ -1,0 +1,60 @@
+.glossary__word {
+  @include font(400, 16px);
+  letter-spacing: 0.04em;
+  color: $dark-gray;
+
+  @for $number from 16 through 37 {
+    &--#{$number} {
+      grid: {
+        row: #{$number - 7} / #{$number - 6};
+        column: 1 / 3;
+      }
+    }
+  }
+
+  @media (min-width: $m-min-width) {
+    @for $number from 16 through 36 {
+      &--#{$number} {
+        grid: {
+          @if $number <= 22 {
+            row: #{$number - 15} / #{$number - 14};
+          } @else if $number <= 29 {
+            row: #{$number - 14} / #{$number - 13};
+          } @else {
+            row: #{$number - 21} / #{$number - 20};
+          }
+          column: if($number <= 22 or $number >= 30, #{"3 / 4"}, #{"1 / 3"});
+        }
+      }
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    @for $number from 1 through 36 {
+      &--#{$number} {
+        grid: {
+          @if $number <= 8 {
+            row: #{$number} / #{$number + 1};
+            column: 1 / 2;
+          } @else if $number <= 15 {
+            row: #{$number - 8} / #{$number - 7};
+            column: 3 / 4;
+          } @else if $number <= 21 {
+            row: #{$number - 15} / #{$number - 14};
+            column: 5 / 6;
+          } @else if $number <= 29 {
+            row: #{$number - 21} / #{$number - 20};
+            column: 7 / 8;
+          } @else {
+            row: #{$number - 29} / #{$number - 28};
+            column: 9 / 10;
+          }
+        }
+      }
+    }
+
+    &--36 {
+      position: absolute;
+    }
+  }
+}

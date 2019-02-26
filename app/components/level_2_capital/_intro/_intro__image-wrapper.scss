@@ -1,0 +1,55 @@
+.intro__image-wrapper {
+  &--1 {
+    position: relative;
+    z-index: 0;
+    width: 320px;
+  }
+
+  &--2 {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    z-index: 1;
+    width: 160px;
+  }
+
+  @media (min-width: $m-min-width) {
+    position: static;
+
+    &--1 {
+      order: 1;
+      width: 488px;
+      margin-bottom: 160px;
+    }
+
+    &--2 {
+      width: 186px;
+      margin: {
+        top: auto;
+        right: auto;
+      }
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      width: 596px;
+    }
+
+    &--2 {
+      width: 212px;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    &--1 {
+      width: 840px;
+    }
+
+    &--2 {
+      width: 300px;
+      margin-left: 70px;
+    }
+  }
+}

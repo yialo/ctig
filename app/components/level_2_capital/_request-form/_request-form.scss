@@ -1,0 +1,30 @@
+.request-form {
+  $request-form-wide-paddings: 64px 64px 40px;
+  background-color: $form-background;
+
+  &--shipping {
+    padding: 48px 16px;
+  }
+
+  &--calculation {
+    padding: 16px;
+  }
+
+  @media (min-width: $m-min-width) {
+    &--calculation {
+      padding: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    &--calculation {
+      padding: $request-form-wide-paddings;
+    }
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    &--shipping {
+      padding: $request-form-wide-paddings;
+    }
+  }
+}

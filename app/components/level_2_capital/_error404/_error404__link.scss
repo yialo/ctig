@@ -1,0 +1,37 @@
+.error404__link {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 0.75px $emerald;
+  position: relative;
+  color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: {
+      image: url("../img/error404__link.svg");
+      position: 0 0;
+      repeat: repeat-x;
+      size: 10px 1;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+
+    &::after {
+      display: block;
+    }
+  }
+}

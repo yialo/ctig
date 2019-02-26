@@ -1,0 +1,15 @@
+.certificates
+  include _d_certificates
+  .certificates__header
+    a.certificates__return-button(href='#') Вернуться
+  ul.certificates__list
+    each text, index in CERTIFICATES_ITEMS
+      li(class=[
+        'certificates__item',
+        (
+          index === CERTIFICATES_ITEMS.length - 1
+          ? 'certificates__item--last'
+          : null
+        )
+      ])
+        a.certificates__link(href='#')= text

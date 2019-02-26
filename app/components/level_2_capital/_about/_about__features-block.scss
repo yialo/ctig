@@ -1,0 +1,36 @@
+.about__features-block {
+  @include margin-bottom-last(48px);
+
+  @media (min-width: $m-min-width) {
+    &--1 {
+      flex: {
+        grow: 1;
+        shrink: 0;
+        basis: 50px;
+      }
+      margin-bottom: 0;
+    }
+
+    &--2 {
+      flex: {
+        grow: 0;
+        shrink: 0;
+        basis: 100%;
+      }
+      margin-top: 48px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    &--1 {
+      grid-area: 1 / 2 / 2 / 3;
+      width: 616px;
+    }
+
+    &--2 {
+      grid-area: 2 / 2 / 3 / 3;
+      width: 644px;
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.transport-item__heading {
+  @include padding-hor();
+  margin-bottom: 16px;
+
+  .transport-item--special & {
+    color: $middle-gray;
+  }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 40px;
+  }
+}

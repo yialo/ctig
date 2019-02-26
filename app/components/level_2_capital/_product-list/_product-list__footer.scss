@@ -1,0 +1,7 @@
+.product-list__footer {
+  padding-left: 16px;
+
+  @media (min-width: $l-min-width) {
+    padding-left: 8px;
+  }
+}

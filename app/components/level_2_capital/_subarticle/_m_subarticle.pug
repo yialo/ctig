@@ -1,0 +1,36 @@
+mixin subarticle(subarticle_modifier)
+  -
+    const SUBARTICLES_PARAGRAPHS_COUNT = {
+      'double-column': 4,
+      'illustrated': 2,
+    };
+    const paragraphsTotal = SUBARTICLES_PARAGRAPHS_COUNT[subarticle_modifier];
+    const getParagraphsStack = function (amount) {
+      let paragraphsSet = [];
+      for (let i = 1; i <= amount; i += 1) {
+        paragraphsSet.push(_TEMPLATE_PARAGRAPHS[(i + 1) % 2]);
+      }
+      return paragraphsSet;
+    };
+
+  div(class=[
+    'subarticle',
+    `subarticle--${subarticle_modifier}`,
+    attributes.class,
+  ])
+    if subarticle_modifier === 'illustrated'
+      +generic-picture().subarticle__image-wrapper(
+        src='img/article__image.jpg',
+        alt='Контейнеры на складе',
+    )
+    h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
+    .subarticle__textblock
+      each paragraphText, index in getParagraphsStack(paragraphsTotal)
+        p.generic-textblock(class=[
+          'subarticle__paragraph',
+          (
+            index === paragraphsTotal - 1
+            ? 'subarticle__paragraph--last'
+            : null
+          ),
+        ])= paragraphText

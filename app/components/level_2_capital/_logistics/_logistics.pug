@@ -1,0 +1,21 @@
+.logistics.page-main__logistics
+  div(class=[
+    'generic-container',
+    'generic-container--wide',
+    'logistics__container',
+  ])
+    h1.generic-heading-1.generic-container__heading.logistics__heading
+      = page.heading()
+    .generic-container__inner.logistics__inner
+      include ../_logistics-crumbs/_logistics-crumbs
+      +generic-picture().logistics__image-wrapper(
+        src='img/logistics__image.jpg',
+        alt=page.heading(),
+      )
+      include ../_country-information/_country-information
+      .logistics__form-wrapper
+        +request-form()(modifier='shipping', heading='Заявка на перевозку')
+          .request-form__body
+            each modifier in ['route', 'dimensions', 'person']
+              +request-text-formgroup()(modifier=modifier, place='at-flow')
+          include ../_request-form/_request-form__footer

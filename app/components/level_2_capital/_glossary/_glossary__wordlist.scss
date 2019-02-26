@@ -1,0 +1,28 @@
+.glossary__wordlist {
+  @include list();
+  display: grid;
+  grid: {
+    template: {
+      rows: repeat(8, auto);
+      columns: repeat(2, 1fr);
+    }
+    auto-flow: column;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $m-min-width) {
+    grid: {
+      template-columns: 1fr 1fr 2fr;
+      auto-flow: column dense;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    position: relative;
+    grid: {
+      template-columns:
+        40px 140px 40px 136px 324px 100px 256px 106px 1fr;
+      auto-flow: column;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.main-menu {
+  @media (min-width: $l-min-width) {
+    height: 100%;
+    padding-top: 96px;
+    background-color: white;
+  }
+}

@@ -1,0 +1,14 @@
+.calls__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $m-min-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $l-min-width) {
+    justify-content: flex-start;
+  }
+}

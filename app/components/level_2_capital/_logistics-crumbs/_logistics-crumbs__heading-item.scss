@@ -1,0 +1,20 @@
+.logistics-crumbs__heading-item {
+  margin-left: var(--logistics-crumbs__heading-list-margin-left);
+
+  &--current {
+    order: -1;
+    flex-grow: 1;
+    display: flex;
+    color: $emerald;
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      align-self: center;
+      width: 10px;
+      height: 1px;
+      margin-left: 8px;
+      background-color: $middle-gray;
+    }
+  }
+}

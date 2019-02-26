@@ -1,0 +1,39 @@
+section.additional-service(class=[
+  'mixed-gallery',
+  pageMain_getElClasses('additional-service'),
+])
+  -
+    const ADDITIONAL_ITEMS = [
+      ['insurance', 'Страхование грузов'],
+      ['chinese', 'Поиск поставщиков в Китае'],
+      ['contract', 'Предоставление контрактодержателя'],
+      ['cross-docking', 'Кросс докинг'],
+    ];
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'additional-service__container',
+  ])
+    h2.generic-heading-1.additional-service__heading Дополнительный сервис
+    ul.mixed-gallery__list.additional-service__list
+      each item, index in ADDITIONAL_ITEMS
+        -
+          const [modifier, heading] = item;
+          const number = index + 1;
+        li(class=[
+          'additional-service-item',
+          `additional-service-item--${modifier}`,
+          'additional-service__item',
+          `additional-service__item--${number}`,
+          (
+            number === ADDITIONAL_ITEMS.length
+            ? 'additional-service__item--last'
+            : null
+          ),
+        ])
+          h3.generic-heading-2.additional-service-item__heading
+            span.additional-service-item__string= heading
+          +generic-picture().additional-service-item__image-wrapper(
+            src=`img/additional-service-item__image--${number}.jpg`,
+            alt=heading,
+          )

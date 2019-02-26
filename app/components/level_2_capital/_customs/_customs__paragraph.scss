@@ -1,0 +1,8 @@
+.customs__paragraph {
+  @include margin-bottom-last(16px);
+  margin-top: 0;
+
+  &--lone {
+    margin-bottom: 24px;
+  }
+}

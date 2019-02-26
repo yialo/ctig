@@ -1,0 +1,5 @@
+.additional-service__list {
+  @media (min-width: $m-min-width) {
+    height: var(--additional-service-list-height);
+  }
+}

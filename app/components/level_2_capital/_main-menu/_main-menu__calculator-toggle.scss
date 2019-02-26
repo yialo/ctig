@@ -1,0 +1,7 @@
+.main-menu__calculator-toggle {
+  display: none;
+
+  @media (min-width: $l-min-width) {
+    display: block;
+  }
+}

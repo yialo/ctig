@@ -1,0 +1,7 @@
+.intro__pictures {
+  padding-bottom: 16px;
+
+  @media (min-width: $m-min-width) {
+    padding-bottom: 0;
+  }
+}

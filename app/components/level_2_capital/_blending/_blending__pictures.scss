@@ -1,0 +1,8 @@
+.blending__pictures {
+  position: relative;
+
+  @media (min-width: $m-min-width) {
+    z-index: 1;
+    display: flex;
+  }
+}

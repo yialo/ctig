@@ -1,0 +1,9 @@
+.product-list__return-link {
+  @include font(500, 12px);
+  @include return-button();
+  color: white;
+
+  &::before {
+    background-image: url("../img/product-list__return-link.svg");
+  }
+}

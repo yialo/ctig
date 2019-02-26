@@ -1,0 +1,24 @@
+.additional-service-item__heading {
+  @include padding-hor();
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+
+  @media (min-width: $m-min-width) {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  @media (min-width: $l-min-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    @include padding-hor(40px);
+    font-size: 48px;
+  }
+}

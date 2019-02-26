@@ -1,0 +1,7 @@
+.blending {
+  @media (min-width: $m-min-width) {
+    -webkit-font-smoothing: subpixel-antialiased;
+    position: relative;
+    z-index: 0;
+  }
+}

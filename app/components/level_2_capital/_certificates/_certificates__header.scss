@@ -1,0 +1,8 @@
+.certificates__header {
+  display: flex;
+  margin-bottom: 32px;
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 48px;
+  }
+}

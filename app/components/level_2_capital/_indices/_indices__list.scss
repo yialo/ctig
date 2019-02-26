@@ -1,0 +1,40 @@
+.indices__list {
+  @include padding-hor();
+  display: grid;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  grid-template: {
+    rows: repeat(8, auto);
+    columns: 1fr;
+  }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 50px;
+    }
+    grid: {
+      template: {
+        rows: repeat(4, auto);
+        columns: auto 1fr;
+      }
+      gap: 32px 24px;
+    }
+    align-items: end;
+  }
+
+  @media (min-width: $l-min-width) {
+    grid-gap: 0 48px;
+    align-content: space-between;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-gap: 96px;
+    align-content: start;
+    max-width: 900px;
+  }
+}

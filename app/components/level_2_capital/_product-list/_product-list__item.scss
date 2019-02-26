@@ -1,0 +1,13 @@
+.product-list__item {
+  @include margin-bottom-last(8px);
+  @include font(400, 16px);
+  line-height: normal;
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $l-min-width) {
+    display: flex;
+  }
+}

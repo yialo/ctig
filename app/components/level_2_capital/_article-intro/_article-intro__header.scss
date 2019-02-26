@@ -1,0 +1,22 @@
+.article-intro__header {
+  margin-bottom: 24px;
+
+  @media (min-width: $m-min-width) {
+    grid-area: 1 / 1 / 2 / 2;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $l-min-width) {
+    justify-self: end;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 1 / 2 / 3;
+    margin: {
+      top: 32px;
+      bottom: 32px;
+      right: 600px;
+    };
+  }
+}

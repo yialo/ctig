@@ -1,0 +1,29 @@
+.contacts__item {
+  margin-bottom: 16px;
+
+  &--address {
+    width: 270px;
+    margin-bottom: 0;
+  }
+
+  &--stock {
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 0;
+
+    &--address {
+      grid-area: 2 / 2 / 4 / 3;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    &--address {
+      width: auto;
+    }
+  }
+}

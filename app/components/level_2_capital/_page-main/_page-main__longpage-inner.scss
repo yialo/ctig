@@ -1,0 +1,23 @@
+.page-main__longpage-inner {
+  margin-bottom: 84px;
+
+  &--customs-service {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 96px;
+
+    &--customs-service {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 200px;
+
+    &--customs-service {
+      margin-bottom: 0;
+    }
+  }
+}

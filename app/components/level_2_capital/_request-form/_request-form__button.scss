@@ -1,0 +1,22 @@
+.request-form__button {
+  @mixin request-form__button-wide($modifier: calculation) {
+    .request-form--#{$modifier} & {
+      margin-bottom: 0;
+      justify-self: start;
+      align-self: end;
+    }
+  }
+
+  margin-bottom: 16px;
+  padding: 0;
+  background-color: transparent;
+  border-style: none;
+
+  @media (min-width: $m-min-width) {
+    @include request-form__button-wide(calculation);
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    @include request-form__button-wide(shipping);
+  }
+}

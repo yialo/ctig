@@ -1,0 +1,19 @@
+.glossary__menu {
+  @include list();
+  margin-bottom: 56px;
+  padding-left: 16px;
+
+  @media (min-width: $m-min-width) {
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 50px;
+    }
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: $xl-min-width) {
+    align-self: center;
+  }
+}

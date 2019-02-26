@@ -1,0 +1,7 @@
+@mixin svg-background() {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}

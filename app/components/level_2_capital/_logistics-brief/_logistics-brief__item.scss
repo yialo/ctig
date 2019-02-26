@@ -1,0 +1,7 @@
+.logistics-brief__item {
+  @include margin-bottom-last(48px);
+
+  @media (min-width: $l-min-width) {
+    @include margin-bottom-last(84px);
+  }
+}

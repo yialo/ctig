@@ -1,0 +1,22 @@
+:root {
+  --product-list__wrapper-scrollbar-width: 4px;
+}
+
+#mCSB_1 {
+  .mCSB_container {
+    margin-right: 0;
+  }
+
+  .mCSB_scrollTools {
+    width: var(--product-list__wrapper-scrollbar-width);
+  }
+
+  .mCSB_dragger_bar {
+    background-color: #4d4d4d;
+  }
+
+  .mCSB_draggerRail {
+    width: 100%;
+    background-color: #292929;
+  }
+}

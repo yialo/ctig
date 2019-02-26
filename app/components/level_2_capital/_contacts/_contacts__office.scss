@@ -1,0 +1,18 @@
+.contacts__office {
+  margin-bottom: 48px;
+
+  @media (min-width: $m-min-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $l-min-width) {
+    margin: {
+      bottom: 0;
+      right: 48px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    margin-right: auto;
+  }
+}

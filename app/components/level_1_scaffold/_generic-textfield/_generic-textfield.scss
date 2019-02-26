@@ -1,0 +1,35 @@
+.generic-textfield {
+  @include form-text-s();
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 7px 12px 6px;
+  background-color: transparent;
+  border: {
+    style: none;
+    bottom: {
+      width: 1px;
+      style: solid;
+    }
+  }
+  transition: {
+    property: border-bottom-color;
+    duration: 0.3s;
+  }
+
+  &::placeholder {
+    color: $form-gray;
+    transition: {
+      property: color;
+      duration: 0.3s;
+    }
+  }
+
+  &:focus {
+    outline-style: none;
+
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
+}

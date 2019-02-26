@@ -1,0 +1,21 @@
+.about-brief__text-content {
+  @include padding-hor();
+
+  @media (min-width: $m-min-width) {
+    position: relative;
+    padding: {
+      left: 48px;
+      right: 0;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 50px;
+    }
+    max-width: 600px;
+    padding-left: 0;
+  }
+}

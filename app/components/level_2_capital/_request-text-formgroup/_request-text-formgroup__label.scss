@@ -1,0 +1,39 @@
+.request-text-formgroup__label {
+  display: block;
+
+  .request-text-formgroup--dimensions & {
+    @each $modifier in (length, width, height, weight,) {
+      &--#{$modifier} {
+        background: {
+          image: url("../img/request-text-formgroup__label--#{$modifier}.svg");
+          position: 12px calc(100% - 6px);
+          repeat: no-repeat;
+          size: 18px if($modifier == weight, 20px, 18px);
+        }
+      }
+    }
+  }
+
+  .request-text-formgroup--cargo-type & {
+    &--type {
+      position: relative;
+
+      &::before {
+        @include form-text-s();
+        content: "выбрать";
+        position: absolute;
+        bottom: 1px;
+        right: 0;
+        height: calc(100% - 1px);
+        padding: 7px 12px 5px 36px;
+        color: $emerald;
+        background-image: linear-gradient(
+          to right,
+          transparent 0,
+          $form-background 24px,
+        );
+        cursor: pointer;
+      }
+    }
+  }
+}

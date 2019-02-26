@@ -1,0 +1,8 @@
+.copyright {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $m-min-width) {
+    justify-content: center;
+  }
+}

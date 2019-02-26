@@ -1,0 +1,41 @@
+.page-header__container {
+  display: grid;
+  grid: {
+    template: {
+      rows: 1fr repeat(3, auto);
+      columns: 1fr;
+    }
+    row-gap: 24px;
+  }
+
+  @media (min-width: $m-min-width) {
+    grid: {
+      template: {
+        rows: 1fr repeat(2, auto);
+        columns: auto 1fr auto;
+      }
+      gap: 32px;
+    }
+    align-items: center;
+  }
+
+  @media (min-width: $l-min-width) {
+    grid: {
+      template: {
+        rows: 1fr;
+        columns: auto 1fr 256px;
+      }
+      gap: 0;
+    }
+    justify-content: start;
+    align-items: start;
+    padding: {
+      top: 40px;
+      bottom: 48px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-right: 176px;
+  }
+}

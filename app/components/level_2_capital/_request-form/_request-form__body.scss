@@ -1,0 +1,35 @@
+.request-form__body {
+  @mixin request-fomr__body-wide($modifier: calculation) {
+    .request-form--#{$modifier} & {
+      grid-row-gap: 48px;
+      margin-bottom: 48px;
+    }
+  }
+
+  display: grid;
+
+  .request-form--shipping & {
+    grid-row-gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .request-form--calculation & {
+    grid-row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $m-min-width) {
+    .request-form--calculation & {
+      grid-row-gap: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    @include request-fomr__body-wide(calculation);
+  }
+
+  @media (min-width: $logistics-request-form-resize) {
+    @include request-fomr__body-wide(shipping);
+  }
+}

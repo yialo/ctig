@@ -1,0 +1,9 @@
+.generic-container__inner {
+  @media (min-width: $l-min-width) {
+    padding-left: 56px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-left: 112px;
+  }
+}
