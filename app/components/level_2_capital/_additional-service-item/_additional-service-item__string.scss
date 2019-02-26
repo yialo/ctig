@@ -1,9 +1,10 @@
 .additional-service-item__string {
   $additions-service-item__string_Data: (
-    insurance: (s: 200px 16px, m: 200px 48px, l: 240px 64px,),
-    chinese: (s: 170px 96px, m: auto 96px, l: 240px 56px,),
-    contract: (s: auto 32px, m: auto 32px, l: auto 40px,),
-    cross-docking: (s: 120px 72px, m: 120px 24px, l: 140px 24px,),
+    insurance: (s: 200px 16px, m: 200px 48px, l: 240px 64px, xl: 340px 98px,),
+    chinese: (s: 170px 96px, m: auto 96px, l: 240px 56px, xl: 340px 98px,),
+    contract: (s: auto 32px, m: auto 32px, l: auto 40px, xl: 560px 98px,),
+    cross-docking:
+      (s: 120px 72px, m: 120px 24px, l: 140px 24px, xl: 180px 98px),
   );
 
   @mixin additional-services-item__string($viewport) {
@@ -24,5 +25,9 @@
 
   @media (min-width: $l-min-width) {
     @include additional-services-item__string(l);
+  }
+
+  @media (min-width: $xl-min-width) {
+    @include additional-services-item__string(xl);
   }
 }

@@ -16,4 +16,9 @@
   @media (min-width: $l-min-width) {
     font-size: 32px;
   }
+
+  @media (min-width: $xl-min-width) {
+    @include padding-hor(40px);
+    font-size: 48px;
+  }
 }

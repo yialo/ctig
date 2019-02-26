@@ -55,4 +55,20 @@
       }
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    &--1 {
+      margin: {
+        bottom: 200px;
+        left: 60px;
+      }
+    }
+
+    &--2 {
+      margin: {
+        top: 340px;
+        bottom: 200px;
+      }
+    }
+  }
 }
