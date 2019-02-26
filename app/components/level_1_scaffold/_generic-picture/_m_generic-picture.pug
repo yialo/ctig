@@ -1,16 +1,49 @@
-mixin generic-picture(genericPicture_modifier)
+mixin generic-picture(genericPicture_props)
+  -
+    const getPictureData = function (props) {
+      const { path, ext, alt, mediaSet } = props;
+
+      let finalSet = { srcset: '', sizes: '' };
+      const lastIndex = mediaSet.length - 1;
+
+      for (let i = 0; i <= lastIndex; i += 1) {
+        if (i < lastIndex) {
+          const [mq, width] = mediaSet[i];
+          const srcToAdd =
+            `img/${path}@${width}.${ext} ${width}w, `;
+          const sizeToAdd = `${_MAX_VIEWPORTS[mq]} ${width}px, `;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += sizeToAdd;
+        } else {
+          const srcToAdd =
+            `img/${path}@${mediaSet[i]}.${ext} ${mediaSet[i]}w`;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += `${mediaSet[i]}px`;
+        }
+      }
+
+      const src = `img/${path}.${ext}`;
+
+      finalSet.alt = alt;
+      finalSet.src = src;
+
+      return finalSet;
+    };
+
+    const { srcset, sizes, src, alt } = getPictureData(genericPicture_props);
+
   picture(class=[
     'generic-picture',
     (
-      genericPicture_modifier
-      ? `generic-picture--${genericPicture_modifier}`
+      attributes.modifier
+      ? `generic-picture--${modifier}`
       : null
     ),
     attributes.class,
-  ])&attributes(attributes)
+  ])
     img.generic-picture__image(
-      srcset=attributes.srcset,
-      sizes=attributes.sizes,
-      src=attributes.src,
-      alt=attributes.alt,
+      srcset=srcset,
+      sizes=sizes,
+      src=src,
+      alt=alt,
     )

@@ -4,12 +4,7 @@
     h1.generic-heading-1.generic-container__heading.about__heading
       = page.heading()
     .generic-container__inner.about__inner
-      +generic-picture().about__image-wrapper(
-        srcset=getPictureData(ABOUT_IMAGES[0]).srcset,
-        sizes=getPictureData(ABOUT_IMAGES[0]).sizes,
-        src=getPictureData(ABOUT_IMAGES[0]).src,
-        alt=getPictureData(ABOUT_IMAGES[0]).alt,
-      )
+      +generic-picture(ABOUT_IMAGES).about__image-wrapper
       each item, index in ABOUT_FEATURES_LISTS
         -
           const { heading, list } = item;

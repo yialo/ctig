@@ -18,13 +18,14 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
           -
             const { title, isShadowed } = image;
             const number = index + 1;
-          +generic-picture(isShadowed ? 'shadowed' : null).blending__picture(
+          +generic-picture().blending__picture(
             class=[
               'logistics-brief__image-wrapper',
               `logistics-brief__image-wrapper--${number}`,
             ],
             src=`img/logistics-brief__image--${number}.jpg`,
             alt=title,
+            modifier=(isShadowed ? 'shadowed' : null),
           )
     ul.logistics-brief__list
       each listItem, index in _LOGISTICS_ITEMS

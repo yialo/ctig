@@ -17,8 +17,9 @@ section.intro(class=pageMain_getElClasses('intro'))
           -
             const { title, isShadowed } = image;
             const number = index + 1;
-          +generic-picture(isShadowed ? 'shadowed' : null).blending__picture(
+          +generic-picture().blending__picture(
             class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
             src=`img/intro__image--${number}.jpg`,
             alt=title,
+            modifier=(isShadowed ? 'shadowed' : null),
           )
