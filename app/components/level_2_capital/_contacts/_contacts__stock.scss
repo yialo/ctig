@@ -2,4 +2,8 @@
   @media (min-width: $l-min-width) {
     flex-grow: 1;
   }
+
+  @media (min-width: $xl-min-width) {
+    flex-grow: 0;
+  }
 }

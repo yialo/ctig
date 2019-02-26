@@ -6,4 +6,8 @@
   @media (min-width: $m-min-width) {
     @include margin-bottom-last(32px);
   }
+
+  @media (min-width: $m-min-width) {
+    font-size: 24px;
+  }
 }

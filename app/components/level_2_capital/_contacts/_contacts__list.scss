@@ -16,4 +16,8 @@
   @media (min-width: $l-min-width) {
     grid-template-columns: 300px 384px;
   }
+
+  @media (min-width: $xl-min-width) {
+    grid-column-gap: 120px;
+  }
 }

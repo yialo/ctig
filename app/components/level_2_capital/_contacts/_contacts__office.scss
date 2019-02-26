@@ -11,4 +11,8 @@
       right: 48px;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    margin-right: auto;
+  }
 }

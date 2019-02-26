@@ -2,4 +2,8 @@
   @media (min-width: $l-min-width) {
     display: flex;
   }
+
+  @media (min-width: $xl-min-width) {
+    width: 1432px;
+  }
 }
