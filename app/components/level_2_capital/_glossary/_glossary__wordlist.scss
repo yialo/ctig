@@ -16,4 +16,13 @@
       auto-flow: column dense;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    position: relative;
+    grid: {
+      template-columns:
+        40px 140px 40px 136px 324px 100px 256px 106px 1fr;
+      auto-flow: column;
+    }
+  }
 }

@@ -1,7 +1,5 @@
 .glossary__menu {
   @include list();
-  display: grid;
-  grid-row-gap: 24px;
   margin-bottom: 56px;
   padding-left: 16px;
 
@@ -15,10 +13,7 @@
     padding-left: 0;
   }
 
-  @media (min-width: $l-min-width) {
-    flex: {
-      grow: 0;
-      basis: 380px;
-    }
+  @media (min-width: $xl-min-width) {
+    align-self: center;
   }
 }

@@ -12,8 +12,15 @@
         alt='Словарь',
       )
       ul.glossary__menu
-        each item in GLOSSARY_MENU_ITEMS
-          li.generic-heading-3.glossary__menu-item
+        each item, index in GLOSSARY_MENU_ITEMS
+          li.generic-heading-3(class=[
+            'glossary__menu-item',
+            (
+              index === GLOSSARY_MENU_ITEMS.length - 1
+              ? 'glossary__menu-item--last'
+              : null
+            ),
+          ])
             a.glossary__menu-link(href='#')= item
       .glossary__content
         h3.generic-heading-3.glossary__wordlist-title Толковый словарь
