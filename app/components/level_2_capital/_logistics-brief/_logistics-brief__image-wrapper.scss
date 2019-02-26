@@ -50,7 +50,10 @@
     &--1 {
       transform: translateY(128px);
       width: 170px;
-      margin-right: var(--logistics-brief-column-gap);
+      margin: {
+        left: 24px;
+        right: var(--logistics-brief-column-gap);
+      }
     }
 
     &--2 {

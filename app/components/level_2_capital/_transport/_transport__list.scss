@@ -1,9 +1,5 @@
 .transport__list {
   @media (min-width: $m-min-width) {
-    height: 1050px;
-  }
-
-  @media (min-width: $l-min-width) {
-    height: 1500px;
+    height: var(--transport-list-heigth);
   }
 }

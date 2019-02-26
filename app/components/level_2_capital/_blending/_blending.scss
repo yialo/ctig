@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $l-min-width) {
-    width: 900px;
+    width: $index-images-container-l;
   }
 
   @media (min-width: $xl-min-width) {
