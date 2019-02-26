@@ -24,4 +24,15 @@
   @media (min-width: $l-min-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 2 / 1 / 3 / 2;
+
+    &::before {
+      background: {
+        position: 0 80px;
+        size: 780px auto;
+      }
+    }
+  }
 }

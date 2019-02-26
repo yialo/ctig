@@ -9,4 +9,14 @@
       column-gap: 64px;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template: {
+        rows: auto 1fr;
+        columns: 840px 1fr;
+      }
+      gap: 176px 64px;
+    }
+  }
 }
