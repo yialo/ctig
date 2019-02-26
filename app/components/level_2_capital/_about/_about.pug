@@ -5,8 +5,10 @@
       = page.heading()
     .generic-container__inner.about__inner
       +generic-picture().about__image-wrapper(
-        src='img/about__image.jpg',
-        alt='Склад',
+        srcset=getPictureData(ABOUT_IMAGES[0]).srcset,
+        sizes=getPictureData(ABOUT_IMAGES[0]).sizes,
+        src=getPictureData(ABOUT_IMAGES[0]).src,
+        alt=getPictureData(ABOUT_IMAGES[0]).alt,
       )
       each item, index in ABOUT_FEATURES_LISTS
         -

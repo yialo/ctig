@@ -7,5 +7,10 @@ mixin generic-picture(genericPicture_modifier)
       : null
     ),
     attributes.class,
-  ])
-    img.generic-picture__image(src=attributes.src alt=attributes.alt)
+  ])&attributes(attributes)
+    img.generic-picture__image(
+      srcset=attributes.srcset,
+      sizes=attributes.sizes,
+      src=attributes.src,
+      alt=attributes.alt,
+    )

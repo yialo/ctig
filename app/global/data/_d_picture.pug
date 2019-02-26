@@ -1,0 +1,44 @@
+-
+  const VIEWPORT_S_MAX_WIDTH = '(max-width: 767px)';
+  const VIEWPORT_M_MAX_WIDTH = '(max-width: 1199px)';
+  const VIEWPORT_L_MAX_WIDTH = '(max-width: 1919px)';
+
+  const VIEWPORT_M_MIN_WIDTH = '(min-width: 768px)';
+  const VIEWPORT_L_MIN_WIDTH = '(min-width: 1200px)';
+  const VIEWPORT_XL_MIN_WIDTH = '(min-width: 1920px)';
+
+  const VPS_MAX = {
+    'S': '(max-width: 767px)',
+    'M': '(max-width: 1199px)',
+    'L': '(max-width: 1919px)',
+  };
+
+  const getPictureData = function (props) {
+    const { path, ext, alt, mediaSet } = props;
+
+    let finalSet = { srcset: '', sizes: '' };
+    const lastIndex = mediaSet.length - 1;
+
+    for (let i = 0; i <= lastIndex; i++) {
+      if (i < lastIndex) {
+        const [mq, width] = mediaSet[i];
+        const srcToAdd =
+          `img/${path}@${width}.${ext} ${width}w, `;
+        const sizeToAdd = `${VPS_MAX[mq]} ${width}px, `;
+        finalSet.srcset += srcToAdd;
+        finalSet.sizes += sizeToAdd;
+      } else {
+        const srcToAdd =
+          `img/${path}@${mediaSet[i]}.${ext} ${mediaSet[i]}w`;
+        finalSet.srcset += srcToAdd;
+        finalSet.sizes += `${mediaSet[i]}px`;
+      }
+    }
+
+    const src = `img/${path}.${ext}`;
+
+    finalSet.alt = alt;
+    finalSet.src = src;
+
+    return finalSet;
+  };
