@@ -4,4 +4,12 @@
     position: relative;
     z-index: 0;
   }
+
+  @media (min-width: $l-min-width) {
+    width: 900px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1265px;
+  }
 }

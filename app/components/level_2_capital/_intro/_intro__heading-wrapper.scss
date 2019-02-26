@@ -9,6 +9,10 @@
   }
 
   @media (min-width: $l-min-width) {
+    top: 72px;
+  }
+
+  @media (min-width: $xl-min-width) {
     top: 130px;
   }
 }

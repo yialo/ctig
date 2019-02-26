@@ -2,8 +2,4 @@
   @media (min-width: $l-min-width) {
     @include padding-hor(0);
   }
-
-  @media (min-width: $xl-min-width) {
-    width: 1265px;
-  }
 }

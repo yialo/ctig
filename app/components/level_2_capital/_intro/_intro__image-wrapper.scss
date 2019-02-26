@@ -33,11 +33,12 @@
 
   @media (min-width: $l-min-width) {
     &--1 {
-      width: 640px;
+      width: 596px;
     }
 
     &--2 {
-      width: 240px;
+      width: 212px;
+      margin-left: auto;
     }
   }
 
