@@ -12,14 +12,20 @@
     }
   }
 
-  @media (min-width: $m-min-width) {
+  @media (min-width: $l-min-width) {
+    grid-column-gap: 48px;
+  }
+
+  @media (min-width: $l-min-width) and (max-width: $l-max-width) {
     padding-left: 0;
   }
 
   @media (min-width: $logistics-request-form-resize) {
-    grid: {
-      template-rows: auto 1fr auto;
-      gap: 32px 48px;
-    }
+    grid-template-rows: auto 1fr auto;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-template: auto 1fr 200px auto / 480px 120px 1fr;
+    grid-column-gap: 0;
   }
 }

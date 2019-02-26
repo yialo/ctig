@@ -34,4 +34,8 @@
       bottom: 48px;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    padding-right: 176px;
+  }
 }

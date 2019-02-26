@@ -4,4 +4,13 @@
   @media (min-width: $m-min-width) {
     grid-area: 1 / 1 / 2 / 3;
   }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 1 / 2 / 4;
+    margin-bottom: 80px;
+  }
 }

@@ -10,5 +10,12 @@
     @include margin-hor();
     grid-area: 3 / 1 / 4 / 3;
     width: $request-form-wide-width;
+    margin-top: 32px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    @include margin-hor(0);
+    grid-area: 3 / 2 / 5 / 4;
+    margin-top: 0;
   }
 }

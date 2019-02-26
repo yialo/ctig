@@ -1,11 +1,6 @@
 .logistics-crumbs {
-  @include padding-hor();
-
   @media (min-width: $m-min-width) {
-    padding: {
-      left: 32px;
-      right: 0;
-    }
+    padding-left: 32px;
   }
 
   @media (min-width: $l-min-width) {
