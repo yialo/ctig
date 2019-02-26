@@ -1,5 +1,4 @@
 .generic-container {
-  @include outline();
   @include margin-hor();
   width: var(--page-min-width);
 
