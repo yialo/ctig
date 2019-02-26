@@ -13,10 +13,20 @@
   @media (min-width: $l-min-width) {
     grid: {
       template: {
+        columns: 422px 1fr;
+      }
+      column-gap: 48px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template: {
         rows: auto 1fr auto;
         columns: 720px 1fr;
       }
-      gap: 0 60px;
+      row-gap: 0;
+      column-gap: 60px;
     }
   }
 }

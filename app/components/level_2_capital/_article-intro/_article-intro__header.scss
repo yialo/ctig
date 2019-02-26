@@ -8,12 +8,15 @@
   }
 
   @media (min-width: $l-min-width) {
-    grid-column-end: 3;
-    justify-self: start;
+    justify-self: end;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-area: 1 / 1 / 2 / 3;
     margin: {
       top: 32px;
       bottom: 32px;
-      left: 600px;
+      right: 600px;
     };
   }
 }
