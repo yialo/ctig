@@ -1,5 +1,10 @@
 .intro__inner {
   @media (min-width: $l-min-width) {
     @include padding-hor(0);
+    width: $index-images-container-l;
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1265px;
   }
 }

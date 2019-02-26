@@ -72,6 +72,7 @@
   @media (min-width: $xl-min-width) {
     &--1 {
       transform: translateY(340px);
+      width: 300px;
       margin: {
         left: 64px;
         right: 60px;
@@ -79,9 +80,14 @@
     }
 
     &--2 {
+      width: 840px;
       margin: {
         right: auto;
       }
+    }
+
+    &--3 {
+      width: 270px;
     }
   }
 }
