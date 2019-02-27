@@ -1,17 +1,15 @@
 section.intro(class=pageMain_getElClasses('intro'))
   -
-    const INTRO_PICTURES = [
+    const INTRO_IMAGES_COMMON_PATH = 'intro__image';
+    const INTRO_IMAGES_EXT = 'jpg';
+    const INTRO_IMAGES = [
       {
         alt: 'Ракета',
-        path: 'intro__image--1',
-        ext: 'jpg',
         mediaSet: [['S', 320], ['M', 488], ['L', 596], 840],
         isShadowed: false,
       },
       {
         alt: 'Облака',
-        path: 'intro__image--2',
-        ext: 'jpg',
         mediaSet: [['S', 160], ['M', 186], ['L', 212], 300],
         isShadowed: true,
       },
@@ -25,11 +23,15 @@ section.intro(class=pageMain_getElClasses('intro'))
       +blending__heading-wrapper().intro__heading-wrapper
         | Международная перевозка сборных грузов
       .blending__pictures.intro__pictures
-        each image, index in INTRO_PICTURES
+        each image, index in INTRO_IMAGES
           -
-            const { alt, isShadowed } = image;
             const number = index + 1;
-          +generic-picture(image).blending__picture(
+            const addProps = {
+              ext: INTRO_IMAGES_EXT,
+              path: `${INTRO_IMAGES_COMMON_PATH}--${number}`,
+            };
+            const full_props = Object.assign(addProps, image);
+          +generic-picture(full_props).blending__picture(
             class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
             modifier=(isShadowed ? 'shadowed' : null),
           )
