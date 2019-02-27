@@ -8,8 +8,8 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
       ['rocket', 'Ракетный транспорт'],
     ];
     const TRANSPORT_MEDIA_SETS = {
-      '1-3-5': [['S', 320], ['M', 324], ['L', 412], 720],
-      '2-4': [['OM', 268], ['S', 320], ['L', 346], 600],
+      odd: [['S', 320], ['M', 324], ['L', 412], 720],
+      even: [['OM', 268], ['S', 320], ['L', 346], 600],
     };
   div(class=[
     'generic-container',
@@ -27,8 +27,8 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
             path: `transport-item__image--${number}`,
             mediaSet: (
               number % 2 === 1
-              ? TRANSPORT_MEDIA_SETS['1-3-5']
-              : TRANSPORT_MEDIA_SETS['2-4']
+              ? TRANSPORT_MEDIA_SETS['odd']
+              : TRANSPORT_MEDIA_SETS['even']
             ),
           };
           const isSpecial = (modifier === 'rocket');
