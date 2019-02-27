@@ -1,8 +1,20 @@
 section.intro(class=pageMain_getElClasses('intro'))
   -
     const INTRO_PICTURES = [
-      { title: 'Ракета', isShadowed: false },
-      { title: 'Облака', isShadowed: true },
+      {
+        alt: 'Ракета',
+        path: 'intro__image--1',
+        ext: 'jpg',
+        mediaSet: [['S', 320], ['M', 488], ['L', 596], 840],
+        isShadowed: false,
+      },
+      {
+        alt: 'Облака',
+        path: 'intro__image--2',
+        ext: 'jpg',
+        mediaSet: [['S', 160], ['M', 186], ['L', 212], 300],
+        isShadowed: true,
+      },
     ];
   div(class=[
     'generic-container',
@@ -15,11 +27,9 @@ section.intro(class=pageMain_getElClasses('intro'))
       .blending__pictures.intro__pictures
         each image, index in INTRO_PICTURES
           -
-            const { title, isShadowed } = image;
+            const { alt, isShadowed } = image;
             const number = index + 1;
-          +generic-picture().blending__picture(
+          +generic-picture(image).blending__picture(
             class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
-            src=`img/intro__image--${number}.jpg`,
-            alt=title,
             modifier=(isShadowed ? 'shadowed' : null),
           )

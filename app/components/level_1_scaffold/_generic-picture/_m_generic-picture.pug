@@ -3,9 +3,9 @@ mixin generic-picture(genericPicture_props)
     const getPictureData = function (props) {
       const { path, ext, mediaSet } = props;
       const lastIndex = mediaSet.length - 1;
-      const src = `img/${path}.${ext}`;
       let finalSet = { srcset: '', sizes: '' };
-      finalSet.src = src;
+
+      finalSet.src = `img/${path}@${mediaSet[lastIndex]}.${ext}`;
 
       for (let i = 0; i <= lastIndex; i += 1) {
         if (i < lastIndex) {
