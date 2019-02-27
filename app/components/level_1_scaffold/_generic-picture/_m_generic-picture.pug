@@ -8,23 +8,23 @@ mixin generic-picture(genericPicture_props)
       OL: '(min-width: 1200px) and (max-width: 1919px)',
     };
     const getPictureData = function (props) {
-      const { path, ext='jpg', mediaSet } = props;
+      const { path, mediaSet } = props;
       const lastIndex = mediaSet.length - 1;
       let finalSet = { srcset: '', sizes: '' };
 
-      finalSet.src = `img/${path}@${mediaSet[lastIndex]}.${ext}`;
+      finalSet.src = `img/${path}@${mediaSet[lastIndex]}.jpg`;
 
       for (let i = 0; i <= lastIndex; i += 1) {
         if (i < lastIndex) {
           const [mq, width] = mediaSet[i];
           const srcToAdd =
-            `img/${path}@${width}.${ext} ${width}w, `;
+            `img/${path}@${width}.jpg ${width}w, `;
           const sizeToAdd = `${_VIEWPORTS[mq]} ${width}px, `;
           finalSet.srcset += srcToAdd;
           finalSet.sizes += sizeToAdd;
         } else {
           const srcToAdd =
-            `img/${path}@${mediaSet[i]}.${ext} ${mediaSet[i]}w`;
+            `img/${path}@${mediaSet[i]}.jpg ${mediaSet[i]}w`;
           finalSet.srcset += srcToAdd;
           finalSet.sizes += `${mediaSet[i]}px`;
         }

@@ -1,6 +1,5 @@
 section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
   -
-    const LOGISTICS_IMAGES_COMMON_PATH = 'logistics-brief__image';
     const LOGISTICS_BRIEF_IMAGES = [
       {
         alt: 'Башня',
@@ -31,7 +30,7 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
           -
             const number = index + 1;
             const pathProp = {
-              path: `${LOGISTICS_IMAGES_COMMON_PATH}--${number}`,
+              path: `logistics-brief__image--${number}`,
             };
             const { title, isShadowed } = image;
             const full_props = Object.assign(image, pathProp);

@@ -19,16 +19,17 @@ section.clients(class=pageMain_getElClasses('clients'))
     h2.generic-heading-1.clients__heading Наши клиенты
     ul.clients__list
       each item, index in CLIENTS_LOGO_ALTS
-        - const number = index + 1;
+        -
+          const number = index + 1;
         li(class=[
           'clients__item',
           number === CLIENTS_LOGO_ALTS ? 'clients__item--last' : null,
         ])
-          +generic-picture(
-            class=[
-              'clients__image-wrapper',
-              `clients__image-wrapper--${number}`,
-            ],
-            src=`img/clients__image--${number}.png`,
-            alt=item,
-          )
+          picture.generic-picture(class=[
+            'clients__image-wrapper',
+            `clients__image-wrapper--${number}`,
+          ])
+            img.generic-picture__image(
+              src=`img/clients__image--${number}.png`,
+              alt=item,
+            )

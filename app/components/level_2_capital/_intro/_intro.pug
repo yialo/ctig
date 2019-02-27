@@ -1,6 +1,5 @@
 section.intro(class=pageMain_getElClasses('intro'))
   -
-    const INTRO_IMAGES_COMMON_PATH = 'intro__image';
     const INTRO_IMAGES = [
       {
         alt: 'Ракета',
@@ -26,7 +25,7 @@ section.intro(class=pageMain_getElClasses('intro'))
           -
             const number = index + 1;
             const pathProp = {
-              path: `${INTRO_IMAGES_COMMON_PATH}--${number}`,
+              path: `intro__image--${number}`,
             };
             const full_props = Object.assign(image, pathProp);
           +generic-picture(full_props).blending__picture(
