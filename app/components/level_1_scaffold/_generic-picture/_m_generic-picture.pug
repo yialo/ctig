@@ -8,7 +8,7 @@ mixin generic-picture(genericPicture_props)
       OL: '(min-width: 1200px) and (max-width: 1919px)',
     };
     const getPictureData = function (props) {
-      const { path, ext, mediaSet } = props;
+      const { path, ext='jpg', mediaSet } = props;
       const lastIndex = mediaSet.length - 1;
       let finalSet = { srcset: '', sizes: '' };
 

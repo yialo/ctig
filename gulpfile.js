@@ -208,3 +208,5 @@ gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
 gulp.task('serve', gulp.series(serve, 'watchForAll'));
 
 gulp.task('default', gulp.series('build', 'serve'));
+
+// TODO: добавить SVG в отдельную директорию (icons?)

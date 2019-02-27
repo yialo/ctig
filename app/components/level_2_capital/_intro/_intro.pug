@@ -1,7 +1,6 @@
 section.intro(class=pageMain_getElClasses('intro'))
   -
     const INTRO_IMAGES_COMMON_PATH = 'intro__image';
-    const INTRO_IMAGES_EXT = 'jpg';
     const INTRO_IMAGES = [
       {
         alt: 'Ракета',
@@ -26,11 +25,10 @@ section.intro(class=pageMain_getElClasses('intro'))
         each image, index in INTRO_IMAGES
           -
             const number = index + 1;
-            const addProps = {
-              ext: INTRO_IMAGES_EXT,
+            const pathProp = {
               path: `${INTRO_IMAGES_COMMON_PATH}--${number}`,
             };
-            const full_props = Object.assign(addProps, image);
+            const full_props = Object.assign(image, pathProp);
           +generic-picture(full_props).blending__picture(
             class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
             modifier=(isShadowed ? 'shadowed' : null),
