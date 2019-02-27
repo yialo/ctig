@@ -1,9 +1,21 @@
 section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
   -
-    const LOGISTICS_BRIEF_PICTURES = [
-      { title: 'Башня', isShadowed: true },
-      { title: 'Собор', isShadowed: false },
-      { title: 'Пагода', isShadowed: true },
+    const LOGISTICS_BRIEF_IMAGES = [
+      {
+        alt: 'Башня',
+        mediaSet: [['S', 80], ['M', 140], ['L', 170], 300],
+        isShadowed: true,
+      },
+      {
+        alt: 'Собор',
+        mediaSet: [['S', 320], ['M', 400], ['L', 480], 840],
+        isShadowed: false,
+      },
+      {
+        alt: 'Пагода',
+        mediaSet: [['S', 80], ['M', 128], ['L', 154], 270],
+        isShadowed: true,
+      },
     ];
   div(class=[
     'generic-container',
@@ -14,17 +26,20 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
       +blending__heading-wrapper().logistics__brief__heading-wrapper
         | География перевозок
       .blending__pictures.logistics__brief__pictures
-        each image, index in LOGISTICS_BRIEF_PICTURES
+        each image, index in LOGISTICS_BRIEF_IMAGES
           -
-            const { title, isShadowed } = image;
             const number = index + 1;
-          +generic-picture(isShadowed ? 'shadowed' : null).blending__picture(
+            const pathProp = {
+              path: `logistics-brief__image--${number}`,
+            };
+            const { title, isShadowed } = image;
+            const full_props = Object.assign(image, pathProp);
+          +generic-picture(full_props).blending__picture(
             class=[
               'logistics-brief__image-wrapper',
               `logistics-brief__image-wrapper--${number}`,
             ],
-            src=`img/logistics-brief__image--${number}.jpg`,
-            alt=title,
+            modifier=(isShadowed ? 'shadowed' : null),
           )
     ul.logistics-brief__list
       each listItem, index in _LOGISTICS_ITEMS

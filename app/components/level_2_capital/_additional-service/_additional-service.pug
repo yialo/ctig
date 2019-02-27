@@ -3,12 +3,16 @@ section.additional-service(class=[
   pageMain_getElClasses('additional-service'),
 ])
   -
-    const ADDITIONAL_ITEMS = [
+    const ADDITIONAL_SERVICE_ITEMS = [
       ['insurance', 'Страхование грузов'],
       ['chinese', 'Поиск поставщиков в Китае'],
       ['contract', 'Предоставление контрактодержателя'],
       ['cross-docking', 'Кросс докинг'],
     ];
+    const ADDITIONAL_SERVICE_MEDIA_SETS = {
+      odd: [['S', 320], ['M', 352], ['L', 450], 780],
+      even: [['OM', 212], ['OL', 276], ['S', 320], 480],
+    };
   div(class=[
     'generic-container',
     'generic-container--wide-s',
@@ -16,24 +20,30 @@ section.additional-service(class=[
   ])
     h2.generic-heading-1.additional-service__heading Дополнительный сервис
     ul.mixed-gallery__list.additional-service__list
-      each item, index in ADDITIONAL_ITEMS
+      each item, index in ADDITIONAL_SERVICE_ITEMS
         -
-          const [modifier, heading] = item;
           const number = index + 1;
+          const [modifier, heading] = item;
+          const imageProps = {
+            alt: heading,
+            path: `additional-service-item__image--${number}`,
+            mediaSet: (
+              number % 2 === 1
+              ? ADDITIONAL_SERVICE_MEDIA_SETS['odd']
+              : ADDITIONAL_SERVICE_MEDIA_SETS['even']
+            ),
+          };
         li(class=[
           'additional-service-item',
           `additional-service-item--${modifier}`,
           'additional-service__item',
           `additional-service__item--${number}`,
           (
-            number === ADDITIONAL_ITEMS.length
+            number === ADDITIONAL_SERVICE_ITEMS.length
             ? 'additional-service__item--last'
             : null
           ),
         ])
           h3.generic-heading-2.additional-service-item__heading
             span.additional-service-item__string= heading
-          +generic-picture().additional-service-item__image-wrapper(
-            src=`img/additional-service-item__image--${number}.jpg`,
-            alt=heading,
-          )
+          +generic-picture(imageProps).additional-service-item__image-wrapper

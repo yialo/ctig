@@ -7,6 +7,10 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
       ['ship', 'Водный транспорт'],
       ['rocket', 'Ракетный транспорт'],
     ];
+    const TRANSPORT_MEDIA_SETS = {
+      odd: [['S', 320], ['M', 324], ['L', 412], 720],
+      even: [['OM', 268], ['S', 320], ['L', 346], 600],
+    };
   div(class=[
     'generic-container',
     'generic-container--wide-s',
@@ -16,8 +20,17 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
     ul.mixed-gallery__list.transport__list
       each item, index in TRANSPORT_ITEMS
         -
-          const [modifier, heading] = item;
           const number = index + 1;
+          const [modifier, heading] = item;
+          const imageProps = {
+            alt: heading,
+            path: `transport-item__image--${number}`,
+            mediaSet: (
+              number % 2 === 1
+              ? TRANSPORT_MEDIA_SETS['odd']
+              : TRANSPORT_MEDIA_SETS['even']
+            ),
+          };
           const isSpecial = (modifier === 'rocket');
         li(class=[
           'transport-item',
@@ -28,10 +41,7 @@ section.transport.mixed-gallery(class=pageMain_getElClasses('transport'))
         ])
           h3.generic-heading-2.transport-item__heading= heading
           mixin transport-item__image-wrapper()
-            +generic-picture().transport-item__image-wrapper(
-              src=`img/transport-item__image--${number}.jpg`,
-              alt=heading,
-            )
+            +generic-picture(imageProps).transport-item__image-wrapper
           if isSpecial
             .transport-item__wrapper
               +transport-item__image-wrapper()

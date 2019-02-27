@@ -3,6 +3,10 @@
   background-color: transparent;
   border-style: none;
 
+  &:focus {
+    outline-style: none;
+  }
+
   &--opener {
     @include svg-background();
     display: block;
@@ -10,7 +14,7 @@
     height: 12px;
     background-image: url("../img/navigation-toggle__button--opener.svg");
 
-    &:hover {
+    @include hover-focus_set() {
       animation: {
         name: bounce;
         duration: 1s;
@@ -30,7 +34,7 @@
     outline-style: none;
     transition: transform ease-in-out 0.5s;
 
-    &:hover {
+    @include hover-focus_set() {
       transform: rotate(0.5turn);
     }
 

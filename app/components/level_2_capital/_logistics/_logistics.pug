@@ -1,4 +1,10 @@
 .logistics.page-main__logistics
+  -
+    const LOGISTICS_IMAGE = {
+      alt: page.heading(),
+      path: 'logistics__image',
+      mediaSet: [['S', 288], ['L', 408], 600],
+    };
   div(class=[
     'generic-container',
     'generic-container--wide',
@@ -8,10 +14,7 @@
       = page.heading()
     .generic-container__inner.logistics__inner
       include ../_logistics-crumbs/_logistics-crumbs
-      +generic-picture().logistics__image-wrapper(
-        src='img/logistics__image.jpg',
-        alt=page.heading(),
-      )
+      +generic-picture(LOGISTICS_IMAGE).logistics__image-wrapper
       include ../_country-information/_country-information
       .logistics__form-wrapper
         +request-form()(modifier='shipping', heading='Заявка на перевозку')

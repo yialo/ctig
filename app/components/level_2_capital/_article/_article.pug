@@ -1,13 +1,16 @@
 article.article.page-main__article
+  -
+    const ARTICLE_BANNER = {
+      alt: page.heading,
+      path: 'article__banner-image',
+      mediaSet: [['S', 768], ['L', 1200], 1440],
+    };
   header.article__header
     .generic-container.article__heading-wrapper
       h1.generic-heading-1.generic-container__heading.article__heading
         = page.heading
     .article__banner-wrapper
-      +generic-picture().article__banner(
-        src='img/article__banner-image.jpg',
-        alt=page.heading,
-      )
+      +generic-picture(ARTICLE_BANNER).article__banner
   .generic-container.article__container
     .generic-container__inner.article__inner
       +subarticle('double-column')(class=[

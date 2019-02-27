@@ -1,5 +1,10 @@
 section.indices(class=pageMain_getElClasses('indices'))
   -
+    const INDICES_IMAGE = {
+      alt: 'Контейнеры',
+      path: 'indices__image',
+      mediaSet: [['OM', 200], ['OL', 300], ['S', 320], 480],
+    };
     const INDICES_ITEMS = [
       ['15 733 000', 'тонн перевезено'],
       ['156', 'партнеров'],
@@ -12,10 +17,7 @@ section.indices(class=pageMain_getElClasses('indices'))
     'indices__container',
   ])
     h2.generic-heading-1.indices__heading Показатели
-    +generic-picture().indices__image-wrapper(
-      src='img/indices__image.jpg',
-      alt='Контейнеры',
-    )
+    +generic-picture(INDICES_IMAGE).indices__image-wrapper
     dl.indices__list
       each item, index in INDICES_ITEMS
         -

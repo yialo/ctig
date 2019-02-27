@@ -2,12 +2,15 @@ article(class=[
   'article-intro',
   `article-intro--${number}`,
 ])
+  -
+    const ARTICLE_INTRO_IMAGE = {
+      alt: 'Праздники в странах',
+      path: `article-intro__image--${number}`,
+      mediaSet: [['M', 288], ['L', 422], 720],
+    };
   header.article-intro__header
     h3.generic-heading-2.article-intro__heading Праздники в странах
-  +generic-picture().article-intro__image-wrapper(
-    src=`img/article-intro__image--${number}.jpg`,
-    alt='Праздники в странах',
-  )
+  +generic-picture(ARTICLE_INTRO_IMAGE).article-intro__image-wrapper
   p.generic-textblock.article-intro__excerpt= _TEMPLATE_PARAGRAPHS[0]
   footer.generic-link.article-intro__footer
     a.article-intro__details(href='article.html') Подробнее

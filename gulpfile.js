@@ -123,11 +123,11 @@ const copyfonts = function copyFontFilesToBuildFolder() {
 };
 
 const copysvg = function copySvgImagesToBuildFolder() {
-  return gulp.src('./app/assets/img/*.svg').pipe(gulp.dest('./dist/img/'));
+  return gulp.src('./app/assets/svg/*.svg').pipe(gulp.dest('./dist/img/'));
 };
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
-  return gulp.src('./app/assets/img/*.{jpg,png}')
+  return gulp.src('./app/assets/bitmaps/*.{jpg,png}')
     .pipe(gulp.dest('./dist/img/'));
 };
 
@@ -183,12 +183,15 @@ const watchJs = function watchForJavascriptFiles() {
 };
 
 const watchSvg = function watchForSvgFiles() {
-  return gulp.watch('./app/assets/img/*.svg', gulp.series(copysvg, reload));
+  return gulp.watch('./app/assets/svg/*.svg', gulp.series(copysvg, reload));
 };
 
 const watchBitmaps = function watchForBitmapFiles() {
   return gulp
-    .watch('./app/assets/img/*.{jpg,png}', gulp.series(copybitmaps, reload));
+    .watch(
+      './app/assets/bitmaps/*.{jpg,png}',
+      gulp.series(copybitmaps, reload),
+    );
 };
 
 // Gulp tasks

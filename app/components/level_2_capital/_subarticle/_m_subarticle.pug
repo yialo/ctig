@@ -1,10 +1,15 @@
 mixin subarticle(subarticle_modifier)
   -
-    const SUBARTICLES_PARAGRAPHS_COUNT = {
+    const SUBARTICLE_PARAGRAPHS_COUNT = {
       'double-column': 4,
       'illustrated': 2,
     };
-    const paragraphsTotal = SUBARTICLES_PARAGRAPHS_COUNT[subarticle_modifier];
+    const SUBARTICLE_IMAGE = {
+      alt: 'Контейнеры на складе',
+      path: 'subarticle__image',
+      mediaSet: [['S', 288], ['M', 328], ['L', 492], 660],
+    };
+    const paragraphsTotal = SUBARTICLE_PARAGRAPHS_COUNT[subarticle_modifier];
     const getParagraphsStack = function (amount) {
       let paragraphsSet = [];
       for (let i = 1; i <= amount; i += 1) {
@@ -19,10 +24,7 @@ mixin subarticle(subarticle_modifier)
     attributes.class,
   ])
     if subarticle_modifier === 'illustrated'
-      +generic-picture().subarticle__image-wrapper(
-        src='img/article__image.jpg',
-        alt='Контейнеры на складе',
-    )
+      +generic-picture(SUBARTICLE_IMAGE).subarticle__image-wrapper
     h3.generic-heading-2.subarticle__heading Подзаголовок для статьи
     .subarticle__textblock
       each paragraphText, index in getParagraphsStack(paragraphsTotal)
