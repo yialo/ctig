@@ -1,5 +1,12 @@
 mixin generic-picture(genericPicture_props)
   -
+    const _VIEWPORTS = {
+      S: '(max-width: 767px)',
+      M: '(max-width: 1199px)',
+      L: '(max-width: 1919px)',
+      OM: '(min-width: 768px) and (max-width: 1199px)',
+      OL: '(min-width: 1200px) and (max-width: 1919px)',
+    };
     const getPictureData = function (props) {
       const { path, ext, mediaSet } = props;
       const lastIndex = mediaSet.length - 1;
@@ -12,7 +19,7 @@ mixin generic-picture(genericPicture_props)
           const [mq, width] = mediaSet[i];
           const srcToAdd =
             `img/${path}@${width}.${ext} ${width}w, `;
-          const sizeToAdd = `${_MAX_VIEWPORTS[mq]} ${width}px, `;
+          const sizeToAdd = `${_VIEWPORTS[mq]} ${width}px, `;
           finalSet.srcset += srcToAdd;
           finalSet.sizes += sizeToAdd;
         } else {
