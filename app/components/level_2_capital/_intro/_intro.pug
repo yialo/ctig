@@ -30,5 +30,5 @@ section.intro(class=pageMain_getElClasses('intro'))
             const full_props = Object.assign(image, pathProp);
           +generic-picture(full_props).blending__picture(
             class=['intro__image-wrapper', `intro__image-wrapper--${number}`],
-            modifier=(isShadowed ? 'shadowed' : null),
+            modifier=(image.isShadowed ? 'shadowed' : null),
           )

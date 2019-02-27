@@ -32,14 +32,13 @@ section.logistics-brief(class=pageMain_getElClasses('logistics-brief'))
             const pathProp = {
               path: `logistics-brief__image--${number}`,
             };
-            const { title, isShadowed } = image;
             const full_props = Object.assign(image, pathProp);
           +generic-picture(full_props).blending__picture(
             class=[
               'logistics-brief__image-wrapper',
               `logistics-brief__image-wrapper--${number}`,
             ],
-            modifier=(isShadowed ? 'shadowed' : null),
+            modifier=(image.isShadowed ? 'shadowed' : null),
           )
     ul.logistics-brief__list
       each listItem, index in _LOGISTICS_ITEMS
