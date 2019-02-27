@@ -2,12 +2,18 @@ mixin customs(customs_modifier)
   include _d_customs
   -
     const {
-      imageDescription,
-      listItems,
-      paragraphs,
-      subtitle,
       title,
+      subtitle,
+      imageAltText,
+      paragraphs,
+      listItems,
     } = CUSTOMS_DATA[customs_modifier];
+    const imageProps = {
+      alt: imageAltText,
+      path: `customs--${customs_modifier}__image`,
+      mediaSet: [['OM', 200], ['S', 320], 420],
+    };
+
   section(class=[
     'customs',
     `customs--${customs_modifier}`,
@@ -21,10 +27,7 @@ mixin customs(customs_modifier)
       header.customs__headline
         h2.generic-heading-1.customs__title= title
         p.generic-heading-3.customs__subtitle= subtitle
-      +generic-picture().customs__image-wrapper(
-        src=`img/customs--${customs_modifier}__image.jpg`,
-        alt=imageDescription,
-      )
+      +generic-picture(imageProps).customs__image-wrapper
       .customs__text-content
         - const customsParagraphsRest = paragraphs.slice(1);
         p.generic-textblock(class=[
