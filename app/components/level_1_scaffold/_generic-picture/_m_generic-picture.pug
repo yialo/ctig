@@ -1,10 +1,11 @@
 mixin generic-picture(genericPicture_props)
   -
     const getPictureData = function (props) {
-      const { path, ext, alt, mediaSet } = props;
-
-      let finalSet = { srcset: '', sizes: '' };
+      const { path, ext, mediaSet } = props;
       const lastIndex = mediaSet.length - 1;
+      const src = `img/${path}.${ext}`;
+      let finalSet = { srcset: '', sizes: '' };
+      finalSet.src = src;
 
       for (let i = 0; i <= lastIndex; i += 1) {
         if (i < lastIndex) {
@@ -22,15 +23,9 @@ mixin generic-picture(genericPicture_props)
         }
       }
 
-      const src = `img/${path}.${ext}`;
-
-      finalSet.alt = alt;
-      finalSet.src = src;
-
       return finalSet;
     };
-
-    const { srcset, sizes, src, alt } = getPictureData(genericPicture_props);
+    const { srcset, sizes, src } = getPictureData(genericPicture_props);
 
   picture(class=[
     'generic-picture',
@@ -45,5 +40,5 @@ mixin generic-picture(genericPicture_props)
       srcset=srcset,
       sizes=sizes,
       src=src,
-      alt=alt,
+      alt=genericPicture_props.alt,
     )
