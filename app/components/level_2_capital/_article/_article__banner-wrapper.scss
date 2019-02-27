@@ -1,14 +1,22 @@
 .article__banner-wrapper {
   @include margin-hor();
-  width: 770px;
 
   @media (min-width: $l-min-width) {
-    width: 1200px;
+    width: calc(
+      var(--page-min-width)
+      + var(--page-margin-left)
+      - var(--page-header__main-menu-width)
+    );
+    max-width: 1200px;
+    margin-left: var(--page-margin-left);
+    padding: {
+      left: 112px;
+      right: 56px;
+    }
   }
 
   @media (min-width: $xl-min-width) {
     width: auto;
-    margin-left: var(--page-margin-left);
     padding-left: 168px;
   }
 }
