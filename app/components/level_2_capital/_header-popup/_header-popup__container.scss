@@ -21,4 +21,8 @@
     margin-left: 0;
     padding-bottom: calc(var(--main-menu__navigation-toggle-Height) + 24px);
   }
+
+  @media (min-width: $m-min-width) {
+    padding-top: 40px;
+  }
 }
