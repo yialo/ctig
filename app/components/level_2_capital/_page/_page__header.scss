@@ -13,7 +13,7 @@
     width: 100%;
 
     .is-modal-shown & {
-      width: calc(100% - var(--scrollbar-width));
+      width: calc(100% - var(--Scrollbar-width));
     }
   }
 }

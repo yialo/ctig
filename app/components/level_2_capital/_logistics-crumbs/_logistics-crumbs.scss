@@ -1,4 +1,6 @@
 .logistics-crumbs {
+  --logistics-crumbs__heading-list-Margin-left: 8px;
+
   @media (min-width: $m-min-width) {
     padding-left: 32px;
   }

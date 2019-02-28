@@ -1,0 +1,9 @@
+.logistics-directions {
+  --logistics-directions__list-Margin-left: 20px;
+  --logistics-directions__list-Margin-top: 24px;
+
+  @media (min-width: $l-min-width) {
+    --logistics-directions__list-Margin-left: 40px;
+    --logistics-directions__list-Margin-top: 42px;
+  }
+}

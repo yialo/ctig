@@ -48,11 +48,11 @@
     &--language-toggle {
       position: absolute;
       top: 45px;
-      right: var(--page-padding-right);
+      right: var(--page-Padding-right);
       z-index: 1;
 
       .is-nav-shown & {
-        right: calc(var(--page-padding-right) + var(--scrollbar-width));
+        right: calc(var(--page-Padding-right) + var(--Scrollbar-width));
       }
     }
 
@@ -61,11 +61,11 @@
       top: 0;
       right: 0;
       z-index: 2;
-      width: var(--page-header__main-menu-width);
+      width: var(--page-header__main-menu-Width);
       height: 100vh;
 
       .is-nav-shown & {
-        right: var(--scrollbar-width);
+        right: var(--Scrollbar-width);
       }
     }
   }

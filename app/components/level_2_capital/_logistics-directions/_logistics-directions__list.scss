@@ -3,8 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: {
-    top: calc(var(--logistics-directions__list-margin-top) * -1);
-    left: calc(var(--logistics-directions__list-margin-left) * -1);
+    top: calc(var(--logistics-directions__list-Margin-top) * -1);
+    left: calc(var(--logistics-directions__list-Margin-left) * -1);
   }
 
   @media (min-width: $xl-min-width) {

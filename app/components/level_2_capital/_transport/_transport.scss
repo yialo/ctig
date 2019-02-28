@@ -1,0 +1,16 @@
+.transport {
+  @media (min-width: $m-min-width) {
+    --transport-items-Width-1-3-4: 324px;
+    --transport-items-Width-2-5: 268px;
+  }
+
+  @media (min-width: $l-min-width) {
+    --transport-items-Width-1-3-4: 412px;
+    --transport-items-Width-2-5: 346px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    --transport-items-Width-1-3-4: 720px;
+    --transport-items-Width-2-5: 600px;
+  }
+}

@@ -4,13 +4,13 @@
 
   @media (min-width: $m-min-width) {
     &--1 {
-      width: var(--additional-service-items-width-1-3);
+      width: var(--additional-service__item-Width-1-3);
       margin-bottom: 64px;
     }
 
     &--2 {
       order: 1;
-      width: var(--additional-service-items-width-2-4);
+      width: var(--additional-service__item-Width-2-4);
       margin: {
         top: 128px;
         bottom: 0;
@@ -18,7 +18,7 @@
     }
 
     &--3 {
-      width: var(--additional-service-items-width-1-3);
+      width: var(--additional-service__item-Width-1-3);
       margin: {
         bottom: 0;
         left: 64px;
@@ -27,7 +27,7 @@
 
     &--4 {
       order: 2;
-      width: var(--additional-service-items-width-2-4);
+      width: var(--additional-service__item-Width-2-4);
       margin-top: auto;
     }
   }

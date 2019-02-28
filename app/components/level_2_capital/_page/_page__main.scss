@@ -2,7 +2,7 @@
   @media (min-width: $l-min-width) {
     @each $word in (nav, modal) {
       .is-#{$word}-shown & {
-        padding-right: var(--scrollbar-width);
+        padding-right: var(--Scrollbar-width);
       }
     }
   }

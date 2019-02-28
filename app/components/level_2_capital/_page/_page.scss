@@ -1,21 +1,21 @@
 .page {
   padding: {
-    top: var(--page-padding-top);
-    bottom: calc(var(--main-menu__navigation-toggle-height) + 32px);
+    top: var(--page-Padding-top);
+    bottom: calc(var(--main-menu__navigation-toggle-Height) + 32px);
   }
 
   @each $modifier in (contacts, logistics) {
     &--#{$modifier} {
-      padding-bottom: var(--main-menu__navigation-toggle-height);
+      padding-bottom: var(--main-menu__navigation-toggle-Height);
     }
   }
 
   @media (min-width: $m-min-width) {
-    padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 64px);
+    padding-bottom: calc(var(--main-menu__navigation-toggle-Height) + 64px);
 
     @each $modifier in (contacts, logistics) {
       &--#{$modifier} {
-        padding-bottom: var(--main-menu__navigation-toggle-height);
+        padding-bottom: var(--main-menu__navigation-toggle-Height);
       }
     }
 

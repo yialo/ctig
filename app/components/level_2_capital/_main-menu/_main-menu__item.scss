@@ -1,13 +1,13 @@
 .main-menu__item {
   @include font(500, 18px);
-  margin-left: var(--main-menu__item-margin-left);
+  margin-left: var(--main-menu__item-Margin-left);
   line-height: 1.5;
   letter-spacing: 0.08em;
 
   @media (min-width: $l-min-width) {
     margin: {
       top: 4px;
-      left: var(--main-menu__item-margin-left);
+      left: var(--main-menu__item-Margin-left);
     }
     font-size: 16px;
   }

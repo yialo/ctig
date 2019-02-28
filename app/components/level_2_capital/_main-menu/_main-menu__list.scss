@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-left: calc(var(--main-menu__item-margin-left) * -1);
+  margin-left: calc(var(--main-menu__item-Margin-left) * -1);
 
   @media (min-width: $m-min-width) {
     flex-wrap: nowrap;
@@ -18,7 +18,7 @@
     width: 500px;
     margin: {
       top: -4px;
-      left: calc(var(--main-menu__item-margin-left) * -1);
+      left: calc(var(--main-menu__item-Margin-left) * -1);
     }
 
     @media (min-height: 840px) {

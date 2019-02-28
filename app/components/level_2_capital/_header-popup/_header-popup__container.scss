@@ -2,8 +2,8 @@
   @include margin-hor();
   width: $s-min-width;
   padding: {
-    top: var(--page-padding-top);
-    bottom: var(--main-menu__navigation-toggle-height);
+    top: var(--page-Padding-top);
+    bottom: var(--main-menu__navigation-toggle-Height);
   }
 
   @media (min-width: $m-min-width) {
@@ -17,8 +17,8 @@
       column-gap: 120px;
     }
     justify-content: space-between;
-    width: calc(100% - var(--page-header__main-menu-width));
+    width: calc(100% - var(--page-header__main-menu-Width));
     margin-left: 0;
-    padding-bottom: calc(var(--main-menu__navigation-toggle-height) + 24px);
+    padding-bottom: calc(var(--main-menu__navigation-toggle-Height) + 24px);
   }
 }

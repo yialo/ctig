@@ -3,12 +3,12 @@
 
   @media (min-width: $l-min-width) {
     width: calc(
-      var(--page-min-width)
-      + var(--page-margin-left)
-      - var(--page-header__main-menu-width)
+      var(--page-Min-width)
+      + var(--page-Margin-left)
+      - var(--page-header__main-menu-Width)
     );
     max-width: 1200px;
-    margin-left: var(--page-margin-left);
+    margin-left: var(--page-Margin-left);
     padding: {
       left: 112px;
       right: 56px;

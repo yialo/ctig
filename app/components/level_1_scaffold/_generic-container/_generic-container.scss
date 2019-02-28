@@ -1,6 +1,6 @@
 .generic-container {
   @include margin-hor();
-  width: var(--page-min-width);
+  width: var(--page-Min-width);
 
   @media (max-width: $s-max-width) {
     @include padding-hor();
@@ -17,13 +17,13 @@
   @media (min-width: $l-min-width) {
     @include padding-hor(56px);
     width: calc(
-      var(--page-min-width)
-      + var(--page-margin-left)
-      - var(--page-header__main-menu-width)
+      var(--page-Min-width)
+      + var(--page-Margin-left)
+      - var(--page-header__main-menu-Width)
     );
-    max-width: var(--page-min-width);
+    max-width: var(--page-Min-width);
     margin: {
-      left: var(--page-margin-left);
+      left: var(--page-Margin-left);
       right: auto;
     };
   }
