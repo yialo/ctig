@@ -63,10 +63,6 @@
       z-index: 2;
       width: var(--page-header__main-menu-Width);
       height: 100vh;
-
-      .is-nav-shown & {
-        right: var(--Scrollbar-width);
-      }
     }
   }
 }

@@ -13,7 +13,11 @@
     width: 100%;
 
     .is-modal-shown & {
-      z-index: 4;
+      z-index: 2;
+      width: calc(100% - var(--Scrollbar-width));
+    }
+
+    .is-nav-shown & {
       width: calc(100% - var(--Scrollbar-width));
     }
   }

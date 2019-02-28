@@ -32,6 +32,11 @@
       overflow-y: hidden;
     }
 
+    &.is-modal-shown {
+      position: relative;
+      z-index: 0;
+    }
+
     &--contacts {
       padding-bottom: 0;
     }
