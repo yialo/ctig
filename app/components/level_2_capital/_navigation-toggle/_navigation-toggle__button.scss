@@ -8,11 +8,9 @@
   }
 
   &--opener {
-    @include svg-background();
     display: block;
-    width: 22px;
+    width: 28px;
     height: 12px;
-    background-image: url("../img/navigation-toggle__button--opener.svg");
 
     @include hover-focus_set() {
       animation: {

@@ -1,15 +1,31 @@
 .navigation-toggle
-  button(
-    class=['navigation-toggle__button', 'navigation-toggle__button--opener'],
-    type='button',
-  )
-    span.generic-hidden-box.navigation-toggle__legend
-      | Показать главное меню
-  button(
-    class=['navigation-toggle__button', 'navigation-toggle__button--closer'],
-    type='button',
-  )
-    svg.navigation-toggle__icon-wrapper(width='22' height='22')
-      use.navigation-toggle__icon(href='#close-button' fill='#000000')
-    span.generic-hidden-box.navigation-toggle__legend
-      | Скрыть главное меню
+  -
+    const NAV_TOGGLE_BUTTONS = [
+      {
+        modifier: 'opener',
+        width: 28,
+        height: 12,
+        text: 'Показать',
+        idPrefix: 'menu-open',
+      },
+      {
+        modifier: 'closer',
+        width: 22,
+        height: 22,
+        text: 'Скрыть',
+        idPrefix: 'close',
+      },
+    ];
+  each button in NAV_TOGGLE_BUTTONS
+    - const { modifier, width, height, text, idPrefix } = button;
+    button(
+      class=[
+        'navigation-toggle__button',
+        `navigation-toggle__button--${modifier}`,
+      ],
+      type='button',
+    )
+      svg.navigation-toggle__icon-wrapper(width=width, height=height)
+        use.navigation-toggle__icon(href=`#${idPrefix}-button`, fill='#000000')
+      span.generic-hidden-box.navigation-toggle__legend
+        | #{text} главное меню
