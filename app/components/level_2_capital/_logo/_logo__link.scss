@@ -26,4 +26,13 @@
       @include set-logo-sizes(119px);
     }
   }
+
+  @media (min-width: $l-min-width) {
+    .logo--outer & {
+      .is-modal-shown & {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
 }

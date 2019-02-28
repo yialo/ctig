@@ -53,10 +53,6 @@
       top: 45px;
       right: var(--page-Padding-right);
       z-index: 3;
-
-      .is-nav-shown & {
-        right: calc(var(--page-Padding-right) + var(--Scrollbar-width));
-      }
     }
 
     &--main-menu {
@@ -66,6 +62,10 @@
       z-index: 2;
       width: var(--page-header__main-menu-Width);
       height: 100vh;
+
+      .is-modal-shown & {
+        z-index: auto;
+      }
     }
   }
 }

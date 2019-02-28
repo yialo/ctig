@@ -11,13 +11,14 @@
     left: 0;
     z-index: 1;
     width: 100%;
+    margin-bottom: 0;
 
-    .is-modal-shown & {
-      z-index: 2;
+    .is-nav-shown & {
       width: calc(100% - var(--Scrollbar-width));
     }
 
-    .is-nav-shown & {
+    .is-modal-shown & {
+      z-index: 1;
       width: calc(100% - var(--Scrollbar-width));
     }
   }

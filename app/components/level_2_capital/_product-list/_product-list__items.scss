@@ -1,6 +1,6 @@
 .product-list__items {
   @include list();
-  padding-right: calc(16px + var(--product-list__wrapper-scrollbar-width));
+  padding-right: calc(16px + var(--product-list__wrapper-Scrollbar-width));
 
   @media (min-width: $m-min-width) {
     display: grid;

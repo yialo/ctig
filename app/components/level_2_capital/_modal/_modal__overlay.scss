@@ -9,6 +9,7 @@
   @media (min-width: $l-min-width) {
     .is-modal-shown & {
       z-index: 1;
+      pointer-events: auto;
     }
   }
 }
