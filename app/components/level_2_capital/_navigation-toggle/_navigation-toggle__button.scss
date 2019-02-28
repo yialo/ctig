@@ -3,10 +3,6 @@
   background-color: transparent;
   border-style: none;
 
-  &:focus {
-    outline-style: none;
-  }
-
   &--opener {
     display: block;
     width: 28px;
@@ -29,7 +25,6 @@
     display: none;
     width: 22px;
     height: 22px;
-    outline-style: none;
     transition: transform ease-in-out 0.5s;
 
     @include hover-focus_set() {

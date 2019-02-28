@@ -3,7 +3,10 @@
 
   @for $count from 1 through length($page-header__inner-Modifiers) {
     &--#{nth($page-header__inner-Modifiers, $count)} {
-      grid-area: #{$count} / 1 / #{$count + 1} / 2;
+      grid: {
+        row: #{$count} / #{$count + 1};
+        column: 1 / 2;
+      }
     }
   }
 
@@ -49,7 +52,7 @@
       position: absolute;
       top: 45px;
       right: var(--page-Padding-right);
-      z-index: 1;
+      z-index: 3;
 
       .is-nav-shown & {
         right: calc(var(--page-Padding-right) + var(--Scrollbar-width));
