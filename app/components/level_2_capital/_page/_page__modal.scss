@@ -6,8 +6,4 @@
     display: block;
     overflow-y: scroll;
   }
-
-  @media (min-width: $l-min-width) {
-    z-index: 4;
-  }
 }

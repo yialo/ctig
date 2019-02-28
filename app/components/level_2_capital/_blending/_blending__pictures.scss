@@ -1,5 +1,6 @@
 .blending__pictures {
   position: relative;
+  z-index: 0;
 
   @media (min-width: $m-min-width) {
     z-index: 1;

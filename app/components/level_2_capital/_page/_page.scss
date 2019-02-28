@@ -1,14 +1,4 @@
 .page {
-  @mixin modal-opened-state() {
-    &.is-nav-shown {
-      @content;
-    }
-
-    &.is-modal-shown {
-      @content;
-    }
-  }
-
   padding: {
     top: var(--page-padding-top);
     bottom: calc(var(--main-menu__navigation-toggle-height) + 32px);
@@ -28,18 +18,18 @@
         padding-bottom: var(--main-menu__navigation-toggle-height);
       }
     }
+
+    &.is-modal-shown {
+      overflow-y: hidden;
+    }
   }
 
   @media (min-width: $l-min-width) {
     min-height: calc(100vh + 1px);
-    padding: {
-      top: 0;
-      bottom: 128px;
-    }
+    padding-bottom: 128px;
 
-    @include modal-opened-state() {
+    &.is-nav-shown {
       overflow-y: hidden;
-      padding-right: var(--scrollbar-width);
     }
 
     &--contacts {

@@ -4,4 +4,16 @@
   @media (min-width: $m-min-width) {
     margin-bottom: 72px;
   }
+
+  @media (min-width: $l-min-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    .is-modal-shown & {
+      width: calc(100% - var(--scrollbar-width));
+    }
+  }
 }

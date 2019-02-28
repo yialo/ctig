@@ -1,5 +1,4 @@
 :root {
-  --generic-list-padding: 21px;
   --logistics-crumbs__heading-list-margin-left: 8px;
   --logistics-directions__list-margin-left: 20px;
   --logistics-directions__list-margin-top: 24px;
@@ -32,6 +31,7 @@
     --page-min-width: #{$l-min-width};
     --page-margin-left: calc((100% - var(--page-min-width)) / 2);
     --page-padding-right: 32px;
+    --page-padding-top: 136px;
     --scrollbar-width: 17px;
     --transport-items-width-1-3-4: 412px;
     --transport-items-width-2-5: 346px;
