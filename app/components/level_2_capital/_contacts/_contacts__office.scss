@@ -7,12 +7,9 @@
 
   @media (min-width: $l-min-width) {
     margin: {
+      top: var(--contacts__inner-Margin-top);
       bottom: 0;
-      right: 48px;
+      right: auto;
     }
-  }
-
-  @media (min-width: $xl-min-width) {
-    margin-right: auto;
   }
 }
