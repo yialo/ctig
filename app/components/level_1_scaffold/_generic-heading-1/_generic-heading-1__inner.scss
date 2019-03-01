@@ -1,5 +1,12 @@
 .generic-heading-1__inner {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  z-index: 1;
+  overflow: hidden;
+  transition: {
+    property: height;
+    duration: 0.25s;
+    delay: 0.25s;
+  }
 }

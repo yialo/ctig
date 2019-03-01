@@ -1,8 +1,8 @@
 .modal {
   position: relative;
-  z-index: 0;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 
   @media (min-width: $m-min-width) {
     align-items: center;
