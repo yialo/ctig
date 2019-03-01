@@ -1,6 +1,11 @@
 .about-brief__heading {
   @include padding-hor();
+  position: relative;
+  width: 200px;
+  height: 80px;
+  overflow: hidden;
   margin-bottom: 32px;
+  transition: height 0.25s ease;
 
   @media (min-width: $m-min-width) {
     @include padding-hor(0);

@@ -1,5 +1,7 @@
 .blending__heading {
+  overflow: hidden;
   margin-bottom: 0;
+  transition: height 0.25s ease;
 
   &--substrate {
     display: none;
