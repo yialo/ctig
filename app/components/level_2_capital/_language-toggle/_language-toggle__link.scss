@@ -12,16 +12,4 @@
   &:active {
     color: transparentize(black, 0.75);
   }
-
-  .is-modal-shown & {
-    color: white;
-
-    &:hover {
-      color: transparentize(white, 0.5);
-    }
-
-    &:active {
-      color: transparentize(white, 0.75);
-    }
-  }
 }

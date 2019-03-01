@@ -3,9 +3,7 @@
   display: none;
 
   .is-modal-shown & {
-    z-index: auto;
     display: block;
     overflow-y: scroll;
-    pointer-events: none;
   }
 }

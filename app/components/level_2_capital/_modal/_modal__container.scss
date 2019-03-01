@@ -12,11 +12,5 @@
 
   @media (min-width: $l-min-width) {
     width: $request-form-wide-width;
-
-    .is-modal-shown & {
-      position: relative;
-      z-index: 3;
-      pointer-events: auto;
-    }
   }
 }

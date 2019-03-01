@@ -7,10 +7,5 @@
   @media (min-width: $m-min-width) {
     align-items: center;
     min-height: 100vh;
-
-    .is-modal-shown & {
-      z-index: auto;
-      pointer-events: none;
-    }
   }
 }
