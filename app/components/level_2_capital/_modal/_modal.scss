@@ -8,4 +8,8 @@
     align-items: center;
     min-height: 100vh;
   }
+
+  @media (min-width: $l-min-width) {
+    justify-content: flex-start;
+  }
 }

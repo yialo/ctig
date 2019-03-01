@@ -5,7 +5,6 @@ $(document).ready(function(){
   var KEYCODE_SPACE = 32;
   var navOpenTimer = 1000;
   var page = $('.page');
-  var headerPopup = page.find('.header-popup');
   var navOpener = page.find('.navigation-toggle__button--opener');
   var navCloser = page.find('.navigation-toggle__button--closer');
   var certsOpener = page.find('.navigation__link--certificates');
