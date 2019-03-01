@@ -5,14 +5,14 @@
     opacity: 0;
     transition: {
       property: opacity;
-      duration: 0.75s;
+      duration: 0.5s;
       timing-function: ease-out;
-      delay: 0.75s;
+      delay: 0.5s;
     }
 
     .is-nav-shown & {
       opacity: 1;
-      transition-timing-function: ease-in;
+      timing-function: ease-in;
     }
   }
 }
