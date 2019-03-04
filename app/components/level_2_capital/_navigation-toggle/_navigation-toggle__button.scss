@@ -8,14 +8,6 @@
     width: 28px;
     height: 12px;
 
-    @include hover-focus_set() {
-      animation: {
-        name: bounce;
-        duration: 1s;
-        timing-function: ease-in-out;
-      }
-    }
-
     .is-nav-shown & {
       display: none;
     }
@@ -27,7 +19,7 @@
     height: 22px;
     transition: transform ease-in-out 0.5s;
 
-    @include hover-focus_set() {
+    &:hover {
       transform: rotate(0.5turn);
     }
 

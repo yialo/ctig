@@ -3,20 +3,21 @@
   position: absolute;
   top: 0;
   left: calc(100% - 8px);
-  width: 200px;
+  width: max-content;
+
+  @supports (not (width: max-content)) {
+    width: 200px;
+  }
+
   transform-origin: top left;
   transform: translateY(96px) rotate(90deg);
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
   padding-left: 32px;
   text-transform: uppercase;
 
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 8px;
     left: 0;
     width: 16px;
     height: 2px;
@@ -40,6 +41,15 @@
   }
 
   @media (min-width: $xl-min-width) {
-    right: -170px;
+    left: calc(100% + 166px);
+    padding: {
+      top: 4px;
+      bottom: 4px;
+    }
+
+
+    &::before {
+      top: 12px;
+    }
   }
 }

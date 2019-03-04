@@ -8,7 +8,10 @@
   @media (min-width: $l-min-width) {
     --main-menu__item-Margin-left: 24px;
     height: 100%;
-    padding-top: 96px;
+    padding: {
+      top: 96px;
+      bottom: 32px;
+    }
     background-color: white;
   }
 }
