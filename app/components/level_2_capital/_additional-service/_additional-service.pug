@@ -18,7 +18,9 @@ section.additional-service(class=[
     'generic-container--wide-s',
     'additional-service__container',
   ])
-    h2.generic-heading-1.additional-service__heading Дополнительный сервис
+    h2.generic-heading-1.additional-service__heading
+      span.generic-heading-1__inner Дополнительный сервис
+      span.generic-heading-1__hidden(role='presentation') Дополнительный сервис
     ul.mixed-gallery__list.additional-service__list
       each item, index in ADDITIONAL_SERVICE_ITEMS
         -

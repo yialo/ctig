@@ -5,11 +5,13 @@
   @media (min-width: $m-min-width) {
     @include padding-hor(0);
     top: 48px;
+    width: 440px;
     margin-bottom: 0;
   }
 
   @media (min-width: $l-min-width) {
     top: 72px;
+    width: 700px;
   }
 
   @media (min-width: $xl-min-width) {

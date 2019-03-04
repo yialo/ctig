@@ -1,7 +1,6 @@
 .blending__heading {
-  overflow: hidden;
+  width: inherit;
   margin-bottom: 0;
-  transition: height 0.25s ease;
 
   &--substrate {
     display: none;
@@ -10,6 +9,7 @@
   @media (min-width: $m-min-width) {
     -webkit-text-stroke: 0.35px #ffffff;
     position: absolute;
+    overflow: hidden;
     mix-blend-mode: overlay;
 
     &--higher {

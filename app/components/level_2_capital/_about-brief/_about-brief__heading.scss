@@ -3,6 +3,7 @@
   position: relative;
   z-index: 0;
   margin-bottom: 32px;
+  transition: opacity 250ms;
 
   @media (min-width: $m-min-width) {
     @include padding-hor(0);
@@ -11,6 +12,7 @@
   }
 
   @media (min-width: $l-min-width) {
+    overflow: hidden;
     margin-bottom: 64px;
   }
 }

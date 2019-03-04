@@ -1,0 +1,8 @@
+.blending__hidden {
+  display: none;
+  visibility: hidden;
+
+  @media (min-width: $m-min-width) {
+    display: block;
+  }
+}

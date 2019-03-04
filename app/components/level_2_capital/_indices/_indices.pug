@@ -16,7 +16,9 @@ section.indices(class=pageMain_getElClasses('indices'))
     'generic-container--wide-s',
     'indices__container',
   ])
-    h2.generic-heading-1.indices__heading Показатели
+    h2.generic-heading-1.indices__heading
+      span.generic-heading-1__inner Показатели
+      span.generic-heading-1__hidden(role='presentation') Показатели
     +generic-picture(INDICES_IMAGE).indices__image-wrapper
     dl.indices__list
       each item, index in INDICES_ITEMS

@@ -1,56 +1,54 @@
 /* eslint-disable */
 
-// document.documentElement.scrollTop
-
 $(document).ready(function(){
-  var page_header = $('.page__header');
   var introHeading = $('.intro__heading-wrapper');
-  var introHeadingWidth = introHeading.find(':first-child').width();
-  var introHeadingHeight = introHeading.find(':first-child').height() + 10;
+  var introHeadingFluid_1 = introHeading.find(':nth-child(1)');
+  var introHeadingFluid_2 = introHeading.find(':nth-child(2)');
+  var introHeadingHeight = introHeading.height();
+
 
   var aboutBriefHeading = $('.about-brief__heading');
-  var aboutBriefHeadingWidth = aboutBriefHeading.find(':first-child').width();
-  var aboutBriefHeadingHeight = aboutBriefHeading
-    .find(':first-child').height() + 10;
+  var aboutBriefHeadingFluid = aboutBriefHeading.find(':first-child');
 
-  var blendingBlockTrigger = 100;
-  var regularBlockTrigger = 500;
+  var introHeadingTrigger = 100;
+  var aboutBriefTrigger = 500;
 
   if (window.innerWidth >= 1200) {
-    introHeading.children().css({
-      width: introHeadingWidth,
-      height: introHeadingHeight,
-    });
-    aboutBriefHeading.children().css({
-      width: aboutBriefHeadingWidth,
-      height: 0,
-    });
+    introHeadingFluid_1.css({ height: introHeadingHeight });
+    introHeadingFluid_2.css({ height: introHeadingHeight });
+    aboutBriefHeading.css({ opacity: '0' });
   }
 
   $(window).scroll(function(){
     if (window.innerWidth >= 1200) {
       var totalOffset = $(document).scrollTop();
 
-      if (totalOffset >= introHeading.offset().top - blendingBlockTrigger) {
-        introHeading.children().css({
+      if (totalOffset >= introHeading.offset().top - introHeadingTrigger) {
+        introHeadingFluid_1.css({
           position: 'fixed',
-          top: `${blendingBlockTrigger}px`,
-          width: introHeadingWidth,
+          top: `${introHeadingTrigger}px`,
+        });
+        introHeadingFluid_2.css({
+          position: 'fixed',
+          top: `${introHeadingTrigger}px`,
         });
       } else {
-        introHeading.children().css({
+        introHeadingFluid_1.css({
           position: 'absolute',
           top: 'auto',
-          width: 'auto',
+        });
+        introHeadingFluid_2.css({
+          position: 'absolute',
+          top: 'auto',
         });
       }
 
-      if (totalOffset >= aboutBriefHeading.offset().top - regularBlockTrigger) {
-        introHeading.children().css({ height: 0 });
-        aboutBriefHeading.children().css({ height: aboutBriefHeadingHeight });
+      if (totalOffset >= aboutBriefHeading.offset().top - aboutBriefTrigger) {
+        introHeading.css({ opacity: '0' });
+        aboutBriefHeading.css({ opacity: '1' });
       } else {
-        introHeading.children().css({ height: introHeadingHeight });
-        aboutBriefHeading.children().css({ height: 0 });
+        introHeading.css({ opacity: '1' });
+        aboutBriefHeading.css({ opacity: '0' });
       }
     }
   });

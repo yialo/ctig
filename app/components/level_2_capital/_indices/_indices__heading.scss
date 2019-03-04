@@ -1,5 +1,6 @@
 .indices__heading {
   @include padding-hor();
+  position: relative;
   margin-bottom: 32px;
 
   @media (min-width: $m-min-width) {

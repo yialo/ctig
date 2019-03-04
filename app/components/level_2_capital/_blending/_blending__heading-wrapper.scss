@@ -1,4 +1,6 @@
 .blending__heading-wrapper {
+  transition: opacity 250ms;
+
   @media (min-width: $m-min-width) {
     position: absolute;
   }
