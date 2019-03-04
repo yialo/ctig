@@ -37,60 +37,96 @@ $(document).ready(function(){
     productClickHandler(products[i]);
   }
 
-  navOpener.click(function(){
+  /* Event handlers */
+
+  var openNavigation = function () {
     page.addClass('is-nav-shown');
     navCloser.focus();
+  };
+
+  var closeNavigation = function () {
+    page.removeClass('is-nav-shown is-certificates-shown');
+    navOpener.focus();
+  };
+
+  var openCertificates = function () {
+    page.addClass('is-certificates-shown');
+  };
+
+  var closeCertificates = function () {
+    page.removeClass('is-certificates-shown');
+  };
+
+  var openCalculator = function () {
+    page.addClass('is-modal-shown');
+    calcCloser.focus();
+  };
+
+  var closeCalculator = function () {
+    page.removeClass('is-modal-shown is-product-list-shown');
+  };
+
+  var openProductList = function () {
+    page.addClass('is-product-list-shown');
+    $('.product-list__link--current').focus();
+  };
+
+  var closeProductList = function () {
+    page.removeClass('is-product-list-shown');
+    calcCloser.focus();
+  };
+
+  /* Event listeners */
+
+  navOpener.click(function(){
+    openNavigation();
   });
 
   navCloser.click(function(){
-    page.removeClass('is-nav-shown is-certificates-shown');
+    closeNavigation();
   });
 
   certsOpener.click(function(evt){
     evt.preventDefault();
-    page.addClass('is-certificates-shown');
+    openCertificates();
   });
   certsCloser.click(function(evt){
     evt.preventDefault();
-    page.removeClass('is-certificates-shown');
+    closeCertificates();
   });
 
   calcOpener.click(function(evt){
     evt.preventDefault();
-    page.addClass('is-modal-shown');
-    calcCloser.focus();
+    openCalculator();
   });
   calcOpener.keydown(function(evt){
     if (evt.keyCode === KEYCODE_SPACE) {
       evt.preventDefault();
-      page.addClass('is-modal-shown');
-      calcCloser.focus();
+      openCalculator();
     }
   });
   calcCloser.click(function(){
     if (page.hasClass('is-modal-shown')) {
-      page.removeClass('is-modal-shown is-product-list-shown');
+      closeCalculator();
     }
   });
   calcOverlay.click(function(){
     if (page.hasClass('is-modal-shown')) {
-      page.removeClass('is-modal-shown is-product-list-shown');
+      closeCalculator();
     }
   });
 
   productListOpener.click(function(evt){
     evt.preventDefault();
-    page.addClass('is-product-list-shown');
-    $('.product-list__link--current').focus();
+    openProductList();
   });
-
-  var currentProductValue = '';
 
   productListCloser.click(function(evt){
     evt.preventDefault();
-    page.removeClass('is-product-list-shown');
-    calcCloser.focus();
+    closeProductList();
   });
+
+  var currentProductValue = '';
 
   productListChecker.click(function(evt){
     currentProductValue = productListItems
@@ -103,14 +139,13 @@ $(document).ready(function(){
     if (evt.keyCode === KEYCODE_ESC) {
       if (page.hasClass('is-product-list-shown')) {
         evt.preventDefault();
-        page.removeClass('is-product-list-shown');
-        calcCloser.focus();
+        closeProductList();
       } else if (page.hasClass('is-modal-shown')) {
         evt.preventDefault();
         page.removeClass('is-modal-shown');
       } else if (page.hasClass('is-certificates-shown')) {
         evt.preventDefault();
-        page.removeClass('is-certificates-shown');
+        closeCertificates();
       } else if (page.hasClass('is-nav-shown')) {
         evt.preventDefault();
         page.removeClass('is-nav-shown');
