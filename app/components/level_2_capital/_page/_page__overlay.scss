@@ -1,0 +1,8 @@
+.page__overlay {
+  display: none;
+  z-index: 2;
+
+  .is-modal-shown & {
+    display: block;
+  }
+}

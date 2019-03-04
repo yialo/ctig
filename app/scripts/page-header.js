@@ -11,7 +11,7 @@ $(document).ready(function(){
   var certsCloser = page.find('.certificates__return-button');
   var calcOpener = page.find('.calculator-toggle__button');
   var calcCloser = page.find('.modal__close-button');
-  var calcOverlay = page.find('.modal__overlay');
+  var calcOverlay = page.find('.page__overlay');
   var productList = page.find('.modal__product-list');
   var productListItems = productList.find('.product-list__items');
   var products = productListItems.find('.product-list__link').toArray();
