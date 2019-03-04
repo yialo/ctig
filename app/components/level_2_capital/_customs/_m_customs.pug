@@ -25,9 +25,7 @@ mixin customs(customs_modifier)
       'customs__container',
     ])
       header.customs__headline
-        h2.generic-heading-1.customs__title
-          span.generic-heading-1__inner= title
-          span.generic-heading-1__hidden(role='presentation')= title
+        h2.generic-heading-1.customs__title= title
         p.generic-heading-3.customs__subtitle= subtitle
       +generic-picture(imageProps).customs__image-wrapper
       .customs__text-content

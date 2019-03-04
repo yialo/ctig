@@ -1,6 +1,7 @@
 .customs__title {
   position: relative;
   margin-bottom: 16px;
+  transition: opacity 250ms;
 
   @media (min-width: $m-min-width) {
     margin-bottom: 24px;
