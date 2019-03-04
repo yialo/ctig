@@ -15,8 +15,8 @@ $(document).ready(function(){
   var transportBlock = $('.transport');
   var additionalServiceHeading = $('.additional-service__heading');
   var clientsHeading = $('.clients__heading');
-  var customsAgentHeading = $('.customs--agent .customs__title');
-  var customsServiceHeading = $('.customs--service .customs__title');
+  var customsAgentHeading = $('.customs--agent .customs__headline');
+  var customsServiceHeading = $('.customs--service .customs__headline');
 
   var halfWindowHeight = window.innerHeight / 2;
 
