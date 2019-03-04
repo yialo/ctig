@@ -31,16 +31,21 @@
   }
 
   @media (min-width: $l-min-width) {
+    @include emerald-line();
     max-width: 400px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
 
-    &--current {
-      @include emerald-line();
+    &::before {
+      width: 0;
+      transition: width 250ms;
+    }
 
+    &--current {
       &::before {
+        width: 100%;
         border-style: none;
       }
     }

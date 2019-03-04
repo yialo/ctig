@@ -130,7 +130,7 @@ $(document).ready(function(){
 
   productListChecker.click(function(evt){
     currentProductValue = productListItems
-    .find('.product-list__link--current').text();
+      .find('.product-list__link--current').text();
     page.removeClass('is-product-list-shown');
     productListOpener.val(currentProductValue);
   });
