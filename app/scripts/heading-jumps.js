@@ -31,8 +31,8 @@ $(document).ready(function(){
   var customsServiceTrigger = halfWindowHeight;
 
   if (window.innerWidth >= 1200) {
-    introHeadingFluid_1.css({ height: introHeadingHeight });
-    introHeadingFluid_2.css({ height: introHeadingHeight });
+    introHeadingFluid_1.css({ height: introHeadingHeight + 10 });
+    introHeadingFluid_2.css({ height: introHeadingHeight + 10 });
     aboutBriefHeading.css({ opacity: '0' });
   }
 
