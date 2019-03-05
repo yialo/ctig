@@ -7,19 +7,24 @@
   }
 
   @media (min-width: $l-min-width) {
+    --main-menu__inner--Padding-hor: 32px;
     transform-origin: top left;
     transform: rotate(-90deg) translate(-100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: calc(100vh - 96px);
+    width: calc(
+      100vh
+      - var(--main-menu-Padding-top)
+      + var(--main-menu-Padding-bottom)
+    );
     height: calc(var(--page-header__main-menu-Width) - 2px);
     padding: {
       top: 22px;
       bottom: var(--page-Padding-right);
-      right: 32px;
-      left: 48px;
+      right: var(--main-menu__inner--Padding-hor);
+      left: var(--main-menu__inner--Padding-hor);
     };
   }
 

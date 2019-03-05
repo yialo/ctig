@@ -2,17 +2,16 @@
   background-color: white;
 
   @media (min-width: $l-min-width) {
-    opacity: 0;
-    transition: {
-      property: opacity;
-      duration: 0.5s;
-      timing-function: ease-out;
-      delay: 0.5s;
-    }
+    // opacity: 0;
+    // transition: {
+    //   property: opacity;
+    //   duration: 0.5s;
+    //   timing-function: ease-out;
+    //   delay: 0.5s;
+    // }
 
-    .is-nav-shown & {
-      opacity: 1;
-      timing-function: ease-in;
-    }
+    // .is-nav-shown & {
+    //   opacity: 1;
+    // }
   }
 }

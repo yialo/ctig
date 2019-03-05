@@ -9,8 +9,8 @@
     --main-menu__item-Margin-left: 24px;
     height: 100%;
     padding: {
-      top: 96px;
-      bottom: 32px;
+      top: var(--main-menu-Padding-top);
+      bottom: var(--main-menu-Padding-bottom);
     }
   }
 }

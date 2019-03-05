@@ -31,4 +31,15 @@
       border-top-style: none;
     }
   }
+
+  @media (min-width: $l-min-width) {
+    &--leading {
+      display: none;
+    }
+
+    &--references {
+      grid-area: 1 / 1/ 2 / 2;
+      padding-top: 6px;
+    }
+  }
 }

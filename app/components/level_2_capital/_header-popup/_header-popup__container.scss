@@ -22,7 +22,12 @@
     padding-bottom: calc(var(--main-menu__navigation-toggle-Height) + 24px);
   }
 
-  @media (min-width: $m-min-width) {
+  @media (min-width: $l-min-width) {
+    grid-template-rows: 1fr;
     padding-top: 40px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid-column-gap: 392px;
   }
 }

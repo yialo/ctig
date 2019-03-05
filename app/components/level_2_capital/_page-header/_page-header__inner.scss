@@ -52,14 +52,13 @@
       position: absolute;
       top: 45px;
       right: var(--page-Padding-right);
-      z-index: 3;
+      z-index: 1;
     }
 
     &--main-menu {
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 2;
       width: var(--page-header__main-menu-Width);
       height: 100vh;
     }
