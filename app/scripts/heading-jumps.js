@@ -33,7 +33,7 @@ $(document).ready(function(){
   if (window.innerWidth >= 1200) {
     introHeadingFluid_1.css({ height: introHeadingHeight + 10 });
     introHeadingFluid_2.css({ height: introHeadingHeight + 10 });
-    aboutBriefHeading.css({ opacity: '0' });
+    // aboutBriefHeading.css({ opacity: '0' });
   }
 
   $(window).scroll(function(){
@@ -62,17 +62,17 @@ $(document).ready(function(){
 
       if (totalOffset >= aboutBriefHeading.offset().top - aboutBriefTrigger) {
         introHeading.css({ opacity: '0' });
-        aboutBriefHeading.css({ opacity: '1' });
+        // aboutBriefHeading.css({ opacity: '1' });
       } else {
         introHeading.css({ opacity: '1' });
-        aboutBriefHeading.css({ opacity: '0' });
+        // aboutBriefHeading.css({ opacity: '0' });
       }
 
-      if (totalOffset >= indicesHeading.offset().top - indicesTrigger) {
-        indicesHeading.css({ opacity: '1' });
-      } else {
-        indicesHeading.css({ opacity: '0' });
-      }
+      // if (totalOffset >= indicesHeading.offset().top - indicesTrigger) {
+      //   indicesHeading.css({ opacity: '1' });
+      // } else {
+      //   indicesHeading.css({ opacity: '0' });
+      // }
 
       if (totalOffset >= logisticsBriefHeading.offset().top - logisticsBriefTrigger) {
         logisticsBriefHeadingFluid_1.css({
@@ -100,37 +100,37 @@ $(document).ready(function(){
         logisticsBriefHeading.css({ opacity: '1' });
       }
 
-      if (totalOffset >= additionalServiceHeading.offset().top - additionalServiceTrigger) {
-        additionalServiceHeading.css({ opacity: '1' });
-      } else {
-        additionalServiceHeading.css({ opacity: '0' });
-      }
+    //   if (totalOffset >= additionalServiceHeading.offset().top - additionalServiceTrigger) {
+    //     additionalServiceHeading.css({ opacity: '1' });
+    //   } else {
+    //     additionalServiceHeading.css({ opacity: '0' });
+    //   }
 
-      if (totalOffset >= clientsHeading.offset().top - clientsTrigger) {
-        clientsHeading.css({ opacity: '1' });
-      } else {
-        clientsHeading.css({ opacity: '0' });
-      }
+    //   if (totalOffset >= clientsHeading.offset().top - clientsTrigger) {
+    //     clientsHeading.css({ opacity: '1' });
+    //   } else {
+    //     clientsHeading.css({ opacity: '0' });
+    //   }
 
-      if (totalOffset >= customsAgentHeading.offset().top - customsAgentTrigger) {
-        customsAgentHeading.css({ opacity: '1' });
-      } else {
-        customsAgentHeading.css({ opacity: '0' });
-      }
+    //   if (totalOffset >= customsAgentHeading.offset().top - customsAgentTrigger) {
+    //     customsAgentHeading.css({ opacity: '1' });
+    //   } else {
+    //     customsAgentHeading.css({ opacity: '0' });
+    //   }
 
-      if (totalOffset >= customsServiceHeading.offset().top - customsServiceTrigger) {
-        customsServiceHeading.css({ opacity: '1' });
-      } else {
-        customsServiceHeading.css({ opacity: '0' });
-      }
-    }
+    //   if (totalOffset >= customsServiceHeading.offset().top - customsServiceTrigger) {
+    //     customsServiceHeading.css({ opacity: '1' });
+    //   } else {
+    //     customsServiceHeading.css({ opacity: '0' });
+    //   }
+    // }
 
-    if (window.innerWidth >= 1920) {
-      if (totalOffset >= transportBlock.offset().top - transportTrigger) {
-        logisticsBriefHeading.css({ opacity: '0' });
-      } else {
-        logisticsBriefHeading.css({ opacity: '1' });
-      }
+    // if (window.innerWidth >= 1920) {
+    //   if (totalOffset >= transportBlock.offset().top - transportTrigger) {
+    //     logisticsBriefHeading.css({ opacity: '0' });
+    //   } else {
+    //     logisticsBriefHeading.css({ opacity: '1' });
+    //   }
     }
   });
 });
