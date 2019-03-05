@@ -1,0 +1,12 @@
+.calls__string-wrapper {
+  top: -12px;
+  display: flex;
+  overflow: hidden;
+  width: 200%;
+  animation: {
+    name: marquee;
+    duration: 5s;
+    timing-function: linear;
+    iteration-count: infinite;
+  }
+}
