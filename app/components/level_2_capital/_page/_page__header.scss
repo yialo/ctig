@@ -14,11 +14,11 @@
     margin-bottom: 0;
 
     .is-nav-shown & {
-      width: calc(100% - var(--Scrollbar-width));
+      width: calc(100% - var(--g_Scrollbar-width));
     }
 
     .is-modal-shown & {
-      width: calc(100% - var(--Scrollbar-width));
+      width: calc(100% - var(--g_Scrollbar-width));
     }
   }
 }

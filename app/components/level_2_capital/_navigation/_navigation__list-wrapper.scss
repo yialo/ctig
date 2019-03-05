@@ -1,0 +1,5 @@
+.navigation__list-wrapper {
+  @media (min-width: $l-min-width) {
+    height: calc(100vh - 112px - var(--g_main-menu-Padding-top));
+  }
+}

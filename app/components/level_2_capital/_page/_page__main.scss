@@ -1,11 +1,11 @@
 .page__main {
   @media (min-width: $l-min-width) {
     .is-nav-shown & {
-      padding-right: var(--Scrollbar-width);
+      padding-right: var(--g_Scrollbar-width);
     }
 
     .is-modal-shown & {
-      padding-right: var(--Scrollbar-width);
+      padding-right: var(--g_Scrollbar-width);
     }
   }
 }

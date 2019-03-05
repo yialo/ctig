@@ -1,27 +1,27 @@
 :root {
-  --main-menu__navigation-toggle-Height: 48px;
-  --page-Min-width: #{$s-min-width};
-  --page-Padding-top: 24px;
+  --g_main-menu__navigation-toggle-Height: 48px;
+  --g_page-Min-width: #{$s-min-width};
+  --g_page-Padding-top: 24px;
 
   @media (min-width: $m-min-width) {
-    --page-Min-width: #{$m-min-width};
-    --page-Padding-top: 32px;
+    --g_page-Min-width: #{$m-min-width};
+    --g_page-Padding-top: 32px;
   }
 
   @media (min-width: $l-min-width) {
-    --main-menu-Padding-top: 96px;
-    --main-menu-Padding-bottom: 32px;
-    --page-header__main-menu-Width: 180px;
-    --page-Min-width: #{$l-min-width};
-    --page-Margin-left: calc((100% - var(--page-Min-width)) / 2);
-    --page-Padding-top: 136px;
-    --page-Padding-right: 32px;
-    --Scrollbar-width: 17px;
+    --g_main-menu-Padding-top: 96px;
+    --g_main-menu-Padding-bottom: 32px;
+    --g_page-header__main-menu-Width: 180px;
+    --g_page-Min-width: #{$l-min-width};
+    --g_page-Margin-left: calc((100% - var(--g_page-Min-width)) / 2);
+    --g_page-Padding-top: 136px;
+    --g_page-Padding-right: 32px;
+    --g_Scrollbar-width: 17px;
   }
 
   @media (min-width: $xl-min-width) {
-    --page-header__main-menu-Width: 256px;
-    --page-Min-width: #{$xl-min-width};
-    --page-Padding-right: 56px;
+    --g_page-header__main-menu-Width: 256px;
+    --g_page-Min-width: #{$xl-min-width};
+    --g_page-Padding-right: 56px;
   }
 }

@@ -16,13 +16,13 @@
     align-items: center;
     width: calc(
       100vh
-      - var(--main-menu-Padding-top)
-      + var(--main-menu-Padding-bottom)
+      - var(--g_main-menu-Padding-top)
+      + var(--g_main-menu-Padding-bottom)
     );
-    height: calc(var(--page-header__main-menu-Width) - 2px);
+    height: calc(var(--g_page-header__main-menu-Width) - 2px);
     padding: {
       top: 22px;
-      bottom: var(--page-Padding-right);
+      bottom: var(--g_page-Padding-right);
       right: var(--main-menu__inner--Padding-hor);
       left: var(--main-menu__inner--Padding-hor);
     };

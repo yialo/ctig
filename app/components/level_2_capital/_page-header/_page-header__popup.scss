@@ -2,26 +2,25 @@
   z-index: 1;
   display: none;
   overflow-y: scroll;
-  background-color: white;
 
   .is-nav-shown & {
     display: block;
   }
 
   @media (min-width: $l-min-width) {
-    display: block;
-    top: var(--main-menu-Padding-top);
-    right: calc(
-      -100vw
-      + var(--page-header__main-menu-Width)
-      + var(--Scrollbar-width)
-    );
+    top: var(--g_main-menu-Padding-top);
+    left: 0;
     transition: right 0.5s ease-out;
-    height: calc(100% - var(--main-menu-Padding-top));
-    min-height: calc(100% - var(--main-menu-Padding-top));
-
-    .is-nav-shown & {
-      right: 0;
-    }
+    display: block;
+    width: calc(
+      100%
+      - var(--g_page-header__main-menu-Width)
+      - var(--g_Scrollbar-width)
+    );
+    height: calc(100% - var(--g_main-menu-Padding-top));
+    min-height: calc(100% - var(--g_main-menu-Padding-top));
+    overflow: hidden;
+    background-color: transparent;
+    pointer-events: none;
   }
 }

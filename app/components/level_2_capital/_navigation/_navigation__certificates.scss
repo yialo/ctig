@@ -8,4 +8,12 @@
   .is-certificates-shown & {
     display: block;
   }
+
+  @media (min-width: $l-min-width) {
+    padding-left: 120px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-left: 392px;
+  }
 }

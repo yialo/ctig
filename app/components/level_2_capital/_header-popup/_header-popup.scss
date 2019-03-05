@@ -2,16 +2,15 @@
   background-color: white;
 
   @media (min-width: $l-min-width) {
-    // opacity: 0;
-    // transition: {
-    //   property: opacity;
-    //   duration: 0.5s;
-    //   timing-function: ease-out;
-    //   delay: 0.5s;
-    // }
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    pointer-events: auto;
+    transition: left 0.5s ease-out;
 
-    // .is-nav-shown & {
-    //   opacity: 1;
-    // }
+    .is-nav-shown & {
+      left: 0;
+    }
   }
 }

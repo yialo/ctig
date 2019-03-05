@@ -51,7 +51,7 @@
     &--language-toggle {
       position: absolute;
       top: 45px;
-      right: var(--page-Padding-right);
+      right: var(--g_page-Padding-right);
       z-index: 1;
     }
 
@@ -59,7 +59,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: var(--page-header__main-menu-Width);
+      width: var(--g_page-header__main-menu-Width);
       height: 100vh;
     }
   }
