@@ -26,6 +26,9 @@
       type='button',
     )
       svg.navigation-toggle__icon-wrapper(width=width, height=height)
-        use.navigation-toggle__icon(href=`#${idPrefix}-button`, fill='#000000')
+        use.navigation-toggle__icon(
+          xlink:href=`#${idPrefix}-button`,
+          fill='#000000',
+        )
       span.generic-hidden-box.navigation-toggle__legend
         | #{text} главное меню

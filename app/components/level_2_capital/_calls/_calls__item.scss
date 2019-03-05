@@ -2,6 +2,7 @@
   @include margin-hor();
   display: flex;
   flex-direction: column;
+  width: var(--calls__item-Width);
 
   &--1 {
     margin-bottom: 24px;
@@ -18,11 +19,11 @@
 
   @media (min-width: $l-min-width) {
     &--1 {
-      margin-left: auto;
+      @include margin-hor(var(--calls__item-Margin-hor));
     }
 
     &--2 {
-      margin-right: auto;
+      margin-right: var(--calls__item-Margin-hor);
     }
   }
 }

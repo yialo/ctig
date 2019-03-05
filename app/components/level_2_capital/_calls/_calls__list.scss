@@ -2,6 +2,7 @@
   @include list();
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: $m-min-width) {
     flex-direction: row;
