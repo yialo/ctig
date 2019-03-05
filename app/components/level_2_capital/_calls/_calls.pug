@@ -12,7 +12,7 @@
         `calls__item--${index + 1}`,
       ])
         a.calls__link(href=`tel:${tel}`)= text
-        a.calls__request(href='#')
+        .calls__request
           .calls__string-wrapper
             - for (let i = 1; i <= 2; i += 1)
-              span.calls__string(class=`calls__string--${i}`) Заказать звонок
+              a.calls__string(href='#') Заказать звонок

@@ -8,7 +8,8 @@
   }
 
   @media (min-width: $l-min-width) {
-    top: var(--g_main-menu-Padding-top);
+    position: absolute;
+    top: 0;
     left: 0;
     transition: right 0.5s ease-out;
     display: block;
@@ -17,8 +18,8 @@
       - var(--g_page-header__main-menu-Width)
       - var(--g_Scrollbar-width)
     );
-    height: calc(100% - var(--g_main-menu-Padding-top));
-    min-height: calc(100% - var(--g_main-menu-Padding-top));
+    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background-color: transparent;
     pointer-events: none;

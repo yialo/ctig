@@ -3,9 +3,10 @@
 
   @media (min-width: $l-min-width) {
     position: absolute;
-    top: 0;
     left: 100%;
     width: 100%;
+    height: 100%;
+    padding-top: var(--g_main-menu-Padding-top);
     pointer-events: auto;
     transition: left 0.5s ease-out;
 
