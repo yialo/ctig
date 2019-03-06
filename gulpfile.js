@@ -4,6 +4,7 @@
 
 const autoprefixer = require('autoprefixer');
 const del = require('del');
+const flatten = require('gulp-flatten');
 const gulp = require('gulp');
 const jpegtran = require('imagemin-jpegtran');
 const mincss = require('gulp-csso');
@@ -108,26 +109,37 @@ const cleanbuild = function deleteFormerBuildFolder() {
 };
 
 const copyvideo = function copyVideoFilesToBuildFolder() {
-  return gulp.src('./app/assets/video/*.mp4').pipe(gulp.dest('./dist/video/'));
+  return gulp.src('./app/components/**/video/*.mp4')
+    .pipe(flatten())
+    .pipe(gulp.dest('./dist/video/'));
 };
 
 const copyfavicons = function copyFaviconsToBuildFolder() {
-  return gulp.src('./app/assets/favicons/*')
+  return gulp.src('./app/global/favicons/*')
     .pipe(gulp.dest('./dist/favicons/'));
 };
 
 const copyfonts = function copyFontFilesToBuildFolder() {
   return gulp
-    .src('./app/assets/fonts/*.{woff,woff2}')
+    .src('./app/global/fonts/*.{woff,woff2}')
     .pipe(gulp.dest('./dist/fonts/'));
 };
 
 const copysvg = function copySvgImagesToBuildFolder() {
-  return gulp.src('./app/assets/svg/*.svg').pipe(gulp.dest('./dist/img/'));
+  return gulp.src([
+    './app/global/svg/*.svg',
+    './app/components/**/svg/*.svg',
+  ])
+    .pipe(flatten())
+    .pipe(gulp.dest('./dist/img/'));
 };
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
-  return gulp.src('./app/assets/bitmaps/*.{jpg,png}')
+  return gulp.src([
+    './app/global/bitmaps/*.{jpg,png}',
+    './app/components/**/bitmaps/*.{jpg,png}',
+  ])
+    .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
 };
 
