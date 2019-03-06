@@ -11,13 +11,13 @@ html(lang='ru')
   include ../global/head/_head
   body.page(class=`page--${page.id}`)
     .page__icon-templates
-      include ../components/level_2_capital/_icon-templates/_icon-templates
+      include ../components/capital/_icon-templates/_icon-templates
     header.page__header
-      include ../components/level_2_capital/_page-header/_page-header
+      include ../components/capital/_page-header/_page-header
     main.page-main.page__main
       block page-main
     .generic-fixed-fullscreen.page__modal
-      include ../components/level_2_capital/_modal/_modal
+      include ../components/capital/_modal/_modal
     .generic-fixed-fullscreen.overlay.page__overlay(role='presentation')
     script(src='js/picturefill.js')
     script(src='js/jquery-3.3.1.js')
