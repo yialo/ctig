@@ -109,7 +109,10 @@ const cleanbuild = function deleteFormerBuildFolder() {
 };
 
 const copyvideo = function copyVideoFilesToBuildFolder() {
-  return gulp.src('./app/components/**/video/*.mp4')
+  return gulp.src([
+    './app/global/video/*.mp4',
+    './app/components/**/video/*.mp4',
+  ])
     .pipe(flatten())
     .pipe(gulp.dest('./dist/video/'));
 };
@@ -195,13 +198,19 @@ const watchJs = function watchForJavascriptFiles() {
 };
 
 const watchSvg = function watchForSvgFiles() {
-  return gulp.watch('./app/assets/svg/*.svg', gulp.series(copysvg, reload));
+  return gulp.watch(
+    ['./app/global/svg/*.svg', './app/components/**/svg/*.svg'],
+    gulp.series(copysvg, reload),
+  );
 };
 
 const watchBitmaps = function watchForBitmapFiles() {
   return gulp
     .watch(
-      './app/assets/bitmaps/*.{jpg,png}',
+      [
+        './app/global/bitmaps/*.{jpg,png}',
+        './app/components/**/bitmaps/*.{jpg,png}',
+      ],
       gulp.series(copybitmaps, reload),
     );
 };
@@ -216,7 +225,7 @@ gulp.task('imagemin', gulp.parallel('svgmin', 'bitmapmin'));
 gulp.task('imagecopy', gulp.parallel('svgcopy', 'bitmapcopy'));
 gulp.task(
   'copyassets',
-  gulp.parallel(copyvideo, copyfonts, copyfavicons, 'imagecopy'),
+  gulp.parallel(copyfonts, copyfavicons, 'imagecopy', copyvideo),
 );
 gulp.task('watchForAll', gulp.parallel(watchJs, watchSvg, watchBitmaps));
 gulp.task('build', gulp.series(cleanbuild, 'copyassets', scripts, style, html));
