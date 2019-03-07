@@ -17,9 +17,10 @@
         'socials__item',
         `socials__item--${number}`,
         number === SOCIALS_ITEMS.length ? 'socials__item--last' : null,
-      ])
+      ], aria-labelledby=path)
         a(
           class=['socials__link', `socials__link--${path}`],
+          id=path,
           href=`https://${path}.com/`,
+          aria-label=text,
         )
-          span.generic-hidden-box.socials__legend= text
