@@ -1,10 +1,11 @@
 'use strict';
 
-// Variables
+// Plugin variables
 
 const autoprefixer = require('autoprefixer');
 const del = require('del');
 const flatten = require('gulp-flatten');
+const gifsicle = require('imagemin-gifsicle');
 const gulp = require('gulp');
 const jpegtran = require('imagemin-jpegtran');
 const mincss = require('gulp-csso');
@@ -20,6 +21,11 @@ const sass = require('gulp-sass');
 const sassglob = require('gulp-sass-glob');
 const server = require('browser-sync').create();
 const zopfli = require('imagemin-zopfli');
+
+// Vinyl variables
+
+const bitmapExts = '{gif,jpg,png}';
+const fontExts = '{woff,woff2}';
 
 // Task functions
 
@@ -83,22 +89,14 @@ const minsvg = function mimimizeSvgImages() {
 
 const minbitmap = function minimizeBitmapImages() {
   return gulp
-    .src('./spec/img-raw/*.{jpg,png}')
+    .src(`./spec/img-raw/*.${bitmapExts}`)
     .pipe(
       minimage([
-        jpegtran({
-          progressive: true,
-        }),
-        mozjpeg({
-          quality: 90,
-        }),
-        pngquant({
-          speed: 1,
-          quality: [0.8, 0.8],
-        }),
-        zopfli({
-          more: true,
-        }),
+        gifsicle(),
+        jpegtran({ progressive: true }),
+        mozjpeg({ quality: 90 }),
+        pngquant({ speed: 1, quality: [0.8, 0.8] }),
+        zopfli({ more: true }),
       ]),
     )
     .pipe(gulp.dest('./spec/img-output/'));
@@ -124,7 +122,7 @@ const copyfavicons = function copyFaviconsToBuildFolder() {
 
 const copyfonts = function copyFontFilesToBuildFolder() {
   return gulp
-    .src('./app/global/fonts/*.{woff,woff2}')
+    .src(`./app/global/fonts/*.${fontExts}`)
     .pipe(gulp.dest('./dist/fonts/'));
 };
 
@@ -139,8 +137,8 @@ const copysvg = function copySvgImagesToBuildFolder() {
 
 const copybitmaps = function copyBitmapImagesToBuildFolder() {
   return gulp.src([
-    './app/global/bitmaps/*.{jpg,png}',
-    './app/components/**/bitmaps/*.{jpg,png}',
+    `./app/global/bitmaps/*.${bitmapExts}`,
+    `./app/components/**/bitmaps/*.${bitmapExts}`,
   ])
     .pipe(flatten())
     .pipe(gulp.dest('./dist/img/'));
@@ -208,8 +206,8 @@ const watchBitmaps = function watchForBitmapFiles() {
   return gulp
     .watch(
       [
-        './app/global/bitmaps/*.{jpg,png}',
-        './app/components/**/bitmaps/*.{jpg,png}',
+        `./app/global/bitmaps/*.${bitmapExts}`,
+        `./app/components/**/bitmaps/*.${bitmapExts}`,
       ],
       gulp.series(copybitmaps, reload),
     );

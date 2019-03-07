@@ -21,6 +21,7 @@
     "gulp-sass": "4.0.2",
     "gulp-sass-glob": "1.0.9",
     "gulp-terser": "1.1.7",
+    "imagemin-gifsicle": "^6.0.1",
     "imagemin-jpegtran": "6.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "7.0.0",
