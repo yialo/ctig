@@ -1,0 +1,7 @@
+.navigation-toggle__icon {
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      fill: white;
+    }
+  }
+}

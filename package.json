@@ -3,6 +3,7 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "description": "CTIG website development",
   "devDependencies": {
     "autoprefixer": "9.4.10",
     "browser-sync": "2.26.3",
@@ -12,7 +13,7 @@
     "eslint-plugin-import": "2.16.0",
     "gulp": "4.0.0",
     "gulp-csso": "3.0.1",
-    "gulp-flatten": "^0.4.0",
+    "gulp-flatten": "0.4.0",
     "gulp-imagemin": "5.0.3",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
@@ -21,7 +22,7 @@
     "gulp-sass": "4.0.2",
     "gulp-sass-glob": "1.0.9",
     "gulp-terser": "1.1.7",
-    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-gifsicle": "6.0.1",
     "imagemin-jpegtran": "6.0.0",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-pngquant": "7.0.0",

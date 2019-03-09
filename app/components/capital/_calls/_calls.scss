@@ -1,4 +1,10 @@
 .calls {
   --calls__item-Width: 166px;
   --calls__item-Margin-hor: calc((100% - 2 * var(--calls__item-Width)) / 3);
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      color: white;
+    }
+  }
 }

@@ -4,4 +4,10 @@
   @media (min-width: $l-min-width) {
     display: block;
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      pointer-events: auto;
+    }
+  }
 }

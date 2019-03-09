@@ -12,4 +12,18 @@
   &:active {
     color: transparentize(black, 0.75);
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      color: white;
+
+      &:hover {
+        color: transparentize(white, 0.5);
+      }
+
+      &:active {
+        color: transparentize(white, 0.75);
+      }
+    }
+  }
 }

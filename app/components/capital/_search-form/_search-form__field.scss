@@ -4,4 +4,24 @@
   @include hover-focus_set() {
     border-bottom-color: $form-background;
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      color: white;
+      border-bottom-color: white;
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:hover {
+        color: transparentize(white, 0.5);
+        border-bottom-color: transparentize(white, 0.5);
+
+        &::placeholder {
+          color: transparentize(white, 0.5);
+        }
+      }
+    }
+  }
 }

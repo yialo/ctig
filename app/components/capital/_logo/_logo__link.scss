@@ -26,4 +26,11 @@
       @include set-logo-sizes(119px);
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      position: relative;
+      z-index: 4;
+    }
+  }
 }

@@ -1,6 +1,5 @@
 .overlay {
   background-color: $modal-overlay;
-  pointer-events: auto;
 
   @supports (backdrop-filter: blur(25px)) {
     backdrop-filter: blur(25px);

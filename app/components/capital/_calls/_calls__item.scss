@@ -26,4 +26,11 @@
       margin-right: var(--calls__item-Margin-hor);
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      position: relative;
+      z-index: 4;
+    }
+  }
 }

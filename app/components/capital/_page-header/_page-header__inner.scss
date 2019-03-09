@@ -75,4 +75,30 @@
       height: 100vh;
     }
   }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      &--logo {
+        z-index: auto;
+      }
+
+      &--calls {
+        z-index: auto;
+      }
+
+      &--search {
+        position: relative;
+        z-index: 4;
+      }
+
+      &--language-toggle {
+        z-index: 4;
+      }
+
+      &--main-menu {
+        z-index: 4;
+        pointer-events: none;
+      }
+    }
+  }
 }
