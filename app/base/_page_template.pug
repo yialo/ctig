@@ -19,7 +19,10 @@ html(lang='ru')
     .generic-fixed-fullscreen.page__modal
       include ../components/capital/_modal/_modal
     script(src='js/picturefill.js')
-    script(src='js/jquery-3.3.1.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script.
+      window.jQuery
+      || document.write('<script src="js/jquery-3.3.1.js"><\/script>')
     script(src='js/mCustomScrollbar.concat.min.js')
     script(src='js/page-header.js')
     script(src='js/custom-scrollbars.js')
