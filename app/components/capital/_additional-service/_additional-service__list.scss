@@ -1,0 +1,13 @@
+.additional-service__list {
+  @media (min-width: $m-min-width) {
+    height: 820px;
+  }
+
+  @media (min-width: $l-min-width) {
+    height: 1160px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    height: 1832px;
+  }
+}

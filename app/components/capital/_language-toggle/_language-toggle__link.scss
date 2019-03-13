@@ -1,0 +1,29 @@
+.language-toggle__link {
+  @include font(500, 12px);
+  line-height: calc(4 / 3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+
+  &:hover {
+    color: transparentize(black, 0.5);
+  }
+
+  &:active {
+    color: transparentize(black, 0.75);
+  }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      color: white;
+
+      &:hover {
+        color: transparentize(white, 0.5);
+      }
+
+      &:active {
+        color: transparentize(white, 0.75);
+      }
+    }
+  }
+}

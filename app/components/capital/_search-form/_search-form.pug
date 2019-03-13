@@ -1,0 +1,17 @@
+form.search-form(
+  method='GET',
+  action=FORM_DEFAULT_ACTION,
+  name='tracking-search',
+)
+  label.search-form__inner
+    span.generic-hidden-box.search-form__legend Поле ввода трек-номера
+    input.generic-textfield.search-form__field(
+      type='search',
+      name='tracking-number',
+      placeholder='Введите трек-номер',
+      required,
+    )
+  button.search-form__button(type='submit')
+    svg.search-form__icon-wrapper(width='16', height='14')
+      use.search-form__icon(xlink:href='#search-form-button', fill='#e6e6e6')
+    span.generic-hidden-box.search-form__button-legend Найти отправление

@@ -6,19 +6,24 @@ head
   title #{page.title} | #{SITE_TITLE}
   each item in GENERAL_META_DATA
     - const [name, content] = item;
-    meta(name=name content=content)
+    meta(name=name, content=content)
   each item in FAVICONS_LINK_DATA
     link&attributes(item)
   each item in FAVICONS_META_DATA
     - const [name, content] = item;
-    meta(name=name content=content)
+    meta(name=name, content=content)
   each value, key in FONT_SETS
     each weightValue in value.weightNames
       each styleValue in value.styleNames
         link(
-          rel='preload'
-          href=`fonts/${key}-${weightValue}-${styleValue}.woff2`
-          as='font'
-          crossorigin='anonymous'
+          rel='preload',
+          href=`fonts/${key}-${weightValue}-${styleValue}.woff2`,
+          as='font',
+          crossorigin='anonymous',
         )
-  link(rel='stylesheet' href='css/main.min.css')
+  link(
+    rel='preload',
+    href='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+    as='script',
+  )
+  link(rel='stylesheet', href='css/main.min.css')

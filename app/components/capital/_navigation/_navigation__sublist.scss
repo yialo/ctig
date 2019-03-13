@@ -1,0 +1,7 @@
+.navigation__sublist {
+  margin-top: 24px;
+
+  @media (min-width: $l-min-width) {
+    margin-top: 32px;
+  }
+}

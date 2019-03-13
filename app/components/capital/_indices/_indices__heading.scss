@@ -1,0 +1,16 @@
+.indices__heading {
+  @include padding-hor();
+  position: relative;
+  margin-bottom: 32px;
+  transition: opacity 250ms;
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $l-min-width) {
+    margin-bottom: 100px;
+  }
+}

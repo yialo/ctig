@@ -1,0 +1,36 @@
+.calls__item {
+  @include margin-hor();
+  display: flex;
+  flex-direction: column;
+  width: var(--calls__item-Width);
+
+  &--1 {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $m-min-width) {
+    @include margin-hor(0);
+    justify-content: space-between;
+
+    &--1 {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $l-min-width) {
+    &--1 {
+      @include margin-hor(var(--calls__item-Margin-hor));
+    }
+
+    &--2 {
+      margin-right: var(--calls__item-Margin-hor);
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      position: relative;
+      z-index: 4;
+    }
+  }
+}

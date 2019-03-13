@@ -1,8 +1,8 @@
 @mixin accessible-hiding() {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   margin: -1px;
   padding: 0;
   white-space: nowrap;

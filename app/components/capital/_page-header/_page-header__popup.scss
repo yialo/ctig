@@ -1,0 +1,26 @@
+.page-header__popup {
+  z-index: 1;
+  display: none;
+  overflow-y: scroll;
+
+  .is-nav-shown & {
+    display: block;
+  }
+
+  @media (min-width: $l-min-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: right 0.5s ease-out;
+    display: block;
+    width: calc(
+      100%
+      - var(--g_page-header__main-menu-Width)
+      - var(--g_Scrollbar-width)
+    );
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}

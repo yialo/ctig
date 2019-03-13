@@ -1,0 +1,9 @@
+.contacts {
+  @media (min-width: $l-min-width) {
+    --contacts__inner-Margin-top: 48px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    --contacts__inner-Margin-top: 0;
+  }
+}

@@ -1,0 +1,32 @@
+.request-radio-formgroup__label {
+  @include emerald-line();
+  @include form-text-s();
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  color: $form-gray;
+  cursor: pointer;
+  transition: {
+    property: color;
+    duration: 0.3s;
+  }
+
+  &::before {
+    width: 0;
+    transition: width 250ms;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  .request-radio-formgroup__field:checked ~ & {
+    font-weight: 500;
+    color: white;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}

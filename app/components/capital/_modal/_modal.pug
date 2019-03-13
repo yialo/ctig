@@ -1,0 +1,15 @@
+.modal
+  .modal__container
+    +request-form().modal__form(
+      modifier='calculation',
+      heading='Запрос на расчет',
+    )
+      include _modal__close-button
+      .request-form__body
+        +request-text-formgroup()(modifier='route' place='at-modal')
+        +request-text-formgroup()(modifier='cargo-type' place='at-modal')
+        include ../_request-radio-formgroup/_request-radio-formgroup
+        +request-text-formgroup()(modifier='person' place='at-modal')
+      include ../_request-form/_request-form__footer
+      .request-form__product-list.modal__product-list
+        include ../_product-list/_product-list

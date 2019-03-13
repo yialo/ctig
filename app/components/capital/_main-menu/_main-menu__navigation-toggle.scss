@@ -1,0 +1,18 @@
+.main-menu__navigation-toggle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: var(--g_main-menu__navigation-toggle-Height);
+  background-color: white;
+
+  @media (min-width: $l-min-width) {
+    position: absolute;
+    top: 42px;
+    left: -13px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+}

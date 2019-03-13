@@ -1,0 +1,9 @@
+.modal__container {
+  @include margin-hor(0);
+  @include padding-hor(0);
+
+  @media (min-width: $l-min-width) {
+    width: 100%;
+    padding-right: var(--g_page-header__main-menu-Width);
+  }
+}

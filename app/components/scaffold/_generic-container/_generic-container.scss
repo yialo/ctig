@@ -1,0 +1,30 @@
+.generic-container {
+  @include margin-hor();
+  width: var(--g_page-Min-width);
+
+  @media (max-width: $s-max-width) {
+    @include padding-hor();
+
+    &--wide-s {
+      @include padding-hor(0);
+    }
+  }
+
+  @media (min-width: $m-min-width) and (max-width: $m-max-width) {
+    @include padding-hor(32px);
+  }
+
+  @media (min-width: $l-min-width) {
+    @include padding-hor(56px);
+    width: calc(
+      var(--g_page-Min-width)
+      + var(--g_page-Margin-left)
+      - var(--g_page-header__main-menu-Width)
+    );
+    max-width: var(--g_page-Min-width);
+    margin: {
+      left: var(--g_page-Margin-left);
+      right: auto;
+    };
+  }
+}

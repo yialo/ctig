@@ -1,0 +1,14 @@
+.certificates__return-button {
+  @include font(500, 12px);
+  @include return-button();
+  padding: {
+    top: 8px;
+    bottom: 8px;
+  }
+  letter-spacing: normal;
+
+  &::before {
+    top: 9px;
+    background-image: url("../img/certificates__return-button.svg");
+  }
+}

@@ -1,0 +1,16 @@
+.logistics-directions__list {
+  @include list();
+  display: flex;
+  flex-wrap: wrap;
+  margin: {
+    top: calc(var(--logistics-directions__list-Margin-top) * -1);
+    left: calc(var(--logistics-directions__list-Margin-left) * -1);
+  }
+
+  @media (min-width: $xl-min-width) {
+    .logistics-directions--europe & {
+      justify-content: space-between;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.transport__list {
+  @media (min-width: $m-min-width) {
+    height: 1050px;
+  }
+
+  @media (min-width: $l-min-width) {
+    height: 1460px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    height: 2233px;
+  }
+}

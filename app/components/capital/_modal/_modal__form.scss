@@ -1,0 +1,16 @@
+.modal__form {
+  position: relative;
+  z-index: 0;
+  width: $s-min-width;
+  pointer-events: auto;
+
+  @media (min-width: $m-min-width) {
+    width: auto;
+    max-width: $m-min-width;
+  }
+
+  @media (min-width: $l-min-width) {
+    @include margin-hor();
+    max-width: $request-form-wide-width;
+  }
+}

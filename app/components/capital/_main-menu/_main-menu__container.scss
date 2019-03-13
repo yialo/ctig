@@ -1,0 +1,12 @@
+.main-menu__container {
+  @media (min-width: $l-min-width) {
+    height: 100%;
+    border-left: 2px solid black;
+  }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      border-left-color: white;
+    }
+  }
+}

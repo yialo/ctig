@@ -1,0 +1,10 @@
+.page__modal {
+  z-index: 4;
+  display: none;
+  pointer-events: none;
+
+  .is-modal-shown & {
+    display: block;
+    overflow-y: scroll;
+  }
+}

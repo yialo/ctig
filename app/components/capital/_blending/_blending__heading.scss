@@ -1,0 +1,25 @@
+.blending__heading {
+  width: inherit;
+  margin-bottom: 0;
+
+  &--substrate {
+    display: none;
+  }
+
+  @media (min-width: $m-min-width) {
+    -webkit-text-stroke: 0.35px #ffffff;
+    position: absolute;
+    overflow: hidden;
+    mix-blend-mode: overlay;
+
+    &--higher {
+      z-index: 2;
+      color: transparent;
+    }
+
+    &--substrate {
+      z-index: 0;
+      display: block;
+    }
+  }
+}

@@ -6,3 +6,12 @@ $(document).ready(function(){
     alwaysShowScrollbar: '1',
   });
 });
+
+$(document).ready(function(){
+  if (window.innerWidth >= 1200) {
+    $('.navigation__list-wrapper').mCustomScrollbar({
+      axis: 'y',
+      alwaysShowScrollbar: '0',
+    });
+  }
+});

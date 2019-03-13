@@ -1,0 +1,23 @@
+.logistics__brief__heading-wrapper {
+  margin-bottom: 16px;
+  padding: {
+    left: 16px;
+    right: calc(25% + 32px);
+  }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(0);
+    top: 104px;
+    width: 400px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $l-min-width) {
+    top: 144px;
+    width: 450px;
+  }
+
+  @media (min-width: $xl-min-width) {
+    top: 384px;
+  }
+}

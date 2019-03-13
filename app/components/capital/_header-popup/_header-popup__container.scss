@@ -1,0 +1,32 @@
+.header-popup__container {
+  @include margin-hor();
+  width: $s-min-width;
+  padding: {
+    top: var(--g_page-Padding-top);
+    bottom: var(--g_main-menu__navigation-toggle-Height);
+  }
+
+  @media (min-width: $m-min-width) {
+    @include padding-hor(32px);
+    display: grid;
+    grid-template: {
+      rows: auto 1fr;
+      columns: 48px 1fr;
+    }
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: calc(var(--g_main-menu__navigation-toggle-Height) + 24px);
+  }
+
+  @media (min-width: $l-min-width) {
+    opacity: 0;
+    grid-template-rows: 1fr;
+    padding-top: 40px;
+    transition: opacity 0.5s ease-out 0.25s;
+
+    .is-nav-shown & {
+      opacity: 1;
+    }
+  }
+}

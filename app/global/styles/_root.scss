@@ -1,52 +1,27 @@
 :root {
-  --generic-list-padding: 21px;
-  --logistics-crumbs__heading-list-margin-left: 8px;
-  --logistics-directions__list-margin-left: 20px;
-  --logistics-directions__list-margin-top: 24px;
-  --main-menu__item-margin-left: 24px;
-  --main-menu__navigation-toggle-height: 48px;
-  --page-min-width: #{$s-min-width};
-  --page-padding-top: 24px;
+  --g_main-menu__navigation-toggle-Height: 48px;
+  --g_page-Min-width: #{$s-min-width};
+  --g_page-Padding-top: 24px;
 
   @media (min-width: $m-min-width) {
-    --additional-service-items-width-1-3: 352px;
-    --additional-service-items-width-2-4: 212px;
-    --additional-service-list-height: 820px;
-    --main-menu__item-margin-left: 0;
-    --page-min-width: #{$m-min-width};
-    --page-padding-top: 32px;
-    --transport-items-width-1-3-4: 324px;
-    --transport-items-width-2-5: 268px;
-    --transport-list-heigth: 1050px;
+    --g_page-Min-width: #{$m-min-width};
+    --g_page-Padding-top: 32px;
   }
 
   @media (min-width: $l-min-width) {
-    --additional-service-items-width-1-3: 450px;
-    --additional-service-items-width-2-4: 276px;
-    --additional-service-list-height: 1160px;
-    --logistics-brief-column-gap: 48px;
-    --logistics-directions__list-margin-left: 40px;
-    --logistics-directions__list-margin-top: 42px;
-    --main-menu__item-margin-left: 24px;
-    --page-header__main-menu-width: 180px;
-    --page-min-width: #{$l-min-width};
-    --page-margin-left: calc((100% - var(--page-min-width)) / 2);
-    --page-padding-right: 32px;
-    --scrollbar-width: 17px;
-    --transport-items-width-1-3-4: 412px;
-    --transport-items-width-2-5: 346px;
-    --transport-list-heigth: 1460px;
+    --g_main-menu-Padding-top: 96px;
+    --g_main-menu-Padding-bottom: 32px;
+    --g_page-header__main-menu-Width: 180px;
+    --g_page-Min-width: #{$l-min-width};
+    --g_page-Margin-left: calc((100% - var(--g_page-Min-width)) / 2);
+    --g_page-Padding-top: 136px;
+    --g_page-Padding-right: 32px;
+    --g_Scrollbar-width: 17px;
   }
 
   @media (min-width: $xl-min-width) {
-    --additional-service-items-width-1-3: 780px;
-    --additional-service-items-width-2-4: 480px;
-    --additional-service-list-height: 1832px;
-    --page-header__main-menu-width: 256px;
-    --page-min-width: #{$xl-min-width};
-    --page-padding-right: 56px;
-    --transport-items-width-1-3-4: 720px;
-    --transport-items-width-2-5: 600px;
-    --transport-list-heigth: 2233px;
+    --g_page-header__main-menu-Width: 256px;
+    --g_page-Min-width: #{$xl-min-width};
+    --g_page-Padding-right: 56px;
   }
 }

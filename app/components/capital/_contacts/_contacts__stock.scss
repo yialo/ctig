@@ -1,0 +1,15 @@
+.contacts__stock {
+  @media (min-width: $l-min-width) {
+    width: min-content;
+    margin-top: var(--contacts__inner-Margin-top);
+
+    @supports (not (width: min-content)) {
+      width: 244px;
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    flex-grow: 0;
+    width: auto;
+  }
+}

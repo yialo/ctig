@@ -1,8 +1,0 @@
-.modal__overlay {
-  z-index: -1;
-  background-color: $modal-overlay;
-
-  @supports (backdrop-filter: blur(25px)) {
-    backdrop-filter: blur(25px);
-  }
-}

@@ -1,17 +1,9 @@
-@keyframes bounce {
-  $bounce-turning-angle: 0.04turn;
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
 
-  0%,
   100% {
-    transform: rotate(0);
-  }
-
-  25%,
-  75% {
-    transform: rotate(-$bounce-turning-angle);
-  }
-
-  50% {
-    transform: rotate($bounce-turning-angle);
+    transform: translateX(-50%);
   }
 }

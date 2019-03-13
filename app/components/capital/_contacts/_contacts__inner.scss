@@ -1,0 +1,11 @@
+.contacts__inner {
+  @media (min-width: $l-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--contacts__inner-Margin-top) * -1);
+  }
+
+  @media (min-width: $xl-min-width) {
+    width: 1432px;
+  }
+}

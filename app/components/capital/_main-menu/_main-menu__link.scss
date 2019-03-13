@@ -1,0 +1,20 @@
+.main-menu__link {
+  @media (min-width: $m-min-width) {
+    &--notext {
+      @include svg-background();
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/main-menu__link--notext.svg");
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    .is-modal-shown & {
+      position: relative;
+      z-index: 4;
+      color: white;
+      pointer-events: auto;
+    }
+  }
+}

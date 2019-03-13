@@ -1,5 +1,5 @@
 :root {
-  --product-list__wrapper-scrollbar-width: 4px;
+  --product-list__wrapper-Scrollbar-width: 4px;
 }
 
 #mCSB_1 {
@@ -8,7 +8,7 @@
   }
 
   .mCSB_scrollTools {
-    width: var(--product-list__wrapper-scrollbar-width);
+    width: var(--product-list__wrapper-Scrollbar-width);
   }
 
   .mCSB_dragger_bar {
@@ -18,5 +18,11 @@
   .mCSB_draggerRail {
     width: 100%;
     background-color: #292929;
+  }
+}
+
+#mCSB_2 {
+  .mCSB_scrollTools {
+    width: 0;
   }
 }

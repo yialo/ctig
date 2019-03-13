@@ -1,0 +1,26 @@
+.navigation-toggle__button {
+  padding: 0;
+  background-color: transparent;
+  border-style: none;
+
+  &--opener {
+    display: block;
+    width: 28px;
+    height: 12px;
+
+    .is-nav-shown & {
+      display: none;
+    }
+  }
+
+  &--closer {
+    display: none;
+    width: 22px;
+    height: 22px;
+    transition: transform ease-in-out 0.5s;
+
+    .is-nav-shown & {
+      display: block;
+    }
+  }
+}

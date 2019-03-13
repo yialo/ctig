@@ -1,0 +1,17 @@
+.header-popup {
+  background-color: white;
+
+  @media (min-width: $l-min-width) {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--g_main-menu-Padding-top);
+    pointer-events: auto;
+    transition: left 0.5s ease-out;
+
+    .is-nav-shown & {
+      left: 0;
+    }
+  }
+}

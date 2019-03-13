@@ -1,0 +1,21 @@
+section.about-brief(class=pageMain_getElClasses('about-brief'))
+  include _d_about-brief
+  div(class=[
+    'generic-container',
+    'generic-container--wide-s',
+    'about-brief__container',
+  ])
+    h2.generic-heading-1.about-brief__heading О нас
+    +generic-picture(ABOUT_BRIEF_IMAGE).about-brief__image-wrapper
+    .about-brief__text-content
+      a.about-brief__subtitle(href='#') Pабота с нами
+      each paragraph, index in ABOUT_BRIEF_PARAGRAPHS
+        p.generic-textblock(class=[
+          'about-brief__paragraph',
+          (
+            index === ABOUT_BRIEF_PARAGRAPHS.length - 1
+            ? 'about-brief__paragraph--last'
+            : null
+          ),
+        ])= paragraph
+      p.about-brief__endline Спасибо за доверие, Ваш #{SITE_TITLE}.

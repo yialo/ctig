@@ -1,0 +1,19 @@
+.logistics-brief__container {
+  @media (min-width: $l-min-width) {
+    display: grid;
+    grid: {
+      template: {
+        rows: auto 1fr;
+        columns: 188px 1fr;
+      }
+      gap: 64px var(--logistics-brief-Column-gap);
+    }
+  }
+
+  @media (min-width: $xl-min-width) {
+    grid: {
+      template-columns: 364px 1fr;
+      row-gap: 104px;
+    }
+  }
+}

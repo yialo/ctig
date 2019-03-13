@@ -1,0 +1,34 @@
+.main-menu__inner {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $m-min-width) {
+    display: block;
+  }
+
+  @media (min-width: $l-min-width) {
+    --main-menu__inner--Padding-hor: 32px;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(
+      100vh
+      - var(--g_main-menu-Padding-top)
+      + var(--g_main-menu-Padding-bottom)
+    );
+    height: calc(var(--g_page-header__main-menu-Width) - 2px);
+    padding: {
+      top: 22px;
+      bottom: var(--g_page-Padding-right);
+      right: var(--main-menu__inner--Padding-hor);
+      left: var(--main-menu__inner--Padding-hor);
+    };
+  }
+
+  @media (min-width: $xl-min-width) {
+    padding-top: 44px;
+  }
+}
