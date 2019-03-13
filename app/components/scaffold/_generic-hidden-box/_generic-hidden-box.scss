@@ -1,3 +1,9 @@
 .generic-hidden-box {
-  @include accessible-hiding();
+  @at-root {
+    &:not(:focus):not(:active),
+    input[type="checkbox"]#{&},
+    input[type="radio"]#{&} {
+      @include accessible-hiding();
+    }
+  }
 }
