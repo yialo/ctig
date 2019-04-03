@@ -1971,11 +1971,13 @@ button {
       font-size: 32px;
       letter-spacing: 1px; } }
 
-.generic-hidden-box {
+.generic-hidden-box:not(:focus):not(:active),
+input[type="checkbox"].generic-hidden-box,
+input[type="radio"].generic-hidden-box {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   margin: -1px;
   padding: 0;
   white-space: nowrap;
@@ -4503,9 +4505,9 @@ button {
 @media (min-width: 768px) {
   .main-menu__legend {
     position: absolute;
+    overflow: hidden;
     width: 1px;
     height: 1px;
-    overflow: hidden;
     margin: -1px;
     padding: 0;
     white-space: nowrap;
@@ -5742,9 +5744,9 @@ button {
 
 .transport__heading {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   margin: -1px;
   padding: 0;
   white-space: nowrap;
