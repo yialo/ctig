@@ -39,7 +39,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/alekseiarrowaytostart/ctig.git"
+    "url": "git+https://github.com/yialo/ctig.git"
   },
   "scripts": {
     "build": "gulp build",
