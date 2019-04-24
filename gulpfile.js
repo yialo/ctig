@@ -146,7 +146,7 @@ const copybitmaps = function copyBitmapImagesToBuildFolder() {
 
 const scripts = function launchJsCompiler() {
   return gulp
-    .src(['./app/vendors/*.js', './app/scripts/*.js'])
+    .src(['./app/vendor/*.js', './app/scripts/*.js'])
     .pipe(minjs())
     .pipe(gulp.dest('./dist/js/'));
 };
